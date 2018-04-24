@@ -1,15 +1,11 @@
-"use strict";
+'use strict';
 
 
 const bodyParser = require('body-parser');
-//import bodyParser from 'body-parser';
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/stundenplaner');
 const express = require('express');
 const app = express.Router();
-
-
-//import schemas from '../Schemas/schemas';
 const schemas = require('../Schemas/schemas');
 
 
