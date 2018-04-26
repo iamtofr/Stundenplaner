@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 let Schema = mongoose.Schema;
 const Address = require('schemaAdress');
-const Subject = require('schemaAdress');
+const Subject = require('schemaSubject');
 
 let profile = new Schema({
     name: {type: String, required: true},
