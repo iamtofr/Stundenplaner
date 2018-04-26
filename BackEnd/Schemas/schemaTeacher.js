@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 let Schema = mongoose.Schema;
-const Profile = require('schemaProfile');
+const Profile = require('./schemaProfile');
 
 
 let teacher = new Schema({
