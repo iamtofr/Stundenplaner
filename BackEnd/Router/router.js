@@ -18,15 +18,15 @@ app.use(function (req, res, next) {
 
 let profile = mongoose.model('profile', schema.profile);
 let address = mongoose.model('address', schema.address);
-let role = mongoose.model('role', schema.role);
+// let role = mongoose.model('role', schema.role);
 
 
 
 app.route('/profile/')
     .get((req, res, next) => {
-        profile.find({}, function (err, users) {
+        profile.find({}, function (err, profile) {
             if (err) throw err;
-            res.status(200).json(users);
+            res.status(200).json(profile);
         });
     })
     .post((req, res, next) => {
@@ -43,9 +43,9 @@ app.route('/profile/')
 
 app.route('/address/')
     .get((req, res, next) => {
-        address.find({}, function (err, users) {
+        address.find({}, function (err, address) {
             if (err) throw err;
-            res.status(200).json(users);
+            res.status(200).json(address);
         });
     })
     .post((req, res, next) => {
