@@ -9,7 +9,6 @@ const app = express.Router();
 
 const schema = require('../Schemas/schemas');
 
-
 app.use(bodyParser.json());
 app.use(function (req, res, next) {
     console.log(req.body);
@@ -18,8 +17,6 @@ app.use(function (req, res, next) {
 
 let profile = mongoose.model('profile', schema.profile);
 let address = mongoose.model('address', schema.address);
-// let role = mongoose.model('role', schema.role);
-
 
 
 app.route('/profile/')
@@ -40,6 +37,8 @@ app.route('/profile/')
         });
         res.status(201).json(newProfile)
     });
+
+// app.use('/profile/', routerProfile);
 
 app.route('/address/')
     .get((req, res, next) => {
