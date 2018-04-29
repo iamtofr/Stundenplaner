@@ -14,25 +14,23 @@ app.use(function (req, res, next) {
     next();
 });
 
-let profile = mongoose.model('profile', schema.profile);
+let address = mongoose.model('address', schema.address);
 
-app.route('/profile/')
+
+app.route('/address/')
     .get((req, res, next) => {
-        profile.find({}, function (err, profile) {
+        address.find({}, function (err, address) {
             if (err) throw err;
-            res.status(200).json(profile);
+            res.status(200).json(address);
         });
     })
     .post((req, res, next) => {
-        let newProfile = profile(req.body);
-        let dateBirth = req.body.dateOfBirth.split(".");
-        newProfile.dateOfBirth = new Date(dateBirth[2] + "-" + dateBirth[1] + "-" + dateBirth[0]);
-        console.log(newProfile.dateOfBirth);
-        newProfile.save(function (err) {
+        let newAddress = address(req.body);
+        newAddress.save(function (err) {
             if (err) throw err;
-            console.log('Profile created!');
+            console.log('Address created!');
         });
-        res.status(201).json(newProfile)
+        res.status(201).json(newAddress)
     });
 
 app.all('*', (req, res, next) => {
@@ -51,5 +49,6 @@ app.all('*', (req, res, next) => {
         res.send('404 (Text) Not found');
     }
 });
+
 
 module.exports = app;

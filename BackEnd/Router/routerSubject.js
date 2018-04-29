@@ -14,26 +14,12 @@ app.use(function (req, res, next) {
     next();
 });
 
-let profile = mongoose.model('profile', schema.profile);
+let subject = mongoose.model('profile', schema.subject);
 
-app.route('/profile/')
-    .get((req, res, next) => {
-        profile.find({}, function (err, profile) {
-            if (err) throw err;
-            res.status(200).json(profile);
-        });
-    })
-    .post((req, res, next) => {
-        let newProfile = profile(req.body);
-        let dateBirth = req.body.dateOfBirth.split(".");
-        newProfile.dateOfBirth = new Date(dateBirth[2] + "-" + dateBirth[1] + "-" + dateBirth[0]);
-        console.log(newProfile.dateOfBirth);
-        newProfile.save(function (err) {
-            if (err) throw err;
-            console.log('Profile created!');
-        });
-        res.status(201).json(newProfile)
-    });
+
+//TODO Router
+
+
 
 app.all('*', (req, res, next) => {
     res.status(404).set('Content-Type', 'text/html');
