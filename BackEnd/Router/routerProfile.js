@@ -23,6 +23,10 @@ app.route('/profile/')
             res.status(200).json(profile);
         });
     })
+
+    /**
+     * dateBirth parsing to DateObject according to specifications of type Date in MongoDb
+     */
     .post((req, res, next) => {
         let newProfile = profile(req.body);
         let dateBirth = req.body.dateOfBirth.split(".");
@@ -33,6 +37,14 @@ app.route('/profile/')
             console.log('Profile created!');
         });
         res.status(201).json(newProfile)
+    });
+
+app.route('/profile/:id')
+    .get((req, res, next) => {
+        profile.find({'_id': req.params.id}, function (err, profile) {
+            if (err) throw err;
+            res.status(200).json(profile);
+        });
     });
 
 app.all('*', (req, res, next) => {
