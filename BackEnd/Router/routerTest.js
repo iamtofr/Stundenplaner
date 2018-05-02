@@ -33,7 +33,7 @@ let City = mongoose.model('city', citySchema);
 app.route('/person/')
     .get((req, res, next) => {
         Person.
-        findOne({_id: '5aea10717f15fb2a0fc964ee'}).
+        findOne({name: 'Frank'}).
         populate('city').
         exec(function (err, person){
             res.status(200).json(person)
@@ -46,7 +46,9 @@ app.route('/person/')
         newPerson.save(function (err) {
             if (err) throw err;
             console.log('Person created!');
+            console.log(newPerson.city);
         });
+        newPerson = Person.findById(newPerson._id);
         res.status(201).json(newPerson)
     });
 
