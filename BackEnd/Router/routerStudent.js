@@ -16,8 +16,47 @@ app.use(function (req, res, next) {
 
 let student = mongoose.model('student', schema.student);
 
+app.route('/student/')
+    .get((req, res, next) => {
+        student.find({}, function (err, student) {
+            if (err) throw err;
+            res.status(200).json(student);
+        });
+    })
 
-//TODO Router
+
+    .post((req, res, next) => {
+        let newStudent = student(req.body);
+        newStudent.save(function (err) {
+            if (err) throw err;
+            console.log('Student created!');
+        });
+        res.status(201).json(newStudent)
+    });
+
+
+
+
+
+
+
+
+app.route('/student/:id')
+    .get((req, res, next) => {
+        let query ={'_id': req.params.id};
+        student.find(query, function (err, student) {
+            if (err) throw err;
+            res.status(200).json(student);
+        });
+    })
+    .patch((req, res, next) => {
+        console.log(req.body);
+        let query = {'_id': req.body._id};
+        student.findOneAndUpdate(query, req.body, {upsert: true, new: true}, function (err, student) {
+            if (err) return res.send(500, {error: err});
+            res.status(200).json(student);
+        });
+    });
 
 
 

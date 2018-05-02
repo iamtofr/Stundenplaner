@@ -3,12 +3,11 @@ let Schema = mongoose.Schema;
 
 const Address = require('./schemaAddress');
 const Subject = require('./schemaSubject');
-const Role = require('./schemaRole');
 
 let profile = new Schema({
     name: {type: String, required: true},
     surname: {type: String, required: true},
-    role: {type: [Role], required:false}, //TODO delete requirement
+    role: {type: Schema.Types.ObjectId, required: true}, //TODO delete requirement
     dateOfBirth: {type: Date, required: true},
     address: Address,
     sex: {type: String, required: true},

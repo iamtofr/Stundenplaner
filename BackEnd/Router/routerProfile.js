@@ -15,12 +15,14 @@ app.use(function (req, res, next) {
 });
 
 let profile = mongoose.model('profile', schema.profile);
+let role = mongoose.model('role', schema.studentRole);
+
 
 app.route('/profile/')
     .get((req, res, next) => {
-        profile.find({}, function (err, profile) {
+        role.find({}, function (err, role) {
             if (err) throw err;
-            res.status(200).json(profile);
+            res.status(200).json(role);
         });
     })
 
@@ -31,6 +33,11 @@ app.route('/profile/')
         let newProfile = profile(req.body);
         let dateBirth = req.body.dateOfBirth.split(".");
         newProfile.dateOfBirth = new Date(dateBirth[2] + "-" + dateBirth[1] + "-" + dateBirth[0]);
+        role.find({_id: newProfile.role}, function(err, role){
+            if (err) throw err;
+        newProfile.role = role._id;
+        });
+
         console.log(newProfile.dateOfBirth);
         newProfile.save(function (err) {
             if (err) throw err;

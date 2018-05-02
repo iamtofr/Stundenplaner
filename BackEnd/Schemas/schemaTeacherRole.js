@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 let Schema = mongoose.Schema;
 
 let role = new Schema({
+    _id: {type: String, required: true, default: 'Teacher'},
     read: {type: Boolean, required: true},
     write: {type: Boolean, required: true},
     print: {type: Boolean, required: true},
