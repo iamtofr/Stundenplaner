@@ -14,7 +14,7 @@ app.use(function (req, res, next) {
     next();
 });
 
-let subject = mongoose.model('profile', schema.subject);
+let subject = mongoose.model('subject', schema.subject);
 
 
 //TODO Router

@@ -45,7 +45,17 @@ app.route('/profile/:id')
             if (err) throw err;
             res.status(200).json(profile);
         });
+    })
+    //TODO maybe move to /profile without id because id is present in body. Need get before patch.
+    .patch((req, res, next) => {
+        console.log(req.body);
+        let query = {'_id': req.body._id};
+        profile.findOneAndUpdate(query, req.body, {upsert: true, new: true}, function (err, profile) {
+            if (err) return res.send(500, {error: err});
+            res.status(200).json(profile);
+        });
     });
+
 
 app.all('*', (req, res, next) => {
     res.status(404).set('Content-Type', 'text/html');

@@ -14,7 +14,7 @@ app.use(function (req, res, next) {
     next();
 });
 
-let teacher = mongoose.model('profile', schema.teacher);
+let teacher = mongoose.model('teacher', schema.teacher);
 
 
 //TODO Router

@@ -14,7 +14,7 @@ app.use(function (req, res, next) {
     next();
 });
 
-let room = mongoose.model('profile', schema.room);
+let room = mongoose.model('room', schema.room);
 
 
 //TODO Router
