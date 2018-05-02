@@ -41,12 +41,12 @@ app.route('/profile/')
 
 app.route('/profile/:id')
     .get((req, res, next) => {
-        profile.find({'_id': req.params.id}, function (err, profile) {
+        let query ={'_id': req.params.id};
+        profile.find(query, function (err, profile) {
             if (err) throw err;
             res.status(200).json(profile);
         });
     })
-    //TODO maybe move to /profile without id because id is present in body. Need get before patch.
     .patch((req, res, next) => {
         console.log(req.body);
         let query = {'_id': req.body._id};
