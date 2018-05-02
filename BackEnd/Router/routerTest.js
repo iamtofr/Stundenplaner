@@ -33,7 +33,7 @@ let City = mongoose.model('city', citySchema);
 app.route('/person/')
     .get((req, res, next) => {
         Person.
-        findOne({name: 'Max'}).
+        findOne({_id: '5aea10717f15fb2a0fc964ee'}).
         populate('city').
         exec(function (err, person){
             res.status(200).json(person)
