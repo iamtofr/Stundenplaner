@@ -7,7 +7,7 @@ const Role = require('./schemaRole');
 let profile = new Schema({
     name: {type: String, required: true},
     surname: {type: String, required: true},
-    role: {Role, required: true},
+    role: {type: Role, required: true},
     dateOfBirth: {type: Date, required: false},
     address: Address,
     sex: {type: String, required: false},

@@ -14,50 +14,48 @@ app.use(function (req, res, next) {
     next();
 });
 
-let student = mongoose.model('student', schema.student);
+let role = mongoose.model('role', schema.role);
 
 app.route('/')
     .get((req, res, next) => {
-        student.find({}, function (err, student) {
+        role.find({}, function (err, role) {
             if (err) throw err;
-            res.status(200).json(student);
+            res.status(200).json(role);
         });
     })
-
 
     .post((req, res, next) => {
-        let newStudent = student(req.body);
-        newStudent.save(function (err) {
+        let newRole = role(req.body);
+        newRole.save(function (err) {
             if (err) throw err;
-            console.log('Student created!');
+            console.log('Subject created!');
         });
-        res.status(201).json(newStudent)
-    });
-
-
-
-
-
-
-
-
-app.route('/student/:id')
-    .get((req, res, next) => {
-        let query ={'_id': req.params.id};
-        student.find(query, function (err, student) {
-            if (err) throw err;
-            res.status(200).json(student);
-        });
+        res.status(201).json(newRole)
     })
+
     .patch((req, res, next) => {
-        console.log(req.body);
         let query = {'_id': req.body._id};
-        student.findOneAndUpdate(query, req.body, {upsert: true, new: true}, function (err, student) {
+        role.findOneAndUpdate(query, req.body, {upsert: true, new: true}, function (err, role) {
             if (err) return res.send(500, {error: err});
-            res.status(200).json(student);
+            res.status(200).json(role);
         });
     });
 
+app.route('/:id')
+    .get((req, res, next) => {
+        let query = {'_id': req.params.id};
+        role.find(query, function (err, role) {
+            if (err) throw err;
+            res.status(200).json(role);
+        })
+    })
+
+    .delete((req, res, next) => {
+        role.remove({_id: req.params.id}, function (err) {
+            if (err) return res.send(500, {error: err});
+            res.status(200).json();
+        });
+    });
 
 
 app.all('*', (req, res, next) => {
@@ -69,7 +67,7 @@ app.all('*', (req, res, next) => {
     }
     // respond with json
     else if (req.accepts('json')) {
-        res.send('404 (json) Not found');
+        res.send('404 (json) Notsssss found');
     }
     // default to plain-text
     else {

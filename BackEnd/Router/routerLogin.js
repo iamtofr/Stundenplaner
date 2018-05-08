@@ -14,7 +14,7 @@ app.use(function (req, res, next) {
     next();
 });
 
-let profile = mongoose.model('profile', schema.profile);
+let account = mongoose.model('profile', schema.account);
 
 app.route('/')
     .get((req, res, next) => {

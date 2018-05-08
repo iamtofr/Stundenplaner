@@ -2,7 +2,7 @@
 
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/testDB');
+// mongoose.connect('mongodb://localhost/testDB');
 const express = require('express');
 const app = express.Router();
 let Schema = mongoose.Schema;
