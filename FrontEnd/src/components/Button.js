@@ -8,7 +8,8 @@ let styles = {
     borderRadius: 5,
     color: Colors.light,
     fontSize: 16,
-    //boxShadow: `0px 1px 2px ${Colors.darkBlue}`,
+    boxShadow: `0px 1px 2px ${Colors.darkBlue}`,
+    outline: 0,
   },
 };
 

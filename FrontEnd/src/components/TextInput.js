@@ -30,6 +30,7 @@ const styles = {
     fontSize: 18,
     color: Colors.darkBlue,
     backgroundColor: Colors.light,
+    outline: 0,
   },
 };
 
@@ -53,7 +54,7 @@ class TextInput extends Component {
     return (
       <div style={styles.container}>
         <div style={styles.row}>
-          <img style={styles.icon} src={icon} />
+          <img style={styles.icon} src={icon} alt="icon" />
           <div style={styles.column}>
             <p style={styles.label}>{label}</p>
             <input style={styles.input} type={this.state.hideInput ? 'password' : 'text'} />
@@ -62,6 +63,7 @@ class TextInput extends Component {
             <img
               style={{ ...styles.icon, ...{ marginLeft: -25 } }}
               src={this.state.hideInput ? iconVisible : iconInvisible}
+              alt="hidePassword"
               onClick={this.onVisiblityClick}
             />
           )}
