@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import Button from './components/Button';
+import LandigPage from './pages/LandingPage';
 
 class App extends Component {
   render() {
     return (
       <div>
-        <Button />
+        <LandigPage />
       </div>
     );
   }
