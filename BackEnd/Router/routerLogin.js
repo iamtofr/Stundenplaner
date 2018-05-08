@@ -18,9 +18,11 @@ let account = mongoose.model('profile', schema.account);
 
 app.route('/')
     .get((req, res, next) => {
-        profile.find({}, function (err, profile) {
+
+        //TODO body must be checked if user/passwd is present and match with db entry
+        account.find({}, function (err, account) {
             if (err) throw err;
-            res.status(200).json(profile);
+            res.status(200).json(account);
         });
     })
 
@@ -28,23 +30,22 @@ app.route('/')
      * dateBirth parsing to DateObject according to specifications of type Date in MongoDb
      */
     .post((req, res, next) => {
-        let newProfile = profile(req.body);
-        let dateBirth = req.body.dateOfBirth.split(".");
-        newProfile.dateOfBirth = new Date(dateBirth[2] + "-" + dateBirth[1] + "-" + dateBirth[0]);
-        console.log(newProfile.dateOfBirth);
-        newProfile.save(function (err) {
+        let newAccount = profile(req.body);
+        newAccount.save(function (err) {
             if (err) throw err;
             console.log('Profile created!');
         });
-        res.status(201).json(newProfile)
+        res.status(201).json(newAccount)
     })
 
     .patch((req, res, next) => {
+
+        //TODO body must be checked if user/passwd is present and match with db entry
         console.log(req.body);
         let query = {'_id': req.body._id};
-        profile.findOneAndUpdate(query, req.body, {upsert: true, new: true}, function (err, profile) {
+        account.findOneAndUpdate(query, req.body, {upsert: true, new: true}, function (err, account) {
             if (err) return res.send(500, {error: err});
-            res.status(200).json(profile);
+            res.status(200).json(account);
         });
     });
 
@@ -52,15 +53,19 @@ app.route('/')
 
 app.route('/:id')
     .get((req, res, next) => {
+
+        //TODO body must be checked if user/passwd is present and match with db entry
         let query ={'_id': req.params.id};
-        profile.find(query, function (err, profile) {
+        account.find(query, function (err, account) {
             if (err) throw err;
-            res.status(200).json(profile);
+            res.status(200).json(account);
         });
     })
 
     .delete((req,res,next)=>{
-        profile.remove({ _id: req.params.id }, function (err) {
+
+        //TODO body must be checked if user/passwd is present and match with db entry
+        account.remove({ _id: req.params.id }, function (err) {
             if (err) return res.send(500, {error: err});
             res.status(200).json();
         });
