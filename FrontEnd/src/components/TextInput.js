@@ -16,7 +16,6 @@ const styles = {
     width: 25,
     height: 25,
     margin: 5,
-    pathFill: Colors.darkBlue,
   },
   label: {
     color: Colors.blue,

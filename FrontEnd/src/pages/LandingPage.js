@@ -7,9 +7,9 @@ import * as Colors from '../constants/Colors';
 
 const styles = {
   container: {
+    height: '100vh',
     display: 'flex',
     flexDirection: 'column',
-    height: '100vh',
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: Colors.light,
