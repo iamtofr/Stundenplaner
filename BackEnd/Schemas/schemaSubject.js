@@ -3,7 +3,9 @@ let Schema = mongoose.Schema;
 
 let subject = new Schema({
     name: {type: String, required: true},
-    state: {type: Number, required: true}
+    grade: {type: Number, required: true},
+    occurrences: {type: Number, required: true},
+    requiredRoomType: {type: String, required: true}
 });
 
 module.exports = subject;

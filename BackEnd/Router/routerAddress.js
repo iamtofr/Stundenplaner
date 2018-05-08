@@ -16,7 +16,6 @@ app.use(function (req, res, next) {
 
 let address = mongoose.model('address', schema.address);
 
-
 app.route('/address/')
     .get((req, res, next) => {
         address.find({}, function (err, address) {

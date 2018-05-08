@@ -4,29 +4,23 @@
 let address = require('./schemaAddress.js');
 let profile = require('./schemaProfile.js');
 let teacher = require('./schemaTeacher.js');
-let schoolClass = require('./schemaClass.js');
+let course = require('./schemaCourse.js');
 let student = require('./schemaStudent.js');
 let room = require('./schemaRoom.js');
-let studentRole = require('./schemaStudentRole.js');
-let teacherRole = require('./schemaTeacherRole.js');
-let adminRole = require('./schemaAdministratorRole.js');
-let managementRole = require('./schemaManagementRole.js');
+let role = require('./schemaRole.js');
 let subject = require('./schemaSubject.js');
-let classSubject = require('./schemaClassSubject.js');
+let lecture = require('./schemaLecture.js');
 
 const collection = {
     address: address,
     profile: profile,
     teacher: teacher,
-    schoolClass: schoolClass,
+    course: course,
     student: student,
     room: room,
-    studentRole: studentRole,
-    teacherRole: teacherRole,
-    adminRole: adminRole,
-    managementRole: managementRole,
+    role: role,
     subject: subject,
-    classSubject: classSubject
+    lecture: lecture
 };
 
 module.exports = collection;
