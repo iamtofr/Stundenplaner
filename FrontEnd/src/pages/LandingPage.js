@@ -37,11 +37,11 @@ class LandingPage extends Component {
 
   handleLogin = () => {
     console.log('handleLogin');
-    //fetch('https://api.stundenplaner.online/profile')
-    //  .then(response => response.json())
-    //  .then(responseJson => console.log(responseJson));
+    fetch('https://api.stundenplaner.online/profile')
+      .then(response => response.json())
+      .then(responseJson => console.log(responseJson));
 
-    this.props.history.push('/dashboard');
+    //this.props.history.push('/dashboard');
   };
 
   render() {

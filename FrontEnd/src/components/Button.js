@@ -4,7 +4,7 @@ import * as Colors from '../constants/Colors';
 let styles = {
   button: {
     padding: 10,
-    border: 'none',
+    border: 0,
     borderRadius: 5,
     color: Colors.light,
     fontSize: 16,
