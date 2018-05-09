@@ -23,6 +23,7 @@ app.route('/')
             res.status(200).json(address);
         });
     })
+
     .post((req, res, next) => {
         let newAddress = address(req.body);
         newAddress.save(function (err) {

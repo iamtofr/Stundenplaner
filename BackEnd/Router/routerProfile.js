@@ -52,10 +52,12 @@ app.route('/')
 
 app.route('/:id')
     .get((req, res, next) => {
-        let query ={'_id': req.params.id};
-        profile.find(query, function (err, profile) {
+        profile.
+        findOne({ _id: req.params.id }).
+        populate('role').populate('address').
+        exec(function (err, result) {
             if (err) throw err;
-            res.status(200).json(profile);
+            res.status(200).json(result);
         });
     })
 

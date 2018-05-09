@@ -1,15 +1,12 @@
 const mongoose = require('mongoose');
 let Schema = mongoose.Schema;
 
-const Address = require('./schemaAddress');
-const Role = require('./schemaRole');
-
 let profile = new Schema({
     name: {type: String, required: true},
     surname: {type: String, required: true},
-    role: {type: Role, required: true},
+    role: {type: Schema.Types.ObjectId, ref: 'role', required: true},
     dateOfBirth: {type: Date, required: false},
-    address: Address,
+    address: {type: Schema.Types.ObjectId, ref: 'address', required: true},
     sex: {type: String, required: false},
     nationality: {type: String, required: false},
     email: {type: String, required: false},
