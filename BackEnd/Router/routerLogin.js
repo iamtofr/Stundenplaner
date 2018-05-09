@@ -6,6 +6,7 @@ mongoose.connect('mongodb://localhost/stundenplaner');
 const express = require('express');
 const app = express.Router();
 
+// let permissionChecker = require('./permissionChecker');
 const schema = require('../Schemas/schemas');
 
 app.use(bodyParser.json());
@@ -13,11 +14,12 @@ app.use(function (req, res, next) {
     console.log(req.body);
     next();
 });
-
 let account = mongoose.model('account', schema.account);
 
 app.route('/')
     .get((req, res, next) => {
+        // permissionChecker(req.query.t);
+        // console.log(permissionChecker(1234));
 
         //TODO body must be checked if user/passwd is present and match with db entry
         account.find({}, function (err, account) {
