@@ -17,6 +17,7 @@ app.use(function (req, res, next) {
 let student = mongoose.model('student', schema.student);
 
 app.route('/')
+
     .get((req, res, next) => {
         student.findAll({}).populate('profile').exec(function (err, result) {
             if (err) throw err;
