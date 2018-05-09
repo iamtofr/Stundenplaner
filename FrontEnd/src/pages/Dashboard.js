@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import * as Colors from '../constants/Colors';
+import Profile from '../components/Profile';
 
 const styles = {
   container: {
@@ -8,7 +9,7 @@ const styles = {
     height: '100vh',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: Colors.darkBlue,
+    backgroundColor: Colors.light,
   },
 };
 
@@ -18,7 +19,11 @@ class Dashboard extends Component {
   }
 
   render() {
-    return <div style={styles.container} />;
+    return (
+      <div style={styles.container}>
+        <Profile />
+      </div>
+    );
   }
 }
 

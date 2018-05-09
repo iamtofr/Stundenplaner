@@ -10,7 +10,6 @@ const styles = {
   container: {
     display: 'flex',
     flexDirection: 'column',
-    //alignItems: 'center',
     borderRadius: 10,
     backgroundColor: Colors.light,
   },
@@ -34,7 +33,7 @@ const styles = {
     borderBottom: `1px solid ${Colors.darkBlue}`,
     fontSize: 18,
     color: Colors.darkBlue,
-    backgroundColor: Colors.light,
+    background: 0,
     outline: 0,
   },
   error: {
@@ -135,7 +134,7 @@ class Login extends Component {
           />
         </div>
         <p style={styles.error}>{this.state.passwordError}</p>
-        <Button text="Einloggen" onClick={this.onClick} />
+        <Button text="Einloggen" color={Colors.blue} onClick={this.onClick} />
         <a style={styles.link} href="" onClick={this.onLinkClicked}>
           Passwort vergessen
         </a>

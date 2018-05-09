@@ -4,7 +4,7 @@ import * as Colors from '../constants/Colors';
 let styles = {
   button: {
     alignSelf: 'center',
-    padding: 10,
+    padding: `8px 12px 8px 12px`,
     border: 0,
     borderRadius: 5,
     color: Colors.light,
@@ -15,39 +15,14 @@ let styles = {
 };
 
 class Button extends Component {
-  constructor() {
-    super();
-    this.state = {
-      clicked: false,
-    };
-  }
-
-  onRelease = () => {
-    this.setState({
-      clicked: false,
-    });
-    this.props.onClick();
-  };
-
-  onPress = () => {
-    this.setState({
-      clicked: true,
-    });
-  };
-
   render() {
-    const { text } = this.props;
-
-    const buttonColor = this.state.clicked
-      ? { backgroundImage: `linear-gradient(to bottom, ${Colors.blue}, ${Colors.lightBlue})` }
-      : { backgroundImage: `linear-gradient(to bottom, ${Colors.lightBlue}, ${Colors.blue})` };
+    const { style, text, color, onClick } = this.props;
 
     return (
       <button
-        style={{ ...styles.button, ...buttonColor }}
+        style={{ ...styles.button, ...style, ...{ backgroundColor: color } }}
         type="button"
-        onMouseDown={this.onPress}
-        onMouseUp={this.onRelease}
+        onClick={onClick}
       >
         {text}
       </button>
