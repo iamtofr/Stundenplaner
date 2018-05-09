@@ -16,8 +16,47 @@ app.use(function (req, res, next) {
 
 let teacher = mongoose.model('teacher', schema.teacher);
 
+app.route('/')
+    .get((req, res, next) => {
+        teacher.findAll({}).populate('profile').exec(function (err, result) {
+            if (err) throw err;
+            res.status(200).json(result);
+        });
+    })
 
-//TODO Router
+    .post((req, res, next) => {
+        let newTeacher = profile(req.body);
+        newTeacher.save(function (err) {
+            if (err) throw err;
+            console.log('Student created!');
+        });
+        res.status(201).json(newTeacher)
+    })
+
+    .patch((req, res, next) => {
+        let query = {'_id': req.body._id};
+        teacher.findOneAndUpdate(query, req.body, {upsert: true, new: true}, function (err, teacher) {
+            if (err) return res.send(500, {error: err});
+            res.status(200).json(teacher);
+        });
+    });
+
+
+app.route('/:id')
+    .get((req, res, next) => {
+        teacher.findOne({_id: req.params.id}).populate('profile').exec(function (err, result) {
+            if (err) throw err;
+            res.status(200).json(result);
+        });
+    })
+
+    .delete((req,res,next)=>{
+        teacher.remove({ _id: req.params.id }, function (err) {
+            if (err) return res.send(500, {error: err});
+            res.status(200).json();
+        });
+    });
+
 
 
 
