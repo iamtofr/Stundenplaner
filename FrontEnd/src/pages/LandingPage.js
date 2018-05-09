@@ -23,7 +23,7 @@ const styles = {
   title: {
     fontSize: 48,
     fontWeight: 'bold',
-    margin: 0,
+    marginBottom: -10,
     color: Colors.darkBlue,
     marginLeft: 20,
   },
@@ -36,10 +36,12 @@ class LandingPage extends Component {
   }
 
   handleLogin = () => {
-    console.log('handleLogin');
-    fetch('https://api.stundenplaner.online/profile')
+    fetch('https://api.stundenplaner.online/profile', {
+      method: 'GET',
+      mode: 'no-cors',
+    })
       .then(response => response.json())
-      .then(responseJson => console.log(responseJson));
+      .catch(err => console.log(err));
 
     //this.props.history.push('/dashboard');
   };

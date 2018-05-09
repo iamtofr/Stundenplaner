@@ -3,6 +3,7 @@ import * as Colors from '../constants/Colors';
 
 let styles = {
   button: {
+    alignSelf: 'center',
     padding: 10,
     border: 0,
     borderRadius: 5,
@@ -35,7 +36,7 @@ class Button extends Component {
   };
 
   render() {
-    const { text, margin } = this.props;
+    const { text } = this.props;
 
     const buttonColor = this.state.clicked
       ? { backgroundImage: `linear-gradient(to bottom, ${Colors.blue}, ${Colors.lightBlue})` }
@@ -43,7 +44,7 @@ class Button extends Component {
 
     return (
       <button
-        style={{ ...styles.button, ...buttonColor, ...{ margin: margin } }}
+        style={{ ...styles.button, ...buttonColor }}
         type="button"
         onMouseDown={this.onPress}
         onMouseUp={this.onRelease}

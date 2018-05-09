@@ -10,7 +10,7 @@ const styles = {
   container: {
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center',
+    //alignItems: 'center',
     borderRadius: 10,
     backgroundColor: Colors.light,
   },
@@ -41,6 +41,11 @@ const styles = {
     height: 20,
     marginLeft: 35,
     color: 'red',
+  },
+  link: {
+    alignSelf: 'center',
+    marginTop: 30,
+    color: Colors.darkBlue,
   },
 };
 
@@ -81,6 +86,10 @@ class Login extends Component {
     this.setState({
       hideInput: !this.state.hideInput,
     });
+  };
+
+  onLinkClicked = e => {
+    e.preventDefault();
   };
 
   render() {
@@ -126,7 +135,10 @@ class Login extends Component {
           />
         </div>
         <p style={styles.error}>{this.state.passwordError}</p>
-        <Button margin={50} text="Einloggen" onClick={this.onClick} />
+        <Button text="Einloggen" onClick={this.onClick} />
+        <a style={styles.link} href="" onClick={this.onLinkClicked}>
+          Passwort vergessen
+        </a>
       </form>
     );
   }
