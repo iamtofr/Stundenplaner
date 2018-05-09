@@ -28,7 +28,7 @@ app.route('/')
         let newTeacher = profile(req.body);
         newTeacher.save(function (err) {
             if (err) throw err;
-            console.log('Student created!');
+            console.log('Teacher created!');
         });
         res.status(201).json(newTeacher)
     })

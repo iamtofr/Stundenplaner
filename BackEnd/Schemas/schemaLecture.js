@@ -7,11 +7,11 @@ const Subject = require('./schemaSubject');
 const Period = require('./schemaPeriod');
 
 let lecture = new Schema({
-    teacher: {type: Teacher, required: false},
-    room: {type: Room, required: false},
-    course: {type: Course, required: false},
-    subject: {type: Subject, required: false},
-    period: {type: Period, required: false},
+    teacher: {type: Schema.Types.ObjectId, ref:'teacher', required: false},
+    room: {type: Schema.Types.ObjectId, ref:'room', required: false},
+    course: {type: Schema.Types.ObjectId, ref:'course', required: false},
+    subject: {type: Schema.Types.ObjectId, ref:'subject', required: false},
+    period: {type: Schema.Types.ObjectId, ref:'period', required: false},
     pinned: {type: Boolean, required: true}
 });
 
