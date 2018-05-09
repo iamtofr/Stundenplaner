@@ -37,7 +37,10 @@ class LandingPage extends Component {
 
   handleLogin = () => {
     console.log('handleLogin');
-    fetch('https://api.stundenplaner.online/profile')
+    fetch('https://api.stundenplaner.online/login',
+      {
+          mode: 'no-cors'
+      })
       .then(response => response.json())
       .then(responseJson => console.log(responseJson));
 

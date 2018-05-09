@@ -14,7 +14,7 @@ app.use(function (req, res, next) {
     next();
 });
 
-let account = mongoose.model('profile', schema.account);
+let account = mongoose.model('account', schema.account);
 
 app.route('/')
     .get((req, res, next) => {
@@ -26,26 +26,26 @@ app.route('/')
         });
     })
 
-    /**
-     * dateBirth parsing to DateObject according to specifications of type Date in MongoDb
-     */
     .post((req, res, next) => {
-        let newAccount = profile(req.body);
+        let newAccount = account(req.body);
         newAccount.save(function (err) {
             if (err) throw err;
-            console.log('Profile created!');
+            console.log('Account created!');
         });
         res.status(201).json(newAccount)
-    })
+    });
 
-    .patch((req, res, next) => {
 
-        //TODO body must be checked if user/passwd is present and match with db entry
-        console.log(req.body);
-        let query = {'_id': req.body._id};
-        account.findOneAndUpdate(query, req.body, {upsert: true, new: true}, function (err, account) {
-            if (err) return res.send(500, {error: err});
-            res.status(200).json(account);
+
+
+app.route('/test/:id')
+    .get((req, res, next) => {
+        account.
+        findOne({ _id: '5af2cbb912ce600ec322e82a' }).
+        populate('profile').
+        exec(function (err, result) {
+            if (err) throw err;
+            res.status(200).json(result);
         });
     });
 
@@ -53,11 +53,21 @@ app.route('/')
 
 app.route('/:id')
     .get((req, res, next) => {
+        account.
+        findOne({ _id: req.params.id }).
+        populate('profile').
+        exec(function (err, result) {
+            if (err) throw err;
+            res.status(200).json(result);
+        });
+    })
+
+    .patch((req, res, next) => {
 
         //TODO body must be checked if user/passwd is present and match with db entry
-        let query ={'_id': req.params.id};
-        account.find(query, function (err, account) {
-            if (err) throw err;
+        let query = {'_id': req.params.id};
+        account.findOneAndUpdate(query, req.body, {upsert: true, new: true}, function (err, account) {
+            if (err) return res.send(500, {error: err});
             res.status(200).json(account);
         });
     })
