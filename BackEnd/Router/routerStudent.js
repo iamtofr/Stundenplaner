@@ -18,43 +18,42 @@ let student = mongoose.model('student', schema.student);
 
 app.route('/')
     .get((req, res, next) => {
-        student.find({}, function (err, student) {
+        student.findAll({}).populate('profile').exec(function (err, result) {
             if (err) throw err;
-            res.status(200).json(student);
+            res.status(200).json(result);
         });
     })
 
-
     .post((req, res, next) => {
-        let newStudent = student(req.body);
+        let newStudent = profile(req.body);
         newStudent.save(function (err) {
             if (err) throw err;
             console.log('Student created!');
         });
         res.status(201).json(newStudent)
-    });
-
-
-
-
-
-
-
-
-app.route('/student/:id')
-    .get((req, res, next) => {
-        let query ={'_id': req.params.id};
-        student.find(query, function (err, student) {
-            if (err) throw err;
-            res.status(200).json(student);
-        });
     })
+
     .patch((req, res, next) => {
-        console.log(req.body);
         let query = {'_id': req.body._id};
         student.findOneAndUpdate(query, req.body, {upsert: true, new: true}, function (err, student) {
             if (err) return res.send(500, {error: err});
             res.status(200).json(student);
+        });
+    });
+
+
+app.route('/:id')
+    .get((req, res, next) => {
+        student.findOne({_id: req.params.id}).populate('profile').exec(function (err, result) {
+            if (err) throw err;
+            res.status(200).json(result);
+        });
+    })
+
+    .delete((req,res,next)=>{
+        student.remove({ _id: req.params.id }, function (err) {
+            if (err) return res.send(500, {error: err});
+            res.status(200).json();
         });
     });
 

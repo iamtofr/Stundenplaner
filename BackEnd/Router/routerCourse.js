@@ -49,7 +49,14 @@ app.route('/:id')
             if (err) throw err;
             res.status(200).json(result);
         });
+    })
+
+.delete((req,res,next)=>{
+    course.remove({ _id: req.params.id }, function (err) {
+        if (err) return res.send(500, {error: err});
+        res.status(200).json();
     });
+});
 
 
 app.all('*', (req, res, next) => {
