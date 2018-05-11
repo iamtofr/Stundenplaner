@@ -48,7 +48,28 @@ app.route('/')
         });
     });
 
-
+//just for input subject array!!!!!!
+// app.route('/fillDatabase')
+//     .get((req, res, next) => {
+//         subject.find({}, function (err, subject) {
+//             if (err) throw err;
+//             res.status(200).json(subject);
+//         });
+//     })
+//
+//     .post((req, res, next) => {
+//         let input = req.body;
+//         console.log(input.popopo);
+//         for (let f of input.popopo){
+//             var newSubject = new profile(f);
+//             newSubject.save(function (err) {
+//                 if (err) throw err;
+//                 console.log('Subject created!');
+//             });
+//
+//         }
+//         res.status(201).json(newSubject)
+//     });
 
 app.route('/:id')
     .get((req, res, next) => {
