@@ -18,6 +18,7 @@ const styles = {
   },
   infoBox: {
     display: 'flex',
+    flex: 'auto',
     flexDirection: 'column',
     padding: 5,
     margin: 10,
@@ -52,11 +53,11 @@ const styles = {
   },
   notes: {
     display: 'flex',
+    flex: 1,
     background: 0,
     border: 0,
     outline: 0,
     fontSize: 14,
-    rows: 10,
   },
   buttons: {
     display: 'flex',
@@ -87,7 +88,8 @@ class Profile extends Component {
       subject2: 'Physik',
       subject3: 'Informatik',
       subject4: 'WMathematik',
-      notes: '',
+      notes:
+        'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.',
     };
   }
 
