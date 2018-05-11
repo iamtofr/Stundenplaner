@@ -13,7 +13,7 @@ const styles = {
     borderRadius: 10,
     backgroundColor: Colors.light,
   },
-  inputField: {
+  textInput: {
     display: 'flex',
     alignItems: 'flex-end',
   },
@@ -94,7 +94,7 @@ class Login extends Component {
   render() {
     return (
       <form style={styles.container}>
-        <div style={styles.inputField}>
+        <div style={styles.textInput}>
           <img style={styles.icon} src={iconUser} alt="userIcon" />
           <div style={styles.column}>
             <p style={styles.label}>Login</p>
@@ -111,7 +111,7 @@ class Login extends Component {
           </div>
         </div>
         <p style={styles.error}>{this.state.nameError}</p>
-        <div style={styles.inputField}>
+        <div style={styles.textInput}>
           <img style={styles.icon} src={iconPassword} alt="passwordIcon" />
           <div style={styles.column}>
             <p style={styles.label}>Passwort</p>

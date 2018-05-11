@@ -6,6 +6,7 @@ const styles = {
     display: 'flex',
     flex: 1,
     flexDirection: 'column',
+    margin: 10,
   },
   label: {
     fontSize: 16,
@@ -22,16 +23,16 @@ const styles = {
   },
 };
 
-class InputField extends Component {
+class TextInput extends Component {
   render() {
-    const { label, value, type } = this.props;
+    const { label, value, type, onChange } = this.props;
     return (
       <div style={styles.container}>
         {label && <p style={styles.label}>{label}</p>}
-        <input style={styles.input} type={type} value={value} />
+        <input style={styles.input} type={type} value={value} onChange={onChange} />
       </div>
     );
   }
 }
 
-export default InputField;
+export default TextInput;

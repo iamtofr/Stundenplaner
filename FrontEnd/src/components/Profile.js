@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import InputField from './InputField';
+import TextInput from './TextInput';
 import Button from './Button';
 import * as Colors from '../constants/Colors';
 import Logo from '../assets/logo.svg';
@@ -14,39 +14,31 @@ const styles = {
   },
   data: {
     display: 'flex',
-    flex: 4,
     flexDirection: 'column',
+  },
+  infoBox: {
+    display: 'flex',
+    flexDirection: 'column',
+    padding: 5,
+    margin: 10,
+    backgroundColor: Colors.lightGrey,
   },
   person: {
     display: 'flex',
-    flex: 1,
-    flexDirection: 'row',
-    padding: 5,
-    margin: 10,
-    backgroundColor: Colors.lightGrey,
   },
   contact: {
     display: 'flex',
-    flex: 2,
-    padding: 5,
-    margin: 10,
-    backgroundColor: Colors.lightGrey,
   },
   contactColumn: {
     display: 'flex',
+    flex: 1,
     flexDirection: 'column',
   },
   subjects: {
     display: 'flex',
-    flex: 1,
-    flexDirection: 'row',
-    padding: 5,
-    margin: 10,
-    backgroundColor: Colors.lightGrey,
   },
   side: {
     display: 'flex',
-    flex: 1,
     flexDirection: 'column',
   },
   title: {
@@ -59,10 +51,12 @@ const styles = {
     borderRadius: 100,
   },
   notes: {
-    width: 300,
-    height: 200,
-    padding: 5,
-    backgroundColor: Colors.lightGrey,
+    display: 'flex',
+    background: 0,
+    border: 0,
+    outline: 0,
+    fontSize: 14,
+    rows: 10,
   },
   buttons: {
     display: 'flex',
@@ -74,52 +68,244 @@ const styles = {
 };
 
 class Profile extends Component {
+  constructor() {
+    super();
+    this.state = {
+      firstName: 'Max',
+      lastName: 'Mustermann',
+      initials: 'Mn',
+      sex: 'männlich',
+      dateOfBirth: '01.01.1960',
+      nationality: 'deutsch',
+      address: '12037, Berlin, Superlange - Musterstraße, 1',
+      phone: '+49 176 000 000 00',
+      email: 'mail@gmail.de',
+      contact: 'Margarete Mustermann, Ehefrau',
+      contactPhone: '+49 176 000 000 00',
+      contactEmail: 'mail@gmail.de',
+      subject1: 'Mathematik',
+      subject2: 'Physik',
+      subject3: 'Informatik',
+      subject4: 'WMathematik',
+      notes: '',
+    };
+  }
+
   render() {
+    const {
+      firstName,
+      lastName,
+      initials,
+      sex,
+      dateOfBirth,
+      nationality,
+      address,
+      phone,
+      email,
+      contact,
+      contactPhone,
+      contactEmail,
+      subject1,
+      subject2,
+      subject3,
+      subject4,
+      notes,
+    } = this.state;
+
     return (
       <div style={styles.container}>
         <div style={styles.info}>
           <div style={styles.data}>
-            <div style={styles.person}>
+            <div style={styles.infoBox}>
               <p style={styles.title}>Persönliche Daten</p>
-              <InputField type="text" label="Vorname" value="Max" />
-              <InputField type="text" label="Nachname" value="Mustermann" />
-              <InputField type="text" label="Kürzel" value="Mn" />
-              <InputField type="text" label="Geschlecht" value="männlich" />
-              <InputField type="text" label="Geburtsdatum" value="01.01.1960" />
-              <InputField type="text" label="Nationalität" value="deutsch" />
+              <div style={styles.person}>
+                <TextInput
+                  type="text"
+                  label="Vorname"
+                  value={firstName}
+                  onChange={event =>
+                    this.setState({
+                      firstName: event.target.value,
+                    })
+                  }
+                />
+                <TextInput
+                  type="text"
+                  label="Nachname"
+                  value={lastName}
+                  onChange={event =>
+                    this.setState({
+                      lastName: event.target.value,
+                    })
+                  }
+                />
+                <TextInput
+                  type="text"
+                  label="Kürzel"
+                  value={initials}
+                  onChange={event =>
+                    this.setState({
+                      initials: event.target.value,
+                    })
+                  }
+                />
+                <TextInput
+                  type="text"
+                  label="Geschlecht"
+                  value={sex}
+                  onChange={event =>
+                    this.setState({
+                      sex: event.target.value,
+                    })
+                  }
+                />
+                <TextInput
+                  type="text"
+                  label="Geburtsdatum"
+                  value={dateOfBirth}
+                  onChange={event =>
+                    this.setState({
+                      dateOfBirth: event.target.value,
+                    })
+                  }
+                />
+                <TextInput
+                  type="text"
+                  label="Nationalität"
+                  value={nationality}
+                  onChange={event =>
+                    this.setState({
+                      nationality: event.target.value,
+                    })
+                  }
+                />
+              </div>
             </div>
-            <div style={styles.contact}>
+            <div style={styles.infoBox}>
               <p style={styles.title}>Kontaktdaten</p>
-              <div style={styles.contactColumn}>
-                <InputField
-                  type="text"
-                  label="Anschrift"
-                  value="12037, Berlin, Superlange - Musterstraße, 1"
-                />
-                <InputField type="tel" label="Telefonnummer" value="+49 176 000 000 00" />
-                <InputField type="email" label="E-Mail" value="mail@gmail.de" />
-              </div>
-              <div style={styles.contactColumn}>
-                <InputField
-                  type="text"
-                  label="Kontaktperson"
-                  value="Margarete Mustermann, Ehefrau"
-                />
-                <InputField type="tel" label="Telefonnummer" value="+49 176 000 000 00" />
-                <InputField type="email" label="E-Mail" value="mail@gmail.de" />
+              <div style={styles.contact}>
+                <div style={styles.contactColumn}>
+                  <TextInput
+                    type="text"
+                    label="Anschrift"
+                    value={address}
+                    onChange={event =>
+                      this.setState({
+                        address: event.target.value,
+                      })
+                    }
+                  />
+                  <TextInput
+                    type="tel"
+                    label="Telefonnummer"
+                    value={phone}
+                    onChange={event =>
+                      this.setState({
+                        phone: event.target.value,
+                      })
+                    }
+                  />
+                  <TextInput
+                    type="email"
+                    label="E-Mail"
+                    value={email}
+                    onChange={event =>
+                      this.setState({
+                        email: event.target.value,
+                      })
+                    }
+                  />
+                </div>
+                <div style={styles.contactColumn}>
+                  <TextInput
+                    type="text"
+                    label="Kontaktperson"
+                    value={contact}
+                    onChange={event =>
+                      this.setState({
+                        contact: event.target.value,
+                      })
+                    }
+                  />
+                  <TextInput
+                    type="tel"
+                    label="Telefonnummer"
+                    value={contactPhone}
+                    onChange={event =>
+                      this.setState({
+                        contactPhone: event.target.value,
+                      })
+                    }
+                  />
+                  <TextInput
+                    type="email"
+                    label="E-Mail"
+                    value={contactEmail}
+                    onChange={event =>
+                      this.setState({
+                        contactEmail: event.target.value,
+                      })
+                    }
+                  />
+                </div>
               </div>
             </div>
-            <div style={styles.subjects}>
+            <div style={styles.infoBox}>
               <p style={styles.title}>Unterrichtete Fächer</p>
-              <InputField type="text" value="Mathematik" />
-              <InputField type="text" value="Physik" />
-              <InputField type="text" value="Informatik" />
+              <div style={styles.subjects}>
+                <TextInput
+                  type="text"
+                  value={subject1}
+                  onChange={event =>
+                    this.setState({
+                      subject1: event.target.value,
+                    })
+                  }
+                />
+                <TextInput
+                  type="text"
+                  value={subject2}
+                  onChange={event =>
+                    this.setState({
+                      subject2: event.target.value,
+                    })
+                  }
+                />
+                <TextInput
+                  type="text"
+                  value={subject3}
+                  onChange={event =>
+                    this.setState({
+                      subject3: event.target.value,
+                    })
+                  }
+                />
+                <TextInput
+                  type="text"
+                  value={subject4}
+                  onChange={event =>
+                    this.setState({
+                      subject4: event.target.value,
+                    })
+                  }
+                />
+              </div>
             </div>
           </div>
           <div style={styles.side}>
             <img style={styles.avatar} src={Logo} alt="Avatar" />
-            <p style={styles.title}>Notizen</p>
-            <div style={styles.notes} />
+            <div style={styles.infoBox}>
+              <p style={styles.title}>Notizen</p>
+              <textarea
+                style={styles.notes}
+                value={notes}
+                onChange={event =>
+                  this.setState({
+                    notes: event.target.value,
+                  })
+                }
+              />
+            </div>
           </div>
         </div>
         <div style={styles.buttons}>

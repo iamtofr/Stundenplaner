@@ -36,15 +36,11 @@ class LandingPage extends Component {
   }
 
   handleLogin = () => {
-    fetch('https://api.stundenplaner.online/profile', {
-      headers: { 'Access-Control-Allow-Origin': '*' },
-      //method: 'GET',
-      //mode: 'no-cors',
-    })
+    fetch('https://api.stundenplaner.online/profile')
       .then(response => response.json())
       .catch(err => console.log(err));
 
-    // this.props.history.push('/dashboard');
+    this.props.history.push('/dashboard');
   };
 
   render() {
