@@ -9,10 +9,12 @@ import org.optaplanner.core.api.domain.variable.PlanningVariable
 
 @PlanningEntity(difficultyWeightFactoryClass = LectureDifficultyWeightFactory::class)
 class Lecture: Persistable() {
+  @get:PlanningPin
+  var pinned: Boolean = false
+
   var course: Course? = null
 
-  @get:PlanningPin
-  var pinned: Boolean? = false
+  var subject: Subject? = null
 
   @get:PlanningVariable(valueRangeProviderRefs = ["allPeriods"],
     strengthWeightFactoryClass = PeriodStrengthWeightFactory::class)

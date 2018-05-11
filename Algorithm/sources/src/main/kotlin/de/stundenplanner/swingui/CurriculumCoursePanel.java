@@ -21,6 +21,7 @@ import org.optaplanner.examples.common.swingui.CommonIcons;
 import org.optaplanner.examples.common.swingui.SolutionPanel;
 import org.optaplanner.examples.common.swingui.components.LabeledComboBoxRenderer;
 import org.optaplanner.examples.common.swingui.timetable.TimeTablePanel;
+import org.optaplanner.examples.curriculumcourse.domain.Curriculum;
 import org.optaplanner.swing.impl.SwingUtils;
 import org.optaplanner.swing.impl.TangoColorFactory;
 
@@ -75,14 +76,14 @@ public class CurriculumCoursePanel extends SolutionPanel<CourseSchedule> {
 
         roomsPanel.defineColumnHeaderByKey(HEADER_COLUMN_GROUP1); // Day header
         roomsPanel.defineColumnHeaderByKey(HEADER_COLUMN); // Period header
-        for (Room room : courseSchedule.getRoomList()) {
+        for (Room room : courseSchedule.getRooms()) {
             roomsPanel.defineColumnHeader(room, footprintWidth);
         }
         roomsPanel.defineColumnHeader(null, footprintWidth); // Unassigned
 
         teachersPanel.defineColumnHeaderByKey(HEADER_COLUMN_GROUP1); // Day header
         teachersPanel.defineColumnHeaderByKey(HEADER_COLUMN); // Period header
-        for (Teacher teacher : courseSchedule.getTeacherList()) {
+        for (Teacher teacher : courseSchedule.getTeachers()) {
             teachersPanel.defineColumnHeader(teacher, footprintWidth);
         }
 
@@ -95,7 +96,7 @@ public class CurriculumCoursePanel extends SolutionPanel<CourseSchedule> {
         roomsPanel.defineRowHeaderByKey(HEADER_ROW); // Room header
         teachersPanel.defineRowHeaderByKey(HEADER_ROW); // Teacher header
         curriculaPanel.defineRowHeaderByKey(HEADER_ROW); // Curriculum header
-        for (Period period : courseSchedule.getPeriodList()) {
+        for (Period period : courseSchedule.getPeriods()) {
             roomsPanel.defineRowHeader(period);
             teachersPanel.defineRowHeader(period);
             curriculaPanel.defineRowHeader(period);
@@ -120,7 +121,7 @@ public class CurriculumCoursePanel extends SolutionPanel<CourseSchedule> {
     }
 
     private void fillRoomCells(CourseSchedule courseSchedule) {
-        for (Room room : courseSchedule.getRoomList()) {
+        for (Room room : courseSchedule.getRooms()) {
             roomsPanel.addColumnHeader(room, HEADER_ROW,
                     createTableHeader(new JLabel(room.getLabel(), SwingConstants.CENTER)));
         }
@@ -129,7 +130,7 @@ public class CurriculumCoursePanel extends SolutionPanel<CourseSchedule> {
     }
 
     private void fillTeacherCells(CourseSchedule courseSchedule) {
-        for (Teacher teacher : courseSchedule.getTeacherList()) {
+        for (Teacher teacher : courseSchedule.getTeachers()) {
             teachersPanel.addColumnHeader(teacher, HEADER_ROW,
                     createTableHeader(new JLabel(teacher.toString(), SwingConstants.CENTER)));
         }
@@ -170,8 +171,8 @@ public class CurriculumCoursePanel extends SolutionPanel<CourseSchedule> {
     }
 
     private void fillLectureCells(CourseSchedule courseSchedule) {
-        preparePlanningEntityColors(courseSchedule.getLectureList());
-        for (Lecture lecture : courseSchedule.getLectureList()) {
+        preparePlanningEntityColors(courseSchedule.getLectures());
+        for (Lecture lecture : courseSchedule.getLectures()) {
             Color color = determinePlanningEntityColor(lecture, lecture.getCourse());
             String toolTip = determinePlanningEntityTooltip(lecture);
             roomsPanel.addCell(lecture.getRoom(), lecture.getPeriod(),
@@ -223,7 +224,7 @@ public class CurriculumCoursePanel extends SolutionPanel<CourseSchedule> {
             JPanel listFieldsPanel = new JPanel(new GridLayout(3, 2));
             listFieldsPanel.add(new JLabel("Period:"));
             CourseSchedule courseSchedule = getSolution();
-            List<Period> periodList = courseSchedule.getPeriodList();
+            List<Period> periodList = courseSchedule.getPeriods();
             // Add 1 to array size to add null, which makes the entity unassigned
             JComboBox periodListField = new JComboBox(
                     periodList.toArray(new Object[periodList.size() + 1]));
@@ -231,7 +232,7 @@ public class CurriculumCoursePanel extends SolutionPanel<CourseSchedule> {
             periodListField.setSelectedItem(lecture.getPeriod());
             listFieldsPanel.add(periodListField);
             listFieldsPanel.add(new JLabel("Room:"));
-            List<Room> roomList = courseSchedule.getRoomList();
+            List<Room> roomList = courseSchedule.getRooms();
             // Add 1 to array size to add null, which makes the entity unassigned
             JComboBox roomListField = new JComboBox(
                     roomList.toArray(new Object[roomList.size() + 1]));

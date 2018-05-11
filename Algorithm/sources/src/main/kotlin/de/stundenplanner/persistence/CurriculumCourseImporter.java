@@ -19,6 +19,8 @@ package de.stundenplanner.persistence;
 import de.stundenplanner.domain.*;
 import org.optaplanner.examples.common.persistence.AbstractTxtSolutionImporter;
 import org.optaplanner.examples.common.persistence.SolutionConverter;
+import org.optaplanner.examples.curriculumcourse.domain.Curriculum;
+import org.optaplanner.examples.curriculumcourse.domain.UnavailablePeriodPenalty;
 
 import java.io.IOException;
 import java.math.BigInteger;
@@ -81,18 +83,18 @@ public class CurriculumCourseImporter extends AbstractTxtSolutionImporter<Course
       readConstantLine("END\\.");
       createLectureList(schedule);
 
-      int possibleForOneLectureSize = schedule.getPeriodList().size() * schedule.getRoomList().size();
+      int possibleForOneLectureSize = schedule.getPeriods().size() * schedule.getRooms().size();
       BigInteger possibleSolutionSize = BigInteger.valueOf(possibleForOneLectureSize).pow(
-        schedule.getLectureList().size());
+        schedule.getLectures().size());
       logger.info("CourseSchedule {} has {} teachers, {} curricula, {} courses, {} lectures," +
           " {} periods, {} rooms and {} unavailable period constraints with a search space of {}.",
         getInputId(),
-        schedule.getTeacherList().size(),
+        schedule.getTeachers().size(),
         schedule.getCurriculumList().size(),
-        schedule.getCourseList().size(),
-        schedule.getLectureList().size(),
-        schedule.getPeriodList().size(),
-        schedule.getRoomList().size(),
+        schedule.getCourses().size(),
+        schedule.getLectures().size(),
+        schedule.getPeriods().size(),
+        schedule.getRooms().size(),
         schedule.getUnavailablePeriodPenaltyList().size(),
         getFlooredPossibleSolutionSize(possibleSolutionSize));
       return schedule;
@@ -120,9 +122,9 @@ public class CurriculumCourseImporter extends AbstractTxtSolutionImporter<Course
         courseList.add(course);
         courseMap.put(course.getCode(), course);
       }
-      schedule.setCourseList(courseList);
+      schedule.setCourses(courseList);
       List<Teacher> teacherList = new ArrayList<>(teacherMap.values());
-      schedule.setTeacherList(teacherList);
+      schedule.setTeachers(teacherList);
       return courseMap;
     }
 
@@ -152,7 +154,7 @@ public class CurriculumCourseImporter extends AbstractTxtSolutionImporter<Course
         room.setId((long) i);
         roomList.add(room);
       }
-      schedule.setRoomList(roomList);
+      schedule.setRooms(roomList);
     }
 
     private Map<List<Integer>, Period> createPeriodListAndDayListAndTimeslotList(
@@ -186,7 +188,7 @@ public class CurriculumCourseImporter extends AbstractTxtSolutionImporter<Course
           day.getPeriodList().add(period);
         }
       }
-      schedule.setPeriodList(periodList);
+      schedule.setPeriods(periodList);
       return periodMap;
     }
 
@@ -252,7 +254,7 @@ public class CurriculumCourseImporter extends AbstractTxtSolutionImporter<Course
     }
 
     private void createLectureList(CourseSchedule schedule) {
-      List<Course> courseList = schedule.getCourseList();
+      List<Course> courseList = schedule.getCourses();
       List<Lecture> lectureList = new ArrayList<>(courseList.size());
       long id = 0L;
       for (Course course : courseList) {
@@ -266,7 +268,7 @@ public class CurriculumCourseImporter extends AbstractTxtSolutionImporter<Course
           lectureList.add(lecture);
         }
       }
-      schedule.setLectureList(lectureList);
+      schedule.setLectures(lectureList);
     }
 
   }

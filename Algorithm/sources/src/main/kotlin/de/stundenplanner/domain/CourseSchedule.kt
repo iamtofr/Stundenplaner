@@ -10,27 +10,22 @@ import org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScore
 @PlanningSolution
 class CourseSchedule : Persistable() {
 
-  var name: String = "default"
+  @get:ValueRangeProvider(id = "allPeriods")
+  var periods: List<Period>? = null
 
   @get:ValueRangeProvider(id = "allTeachers")
-  @get:ProblemFactCollectionProperty
-  var teacherList: List<Teacher>? = null
-
-  @get:ProblemFactCollectionProperty
-  var courseList: List<Course>? = null
-
-  @get:ValueRangeProvider(id = "allPeriods")
-  @get:ProblemFactCollectionProperty
-  var periodList: List<Period>? = null
+  var teachers: List<Teacher>? = null
 
   @get:ValueRangeProvider(id = "allRooms")
-  @get:ProblemFactCollectionProperty
-  var roomList: List<Room>? = null
+  var rooms: List<Room>? = null
+
+  var courses: List<Course>? = null
+
+  var subjects: List<Subject>? = null
 
   @get:PlanningEntityCollectionProperty
-  var lectureList: List<Lecture>? = null
+  var lectures: List<Lecture>? = null
 
-//  @XStreamConverter(HardSoftScoreJacksonJsonSerializer::class)
   @get:PlanningScore
   var score: HardSoftScore? = null
 
@@ -38,9 +33,9 @@ class CourseSchedule : Persistable() {
 //  private fun calculateCourseConflictList(): List<CourseConflict> {
 //    val courseConflictList = ArrayList<CourseConflict>()
 //
-//    courseList!!
+//    courses!!
 //      .forEach { leftCourse ->
-//        courseList!!
+//        courses!!
 //          .filter { rightCourse -> leftCourse.id >= rightCourse.id }
 //          .forEach { rightCourse ->
 //            var conflictCount = 0

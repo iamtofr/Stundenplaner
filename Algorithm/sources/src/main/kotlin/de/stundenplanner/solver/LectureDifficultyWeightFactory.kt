@@ -28,10 +28,11 @@ class LectureDifficultyWeightFactory : SelectionSorterWeightFactory<CourseSchedu
     val course:Course = lecture.course!!
     var unavailablePeriodPenaltyCount = 0
 
-    for (penalty in schedule.unavailablePeriodPenaltyList!!)
-      if (penalty.course == course) unavailablePeriodPenaltyCount++
+//    for (penalty in schedule.unavailablePeriodPenaltyList!!)
+//      if (penalty.course == course) unavailablePeriodPenaltyCount++
 
-    return LectureDifficultyWeight(lecture, unavailablePeriodPenaltyCount)
+//    return LectureDifficultyWeight(lecture, unavailablePeriodPenaltyCount)
+    return LectureDifficultyWeight(lecture, 0)
   }
 
   class LectureDifficultyWeight(private val lecture: Lecture, private val unavailablePeriodPenaltyCount: Int) : Comparable<LectureDifficultyWeight> {
@@ -41,7 +42,7 @@ class LectureDifficultyWeightFactory : SelectionSorterWeightFactory<CourseSchedu
       val otherCourse = other.lecture.course
       return CompareToBuilder()
         .append(course!!.curriculumList.size, otherCourse!!.curriculumList.size)
-        .append(unavailablePeriodPenaltyCount, other.unavailablePeriodPenaltyCount)
+//        .append(unavailablePeriodPenaltyCount, other.unavailablePeriodPenaltyCount)
         .append(course.lectureSize, otherCourse.lectureSize)
         .append(course.studentSize, otherCourse.studentSize)
         .append(course.minWorkingDaySize, otherCourse.minWorkingDaySize)

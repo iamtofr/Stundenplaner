@@ -23,27 +23,27 @@
 
   <properties>
     <java.module.name>org.optaplanner.examples</java.module.name>
-      <kotlin.version>1.2.41</kotlin.version>
+    <kotlin.version>1.2.41</kotlin.version>
   </properties>
 
-  <repositories>
-    <!-- TODO remove this once maven central replicates the jboss repository -->
-    <!-- Included so the examples sources in the distribution zip build out-of-the-box with maven -->
-    <repository>
-      <id>jboss-public-repository-group</id>
-      <name>JBoss Public Repository Group</name>
-      <url>https://repository.jboss.org/nexus/content/groups/public/</url>
-      <layout>default</layout>
-      <releases>
-        <enabled>true</enabled>
-        <updatePolicy>never</updatePolicy>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-        <updatePolicy>daily</updatePolicy>
-      </snapshots>
-    </repository>
-  </repositories>
+  <!--<repositories>-->
+    <!--&lt;!&ndash; TODO remove this once maven central replicates the jboss repository &ndash;&gt;-->
+    <!--&lt;!&ndash; Included so the examples sources in the distribution zip build out-of-the-box with maven &ndash;&gt;-->
+    <!--<repository>-->
+      <!--<id>jboss-public-repository-group</id>-->
+      <!--<name>JBoss Public Repository Group</name>-->
+      <!--<url>https://repository.jboss.org/nexus/content/groups/public/</url>-->
+      <!--<layout>default</layout>-->
+      <!--<releases>-->
+        <!--<enabled>true</enabled>-->
+        <!--<updatePolicy>never</updatePolicy>-->
+      <!--</releases>-->
+      <!--<snapshots>-->
+        <!--<enabled>true</enabled>-->
+        <!--<updatePolicy>daily</updatePolicy>-->
+      <!--</snapshots>-->
+    <!--</repository>-->
+  <!--</repositories>-->
 
   <build>
     <pluginManagement>
@@ -72,56 +72,56 @@
         </plugin>
       </plugins>
     </pluginManagement>
-      <plugins>
-          <plugin>
-              <groupId>org.jetbrains.kotlin</groupId>
-              <artifactId>kotlin-maven-plugin</artifactId>
-              <version>${kotlin.version}</version>
-              <executions>
-                  <execution>
-                      <id>compile</id>
-                      <phase>compile</phase>
-                      <goals>
-                          <goal>compile</goal>
-                      </goals>
-                  </execution>
-                  <execution>
-                      <id>test-compile</id>
-                      <phase>test-compile</phase>
-                      <goals>
-                          <goal>test-compile</goal>
-                      </goals>
-                  </execution>
-              </executions>
-              <configuration>
-                  <jvmTarget>1.8</jvmTarget>
-              </configuration>
-          </plugin>
-          <plugin>
-              <groupId>org.apache.maven.plugins</groupId>
-              <artifactId>maven-compiler-plugin</artifactId>
-              <executions>
-                  <execution>
-                      <id>compile</id>
-                      <phase>compile</phase>
-                      <goals>
-                          <goal>compile</goal>
-                      </goals>
-                  </execution>
-                  <execution>
-                      <id>testCompile</id>
-                      <phase>test-compile</phase>
-                      <goals>
-                          <goal>testCompile</goal>
-                      </goals>
-                  </execution>
-              </executions>
-          </plugin>
-      </plugins>
+    <plugins>
+      <plugin>
+        <groupId>org.jetbrains.kotlin</groupId>
+        <artifactId>kotlin-maven-plugin</artifactId>
+        <version>${kotlin.version}</version>
+        <executions>
+          <execution>
+            <id>compile</id>
+            <phase>compile</phase>
+            <goals>
+              <goal>compile</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>test-compile</id>
+            <phase>test-compile</phase>
+            <goals>
+              <goal>test-compile</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <jvmTarget>1.8</jvmTarget>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>compile</id>
+            <phase>compile</phase>
+            <goals>
+              <goal>compile</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>testCompile</id>
+            <phase>test-compile</phase>
+            <goals>
+              <goal>testCompile</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
   </build>
 
   <dependencies>
-    <!-- Internal dependencies -->
+    <!-- Optaplanner dependencies -->
     <dependency>
       <groupId>org.optaplanner</groupId>
       <artifactId>optaplanner-core</artifactId>
@@ -130,15 +130,7 @@
       <groupId>org.optaplanner</groupId>
       <artifactId>optaplanner-persistence-common</artifactId>
     </dependency>
-    <dependency><!-- Most examples use the XStream integration -->
-      <groupId>org.optaplanner</groupId>
-      <artifactId>optaplanner-persistence-xstream</artifactId>
-    </dependency>
-    <dependency><!-- TODO add examples that use the JAXB integration -->
-      <groupId>org.optaplanner</groupId>
-      <artifactId>optaplanner-persistence-jaxb</artifactId>
-    </dependency>
-    <dependency><!-- TODO add examples that use the jackson integration -->
+    <dependency>
       <groupId>org.optaplanner</groupId>
       <artifactId>optaplanner-persistence-jackson</artifactId>
     </dependency>
@@ -151,36 +143,15 @@
       <artifactId>optaplanner-test</artifactId>
       <scope>test</scope>
     </dependency>
-    <dependency>
-      <groupId>org.kie</groupId>
-      <artifactId>kie-api</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.drools</groupId>
-      <artifactId>drools-decisiontables</artifactId>
-      <scope>runtime</scope>
-    </dependency>
     <!-- External dependencies -->
     <dependency>
       <groupId>commons-io</groupId>
       <artifactId>commons-io</artifactId>
     </dependency>
-    <dependency>
-      <groupId>org.jfree</groupId>
-      <artifactId>jfreechart</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.jfree</groupId>
-      <artifactId>jcommon</artifactId>
-    </dependency>
     <!-- Common utils -->
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-lang3</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.google.guava</groupId>
-      <artifactId>guava</artifactId>
     </dependency>
     <!-- Logging -->
     <dependency>
@@ -192,48 +163,24 @@
       <artifactId>logback-classic</artifactId>
       <scope>runtime</scope>
     </dependency>
-    <!-- XML -->
+    <!-- Jackson -->
+    <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
     <dependency>
-      <groupId>com.thoughtworks.xstream</groupId>
-      <artifactId>xstream</artifactId>
-    </dependency>
-
-    <!-- Examples only dependencies. -->
-    <!--
-      WARNING: every examples only dependency must be properly dealt with in
-      optaplanner-distribution/src/main/assembly/assembly-optaplanner.xml
-    -->
-    <!-- Converters -->
-    <dependency>
-      <groupId>org.jdom</groupId>
-      <artifactId>jdom</artifactId>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>2.0.2</version>
     </dependency>
     <dependency>
-      <groupId>org.apache.poi</groupId>
-      <artifactId>poi</artifactId>
+      <groupId>org.jetbrains.kotlin</groupId>
+      <artifactId>kotlin-stdlib-jdk8</artifactId>
+      <version>${kotlin.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.apache.poi</groupId>
-      <artifactId>poi-ooxml</artifactId>
-      <exclusions>
-        <exclusion>
-          <!-- Collides with 'javax.xml.stream:stax-api' brought in by 'org.drools:drools-decisiontables'. -->
-          <groupId>stax</groupId>
-          <artifactId>stax-api</artifactId>
-        </exclusion>
-      </exclusions>
+      <groupId>org.jetbrains.kotlin</groupId>
+      <artifactId>kotlin-test</artifactId>
+      <version>${kotlin.version}</version>
+      <scope>test</scope>
     </dependency>
-      <dependency>
-          <groupId>org.jetbrains.kotlin</groupId>
-          <artifactId>kotlin-stdlib-jdk8</artifactId>
-          <version>${kotlin.version}</version>
-      </dependency>
-      <dependency>
-          <groupId>org.jetbrains.kotlin</groupId>
-          <artifactId>kotlin-test</artifactId>
-          <version>${kotlin.version}</version>
-          <scope>test</scope>
-      </dependency>
   </dependencies>
 
 </project>

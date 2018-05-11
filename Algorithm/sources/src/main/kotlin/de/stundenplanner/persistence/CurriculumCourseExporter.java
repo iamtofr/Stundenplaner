@@ -48,7 +48,7 @@ public class CurriculumCourseExporter extends AbstractTxtSolutionExporter<Course
 
         @Override
         public void writeSolution() throws IOException {
-            for (Lecture lecture : solution.getLectureList()) {
+            for (Lecture lecture : solution.getLectures()) {
                 bufferedWriter.write(lecture.getCourse().getCode()
                         + " r" + lecture.getRoom().getCode()
                         + " " + lecture.getPeriod().getDay().getDayIndex()

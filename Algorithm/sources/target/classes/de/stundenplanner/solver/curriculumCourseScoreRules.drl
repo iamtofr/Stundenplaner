@@ -86,10 +86,10 @@ end
 
 // RoomCapacity: For each lecture, the number of students that attend the course should be less or equal
 // than the number of seats of all the rooms that host its lectures.
-// Each student above the capacity counts as 1 point of penalty.
+// Each student above the seats counts as 1 point of penalty.
 rule "roomCapacity"
     when
-        $room : Room($capacity : capacity)
+        $room : Room($capacity : seats)
         Lecture(room == $room, studentSize > $capacity, $studentSize : studentSize)
     then
         scoreHolder.addSoftConstraintMatch(kcontext, ($capacity - $studentSize));

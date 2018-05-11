@@ -20,6 +20,8 @@ import de.stundenplanner.domain.*;
 import org.optaplanner.examples.common.app.CommonApp;
 import org.optaplanner.examples.common.app.LoggingMain;
 import org.optaplanner.examples.common.persistence.StringDataGenerator;
+import org.optaplanner.examples.curriculumcourse.domain.Curriculum;
+import org.optaplanner.examples.curriculumcourse.domain.UnavailablePeriodPenalty;
 import org.optaplanner.persistence.common.api.domain.solution.SolutionFileIO;
 import org.optaplanner.persistence.xstream.impl.domain.solution.XStreamSolutionFileIO;
 
@@ -111,18 +113,18 @@ public class CurriculumCourseGenerator extends LoggingMain {
     createCurriculumList(schedule, curriculumListSize);
     createUnavailablePeriodPenaltyList(schedule);
 
-    int possibleForOneLectureSize = schedule.getPeriodList().size() * schedule.getRoomList().size();
+    int possibleForOneLectureSize = schedule.getPeriods().size() * schedule.getRooms().size();
     BigInteger possibleSolutionSize = BigInteger.valueOf(possibleForOneLectureSize).pow(
-      schedule.getLectureList().size());
+      schedule.getLectures().size());
     logger.info("CourseSchedule {} has {} teachers, {} curricula, {} courses, {} lectures," +
         " {} periods, {} rooms and {} unavailable period constraints with a search space of {}.",
       fileName,
-      schedule.getTeacherList().size(),
+      schedule.getTeachers().size(),
       schedule.getCurriculumList().size(),
-      schedule.getCourseList().size(),
-      schedule.getLectureList().size(),
-      schedule.getPeriodList().size(),
-      schedule.getRoomList().size(),
+      schedule.getCourses().size(),
+      schedule.getLectures().size(),
+      schedule.getPeriods().size(),
+      schedule.getRooms().size(),
       schedule.getUnavailablePeriodPenaltyList().size(),
       getFlooredPossibleSolutionSize(possibleSolutionSize));
     return schedule;
@@ -164,7 +166,7 @@ public class CurriculumCourseGenerator extends LoggingMain {
         periodList.add(period);
       }
     }
-    schedule.setPeriodList(periodList);
+    schedule.setPeriods(periodList);
   }
 
   private void createTeacherList(CourseSchedule schedule, int teacherListSize) {
@@ -175,11 +177,11 @@ public class CurriculumCourseGenerator extends LoggingMain {
       teacher.setId((long) i);
       teacherList.add(teacher);
     }
-    schedule.setTeacherList(teacherList);
+    schedule.setTeachers(teacherList);
   }
 
   private void createCourseList(CourseSchedule schedule, int courseListSize) {
-    List<Teacher> teacherList = schedule.getTeacherList();
+    List<Teacher> teacherList = schedule.getTeachers();
     List<Course> courseList = new ArrayList<>(courseListSize);
     Set<String> codeSet = new HashSet<>();
     for (int i = 0; i < courseListSize; i++) {
@@ -204,11 +206,11 @@ public class CurriculumCourseGenerator extends LoggingMain {
       course.setCurriculumList(new ArrayList<>());
       courseList.add(course);
     }
-    schedule.setCourseList(courseList);
+    schedule.setCourses(courseList);
   }
 
   private void createLectureList(CourseSchedule schedule, int lectureListSize) {
-    List<Course> courseList = schedule.getCourseList();
+    List<Course> courseList = schedule.getCourses();
     List<Lecture> lectureList = new ArrayList<>(lectureListSize);
     for (int i = 0; i < lectureListSize; i++) {
       Course course = (i < courseList.size() * 2)
@@ -221,7 +223,7 @@ public class CurriculumCourseGenerator extends LoggingMain {
       course.setLectureSize(course.getLectureSize() + 1);
       lectureList.add(lecture);
     }
-    schedule.setLectureList(lectureList);
+    schedule.setLectures(lectureList);
 
   }
 
@@ -234,12 +236,12 @@ public class CurriculumCourseGenerator extends LoggingMain {
       room.setId((long) i);
       roomList.add(room);
     }
-    schedule.setRoomList(roomList);
+    schedule.setRooms(roomList);
   }
 
   private void createCurriculumList(CourseSchedule schedule, int curriculumListSize) {
-    int maximumCapacity = schedule.getRoomList().stream().mapToInt(Room::getSeats).max().getAsInt();
-    List<Course> courseList = schedule.getCourseList();
+    int maximumCapacity = schedule.getRooms().stream().mapToInt(Room::getSeats).max().getAsInt();
+    List<Course> courseList = schedule.getCourses();
     List<Curriculum> curriculumList = new ArrayList<>(curriculumListSize);
     StringDataGenerator codeGenerator = new StringDataGenerator("")
       .addAToZPart(true, 0).addAToZPart(false, 1).addAToZPart(false, 1).addAToZPart(false, 1);
@@ -271,8 +273,8 @@ public class CurriculumCourseGenerator extends LoggingMain {
   }
 
   private void createUnavailablePeriodPenaltyList(CourseSchedule schedule) {
-    List<Course> courseList = schedule.getCourseList();
-    List<Period> periodList = schedule.getPeriodList();
+    List<Course> courseList = schedule.getCourses();
+    List<Period> periodList = schedule.getPeriods();
     List<UnavailablePeriodPenalty> unavailablePeriodPenaltyList = new ArrayList<>(courseList.size());
     long penaltyId = 0L;
     for (Course course : courseList) {

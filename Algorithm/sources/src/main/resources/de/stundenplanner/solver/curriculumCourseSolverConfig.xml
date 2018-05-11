@@ -5,7 +5,7 @@
   <entityClass>de.stundenplanner.domain.Lecture</entityClass>
 
   <scoreDirectorFactory>
-    <!--<incrementalScoreCalculatorClass>de.stundenplanner.solver.CurriculumIncrementalScoreCalculator</incrementalScoreCalculatorClass>-->
+    <!--<incrementalScoreCalculatorClass>de.stundenplanner.solver.calculator.CurriculumIncrementalScoreCalculator</incrementalScoreCalculatorClass>-->
     <scoreDrl>org/optaplanner/examples/curriculumcourse/solver/curriculumCourseScoreRules.drl</scoreDrl>
     <!--<assertionScoreDirectorFactory>-->
       <!--<scoreDrl>org/optaplanner/examples/curriculumcourse/solver/curriculumCourseScoreRules.drl</scoreDrl>-->
