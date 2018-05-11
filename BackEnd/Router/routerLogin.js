@@ -10,11 +10,32 @@ const app = express.Router();
 const schema = require('../Schemas/schemas');
 
 app.use(bodyParser.json());
-app.use(function (req, res, next) {
-    console.log(req.body);
-    next();
+app.use((req, res, next) =>{
+
+    // Website you wish to allow to connect
+    res.setHeader('Access-Control-Allow-Origin', '*');
+
+    // Request methods you wish to allow
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+
+    // Request headers you wish to allow
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With, content-type, Authorization');
+
+    // Set to true if you need the website to include cookies in the requests sent
+    // to the API (e.g. in case you use sessions)
+    res.setHeader('Access-Control-Allow-Credentials', true);
+
+    // Pass to next layer of middleware if it's not an Option-Request
+    if ('OPTIONS' === req.method) {
+        res.sendStatus(200);
+    }
+    else {
+        next();
+    }
 });
+
 let account = mongoose.model('account', schema.account);
+
 
 app.route('/')
     .get((req, res, next) => {
@@ -38,27 +59,18 @@ app.route('/')
     });
 
 
-
-
 app.route('/test/:id')
     .get((req, res, next) => {
-        account.
-        findOne({ _id: '5af2cbb912ce600ec322e82a' }).
-        populate('profile').
-        exec(function (err, result) {
+        account.findOne({_id: '5af2cbb912ce600ec322e82a'}).populate('profile').exec(function (err, result) {
             if (err) throw err;
             res.status(200).json(result);
         });
     });
 
 
-
 app.route('/:id')
     .get((req, res, next) => {
-        account.
-        findOne({ _id: req.params.id }).
-        populate('profile').
-        exec(function (err, result) {
+        account.findOne({_id: req.params.id}).populate('profile').exec(function (err, result) {
             if (err) throw err;
             res.status(200).json(result);
         });
@@ -74,15 +86,14 @@ app.route('/:id')
         });
     })
 
-    .delete((req,res,next)=>{
+    .delete((req, res, next) => {
 
         //TODO body must be checked if user/passwd is present and match with db entry
-        account.remove({ _id: req.params.id }, function (err) {
+        account.remove({_id: req.params.id}, function (err) {
             if (err) return res.send(500, {error: err});
             res.status(200).json();
         });
     });
-
 
 
 app.all('*', (req, res, next) => {
