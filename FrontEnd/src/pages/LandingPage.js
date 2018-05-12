@@ -36,11 +36,17 @@ class LandingPage extends Component {
   }
 
   handleLogin = () => {
-    fetch('https://api.stundenplaner.online/profile')
+    fetch('https://api.stundenplaner.online/login', {
+      method: 'POST',
+      body: {
+        username: 'Max',
+        password: 'StarkIndustries',
+      },
+    })
       .then(response => response.json())
       .catch(err => console.log(err));
 
-    this.props.history.push('/dashboard');
+    //this.props.history.push('/dashboard');
   };
 
   render() {

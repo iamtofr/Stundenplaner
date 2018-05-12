@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import TextInput from './TextInput';
 import Button from './Button';
 import * as Colors from '../constants/Colors';
-import Logo from '../assets/logo.svg';
 
 const styles = {
   container: {
@@ -72,6 +71,7 @@ class Profile extends Component {
   constructor() {
     super();
     this.state = {
+      photo: 'https://robohash.org/eteaquequas.jpg?size=50x50&set=set1',
       firstName: 'Max',
       lastName: 'Mustermann',
       initials: 'Mn',
@@ -93,8 +93,23 @@ class Profile extends Component {
     };
   }
 
+  componentDidMount() {
+    fetch('https://api.stundenplaner.online/profile/5af5cf0420c6f43d9b506f03')
+      .then(response => response.json())
+      .then(response =>
+        //console.log(response),
+        this.setState({
+          photo: response.photo,
+          firstName: response.name,
+          lastName: response.surname,
+          sex: response.sex,
+        }),
+      );
+  }
+
   render() {
     const {
+      photo,
       firstName,
       lastName,
       initials,
@@ -295,7 +310,7 @@ class Profile extends Component {
             </div>
           </div>
           <div style={styles.side}>
-            <img style={styles.avatar} src={Logo} alt="Avatar" />
+            <img style={styles.avatar} src={photo} alt="Avatar" />
             <div style={styles.infoBox}>
               <p style={styles.title}>Notizen</p>
               <textarea
