@@ -18,7 +18,7 @@ app.use(function (req, res, next) {
 
 let address = mongoose.model('address', schema.address);
 
-
+//TODO zu Testzwecken permission check eingebaut
 app.route('/')
     .get((req, res, next) => {
         if (getPermission >=0) {
