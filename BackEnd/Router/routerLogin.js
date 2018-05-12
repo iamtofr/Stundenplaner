@@ -24,6 +24,16 @@ app.route('/')
         });
     })
 
+    .patch((req, res, next) => {
+
+        //TODO body must be checked if user/passwd is present and match with db entry
+        let query = {'_id': req.body.id};
+        account.findOneAndUpdate(query, req.body, {upsert: true, new: true}, function (err, account) {
+            if (err) return res.send(500, {error: err});
+            res.status(200).json(account);
+        });
+    })
+
     .post((req, res, next) => {
         account.findOne({'username': req.body.username}).populate('profile').exec(function (err, result) {
             if (err) throw err;
@@ -58,15 +68,6 @@ app.route('/:id')
         });
     })
 
-    .patch((req, res, next) => {
-
-        //TODO body must be checked if user/passwd is present and match with db entry
-        let query = {'_id': req.params.id};
-        account.findOneAndUpdate(query, req.body, {upsert: true, new: true}, function (err, account) {
-            if (err) return res.send(500, {error: err});
-            res.status(200).json(account);
-        });
-    })
 
     .delete((req, res, next) => {
 
