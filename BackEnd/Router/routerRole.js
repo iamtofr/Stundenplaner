@@ -28,7 +28,7 @@ app.route('/')
         let newRole = role(req.body);
         newRole.save(function (err) {
             if (err) throw err;
-            console.log('Subject created!');
+            console.log('Role created!');
         });
         res.status(201).json(newRole)
     })

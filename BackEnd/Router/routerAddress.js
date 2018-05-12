@@ -16,7 +16,6 @@ app.use(function (req, res, next) {
 
 let address = mongoose.model('address', schema.address);
 
-//TODO get auf id
 
 app.route('/')
     .get((req, res, next) => {
@@ -33,6 +32,15 @@ app.route('/')
             console.log('Address created!');
         });
         res.status(201).json(newAddress)
+    });
+
+app.route('/:id')
+    .get((req, res, next) => {
+        let query ={'_id': req.params.id};
+        address.find(query, function (err, address) {
+            if (err) throw err;
+            res.status(200).json(address);
+        });
     });
 
 app.all('*', (req, res, next) => {
