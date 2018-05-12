@@ -10,62 +10,44 @@ const app = express.Router();
 const schema = require('../Schemas/schemas');
 
 app.use(bodyParser.json());
-app.use((req, res, next) =>{
-
-    // Website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', '*');
-
-    // Request methods you wish to allow
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-
-    // Request headers you wish to allow
-    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With, content-type, Authorization');
-
-    // Set to true if you need the website to include cookies in the requests sent
-    // to the API (e.g. in case you use sessions)
-    res.setHeader('Access-Control-Allow-Credentials', true);
-
-    // Pass to next layer of middleware if it's not an Option-Request
-    if ('OPTIONS' === req.method) {
-        res.sendStatus(200);
-    }
-    else {
-        next();
-    }
+app.use((req, res, next) => {
+    console.log(req.body);
+    next();
 });
-
 let account = mongoose.model('account', schema.account);
-
 
 app.route('/')
     .get((req, res, next) => {
-        // permissionChecker(req.query.t);
-        // console.log(permissionChecker(1234));
-
-        //TODO body must be checked if user/passwd is present and match with db entry
-        account.find({}, function (err, account) {
+        account.findOne({}).populate('profile').exec(function (err, result) {
             if (err) throw err;
-            res.status(200).json(account);
+            res.status(200).json(result);
         });
     })
 
     .post((req, res, next) => {
-        let newAccount = account(req.body);
-        newAccount.save(function (err) {
+        account.findOne({'username': req.body.username}).populate('profile').exec(function (err, result) {
             if (err) throw err;
-            console.log('Account created!');
+            if (result === null) {
+                let newAccount = account(req.body);
+                newAccount.save(function (err) {
+                    if (err) throw err;
+                    res.status(201).json(newAccount);
+                })
+            } else if (req.body.password === result.password) {
+                res.status(200).json(result);
+            } else res.status(401).json();
+
         });
-        res.status(201).json(newAccount)
     });
 
 
-app.route('/test/:id')
-    .get((req, res, next) => {
-        account.findOne({_id: '5af2cbb912ce600ec322e82a'}).populate('profile').exec(function (err, result) {
-            if (err) throw err;
-            res.status(200).json(result);
-        });
-    });
+// app.route('/test/:id')
+//     .get((req, res, next) => {
+//         account.findOne({_id: '5af2cbb912ce600ec322e82a'}).populate('profile').exec(function (err, result) {
+//             if (err) throw err;
+//             res.status(200).json(result);
+//         });
+//     });
 
 
 app.route('/:id')

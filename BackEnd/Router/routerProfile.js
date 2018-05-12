@@ -5,7 +5,6 @@ const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/stundenplaner');
 const express = require('express');
 const app = express.Router();
-
 const schema = require('../Schemas/schemas');
 
 app.use(bodyParser.json());
