@@ -5,11 +5,13 @@ const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/stundenplaner');
 const express = require('express');
 const app = express.Router();
-
+const permission = require('../Tools/permissionCheck');
 const schema = require('../Schemas/schemas');
+let getPermission;
 
 app.use(bodyParser.json());
 app.use(function (req, res, next) {
+    getPermission = permission(req);
     console.log(req.body);
     next();
 });
@@ -19,10 +21,13 @@ let address = mongoose.model('address', schema.address);
 
 app.route('/')
     .get((req, res, next) => {
-        address.find({}, function (err, address) {
-            if (err) throw err;
-            res.status(200).json(address);
-        });
+        if (getPermission >=0) {
+            address.find({}, function (err, address) {
+                if (err) throw err;
+                res.status(200).json(address);
+            });
+        }else res.status(401).json();
+
     })
 
     .post((req, res, next) => {

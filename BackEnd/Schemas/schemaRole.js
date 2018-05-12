@@ -7,7 +7,8 @@ let role = new Schema({
     write: {type: Boolean, required: false},
     print: {type: Boolean, required: false},
     create: {type: Boolean, required: false},
-    delete: {type: Boolean, required: false}
+    delete: {type: Boolean, required: false},
+    permissionNumber: {type: Number, required: false}
 });
 
 module.exports = role;
