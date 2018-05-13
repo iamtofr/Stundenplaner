@@ -4,20 +4,20 @@ import * as Colors from '../constants/Colors';
 const styles = {
   container: {
     display: 'flex',
-    flex: 1,
     flexDirection: 'column',
     margin: 10,
   },
   label: {
-    fontSize: 16,
-    margin: 5,
+    fontSize: 14,
+    margin: 0,
+    color: Colors.grey,
   },
   input: {
     height: 30,
     paddingLeft: 5,
     border: 0,
     borderBottom: `1px solid ${Colors.darkBlue}`,
-    fontSize: 14,
+    fontSize: 16,
     background: 0,
     outline: 0,
   },

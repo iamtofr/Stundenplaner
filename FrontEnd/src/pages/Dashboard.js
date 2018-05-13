@@ -21,7 +21,7 @@ class Dashboard extends Component {
   render() {
     return (
       <div style={styles.container}>
-        <Profile />
+        <Profile id="5af5cf0420c6f43d9b506f03" />
       </div>
     );
   }

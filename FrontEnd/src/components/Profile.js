@@ -20,8 +20,7 @@ const styles = {
     flex: 'auto',
     flexDirection: 'column',
     padding: 5,
-    margin: 10,
-    backgroundColor: Colors.lightGrey,
+    margin: 20,
   },
   person: {
     display: 'flex',
@@ -46,8 +45,8 @@ const styles = {
     textTransform: 'uppercase',
   },
   avatar: {
-    width: 150,
-    height: 150,
+    width: 200,
+    height: 200,
     borderRadius: 100,
   },
   notes: {
@@ -94,17 +93,22 @@ class Profile extends Component {
   }
 
   componentDidMount() {
-    fetch('https://api.stundenplaner.online/profile/5af5cf0420c6f43d9b506f03')
+    fetch(`https://api.stundenplaner.online/profile/${this.props.id}`)
       .then(response => response.json())
-      .then(response =>
-        //console.log(response),
+      .then(response => {
+        console.log(response);
         this.setState({
           photo: response.photo,
           firstName: response.name,
           lastName: response.surname,
           sex: response.sex,
-        }),
-      );
+          nationality: response.nationality,
+          email: response.email,
+          contact: response.contact,
+          address: response.address,
+        });
+      })
+      .catch(err => console.log(err));
   }
 
   render() {
@@ -311,6 +315,7 @@ class Profile extends Component {
           </div>
           <div style={styles.side}>
             <img style={styles.avatar} src={photo} alt="Avatar" />
+            <Button style={styles.button} text="Löschen" color={Colors.grey} />
             <div style={styles.infoBox}>
               <p style={styles.title}>Notizen</p>
               <textarea

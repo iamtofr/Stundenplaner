@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
-
 import Login from '../components/Login';
 import Logo from '../assets/logo.svg';
 import * as Colors from '../constants/Colors';
@@ -19,7 +17,6 @@ const styles = {
     alignItems: 'flex-end',
     marginBottom: 50,
   },
-  logo: {},
   title: {
     fontSize: 48,
     fontWeight: 'bold',
@@ -27,7 +24,6 @@ const styles = {
     color: Colors.darkBlue,
     marginLeft: 20,
   },
-  login: {},
 };
 
 class LandingPage extends Component {
@@ -35,31 +31,17 @@ class LandingPage extends Component {
     document.title = 'StundenPlaner - Login';
   }
 
-  handleLogin = () => {
-    fetch('https://api.stundenplaner.online/login', {
-      method: 'POST',
-      body: {
-        username: 'Max',
-        password: 'StarkIndustries',
-      },
-    })
-      .then(response => response.json())
-      .catch(err => console.log(err));
-
-    //this.props.history.push('/dashboard');
-  };
-
   render() {
     return (
       <div style={styles.container}>
         <div style={styles.header}>
-          <img style={styles.logo} src={Logo} alt="Logo" />
+          <img src={Logo} alt="Logo" />
           <p style={styles.title}>StundenPlaner</p>
         </div>
-        <Login style={styles.login} onSubmit={this.handleLogin} />
+        <Login />
       </div>
     );
   }
 }
 
-export default withRouter(LandingPage);
+export default LandingPage;

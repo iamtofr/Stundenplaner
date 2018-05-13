@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import Button from './Button';
 import * as Colors from '../constants/Colors';
 import iconUser from '../assets/user.svg';
@@ -78,7 +79,21 @@ class Login extends Component {
       });
     }
 
-    this.props.onSubmit();
+    this.handleLogin();
+  };
+
+  handleLogin = () => {
+    fetch('https://api.stundenplaner.online/login', {
+      method: 'POST',
+      body: {
+        username: 'Max',
+        password: 'StarkIndustries',
+      },
+    })
+      .then(response => console.log(response.json()))
+      .catch(err => console.log(err));
+
+    this.props.history.push('/dashboard');
   };
 
   onVisiblityClick = () => {
@@ -143,4 +158,4 @@ class Login extends Component {
   }
 }
 
-export default Login;
+export default withRouter(Login);
