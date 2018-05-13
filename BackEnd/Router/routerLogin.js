@@ -71,10 +71,18 @@ app.route('/')
 
 app.route('/:id')
     .get((req, res, next) => {
-        account.findOne({_id: req.params.id}).populate('profile').exec(function (err, result) {
-            if (err) throw err;
-            res.status(200).json(result);
-        });
+        account.findById(req.params.id)
+            .exec(function (err, resultAccount) {
+                let newProfile = profile.findById(resultAccount.profile);
+                newProfile
+                    .populate('role')
+                    .populate('address')
+                    .exec(function (err, result) {
+                        if (err) throw err;
+                        resultAccount.profile = result;
+                        res.status(200).json(resultAccount);
+                    });
+            });
     })
 
 
