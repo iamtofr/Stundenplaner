@@ -15,13 +15,22 @@ app.use((req, res, next) => {
     next();
 });
 let account = mongoose.model('account', schema.account);
+let profile = mongoose.model('profile', schema.profile);
 
 app.route('/')
     .get((req, res, next) => {
-        account.findOne({}).populate('profile').exec(function (err, result) {
-            if (err) throw err;
-            res.status(200).json(result);
-        });
+        account.findOne({})
+            .exec(function (err, resultAccount) {
+                let newProfile = profile.findById(resultAccount.profile);
+                newProfile
+                    .populate('role')
+                    .populate('address')
+                    .exec(function (err, result) {
+                        if (err) throw err;
+                        resultAccount.profile = result;
+                        res.status(200).json(resultAccount);
+                    });
+            });
     })
 
     .patch((req, res, next) => {

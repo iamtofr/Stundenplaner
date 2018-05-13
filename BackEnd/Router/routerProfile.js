@@ -13,6 +13,8 @@ app.use(function (req, res, next) {
     next();
 });
 
+//TODO populate children fehlt noch auf role und address
+
 let profile = mongoose.model('profile', schema.profile);
 
 app.route('/')
