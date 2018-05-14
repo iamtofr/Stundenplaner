@@ -25,10 +25,14 @@ let profile = mongoose.model('profile', schema.profile);
 
 app.route('/')
     .get((req, res, next) => {
-        profile.find({}, function (err, profile) {
-            if (err) throw err;
-            res.status(200).json(profile);
-        });
+        if (req.perm >=6){
+            profile.find({}, function (err, profile) {
+                if (err) throw err;
+                res.status(200).json(profile);
+            });
+        } else {
+            res.status(401).json("Unauthorized");
+        }
     })
 
     /**
