@@ -3,11 +3,8 @@
 const mongoose = require('mongoose');
 const express = require('express');
 const app = express.Router();
-// let permissionChecker = require('./permissionChecker');
 const schema = require('../Schemas/schemas');
-
-let role = mongoose.model('role', schema.role);
-let account = mongoose.model('account', schema.account);
+const account = mongoose.model('account', schema.account);
 
 mongoose.Promise = Promise;
 
