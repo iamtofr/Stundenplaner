@@ -5,7 +5,6 @@ const mongoose = require('mongoose');
 // mongoose.connect('mongodb://localhost/testDB');
 const express = require('express');
 const app = express.Router();
-const permission = require('../Tools/permissionCheck');
 let Schema = mongoose.Schema;
 
 

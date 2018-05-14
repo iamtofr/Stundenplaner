@@ -5,7 +5,6 @@ const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/stundenplaner');
 const express = require('express');
 const app = express.Router();
-const permission = require('../Tools/permissionCheck');
 const schema = require('../Schemas/schemas');
 let getPermission;
 
@@ -21,13 +20,11 @@ let address = mongoose.model('address', schema.address);
 //TODO zu Testzwecken permission check eingebaut
 app.route('/')
     .get((req, res, next) => {
-        if (getPermission >=0) {
+
             address.find({}, function (err, address) {
                 if (err) throw err;
                 res.status(200).json(address);
             });
-        }else res.status(401).json();
-
     })
 
     .post((req, res, next) => {
