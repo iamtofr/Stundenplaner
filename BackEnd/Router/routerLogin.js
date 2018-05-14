@@ -17,6 +17,12 @@ app.use((req, res, next) => {
 let account = mongoose.model('account', schema.account);
 let profile = mongoose.model('profile', schema.profile);
 
+
+//TODO PERMISSION
+//TODO get all || admin
+//TODO post || verwalter
+//TODO patch || admin
+
 app.route('/')
     .get((req, res, next) => {
         account.findOne({})
@@ -35,7 +41,6 @@ app.route('/')
 
     .patch((req, res, next) => {
 
-        //TODO body must be checked if user/passwd is present and match with db entry
         let query = {'_id': req.body.id};
         account.findOneAndUpdate(query, req.body, {upsert: true, new: true}, function (err, account) {
             if (err) return res.send(500, {error: err});
@@ -58,15 +63,6 @@ app.route('/')
 
         });
     });
-
-
-// app.route('/test/:id')
-//     .get((req, res, next) => {
-//         account.findOne({_id: '5af2cbb912ce600ec322e82a'}).populate('profile').exec(function (err, result) {
-//             if (err) throw err;
-//             res.status(200).json(result);
-//         });
-//     });
 
 
 app.route('/:id')

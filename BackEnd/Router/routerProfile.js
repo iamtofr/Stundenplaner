@@ -13,7 +13,12 @@ app.use(function (req, res, next) {
     next();
 });
 
-//TODO populate children fehlt noch auf role und address
+//TODO PERMISSION
+//TODO get all || verwalter
+//TODO post || verwalter
+//TODO delelte || verwalter
+//TODO patch || jeder, jedoch muss im frontend sichergestellt werden, dass ein schüler/lehrer nur auf seine id patcht
+
 
 let profile = mongoose.model('profile', schema.profile);
 

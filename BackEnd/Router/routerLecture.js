@@ -17,6 +17,7 @@ app.use(function (req, res, next) {
 let lecture = mongoose.model('lecture', schema.lecture);
 
 
+
 app.route('/')
     .get((req, res, next) => {
         lecture.findAll({})

@@ -17,10 +17,13 @@ app.use(function (req, res, next) {
 
 let address = mongoose.model('address', schema.address);
 
-//TODO zu Testzwecken permission check eingebaut
+//TODO PERMISSION
+//TODO get all || verwalter
+//TODO post || verwalter
+
+
 app.route('/')
     .get((req, res, next) => {
-
             address.find({}, function (err, address) {
                 if (err) throw err;
                 res.status(200).json(address);

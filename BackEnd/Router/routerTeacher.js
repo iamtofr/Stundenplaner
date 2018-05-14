@@ -16,6 +16,15 @@ app.use(function (req, res, next) {
 
 let teacher = mongoose.model('teacher', schema.teacher);
 
+
+//TODO PERMISSION
+//TODO get all || verwalter
+//TODO get id || lehrer
+//TODO post || verwalter
+//TODO delelte || verwalter
+//TODO patch || verwalter
+
+
 app.route('/')
     .get((req, res, next) => {
         teacher.findAll({}).populate('profile').exec(function (err, result) {

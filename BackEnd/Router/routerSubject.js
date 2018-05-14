@@ -16,6 +16,15 @@ app.use(function (req, res, next) {
 
 let subject = mongoose.model('subject', schema.subject);
 
+
+//TODO PERMISSION
+//TODO get all || verwalter
+//TODO get id || lehrer
+//TODO post || verwalter
+//TODO delelte || verwalter
+//TODO patch || verwalter
+
+
 //just for input subject array!!!!!!
 // app.route('/fillDatabase')
 //     .get((req, res, next) => {

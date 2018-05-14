@@ -17,6 +17,13 @@ app.use(function (req, res, next) {
 let course = mongoose.model('course', schema.course);
 
 
+//TODO PERMISSION
+//TODO get all || verwalter
+//TODO get id || lehrer
+//TODO post || verwalter
+//TODO delelte || verwalter
+//TODO patch || verwalter
+
 app.route('/')
     .get((req, res, next) => {
         course.findAll({}).populate('students').exec(function (err, result) {

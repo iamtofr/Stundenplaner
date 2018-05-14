@@ -16,6 +16,15 @@ app.use(function (req, res, next) {
 
 let role = mongoose.model('role', schema.role);
 
+
+//TODO PERMISSION
+//TODO get all || verwalter
+//TODO get id || schüler
+//TODO post || verwalter
+//TODO delelte || verwalter
+//TODO patch || verwalter
+
+
 app.route('/')
     .get((req, res, next) => {
         role.find({}, function (err, role) {

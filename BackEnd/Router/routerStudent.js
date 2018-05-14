@@ -16,6 +16,15 @@ app.use(function (req, res, next) {
 
 let student = mongoose.model('student', schema.student);
 
+
+//TODO PERMISSION
+//TODO get all || lehrer
+//TODO get id || schüler
+//TODO post || verwalter
+//TODO delelte || verwalter
+//TODO patch || verwalter
+
+
 app.route('/')
 
     .get((req, res, next) => {

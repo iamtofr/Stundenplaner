@@ -1,10 +1,5 @@
 const mongoose = require('mongoose');
 let Schema = mongoose.Schema;
-const Teacher = require('./schemaTeacher');
-const Room = require('./schemaRoom');
-const Course = require('./schemaCourse');
-const Subject = require('./schemaSubject');
-const Period = require('./schemaPeriod');
 
 let lecture = new Schema({
     teacher: {type: Schema.Types.ObjectId, ref:'teacher', required: false},
