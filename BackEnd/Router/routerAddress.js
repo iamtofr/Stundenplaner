@@ -18,8 +18,8 @@ app.use(function (req, res, next) {
 let address = mongoose.model('address', schema.address);
 
 //TODO PERMISSION
-//TODO get all || verwalter
-//TODO post || verwalter
+//TODO get all || manager
+//TODO post || manager
 
 
 app.route('/')

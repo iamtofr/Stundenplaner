@@ -6,6 +6,7 @@ mongoose.connect('mongodb://localhost/stundenplaner');
 const express = require('express');
 const app = express.Router();
 const schema = require('../Schemas/schemas');
+const permission = require('../Tools/permissions');
 
 app.use(bodyParser.json());
 app.use(function (req, res, next) {
@@ -13,19 +14,21 @@ app.use(function (req, res, next) {
     next();
 });
 
+
 //TODO PERMISSION
-//TODO get all || verwalter
-//TODO get id || schüler
-//TODO post || verwalter
-//TODO delelte || verwalter
-//TODO patch || jeder, jedoch muss im frontend sichergestellt werden, dass ein schüler/lehrer nur auf seine id patcht
+//TODO get all || manager
+//TODO get id || student
+//TODO post || manager
+//TODO delete || manager
+//TODO patch || jeder, jedoch muss im frontend sichergestellt werden, dass ein student/teacher nur auf seine id patcht
 
 
 let profile = mongoose.model('profile', schema.profile);
 
+
 app.route('/')
     .get((req, res, next) => {
-        if (req.perm >=6){
+        if (req.perm >= permission.manager) {
             profile.find({}, function (err, profile) {
                 if (err) throw err;
                 res.status(200).json(profile);
@@ -39,24 +42,33 @@ app.route('/')
      * dateBirth parsing to DateObject according to specifications of type Date in MongoDb
      */
     .post((req, res, next) => {
-        let newProfile = profile(req.body);
-        let dateBirth = req.body.dateOfBirth.split(".");
-        newProfile.dateOfBirth = new Date(dateBirth[2] + "-" + dateBirth[1] + "-" + dateBirth[0]);
-        console.log(newProfile.dateOfBirth);
-        newProfile.save(function (err) {
-            if (err) throw err;
-            console.log('Profile created!');
-        });
-        res.status(201).json(newProfile)
+        if (req.perm >= permission.manager) {
+            let newProfile = profile(req.body);
+            let dateBirth = req.body.dateOfBirth.split(".");
+            newProfile.dateOfBirth = new Date(dateBirth[2] + "-" + dateBirth[1] + "-" + dateBirth[0]);
+            console.log(newProfile.dateOfBirth);
+            newProfile.save(function (err) {
+                if (err) throw err;
+                console.log('Profile created!');
+            });
+            res.status(201).json(newProfile)
+        } else {
+            res.status(401).json("Unauthorized");
+        }
+
     })
 
     .patch((req, res, next) => {
-        console.log(req.body);
-        let query = {'_id': req.body._id};
-        profile.findOneAndUpdate(query, req.body, {upsert: true, new: true}, function (err, profile) {
-            if (err) return res.send(500, {error: err});
-            res.status(200).json(profile);
-        });
+        if (req.perm >= permission.student) {
+            console.log(req.body);
+            let query = {'_id': req.body._id};
+            profile.findOneAndUpdate(query, req.body, {upsert: true, new: true}, function (err, profile) {
+                if (err) return res.send(500, {error: err});
+                res.status(200).json(profile);
+            });
+        } else {
+            res.status(401).json("Unauthorized");
+        }
     });
 
 //just for input subject array!!!!!!
@@ -84,22 +96,28 @@ app.route('/')
 
 app.route('/:id')
     .get((req, res, next) => {
-        profile.
-        findOne({ _id: req.params.id }).
-        populate('role').populate('address').
-        exec(function (err, result) {
-            if (err) throw err;
-            res.status(200).json(result);
-        });
+        if (req.perm >= permission.student) {
+            profile.findOne({_id: req.params.id}).populate('role').populate('address').exec(function (err, result) {
+                if (err) throw err;
+                res.status(200).json(result);
+            });
+        } else {
+            res.status(401).json("Unauthorized");
+        }
+
     })
 
-    .delete((req,res,next)=>{
-        profile.remove({ _id: req.params.id }, function (err) {
-            if (err) return res.send(500, {error: err});
-            res.status(200).json();
-        });
-    });
+    .delete((req, res, next) => {
+        if (req.perm >= permission.manager) {
+            profile.remove({_id: req.params.id}, function (err) {
+                if (err) return res.send(500, {error: err});
+                res.status(200).json();
+            });
+        } else {
+            res.status(401).json("Unauthorized");
+        }
 
+    });
 
 
 app.all('*', (req, res, next) => {
