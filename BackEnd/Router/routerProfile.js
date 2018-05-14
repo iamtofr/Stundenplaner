@@ -15,6 +15,7 @@ app.use(function (req, res, next) {
 
 //TODO PERMISSION
 //TODO get all || verwalter
+//TODO get id || schüler
 //TODO post || verwalter
 //TODO delelte || verwalter
 //TODO patch || jeder, jedoch muss im frontend sichergestellt werden, dass ein schüler/lehrer nur auf seine id patcht
