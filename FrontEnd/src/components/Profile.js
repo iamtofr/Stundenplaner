@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import TextInput from './TextInput';
 import Button from './Button';
 import * as Colors from '../constants/Colors';
+import Logo from '../assets/logo.svg';
 
 const styles = {
   container: {
@@ -67,71 +68,22 @@ const styles = {
 };
 
 class Profile extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      photo: 'https://robohash.org/eteaquequas.jpg?size=50x50&set=set1',
-      firstName: 'Max',
-      lastName: 'Mustermann',
-      initials: 'Mn',
-      sex: 'männlich',
-      dateOfBirth: '01.01.1960',
-      nationality: 'deutsch',
-      address: '12037, Berlin, Superlange - Musterstraße, 1',
-      phone: '+49 176 000 000 00',
-      email: 'mail@gmail.de',
-      contact: 'Margarete Mustermann, Ehefrau',
-      contactPhone: '+49 176 000 000 00',
-      contactEmail: 'mail@gmail.de',
-      subject1: 'Mathematik',
-      subject2: 'Physik',
-      subject3: 'Informatik',
-      subject4: 'WMathematik',
-      notes:
-        'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.',
+      profile: props,
     };
   }
 
-  componentDidMount() {
-    fetch(`https://api.stundenplaner.online/profile/${this.props.id}`)
-      .then(response => response.json())
-      .then(response => {
-        console.log(response);
-        this.setState({
-          photo: response.photo,
-          firstName: response.name,
-          lastName: response.surname,
-          sex: response.sex,
-          nationality: response.nationality,
-          email: response.email,
-          contact: response.contact,
-          address: response.address,
-        });
-      })
-      .catch(err => console.log(err));
-  }
-
   render() {
-    const {
-      photo,
-      firstName,
-      lastName,
-      initials,
-      sex,
-      dateOfBirth,
-      nationality,
-      address,
-      phone,
-      email,
-      contact,
-      contactPhone,
-      contactEmail,
-      subject1,
-      subject2,
-      subject3,
-      subject4,
-      notes,
-    } = this.state;
+    const { profile } = this.props;
+    profile.initials = `${profile.surname.substring(0, 1)}${profile.name.substring(0, 1)}`;
+    const date = new Date(profile.dateOfBirth);
+    profile.dateOfBirth = date.toLocaleDateString('de', {
+      day: '2-digit',
+      month: '2-digit',
+      year: 'numeric',
+    });
 
     return (
       <div style={styles.container}>
@@ -143,7 +95,7 @@ class Profile extends Component {
                 <TextInput
                   type="text"
                   label="Vorname"
-                  value={firstName}
+                  value={profile.surname}
                   onChange={event =>
                     this.setState({
                       firstName: event.target.value,
@@ -153,7 +105,7 @@ class Profile extends Component {
                 <TextInput
                   type="text"
                   label="Nachname"
-                  value={lastName}
+                  value={profile.name}
                   onChange={event =>
                     this.setState({
                       lastName: event.target.value,
@@ -163,7 +115,7 @@ class Profile extends Component {
                 <TextInput
                   type="text"
                   label="Kürzel"
-                  value={initials}
+                  value={profile.initials}
                   onChange={event =>
                     this.setState({
                       initials: event.target.value,
@@ -173,7 +125,7 @@ class Profile extends Component {
                 <TextInput
                   type="text"
                   label="Geschlecht"
-                  value={sex}
+                  value={profile.sex}
                   onChange={event =>
                     this.setState({
                       sex: event.target.value,
@@ -183,7 +135,7 @@ class Profile extends Component {
                 <TextInput
                   type="text"
                   label="Geburtsdatum"
-                  value={dateOfBirth}
+                  value={profile.dateOfBirth}
                   onChange={event =>
                     this.setState({
                       dateOfBirth: event.target.value,
@@ -193,7 +145,7 @@ class Profile extends Component {
                 <TextInput
                   type="text"
                   label="Nationalität"
-                  value={nationality}
+                  value={profile.nationality}
                   onChange={event =>
                     this.setState({
                       nationality: event.target.value,
@@ -209,7 +161,7 @@ class Profile extends Component {
                   <TextInput
                     type="text"
                     label="Anschrift"
-                    value={address}
+                    value={profile.address}
                     onChange={event =>
                       this.setState({
                         address: event.target.value,
@@ -219,7 +171,7 @@ class Profile extends Component {
                   <TextInput
                     type="tel"
                     label="Telefonnummer"
-                    value={phone}
+                    value={profile.phoneNumber}
                     onChange={event =>
                       this.setState({
                         phone: event.target.value,
@@ -229,7 +181,7 @@ class Profile extends Component {
                   <TextInput
                     type="email"
                     label="E-Mail"
-                    value={email}
+                    value={profile.email}
                     onChange={event =>
                       this.setState({
                         email: event.target.value,
@@ -241,7 +193,7 @@ class Profile extends Component {
                   <TextInput
                     type="text"
                     label="Kontaktperson"
-                    value={contact}
+                    value={profile.contact}
                     onChange={event =>
                       this.setState({
                         contact: event.target.value,
@@ -251,7 +203,7 @@ class Profile extends Component {
                   <TextInput
                     type="tel"
                     label="Telefonnummer"
-                    value={contactPhone}
+                    value={profile.contactPhone}
                     onChange={event =>
                       this.setState({
                         contactPhone: event.target.value,
@@ -261,7 +213,7 @@ class Profile extends Component {
                   <TextInput
                     type="email"
                     label="E-Mail"
-                    value={contactEmail}
+                    value={profile.contactEmail}
                     onChange={event =>
                       this.setState({
                         contactEmail: event.target.value,
@@ -276,7 +228,7 @@ class Profile extends Component {
               <div style={styles.subjects}>
                 <TextInput
                   type="text"
-                  value={subject1}
+                  value={profile.subject}
                   onChange={event =>
                     this.setState({
                       subject1: event.target.value,
@@ -285,7 +237,7 @@ class Profile extends Component {
                 />
                 <TextInput
                   type="text"
-                  value={subject2}
+                  value={profile.subject}
                   onChange={event =>
                     this.setState({
                       subject2: event.target.value,
@@ -294,7 +246,7 @@ class Profile extends Component {
                 />
                 <TextInput
                   type="text"
-                  value={subject3}
+                  value={profile.subject}
                   onChange={event =>
                     this.setState({
                       subject3: event.target.value,
@@ -303,7 +255,7 @@ class Profile extends Component {
                 />
                 <TextInput
                   type="text"
-                  value={subject4}
+                  value={profile.subject}
                   onChange={event =>
                     this.setState({
                       subject4: event.target.value,
@@ -314,13 +266,13 @@ class Profile extends Component {
             </div>
           </div>
           <div style={styles.side}>
-            <img style={styles.avatar} src={photo} alt="Avatar" />
+            <img style={styles.avatar} src={profile.photo || Logo} alt="Avatar" />
             <Button style={styles.button} text="Löschen" color={Colors.grey} />
             <div style={styles.infoBox}>
               <p style={styles.title}>Notizen</p>
               <textarea
                 style={styles.notes}
-                value={notes}
+                value={profile.notes}
                 onChange={event =>
                   this.setState({
                     notes: event.target.value,

@@ -21,7 +21,7 @@ class Button extends Component {
     return (
       <button
         style={{ ...styles.button, ...style, ...{ backgroundColor: color } }}
-        type="button"
+        type="submit"
         onClick={onClick}
       >
         {text}

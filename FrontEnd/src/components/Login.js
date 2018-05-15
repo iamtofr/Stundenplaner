@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { actions as appActions } from '../reducers/app';
 import Button from './Button';
 import * as Colors from '../constants/Colors';
 import iconUser from '../assets/user.svg';
@@ -40,6 +42,7 @@ const styles = {
   error: {
     height: 20,
     marginLeft: 35,
+    fontSize: 14,
     color: 'red',
   },
   link: {
@@ -59,6 +62,12 @@ class Login extends Component {
       passwordError: '',
       hideInput: true,
     };
+  }
+
+  componentDidMount() {
+    //if (this.props.isLoggedIn) {
+    //  this.props.history.push('/dashboard');
+    //}
   }
 
   onClick = () => {
@@ -83,17 +92,34 @@ class Login extends Component {
   };
 
   handleLogin = () => {
-    fetch('https://api.stundenplaner.online/login', {
+    fetch('https://api.stundenplaner.online:8443/login', {
       method: 'POST',
-      body: {
-        username: 'Max',
-        password: 'StarkIndustries',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
       },
+      body: JSON.stringify({
+        username: this.state.name,
+        password: this.state.password,
+      }),
     })
-      .then(response => console.log(response.json()))
-      .catch(err => console.log(err));
-
-    this.props.history.push('/dashboard');
+      .then(response => response.json())
+      .then(responseJson => {
+        console.log(responseJson);
+        this.props.login({
+          username: this.state.name,
+          password: this.state.password,
+          token: responseJson.token,
+          profile: responseJson.profile,
+        });
+        this.props.history.push('/dashboard');
+      })
+      .catch(err => {
+        console.log(err);
+        this.setState({
+          passwordError: 'Benutzername oder Passwort falsch.',
+        });
+      });
   };
 
   onVisiblityClick = () => {
@@ -119,7 +145,7 @@ class Login extends Component {
               value={this.state.name}
               onChange={event =>
                 this.setState({
-                  name: event.target.value,
+                  name: event.target.value.trim(),
                 })
               }
             />
@@ -136,7 +162,7 @@ class Login extends Component {
               value={this.state.password}
               onChange={event =>
                 this.setState({
-                  password: event.target.value,
+                  password: event.target.value.trim(),
                 })
               }
             />
@@ -158,4 +184,12 @@ class Login extends Component {
   }
 }
 
-export default withRouter(Login);
+const mapStateToProps = state => ({
+  isLoggedIn: state.app.isLoggedIn,
+});
+
+const mapDispatchToProps = {
+  login: appActions.login,
+};
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Login));
