@@ -5,73 +5,65 @@ import org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScore
 import org.optaplanner.core.impl.score.director.incremental.AbstractIncrementalScoreCalculator
 
 object CurriculumIncrementalScoreCalculator : AbstractIncrementalScoreCalculator<CourseSchedule>() {
-  private var scheduleTeacher: Map<Teacher, Map<Period, ArrayList<Lecture>>> = LinkedHashMap()
-  private var scheduleRoom: Map<Room, Map<Period, ArrayList<Lecture>>> = LinkedHashMap()
-  private var scheduleCourse: Map<Course, Map<Period, ArrayList<Lecture>>> = LinkedHashMap()
-  private var subjectOccurrencesPerDay: Map<Subject, MutableMap<Day, Int>> = LinkedHashMap()
 
-  private var hardScore: Int = 0
-  private var softScore: Int = 0
 
-  override fun resetWorkingSolution(schedule: CourseSchedule) {
-    val periods = schedule.periods!!
-    val teachers = schedule.teachers!!
-    val rooms = schedule.rooms!!
-    val courses = schedule.courses!!
-    val lectures = schedule.lectures!!
-    val subjects = schedule.subjects!!
+  private val calculators: Map<String, BasicScoreCalculator<Persistable>> = mapOf(
+    "teacher" to TeacherScoreCalculator() as BasicScoreCalculator<Persistable>,
+    "room" to RoomScoreCalculator() as BasicScoreCalculator<Persistable>,
+    "course" to CourseScoreCalculator() as BasicScoreCalculator<Persistable>
+  )
 
-    scheduleTeacher = teachers
-      .associate { teacher -> teacher to periods.associate { period -> period to ArrayList<Lecture>() } }
-    scheduleRoom = rooms
-      .associate { room -> room to periods.associate { period -> period to ArrayList<Lecture>() } }
-    scheduleCourse = courses
-      .associate { course -> course to periods.associate { period -> period to ArrayList<Lecture>() } }
-    subjectOccurrencesPerDay = subjects
-      .associate { subject -> subject to Day.DAYS.associateTo(HashMap<Day, Int>(), { day -> day to 0 }) }
+  override fun resetWorkingSolution(schedule: CourseSchedule?) {
+    schedule!!
+    val owners = mapOf(
+      "teacher" to schedule.teachers,
+      "room" to schedule.rooms,
+      "course" to schedule.courses
+      )
+    val periods = schedule.periods
+    val lectures = schedule.lectures
 
-    hardScore = 0
-    softScore = 0
-
-    lectures.forEach { lecture -> insert(lecture) }
-  }
-
-  private fun insert(lecture: Lecture) {
-    val (teacherHardScore, teacherSoftScore) =
-      TeacherScoreCalculator.calculateAndInsert(lecture, scheduleTeacher)
-    val (roomHardScore, roomSoftScore) =
-      RoomScoreCalculator.calculateAndInsert(lecture, scheduleRoom)
-    val (courseHardScore, courseSoftScore) =
-      CourseScoreCalculator.calculateAndInsert(lecture, scheduleCourse, subjectOccurrencesPerDay)
-
-    hardScore += teacherHardScore + roomHardScore + courseHardScore
-    softScore += teacherSoftScore + roomSoftScore + courseSoftScore
+    calculators.forEach { variableName: String, calculator ->
+      calculator.resetWorkingSolution(
+        owners[variableName],
+        periods,
+        lectures,
+        schedule
+      )
+    }
   }
 
 
-  override fun beforeEntityAdded(lecture: Any) {
-    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+  override fun beforeEntityAdded(lecture: Any?) {
+    calculators.values.forEach { calculator -> calculator.insert(lecture as Lecture) }
   }
 
-  override fun afterEntityAdded(lecture: Any) {
-    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+  override fun afterEntityAdded(lecture: Any?) {
+    // Do nothing
   }
 
-  override fun beforeVariableChanged(lecture: Any, variableName: String) {
-    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+  override fun beforeVariableChanged(lecture: Any?, variableName: String) {
+    calculators[variableName]?.retract(lecture as Lecture)
+      ?: calculators.values.forEach { calculator -> calculator.insert(lecture as Lecture) }
   }
 
-  override fun afterVariableChanged(lecture: Any, variableName: String) {
-    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+  override fun afterVariableChanged(lecture: Any?, variableName: String) {
+    calculators[variableName]?.insert(lecture as Lecture)
+      ?: calculators.values.forEach { calculator -> calculator.insert(lecture as Lecture) }
   }
 
-  override fun beforeEntityRemoved(lecture: Any) {
+  override fun beforeEntityRemoved(lecture: Any?) {
+    // Do nothing
   }
 
-  override fun afterEntityRemoved(lecture: Any) {
-    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+  override fun afterEntityRemoved(lecture: Any?) {
+    calculators.values.forEach { calculator -> calculator.retract(lecture as Lecture) }
   }
 
-  override fun calculateScore(): HardSoftScore = HardSoftScore.valueOf(hardScore, softScore)
+  override fun calculateScore(): HardSoftScore {
+    val hardScore = calculators.values.map { it.hardScore }.sum()
+    val softScore = calculators.values.map { it.softScore }.sum()
+    return HardSoftScore.valueOf(hardScore, softScore)
+  }
 
 }

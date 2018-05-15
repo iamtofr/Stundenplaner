@@ -256,7 +256,7 @@
      gridtolerance="10"
      inkscape:window-width="1680"
      inkscape:window-height="991"
-     inkscape:window-x="1680"
+     inkscape:window-lecturesInPeriodOfCourse="1680"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
      inkscape:snap-grids="true"
@@ -322,7 +322,7 @@
            id="rect4161"
            width="10.955056"
            height="72.471909"
-           x="16.011236"
+           lecturesInPeriodOfCourse="16.011236"
            y="-53.932568" /></flowRegion><flowPara
          id="flowPara4163" /></flowRoot>    <flowRoot
        xml:space="preserve"
@@ -333,7 +333,7 @@
            id="rect3683"
            width="15.209126"
            height="193.1559"
-           x="44.86692"
+           lecturesInPeriodOfCourse="44.86692"
            y="282.88974" /></flowRegion><flowPara
          id="flowPara3685" /></flowRoot>    <flowRoot
        transform="translate(70.000995,868.58502)"
@@ -344,7 +344,7 @@
            id="rect3989-2"
            width="340"
            height="200.00008"
-           x="-40.000996"
+           lecturesInPeriodOfCourse="-40.000996"
            y="-46.222912"
            style="font-size:16px;text-align:start;text-anchor:start" /></flowRegion><flowPara
          id="flowPara3338">1. First <flowSpan

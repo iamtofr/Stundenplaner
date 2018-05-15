@@ -2,56 +2,66 @@ package de.stundenplanner.solver.calculator
 
 import de.stundenplanner.domain.*
 
-object CourseScoreCalculator {
+private const val targetLecturesPerDay: Int = 2
+
+class CourseScoreCalculator : BasicScoreCalculator<Course>() {
 
   private val coursePeriodsGapWeight: Int = 10
   private val maxOccurrencesPerDayWeight: Int = 10
 
-  private const val targetLecturesPerDay: Int = 2
+  private var subjectOccurrencesPerDay: Map<Subject, MutableMap<Day, Int>>? = null
 
-  internal fun calculateAndInsert(
-    lecture: Lecture,
-    scheduleCourse: Map<Course, Map<Period, ArrayList<Lecture>>>,
-    subjectOccurrencesPerDay: Map<Subject, MutableMap<Day, Int>>
-  ): Pair<Int, Int> {
-    val courseSchedule = scheduleCourse[lecture.course]!!
-    val lecturesInPeriodOfCourse = courseSchedule[lecture.period]!!
+  override fun resetWorkingSolution(
+    scheduleOwners: List<Course>?, periods: List<Period>?, lectures: List<Lecture>?, mainSchedule: CourseSchedule?
+  ) {
+    schedule = scheduleOwners!!
+      .associate { it to periods!!.associate { it to ArrayList<Lecture>() } }
+    subjectOccurrencesPerDay = mainSchedule!!.subjects!!
+      .associate { it to Day.DAYS.associateTo(HashMap<Day, Int>(), { it to 0 }) }
 
-    val hardScore = calculateHardScore(lecturesInPeriodOfCourse)
-    val softScore = calculateSoftScore(lecture, courseSchedule, subjectOccurrencesPerDay)
+    lectures!!.forEach { insert(it) }
+  }
 
+  override fun insertMove(lecture: Lecture?) {
+    val lecturesInPeriodOfCourse = schedule!![lecture!!.course]!![lecture.period]!!
     lecturesInPeriodOfCourse.add(lecture)
-    incrementOccurrences(subjectOccurrencesPerDay, lecture)
-
-    return Pair(hardScore, softScore)
+    addToOccurrences(lecture, 1)
   }
 
-  private fun incrementOccurrences(subjectOccurrencesPerDay: Map<Subject, MutableMap<Day, Int>>, lecture: Lecture) {
-    val occurrencesPerDay = subjectOccurrencesPerDay[lecture.subject]!!
+  override fun retractMove(lecture: Lecture?) {
+    val lecturesInPeriodOfCourse = schedule!![lecture!!.course]!![lecture.period]!!
+    lecturesInPeriodOfCourse.add(lecture)
+    addToOccurrences(lecture, -1)
+  }
+
+  override fun calculateHardScoreOfMove(lecture: Lecture?): Int {
+    return conflictingLecturesPenalty(lecture)
+  }
+
+  override fun calculateSoftScoreOfMove(lecture: Lecture?): Int {
+    return periodGapPenalty(lecture) * coursePeriodsGapWeight +
+      maxOccurrencesPerDayPenalty(lecture) * maxOccurrencesPerDayWeight
+  }
+
+  private fun addToOccurrences(lecture: Lecture?, n: Int) {
+    val occurrencesPerDay = subjectOccurrencesPerDay!![lecture!!.subject]!!
     val occurrencesSoFar = occurrencesPerDay[lecture.period!!.day]!!
-    occurrencesPerDay[lecture.period!!.day] = occurrencesSoFar + 1
+    occurrencesPerDay[lecture.period!!.day] = occurrencesSoFar + n
   }
 
-  private fun calculateHardScore(lecturesInPeriodOfCourse: ArrayList<Lecture>): Int {
-    return conflictingLecturesPenalty(lecturesInPeriodOfCourse)
-  }
+    /**Hard:
+     * There should not be several lectures in the same period for the same course
+     */
+    private fun conflictingLecturesPenalty(lecture: Lecture?): Int {
+      val lecturesInPeriodInCourse = schedule!![lecture!!.course]!![lecture.period]!!
+      return lecturesInPeriodInCourse.size
+    }
 
-  /**
-   * There should not be several lectures in the same period for the same course
-   */
-  private fun conflictingLecturesPenalty(lecturesInPeriod: ArrayList<Lecture>): Int {
-    return lecturesInPeriod.size
-  }
-
-  private fun calculateSoftScore(lecture: Lecture, courseSchedule: Map<Period, ArrayList<Lecture>>, subjectOccurrencesPerDay: Map<Subject, MutableMap<Day, Int>>): Int {
-    return periodGapPenalty(lecture, courseSchedule) * coursePeriodsGapWeight +
-      maxOccurrencesPerDayPenalty(lecture, subjectOccurrencesPerDay) * maxOccurrencesPerDayWeight
-  }
-
-  /**
+  /**Soft:
    * There is a penalty for an isolated lecture in the course's schedule
    */
-  private fun periodGapPenalty(lecture: Lecture, courseSchedule: Map<Period, ArrayList<Lecture>>): Int {
+  private fun periodGapPenalty(lecture: Lecture?): Int {
+    val courseSchedule = schedule!![lecture!!.course]!!
     val period = lecture.period!!
     val day = period.day
     val periodBefore = day.periods[period.timeSlot - 1]
@@ -67,17 +77,17 @@ object CourseScoreCalculator {
     }
   }
 
-  /**
+  /**Soft:
    * There is a penalty for anything beyond the targetLecturesPerDay per subject, while the actual target amount is favored
    */
-  private fun maxOccurrencesPerDayPenalty(lecture: Lecture, subjectOccurrencesPerDay: Map<Subject, MutableMap<Day, Int>>): Int {
-    val subject = lecture.subject!!
+  private fun maxOccurrencesPerDayPenalty(lecture: Lecture?): Int {
+    val subject = lecture!!.subject!!
     val day = lecture.period!!.day
-    val occurrencesPerDay = subjectOccurrencesPerDay[subject]!![day]!!
+    val occurrencesPerDay = subjectOccurrencesPerDay!![subject]!![day]!!
     return when {
-        occurrencesPerDay == targetLecturesPerDay -> 1
-        occurrencesPerDay < targetLecturesPerDay -> 0
-        else -> -occurrencesPerDay + 2
+      occurrencesPerDay == targetLecturesPerDay -> 1
+      occurrencesPerDay < targetLecturesPerDay -> 0
+      else -> -occurrencesPerDay + 2
     }
   }
 

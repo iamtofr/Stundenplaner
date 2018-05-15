@@ -2,322 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d559c28-16cb-456a-a863-22861f23b42d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/solver/calculator/CurriculumIncrementalScoreCalculator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UML.mdj" beforeDir="false" afterPath="$PROJECT_DIR$/../UML.mdj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scrabble/unsolved/jbossProjects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/data/scrabble/unsolved/jbossProjects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/tsp/import/tutorial/test/circle_25.tsp" beforeDir="false" afterPath="$PROJECT_DIR$/data/tsp/import/tutorial/test/circle_25.tsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/domain/CourseSchedule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/domain/CourseSchedule.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/domain/domainModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/domain/domainModel.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/domain/solutionModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/domain/solutionModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/persistence/CurriculumCourseExporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/persistence/CurriculumCourseExporter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/persistence/CurriculumCourseGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/persistence/CurriculumCourseGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/persistence/CurriculumCourseImporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/persistence/CurriculumCourseImporter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/solver/CurriculumIncrementalScoreCalculator.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/solver/LectureDifficultyWeightFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/solver/LectureDifficultyWeightFactory.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/swingui/CurriculumCoursePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/swingui/CurriculumCoursePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/de/stundenplanner/solver/curriculumCourseSolverConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/de/stundenplanner/solver/curriculumCourseSolverConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/optaplanner-examples.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/stundenplanner/app/CurriculumCourseApp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/stundenplanner/app/CurriculumCourseAppKt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/stundenplanner/domain/Course.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/stundenplanner/domain/CourseSchedule.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/stundenplanner/domain/Curriculum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/stundenplanner/domain/Day.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/stundenplanner/domain/Lecture.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/stundenplanner/domain/Period.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/stundenplanner/domain/Room.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/stundenplanner/domain/Teacher.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/stundenplanner/domain/TimeSlot.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/stundenplanner/domain/UnavailablePeriodPenalty.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/stundenplanner/persistence/CurriculumCourseExporter$CurriculumCourseOutputBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/stundenplanner/persistence/CurriculumCourseExporter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/stundenplanner/persistence/CurriculumCourseGenerator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/stundenplanner/persistence/CurriculumCourseImporter$CurriculumCourseInputBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/stundenplanner/persistence/CurriculumCourseImporter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/stundenplanner/solver/CourseConflict.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/stundenplanner/solver/CurriculumIncrementalScoreCalculator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/stundenplanner/solver/LectureDifficultyWeightFactory$LectureDifficultyWeight.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/stundenplanner/solver/LectureDifficultyWeightFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/stundenplanner/solver/PeriodStrengthWeightFactory$PeriodStrengthWeight.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/stundenplanner/solver/PeriodStrengthWeightFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/stundenplanner/solver/RoomStrengthWeightFactory$RoomStrengthWeight.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/stundenplanner/solver/RoomStrengthWeightFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/stundenplanner/solver/curriculumCourseScoreRules.drl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/stundenplanner/solver/curriculumCourseScoreRules.drl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/stundenplanner/solver/move/DifferentCourseSwapMoveFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/stundenplanner/swingui/CurriculumCoursePanel$LectureAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/stundenplanner/swingui/CurriculumCoursePanel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/cheaptime/benchmark/cheapTimeBenchmarkConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/cheaptime/benchmark/cheapTimeBenchmarkConfigTemplate.xml.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/cheaptime/solver/cheapTimeScoreRules.drl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/cheaptime/solver/cheapTimeSolverConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/cheaptime/swingui/cheapTimeLogo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/cheaptime/swingui/cheapTimeLogo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/cloudbalancing/optional/benchmark/cloudBalancingBenchmarkConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/cloudbalancing/optional/benchmark/cloudBalancingBenchmarkConfigTemplate.xml.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/cloudbalancing/optional/benchmark/cloudBalancingScoreDirectorBenchmarkConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/cloudbalancing/optional/benchmark/cloudBalancingStepLimitBenchmarkConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/cloudbalancing/solver/cloudBalancingScoreRules.drl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/cloudbalancing/solver/cloudBalancingSolverConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/cloudbalancing/swingui/addCloudComputer.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/cloudbalancing/swingui/addCloudComputer.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/cloudbalancing/swingui/addCloudProcess.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/cloudbalancing/swingui/addCloudProcess.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/cloudbalancing/swingui/cloudBalancingLogo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/cloudbalancing/swingui/cloudBalancingLogo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/cloudbalancing/swingui/cloudComputer.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/cloudbalancing/swingui/cloudComputer.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/cloudbalancing/swingui/cloudProcess.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/cloudbalancing/swingui/cloudProcess.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/cloudbalancing/swingui/deleteCloudComputer.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/cloudbalancing/swingui/deleteCloudComputer.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/cloudbalancing/swingui/deleteCloudProcess.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/cloudbalancing/swingui/deleteCloudProcess.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/coachshuttlegathering/solver/coachShuttleGatheringScoreRules.drl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/coachshuttlegathering/solver/coachShuttleGatheringSolverConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/app/CommonApp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/app/CommonBenchmarkApp$ArgOption.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/app/CommonBenchmarkApp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/app/LoggingMain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/business/AlphaNumericStringComparator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/business/ExtensionFileFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/business/ProblemFileComparator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/business/SolutionBusiness.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/domain/AbstractPersistable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/domain/PersistableIdComparator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/persistence/AbstractPngSolutionImporter$PngInputBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/persistence/AbstractPngSolutionImporter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/persistence/AbstractSolutionExporter$OutputBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/persistence/AbstractSolutionExporter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/persistence/AbstractSolutionImporter$InputBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/persistence/AbstractSolutionImporter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/persistence/AbstractTxtSolutionExporter$TxtOutputBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/persistence/AbstractTxtSolutionExporter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/persistence/AbstractTxtSolutionImporter$TxtInputBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/persistence/AbstractTxtSolutionImporter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/persistence/AbstractXlsxSolutionImporter$XslxInputBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/persistence/AbstractXlsxSolutionImporter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/persistence/AbstractXmlSolutionExporter$XmlOutputBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/persistence/AbstractXmlSolutionExporter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/persistence/AbstractXmlSolutionImporter$XmlInputBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/persistence/AbstractXmlSolutionImporter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/persistence/SolutionConverter$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/persistence/SolutionConverter$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/persistence/SolutionConverter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/persistence/StringDataGenerator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/swingui/CommonIcons.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/swingui/ConstraintMatchesDialog$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/swingui/ConstraintMatchesDialog$ConstraintMatchTotalTableModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/swingui/ConstraintMatchesDialog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/swingui/OpenBrowserAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/swingui/SolutionPanel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/swingui/SolverAndPersistenceFrame$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/swingui/SolverAndPersistenceFrame$ExportAction$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/swingui/SolverAndPersistenceFrame$ExportAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/swingui/SolverAndPersistenceFrame$ImportAction$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/swingui/SolverAndPersistenceFrame$ImportAction$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/swingui/SolverAndPersistenceFrame$ImportAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/swingui/SolverAndPersistenceFrame$OpenAction$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/swingui/SolverAndPersistenceFrame$OpenAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/swingui/SolverAndPersistenceFrame$QuickOpenAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/swingui/SolverAndPersistenceFrame$SaveAction$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/swingui/SolverAndPersistenceFrame$SaveAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/swingui/SolverAndPersistenceFrame$ShowConstraintMatchesDialogAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/swingui/SolverAndPersistenceFrame$SolveAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/swingui/SolverAndPersistenceFrame$SolveWorker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/swingui/SolverAndPersistenceFrame$TerminateSolvingEarlyAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/swingui/SolverAndPersistenceFrame.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/swingui/components/Labeled.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/swingui/components/LabeledComboBoxRenderer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/swingui/latitudelongitude/LatitudeLongitudeTranslator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/swingui/timetable/TimeTableLayout$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/swingui/timetable/TimeTableLayout$Cell.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/swingui/timetable/TimeTableLayout$Column.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/swingui/timetable/TimeTableLayout$ComponentSpan.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/swingui/timetable/TimeTableLayout$Row.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/swingui/timetable/TimeTableLayout.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/swingui/timetable/TimeTableLayoutConstraints.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/swingui/timetable/TimeTablePanel$HeaderColumnKey.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/swingui/timetable/TimeTablePanel$HeaderRowKey.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/common/swingui/timetable/TimeTablePanel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/conferencescheduling/solver/conferenceSchedulingScoreRules.drl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/conferencescheduling/solver/conferenceSchedulingSolverConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/conferencescheduling/swingui/conferenceSchedulingLogo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/conferencescheduling/swingui/conferenceSchedulingLogo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/curriculumcourse/app/CurriculumCourseApp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/curriculumcourse/app/CurriculumCourseBenchmarkApp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/curriculumcourse/domain/Course.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/curriculumcourse/domain/CourseSchedule.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/curriculumcourse/domain/Curriculum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/curriculumcourse/domain/Day.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/curriculumcourse/domain/Lecture.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/curriculumcourse/domain/Period.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/curriculumcourse/domain/Room.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/curriculumcourse/domain/Teacher.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/curriculumcourse/domain/Timeslot.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/curriculumcourse/domain/UnavailablePeriodPenalty.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/curriculumcourse/domain/solver/CourseConflict.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/curriculumcourse/domain/solver/LectureDifficultyWeightFactory$LectureDifficultyWeight.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/curriculumcourse/domain/solver/LectureDifficultyWeightFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/curriculumcourse/domain/solver/PeriodStrengthWeightFactory$PeriodStrengthWeight.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/curriculumcourse/domain/solver/PeriodStrengthWeightFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/curriculumcourse/domain/solver/RoomStrengthWeightFactory$RoomStrengthWeight.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/curriculumcourse/domain/solver/RoomStrengthWeightFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/curriculumcourse/persistence/CurriculumCourseExporter$CurriculumCourseOutputBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/curriculumcourse/persistence/CurriculumCourseExporter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/curriculumcourse/persistence/CurriculumCourseGenerator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/curriculumcourse/persistence/CurriculumCourseImporter$CurriculumCourseInputBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/curriculumcourse/persistence/CurriculumCourseImporter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/curriculumcourse/solver/curriculumCourseScoreRules.drl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/curriculumcourse/solver/curriculumCourseScoreRules.drl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/curriculumcourse/solver/move/DifferentCourseSwapMoveFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/curriculumcourse/swingui/CurriculumCoursePanel$LectureAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/curriculumcourse/swingui/CurriculumCoursePanel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/dinnerparty/solver/dinnerPartyExtraScoreRules.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/dinnerparty/solver/dinnerPartyScoreRules.drl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/dinnerparty/solver/dinnerPartySolverConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/dinnerparty/swingui/dinnerPartyLogo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/dinnerparty/swingui/dinnerPartyLogo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/dinnerparty/swingui/guestFemale.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/dinnerparty/swingui/guestFemale0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/dinnerparty/swingui/guestFemale1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/dinnerparty/swingui/guestFemale2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/dinnerparty/swingui/guestFemale3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/dinnerparty/swingui/guestFemale4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/dinnerparty/swingui/guestMale.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/dinnerparty/swingui/guestMale0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/dinnerparty/swingui/guestMale1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/dinnerparty/swingui/guestMale2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/dinnerparty/swingui/guestMale3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/dinnerparty/swingui/guestMale4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/dinnerparty/swingui/hobbyChess.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/dinnerparty/swingui/hobbyChess.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/dinnerparty/swingui/hobbyGolf.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/dinnerparty/swingui/hobbyGolf.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/dinnerparty/swingui/hobbyMotorcycles.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/dinnerparty/swingui/hobbyMotorcycles.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/dinnerparty/swingui/hobbyPoker.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/dinnerparty/swingui/hobbyPoker.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/dinnerparty/swingui/hobbyTennis.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/dinnerparty/swingui/hobbyTennis.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/examination/benchmark/examinationBenchmarkConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/examination/benchmark/examinationStepLimitBenchmarkConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/examination/solver/examinationScoreRules.drl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/examination/solver/examinationSolverConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/examination/swingui/examinationLogo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/examination/swingui/examinationLogo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/investment/solver/investmentScoreRules.drl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/investment/solver/investmentSolverConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/investment/swingui/investmentLogo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/investment/swingui/investmentLogo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/machinereassignment/benchmark/machineReassignmentBenchmarkConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/machinereassignment/benchmark/machineReassignmentBenchmarkConfigTemplate.xml.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/machinereassignment/benchmark/machineReassignmentScoreDirectorBenchmarkConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/machinereassignment/benchmark/machineReassignmentStepLimitBenchmarkConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/machinereassignment/solver/machineReassignmentScoreRules.drl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/machinereassignment/solver/machineReassignmentSolverConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/machinereassignment/swingui/machineReassignmentLogo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/machinereassignment/swingui/machineReassignmentLogo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/meetingscheduling/solver/meetingSchedulingScoreRules.drl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/meetingscheduling/solver/meetingSchedulingSolverConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/meetingscheduling/swingui/meetingSchedulingLogo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/meetingscheduling/swingui/meetingSchedulingLogo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/nqueens/benchmark/nqueensBenchmarkConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/nqueens/benchmark/nqueensScoreDirectorBenchmarkConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/nqueens/benchmark/nqueensStepLimitBenchmarkConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/nqueens/solver/nQueensScoreRules.drl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/nqueens/solver/nqueensSolverConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/nqueens/swingui/nqueensLogo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/nqueens/swingui/nqueensLogo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/nqueens/swingui/queenImage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/nqueens/swingui/queenImage.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/nurserostering/benchmark/nurseRosteringLongBenchmarkConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/nurserostering/benchmark/nurseRosteringMediumBenchmarkConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/nurserostering/benchmark/nurseRosteringSprintBenchmarkConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/nurserostering/benchmark/nurseRosteringStepLimitBenchmarkConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/nurserostering/solver/nurseRosteringScoreRules.drl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/nurserostering/solver/nurseRosteringSolverConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/nurserostering/swingui/deleteEmployee.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/nurserostering/swingui/deleteEmployee.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/nurserostering/swingui/employee.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/nurserostering/swingui/employee.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/nurserostering/swingui/nurseRosteringLogo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/nurserostering/swingui/nurseRosteringLogo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/nurserostering/swingui/shiftTypeEarly.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/nurserostering/swingui/shiftTypeEarly.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/nurserostering/swingui/shiftTypeLate.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/nurserostering/swingui/shiftTypeLate.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/nurserostering/swingui/shiftTypeNight.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/nurserostering/swingui/shiftTypeNight.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/pas/benchmark/patientAdmissionScheduleBenchmarkConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/pas/solver/patientAdmissionScheduleScoreRules.drl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/pas/solver/patientAdmissionScheduleSolverConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/pas/swingui/anyGender.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/pas/swingui/anyGender.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/pas/swingui/female.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/pas/swingui/female.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/pas/swingui/male.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/pas/swingui/male.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/pas/swingui/pasLogo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/pas/swingui/pasLogo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/pas/swingui/sameGender.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/pas/swingui/sameGender.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/projectjobscheduling/benchmark/projectJobSchedulingBenchmarkConfigTemplate.xml.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/projectjobscheduling/solver/projectJobSchedulingScoreRules.drl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/projectjobscheduling/solver/projectJobSchedulingSolverConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/projectjobscheduling/swingui/projectJobSchedulingLogo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/projectjobscheduling/swingui/projectJobSchedulingLogo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/scrabble/solver/scrabbleScoreRules.drl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/scrabble/solver/scrabbleSolverConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/taskassigning/benchmark/taskAssigningBenchmarkConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/taskassigning/solver/taskAssigningScoreRules.drl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/taskassigning/solver/taskAssigningSolverConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/taskassigning/swingui/affinityHigh.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/taskassigning/swingui/affinityHigh.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/taskassigning/swingui/affinityLow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/taskassigning/swingui/affinityLow.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/taskassigning/swingui/affinityMedium.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/taskassigning/swingui/affinityMedium.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/taskassigning/swingui/affinityNone.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/taskassigning/swingui/affinityNone.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/taskassigning/swingui/priorityCritical.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/taskassigning/swingui/priorityCritical.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/taskassigning/swingui/priorityMajor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/taskassigning/swingui/priorityMajor.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/taskassigning/swingui/priorityMinor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/taskassigning/swingui/priorityMinor.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/taskassigning/swingui/taskAssigningLogo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/taskassigning/swingui/taskAssigningLogo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/tennis/solver/tennisScoreRules.drl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/tennis/solver/tennisSolverConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/tennis/swingui/tennisLogo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/tennis/swingui/tennisLogo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/travelingtournament/benchmark/travelingTournamentBenchmarkConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/travelingtournament/benchmark/travelingTournamentStepLimitBenchmarkConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/travelingtournament/solver/travelingTournamentScoreRules.drl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/travelingtournament/solver/travelingTournamentSolverConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/travelingtournament/swingui/awayMatch.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/travelingtournament/swingui/awayMatch.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/travelingtournament/swingui/travelingTournamentLogo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/travelingtournament/swingui/travelingTournamentLogo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/tsp/benchmark/tspBenchmarkConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/tsp/solver/tspScoreRules.drl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/tsp/solver/tspSolverConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/tsp/swingui/europaBackground.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/tsp/swingui/tspLogo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/tsp/swingui/tspLogo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/vehiclerouting/benchmark/vehicleRoutingBenchmarkConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/vehiclerouting/benchmark/vehicleRoutingBenchmarkConfigTemplate.xml.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/vehiclerouting/benchmark/vehicleRoutingStepLimitBenchmarkConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/vehiclerouting/solver/vehicleRoutingScoreRules.drl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/vehiclerouting/solver/vehicleRoutingSolverConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/vehiclerouting/swingui/depot.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/vehiclerouting/swingui/depot.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/vehiclerouting/swingui/vehicle.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/vehiclerouting/swingui/vehicleButter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/vehiclerouting/swingui/vehicleChameleon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/vehiclerouting/swingui/vehicleChocolate.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/vehiclerouting/swingui/vehiclePlum.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/vehiclerouting/swingui/vehicleRoutingLogo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/vehiclerouting/swingui/vehicleRoutingLogo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/optaplanner/examples/vehiclerouting/swingui/vehicleSkyBlue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/solver/calculator/CourseScoreCalculator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/solver/calculator/CourseScoreCalculator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/solver/calculator/CurriculumIncrementalScoreCalculator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/solver/calculator/CurriculumIncrementalScoreCalculator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/solver/calculator/RoomScoreCalculator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/solver/calculator/RoomScoreCalculator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/solver/calculator/TeacherScoreCalculator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/solver/calculator/TeacherScoreCalculator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/de/stundenplanner/common/swingui/checkNo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/de/stundenplanner/common/swingui/checkNo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/de/stundenplanner/common/swingui/checkYes.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/de/stundenplanner/common/swingui/checkYes.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/de/stundenplanner/common/swingui/exampleUsageExplanation.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/de/stundenplanner/common/swingui/exampleUsageExplanation.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/de/stundenplanner/common/swingui/indictmentHeatMapFalseIcon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/de/stundenplanner/common/swingui/indictmentHeatMapFalseIcon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/de/stundenplanner/common/swingui/indictmentHeatMapTrueIcon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/de/stundenplanner/common/swingui/indictmentHeatMapTrueIcon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/de/stundenplanner/common/swingui/pinned.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/de/stundenplanner/common/swingui/pinned.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/de/stundenplanner/common/swingui/refreshScreenDuringSolvingFalseIcon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/de/stundenplanner/common/swingui/refreshScreenDuringSolvingFalseIcon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/de/stundenplanner/common/swingui/refreshScreenDuringSolvingTrueIcon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/de/stundenplanner/common/swingui/refreshScreenDuringSolvingTrueIcon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/de/stundenplanner/common/swingui/solveAction.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/de/stundenplanner/common/swingui/solveAction.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/de/stundenplanner/common/swingui/terminateSolvingEarlyAction.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/de/stundenplanner/common/swingui/terminateSolvingEarlyAction.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/de/stundenplanner/swingui/curriculumCourseLogo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/de/stundenplanner/swingui/curriculumCourseLogo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/optaplanner/examples/common/swingui/checkNo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/optaplanner/examples/common/swingui/checkNo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/optaplanner/examples/common/swingui/checkYes.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/optaplanner/examples/common/swingui/checkYes.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/optaplanner/examples/common/swingui/exampleUsageExplanation.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/optaplanner/examples/common/swingui/exampleUsageExplanation.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/optaplanner/examples/common/swingui/indictmentHeatMapFalseIcon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/optaplanner/examples/common/swingui/indictmentHeatMapFalseIcon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/optaplanner/examples/common/swingui/indictmentHeatMapTrueIcon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/optaplanner/examples/common/swingui/indictmentHeatMapTrueIcon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/optaplanner/examples/common/swingui/pinned.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/optaplanner/examples/common/swingui/pinned.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/optaplanner/examples/common/swingui/refreshScreenDuringSolvingFalseIcon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/optaplanner/examples/common/swingui/refreshScreenDuringSolvingFalseIcon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/optaplanner/examples/common/swingui/refreshScreenDuringSolvingTrueIcon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/optaplanner/examples/common/swingui/refreshScreenDuringSolvingTrueIcon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/optaplanner/examples/common/swingui/solveAction.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/optaplanner/examples/common/swingui/solveAction.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/optaplanner/examples/common/swingui/terminateSolvingEarlyAction.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/optaplanner/examples/common/swingui/terminateSolvingEarlyAction.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/optaplanner/examples/curriculumcourse/swingui/curriculumCourseLogo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/optaplanner/examples/curriculumcourse/swingui/curriculumCourseLogo.svg" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -328,97 +46,99 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Curriculum.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/optaplanner/examples/curriculumcourse/domain/Curriculum.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Course.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/optaplanner/examples/curriculumcourse/domain/Course.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-              <folding>
-                <element signature="e#1196#1197#0" expanded="true" />
-                <element signature="e#1228#1229#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CourseSchedule.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/domain/CourseSchedule.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="31" column="34" lean-forward="true" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RoomScoreCalculator.kt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/solver/calculator/RoomScoreCalculator.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="46" column="57" selection-start-line="46" selection-start-column="57" selection-end-line="46" selection-end-column="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="curriculumCourseScoreRules.drl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/de/stundenplanner/solver/curriculumCourseScoreRules.drl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1551">
-              <caret line="107" column="9" lean-forward="true" selection-start-line="107" selection-start-column="9" selection-end-line="107" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CurriculumCourseApp.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/app/CurriculumCourseApp.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LectureDifficultyWeightFactory.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/solver/LectureDifficultyWeightFactory.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
-              <folding>
-                <element signature="e#656#936#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Persistable.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/domain/Persistable.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-              <folding>
-                <element signature="e#34#306#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="RoomScoreCalculator.kt" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/solver/calculator/RoomScoreCalculator.kt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="443">
+                  <caret line="54" column="47" selection-start-line="54" selection-start-column="47" selection-end-line="54" selection-end-column="47" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="CurriculumIncrementalScoreCalculator.kt" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/solver/calculator/CurriculumIncrementalScoreCalculator.kt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <caret column="43" selection-start-column="43" selection-end-column="43" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="domainModel.kt" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/domain/domainModel.kt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="799">
+                  <caret line="47" column="14" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="CourseScoreCalculator.kt" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/solver/calculator/CourseScoreCalculator.kt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1343">
+                  <caret line="79" column="10" selection-start-line="79" selection-start-column="10" selection-end-line="79" selection-end-column="10" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="TeacherScoreCalculator.kt" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/solver/calculator/TeacherScoreCalculator.kt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="408">
+                  <caret line="25" selection-start-line="25" selection-end-line="25" />
+                  <folding>
+                    <element signature="e#45#124#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="curriculumCourseScoreRules.drl" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/resources/de/stundenplanner/solver/curriculumCourseScoreRules.drl">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1853">
+                  <caret line="109" column="57" selection-start-line="109" selection-start-column="57" selection-end-line="109" selection-end-column="57" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="BasicScoreCalculator.kt" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/solver/calculator/BasicScoreCalculator.kt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="425">
+                  <caret line="25" selection-start-line="25" selection-end-line="25" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="solutionModel.kt" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/domain/solutionModel.kt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="442">
+                  <caret line="32" selection-start-line="32" selection-end-line="32" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin Class" />
-        <option value="Kotlin File" />
         <option value="Kotlin Object" />
+        <option value="Class" />
+        <option value="Kotlin File" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -442,6 +162,8 @@
       <find>solve</find>
       <find>required</find>
       <find>teacher</find>
+      <find>subjects</find>
+      <find>valuerangeproviderre</find>
     </findStrings>
     <replaceStrings>
       <replace>course</replace>
@@ -456,11 +178,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/domain/model.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/domain/Course.java" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/domain/Curriculum.java" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/domain/CourseSchedule.java" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/domain/solver/CourseConflict.java" />
         <option value="$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/domain/solver/PeriodStrengthWeightFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/optaplanner/examples/curriculumcourse/domain/Timeslot.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/optaplanner/examples/curriculumcourse/domain/solver/CourseConflict.java" />
@@ -499,12 +216,17 @@
         <option value="$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/persistence/CurriculumCourseImporter.java" />
         <option value="$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/persistence/CurriculumCourseGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/swingui/CurriculumCoursePanel.java" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/domain/solutionModel.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/domain/domainModel.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/solver/CurriculumIncrementalScoreCalculator.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/solver/calculator/TeacherScoreCalculator.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/org/optaplanner/examples/curriculumcourse/domain/aJavaClass.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/optaplanner/examples/curriculumcourse/domain/AJavaClass.java" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/domain/KotlinClass.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/org/optaplanner/examples/curriculumcourse/domain/JavaClass.java" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/domain/solutionModel.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/domain/CourseSchedule.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/solver/calculator/CurriculumIncrementalScoreCalculator.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/domain/domainModel.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/solver/calculator/BasicScoreCalculator.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/solver/calculator/TeacherScoreCalculator.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/solver/calculator/CourseScoreCalculator.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/solver/calculator/RoomScoreCalculator.kt" />
       </list>
@@ -527,7 +249,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-2" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1096" />
   </component>
@@ -539,6 +262,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -579,25 +303,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="examples" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sources" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sources" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sources" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sources" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
               <item name="curriculumcourse" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -608,30 +313,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="examples" type="462c0819:PsiDirectoryNode" />
               <item name="curriculumcourse" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sources" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sources" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sources" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sources" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="stundenplanner" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sources" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sources" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="stundenplanner" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -640,6 +321,21 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sources" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sources" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="stundenplanner" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sources" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sources" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
               <item name="stundenplanner" type="462c0819:PsiDirectoryNode" />
               <item name="domain" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -650,15 +346,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="kotlin" type="462c0819:PsiDirectoryNode" />
               <item name="stundenplanner" type="462c0819:PsiDirectoryNode" />
-              <item name="persistence" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sources" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sources" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="stundenplanner" type="462c0819:PsiDirectoryNode" />
               <item name="solver" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -666,55 +353,18 @@
               <item name="sources" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="stundenplanner" type="462c0819:PsiDirectoryNode" />
-              <item name="solver" type="462c0819:PsiDirectoryNode" />
-              <item name="calculator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sources" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sources" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="stundenplanner" type="462c0819:PsiDirectoryNode" />
-              <item name="swingui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sources" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sources" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sources" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sources" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="stundenplanner" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sources" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sources" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="stundenplanner" type="462c0819:PsiDirectoryNode" />
-              <item name="solver" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="course&#9;FILE&#9;file://C:/Users/anarc/git/Die-Stundenplanner/Algorithm/sources/src/main/java/org/optaplanner/examples/curriculumcourse/domain/Course.java&#10;commonapp&#9;FILE&#9;file://C:/Users/anarc/git/Die-Stundenplanner/Algorithm/sources/src/main/java/org/optaplanner/examples/common/app/CommonApp.java&#10;coursecon&#9;FILE&#9;file://C:/Users/anarc/git/Die-Stundenplanner/Algorithm/sources/src/main/kotlin/de/stundenplanner/domain/solver/CourseConflict.kt" />
+    <property name="SearchEverywhereHistoryKey" value="domainm&#9;FILE&#9;file://C:/Users/anarc/git/Die-Stundenplanner/Algorithm/sources/src/main/kotlin/de/stundenplanner/domain/domainModel.kt&#10;course&#9;FILE&#9;file://C:/Users/anarc/git/Die-Stundenplanner/Algorithm/sources/src/main/java/org/optaplanner/examples/curriculumcourse/domain/Course.java&#10;commonapp&#9;FILE&#9;file://C:/Users/anarc/git/Die-Stundenplanner/Algorithm/sources/src/main/java/org/optaplanner/examples/common/app/CommonApp.java&#10;coursecon&#9;FILE&#9;file://C:/Users/anarc/git/Die-Stundenplanner/Algorithm/sources/src/main/kotlin/de/stundenplanner/domain/solver/CourseConflict.kt" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/kotlin" />
@@ -861,20 +511,20 @@
       <workItem from="1525858474676" duration="16000" />
       <workItem from="1525858603952" duration="9324000" />
       <workItem from="1525962836314" duration="3756000" />
-      <workItem from="1526031200697" duration="28382000" />
+      <workItem from="1526031200697" duration="29034000" />
+      <workItem from="1526138704577" duration="23048000" />
+      <workItem from="1526371187023" duration="230000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94690000" />
+    <option name="totallyTimeSpent" value="118620000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="10" visible="true" weight="0.32925585" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
@@ -888,7 +538,6 @@
       <window_info id="Designer" order="3" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32925585" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
@@ -900,37 +549,9 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-    </layout>
-    <layout-to-restore>
-      <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32925585" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32925585" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32925585" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32925585" />
-      <window_info anchor="right" id="Maven Projects" order="7" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-    </layout-to-restore>
+    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -944,10 +565,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/optaplanner/examples/curriculumcourse/persistence/CurriculumCourseOpenDataFilesTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/optaplanner/examples/curriculumcourse/app/CurriculumCourseSolveAllTurtleTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/optaplanner/examples/curriculumcourse/persistence/CurriculumCourseImporterTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/optaplanner/examples/common/app/AbstractConstructionHeuristicTest.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/org/optaplanner/examples/curriculumcourse/app/CurriculumCoursePerformanceTest.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/org/optaplanner/examples/curriculumcourse/app/CurriculumCourseConstructionHeuristicTest.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/org/optaplanner/examples/curriculumcourse/app/CurriculumCourseBenchmarkConfigTest.java" />
@@ -1020,9 +637,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="e#39#346#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1082,16 +696,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/domain/Persistable.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-          <folding>
-            <element signature="e#34#306#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/optaplanner/examples/common/persistence/AbstractSolutionExporter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1117,9 +721,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="531">
           <caret line="224" column="7" selection-start-line="224" selection-start-column="7" selection-end-line="224" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1127,9 +728,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3026">
           <caret line="41" column="42" lean-forward="true" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1140,20 +738,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/app/CurriculumCourseApp.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/swingui/CurriculumCoursePanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1140">
           <caret line="236" column="48" selection-start-line="236" selection-start-column="48" selection-end-line="236" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1171,30 +759,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/optaplanner/examples/curriculumcourse/domain/Period.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="20" column="66" lean-forward="true" selection-start-line="20" selection-start-column="66" selection-end-line="20" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/domain/solutionModel.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-          <folding>
-            <element signature="e#34#398#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/de/stundenplanner/solver/curriculumCourseScoreRules.drl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1551">
-          <caret line="107" column="9" lean-forward="true" selection-start-line="107" selection-start-column="9" selection-end-line="107" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/optaplanner/optaplanner-core/7.7.0.Final/optaplanner-core-7.7.0.Final.jar!/org/optaplanner/core/api/score/buildin/hardsoft/HardSoftScore.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="335">
@@ -1202,82 +766,132 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/domain/domainModel.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/optaplanner/examples/curriculumcourse/domain/Course.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="42" lean-forward="true" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
-          <folding>
-            <element signature="e#34#134#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="374">
+          <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/optaplanner/examples/curriculumcourse/domain/Curriculum.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/optaplanner/examples/curriculumcourse/domain/Course.java">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/domain/KotlinClass.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="e#1196#1197#0" expanded="true" />
-            <element signature="e#1228#1229#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="221">
+          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/optaplanner/examples/curriculumcourse/domain/JavaClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="3" lean-forward="true" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/domain/Persistable.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/app/CurriculumCourseApp.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/de/stundenplanner/solver/curriculumCourseScoreRules.drl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1853">
+          <caret line="109" column="57" selection-start-line="109" selection-start-column="57" selection-end-line="109" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/solver/LectureDifficultyWeightFactory.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="50" column="5" lean-forward="true" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/optaplanner/examples/curriculumcourse/domain/Period.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/domain/solutionModel.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/optaplanner/optaplanner-core/7.7.0.Final/optaplanner-core-7.7.0.Final.jar!/org/optaplanner/core/impl/score/director/incremental/IncrementalScoreCalculator.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/domain/CourseSchedule.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/solver/calculator/CurriculumIncrementalScoreCalculator.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        <state>
+          <caret column="43" selection-start-column="43" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/domain/domainModel.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="47" column="14" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/solver/calculator/TeacherScoreCalculator.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
           <folding>
-            <element signature="e#34#231#0" expanded="true" />
+            <element signature="e#45#124#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/solver/calculator/CourseScoreCalculator.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="7" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
+        <state relative-caret-position="1343">
+          <caret line="79" column="10" selection-start-line="79" selection-start-column="10" selection-end-line="79" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/solver/calculator/TeacherScoreCalculator.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/solver/calculator/BasicScoreCalculator.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="81" selection-start-line="29" selection-start-column="81" selection-end-line="29" selection-end-column="81" />
-          <folding>
-            <element signature="e#45#163#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/solver/LectureDifficultyWeightFactory.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
-          <folding>
-            <element signature="e#656#936#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/domain/CourseSchedule.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="31" column="34" lean-forward="true" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
+        <state relative-caret-position="425">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/de/stundenplanner/solver/calculator/RoomScoreCalculator.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="46" column="57" selection-start-line="46" selection-start-column="57" selection-end-line="46" selection-end-column="57" />
+        <state relative-caret-position="443">
+          <caret line="54" column="47" selection-start-line="54" selection-start-column="47" selection-end-line="54" selection-end-column="47" />
         </state>
       </provider>
     </entry>

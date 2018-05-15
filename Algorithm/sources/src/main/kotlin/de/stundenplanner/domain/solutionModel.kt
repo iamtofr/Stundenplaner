@@ -5,6 +5,7 @@ import de.stundenplanner.solver.PeriodStrengthWeightFactory
 import de.stundenplanner.solver.RoomStrengthWeightFactory
 import org.optaplanner.core.api.domain.entity.PlanningEntity
 import org.optaplanner.core.api.domain.entity.PlanningPin
+import org.optaplanner.core.api.domain.valuerange.ValueRangeProvider
 import org.optaplanner.core.api.domain.variable.PlanningVariable
 
 @PlanningEntity(difficultyWeightFactoryClass = LectureDifficultyWeightFactory::class)
@@ -24,8 +25,11 @@ class Lecture: Persistable() {
     strengthWeightFactoryClass = RoomStrengthWeightFactory::class)
   var room: Room? = null
 
-  @get:PlanningVariable(valueRangeProviderRefs = ["allTeachers"])
+  @get:PlanningVariable(valueRangeProviderRefs = ["subjectTeachers"])
   var teacher: Teacher? = null
+
+  @ValueRangeProvider(id = "subjectTeachers")
+  fun getSubjectTeachers() = subject!!.requiredTeacher
 
   override fun toString(): String {
     return (course).toString()

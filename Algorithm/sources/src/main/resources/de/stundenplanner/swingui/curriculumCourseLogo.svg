@@ -356,7 +356,7 @@
      inkscape:zoom="7.5625"
      inkscape:cx="26.975207"
      inkscape:cy="32"
-     inkscape:window-x="0"
+     inkscape:window-lecturesInPeriodOfCourse="0"
      inkscape:window-y="27"
      inkscape:current-layer="svg2"
      inkscape:grid-points="true"
@@ -374,7 +374,7 @@
      id="rect1314"
      width="48.693699"
      height="38.104076"
-     x="4.653152"
+     lecturesInPeriodOfCourse="4.653152"
      y="5.2427721"
      rx="2.1600409"
      ry="2.1600401" />
@@ -382,7 +382,7 @@
      id="g3166">
     <rect
        y="11.297521"
-       x="10.694215"
+       lecturesInPeriodOfCourse="10.694215"
        height="2"
        width="21"
        id="rect2271"
@@ -392,11 +392,11 @@
        id="rect2273"
        width="20"
        height="2"
-       x="10.694215"
+       lecturesInPeriodOfCourse="10.694215"
        y="15.297521" />
     <rect
        y="19.297522"
-       x="10.694215"
+       lecturesInPeriodOfCourse="10.694215"
        height="2"
        width="18"
        id="rect2275"
@@ -406,11 +406,11 @@
        id="rect2277"
        width="21"
        height="2"
-       x="10.694215"
+       lecturesInPeriodOfCourse="10.694215"
        y="23.297522" />
     <rect
        y="27.297522"
-       x="10.694215"
+       lecturesInPeriodOfCourse="10.694215"
        height="2"
        width="13"
        id="rect2279"
@@ -427,7 +427,7 @@
      id="rect1340"
      width="44.673561"
      height="34.211452"
-     x="6.6135788"
+     lecturesInPeriodOfCourse="6.6135788"
      y="7.2092752"
      rx="0.15457328"
      ry="0.15457328" />

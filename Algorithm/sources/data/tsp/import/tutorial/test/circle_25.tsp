@@ -1,6 +1,6 @@
 NAME : Circle 25
 COMMENT : 25 Points that represent a circle
-COMMENT : Derived from math C^2=A^2+B^2 where C^2 = 400 solving for integers of x
+COMMENT : Derived from math C^2=A^2+B^2 where C^2 = 400 solving for integers of lecturesInPeriodOfCourse
 TYPE : TSP
 DIMENSION : 25
 EDGE_WEIGHT_TYPE : EUC_2D

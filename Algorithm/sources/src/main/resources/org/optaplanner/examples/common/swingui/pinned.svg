@@ -239,7 +239,7 @@
      inkscape:zoom="22.627417"
      inkscape:cx="10.743793"
      inkscape:cy="9.3360443"
-     inkscape:window-x="1680"
+     inkscape:window-lecturesInPeriodOfCourse="1680"
      inkscape:window-y="27"
      inkscape:current-layer="svg2"
      inkscape:grid-points="true"
@@ -265,7 +265,7 @@
        id="rect4562"
        width="10"
        height="7"
-       x="2.0000033"
+       lecturesInPeriodOfCourse="2.0000033"
        y="7" />
   </g>
 </svg>

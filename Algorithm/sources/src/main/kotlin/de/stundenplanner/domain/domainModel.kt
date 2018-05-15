@@ -1,7 +1,6 @@
 package de.stundenplanner.domain
 
 import org.optaplanner.examples.common.swingui.components.Labeled
-import javax.security.auth.Subject
 
 data class Subject(
   val name: String,
@@ -9,11 +8,18 @@ data class Subject(
   val occurrences: Int,
   val requiredEquipment: String?,
   val requiredRoomType: String = "general"
-) : Persistable()
+) : Persistable() {
+  val requiredTeacher: ArrayList<Teacher> = ArrayList()
+}
 
 data class Teacher(
-  val subjectSpecialization: List<Subject>
-) : Persistable()
+  private val subjectSpecialization: List<Subject>
+) : Persistable() {
+  init {
+    subjectSpecialization
+      .forEach { subject -> subject.requiredTeacher.add(this) }
+  }
+}
 
 data class Course(
   val grade: Int,
@@ -42,7 +48,7 @@ class Period(val timeSlot: Int, weekDay: Int) : Persistable(), Labeled {
   val day: Day = Day.DAYS[weekDay]
 
   init {
-      day.addPeriod(this)
+    day.addPeriod(this)
   }
 
   override fun getLabel(): String {

@@ -13,7 +13,6 @@ class CourseSchedule : Persistable() {
   @get:ValueRangeProvider(id = "allPeriods")
   var periods: List<Period>? = null
 
-  @get:ValueRangeProvider(id = "allTeachers")
   var teachers: List<Teacher>? = null
 
   @get:ValueRangeProvider(id = "allRooms")
@@ -28,30 +27,5 @@ class CourseSchedule : Persistable() {
 
   @get:PlanningScore
   var score: HardSoftScore? = null
-
-//  @ProblemFactCollectionProperty
-//  private fun calculateCourseConflictList(): List<CourseConflict> {
-//    val courseConflictList = ArrayList<CourseConflict>()
-//
-//    courses!!
-//      .forEach { leftCourse ->
-//        courses!!
-//          .filter { rightCourse -> leftCourse.id >= rightCourse.id }
-//          .forEach { rightCourse ->
-//            var conflictCount = 0
-//            if (leftCourse.teacher == rightCourse.teacher)
-//              conflictCount++
-//
-//            for (curriculum in leftCourse.curriculumList)
-//              if (rightCourse.curriculumList.contains(curriculum))
-//                conflictCount++
-//
-//            if (conflictCount > 0)
-//              courseConflictList.add(CourseConflict(leftCourse, rightCourse, conflictCount))
-//          }
-//      }
-//
-//    return courseConflictList
-//  }
 
 }

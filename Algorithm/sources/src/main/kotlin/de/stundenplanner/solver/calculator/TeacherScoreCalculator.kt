@@ -1,46 +1,44 @@
 package de.stundenplanner.solver.calculator
 
 import de.stundenplanner.domain.Lecture
-import de.stundenplanner.domain.Period
 import de.stundenplanner.domain.Teacher
 
-object TeacherScoreCalculator {
+class TeacherScoreCalculator : BasicScoreCalculator<Teacher>() {
 
   private val teacherPeriodsGapWeight: Int = 10
 
-  internal fun calculateAndInsert(
-    lecture: Lecture,
-    scheduleTeacher: Map<Teacher, Map<Period, ArrayList<Lecture>>>
-  ): Pair<Int, Int> {
-    val teacherSchedule = scheduleTeacher[lecture.teacher]!!
-    val lecturesInPeriodOfTeacher = teacherSchedule[lecture.period]!!
 
-    val hardScore = calculateHardScore(lecturesInPeriodOfTeacher)
-    val softScore = calculateSoftScore(lecture, teacherSchedule)
-
-    lecturesInPeriodOfTeacher.add(lecture)
-    return Pair(hardScore, softScore)
+  override fun insertMove(lecture: Lecture?) {
+    val lecturesInPeriodOfCourse = schedule!![lecture!!.teacher]!![lecture.period]!!
+    lecturesInPeriodOfCourse.add(lecture)
   }
 
-  private fun calculateHardScore(lecturesInPeriodOfTeacher: ArrayList<Lecture>): Int {
-    return conflictingLecturesPenalty(lecturesInPeriodOfTeacher)
+  override fun retractMove(lecture: Lecture?) {
+    val lecturesInPeriodOfCourse = schedule!![lecture!!.teacher]!![lecture.period]!!
+    lecturesInPeriodOfCourse.add(lecture)
   }
 
-  /**
-   * There should not be several lectures in the same period for the same teacher
+  override fun calculateHardScoreOfMove(lecture: Lecture?): Int {
+    return conflictingLecturesPenalty(lecture)
+  }
+
+  override fun calculateSoftScoreOfMove(lecture: Lecture?): Int {
+    return periodGapPenalty(lecture) * teacherPeriodsGapWeight
+  }
+
+  /**Hard:
+   * There should not be several lectures in the same period for the same room
    */
-  private fun conflictingLecturesPenalty(lecturesInPeriod: ArrayList<Lecture>): Int {
-    return lecturesInPeriod.size
+  private fun conflictingLecturesPenalty(lecture: Lecture?): Int {
+    val lecturesInPeriodInTeacher = schedule!![lecture!!.teacher]!![lecture.period]!!
+    return lecturesInPeriodInTeacher.size
   }
 
-  private fun calculateSoftScore(lecture: Lecture, teacherSchedule: Map<Period, ArrayList<Lecture>>): Int {
-    return periodGapPenalty(lecture, teacherSchedule) * teacherPeriodsGapWeight
-  }
-
-  /**
+  /**Soft:
    * There is a penalty for an isolated lecture in the teacher's schedule
    */
-  private fun periodGapPenalty(lecture: Lecture, teacherSchedule: Map<Period, ArrayList<Lecture>>): Int {
+  private fun periodGapPenalty(lecture: Lecture?): Int {
+    val teacherSchedule = schedule!![lecture!!.teacher]!!
     val period = lecture.period!!
     val day = period.day
     val periodBefore = day.periods[period.timeSlot - 1]
@@ -55,6 +53,5 @@ object TeacherScoreCalculator {
       else -> -2
     }
   }
-
 
 }
