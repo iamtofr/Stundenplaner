@@ -13,17 +13,23 @@ const initialState = {
   profile: {},
   isLoggedIn: false,
 };
-
+4;
 export default (state = initialState, action) => {
   switch (action.type) {
     case types.LOGIN:
+      console.log('login');
       return {
         token: action.data.token,
         profile: action.data.profile,
         isLoggedIn: true,
       };
     case types.LOGOUT:
-      return initialState;
+      console.log('logout');
+      return {
+        token: '',
+        profile: {},
+        isLoggedIn: false,
+      };
     default:
       return state;
   }

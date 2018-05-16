@@ -65,9 +65,9 @@ class Login extends Component {
   }
 
   componentDidMount() {
-    //if (this.props.isLoggedIn) {
-    //  this.props.history.push('/dashboard');
-    //}
+    if (this.props.isLoggedIn) {
+      this.props.history.push('/dashboard');
+    }
   }
 
   onClick = () => {
@@ -92,6 +92,7 @@ class Login extends Component {
   };
 
   handleLogin = () => {
+    console.log('handleLogin');
     fetch('https://api.stundenplaner.online:8443/login', {
       method: 'POST',
       headers: {
@@ -103,7 +104,10 @@ class Login extends Component {
         password: this.state.password,
       }),
     })
-      .then(response => response.json())
+      .then(response => {
+        console.log(response);
+        return response.json();
+      })
       .then(responseJson => {
         console.log(responseJson);
         this.props.login({
