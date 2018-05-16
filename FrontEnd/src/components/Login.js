@@ -70,25 +70,33 @@ class Login extends Component {
     }
   }
 
-  onClick = () => {
+  submitForm = () => {
+    if (this.isValid()) {
+      this.handleLogin();
+    }
+  };
+
+  isValid = () => {
     this.setState({
       nameError: '',
       passwordError: '',
     });
 
     if (!this.state.name) {
-      return this.setState({
+      this.setState({
         nameError: 'Bitte gib einen Namen ein.',
       });
+      return false;
     }
 
     if (!this.state.password) {
-      return this.setState({
+      this.setState({
         passwordError: 'Bitte gib ein Passwort ein.',
       });
+      return false;
     }
 
-    this.handleLogin();
+    return true;
   };
 
   handleLogin = () => {
@@ -104,12 +112,8 @@ class Login extends Component {
         password: this.state.password,
       }),
     })
-      .then(response => {
-        console.log(response);
-        return response.json();
-      })
+      .then(response => response.json())
       .then(responseJson => {
-        console.log(responseJson);
         this.props.login({
           username: this.state.name,
           password: this.state.password,
@@ -179,7 +183,7 @@ class Login extends Component {
           />
         </div>
         <p style={styles.error}>{this.state.passwordError}</p>
-        <Button text="Einloggen" color={Colors.blue} onClick={this.onClick} />
+        <Button text="Einloggen" color={Colors.blue} onClick={this.submitForm} />
         <a style={styles.link} href="" onClick={this.onLinkClicked}>
           Passwort vergessen
         </a>

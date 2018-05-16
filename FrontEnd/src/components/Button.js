@@ -21,8 +21,11 @@ class Button extends Component {
     return (
       <button
         style={{ ...styles.button, ...style, ...{ backgroundColor: color } }}
-        type="button"
-        onClick={onClick}
+        type="submit"
+        onClick={event => {
+          event.preventDefault();
+          onClick();
+        }}
       >
         {text}
       </button>
