@@ -10,7 +10,6 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: Colors.light,
   },
   header: {
     display: 'flex',

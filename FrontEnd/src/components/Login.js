@@ -14,7 +14,6 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     borderRadius: 10,
-    backgroundColor: Colors.light,
   },
   textInput: {
     display: 'flex',

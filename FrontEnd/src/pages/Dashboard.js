@@ -12,7 +12,6 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     flexWrap: 'wrap',
-    backgroundColor: Colors.light,
   },
   widget: {
     margin: 10,
