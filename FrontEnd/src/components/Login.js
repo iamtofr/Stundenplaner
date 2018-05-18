@@ -99,8 +99,8 @@ class Login extends Component {
   };
 
   handleLogin = () => {
-    console.log('handleLogin');
-    fetch('https://api.stundenplaner.online:8443/login', {
+    console.log('handleLogin: ' + this.state.name + ', ' + this.state.password);
+    fetch('https://api.stundenplaner.online:5443/login', {
       method: 'POST',
       headers: {
         Accept: 'application/json',
@@ -113,6 +113,7 @@ class Login extends Component {
     })
       .then(response => response.json())
       .then(responseJson => {
+        console.log(responseJson);
         this.props.login({
           username: this.state.name,
           password: this.state.password,

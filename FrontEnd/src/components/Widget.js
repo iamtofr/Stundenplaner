@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import * as Colors from '../constants/Colors';
 import Logo from '../assets/logo.svg';
 
-let styles = {
+const styles = {
   widget: {
     alignSelf: 'center',
     padding: 20,
@@ -32,7 +32,7 @@ let styles = {
 
 class Widget extends Component {
   render() {
-    const { style, text, color, onClick } = this.props;
+    const { style, image, text, color, onClick } = this.props;
 
     return (
       <button
@@ -42,7 +42,7 @@ class Widget extends Component {
       >
         <div style={styles.content}>
           <p style={styles.label}>{text}</p>
-          <img style={styles.image} src={Logo} />
+          <img style={styles.image} src={image || Logo} />
         </div>
       </button>
     );

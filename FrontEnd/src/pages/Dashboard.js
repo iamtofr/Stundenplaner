@@ -4,6 +4,12 @@ import { connect } from 'react-redux';
 import { actions as appActions } from '../reducers/app';
 import Widget from '../components/Widget';
 import * as Colors from '../constants/Colors';
+import Accounts from '../assets/Accounts.svg';
+import Timetable from '../assets/Timetable.svg';
+import Class from '../assets/Class.svg';
+import Teacher from '../assets/TeacherProfile.svg';
+import Student from '../assets/StudentList.svg';
+import Room from '../assets/Room.svg';
 
 const styles = {
   container: {
@@ -33,6 +39,7 @@ class Dashboard extends Component {
       <div style={styles.container}>
         <Widget
           style={styles.widget}
+          image={Accounts}
           text="Accounts verwalten"
           color={Colors.grey}
           onClick={() => {
@@ -40,11 +47,21 @@ class Dashboard extends Component {
             this.props.history.push('/');
           }}
         />
-        <Widget style={styles.widget} text="Stundenpläne verwalten" color={Colors.grey} />
-        <Widget style={styles.widget} text="Klassen verwalten" color={Colors.grey} />
-        <Widget style={styles.widget} text="Lehrer verwalten" color={Colors.grey} />
-        <Widget style={styles.widget} text="Schüler verwalten" color={Colors.grey} />
-        <Widget style={styles.widget} text="Räume verwalten" color={Colors.grey} />
+        <Widget
+          style={styles.widget}
+          image={Timetable}
+          text="Stundenpläne verwalten"
+          color={Colors.grey}
+        />
+        <Widget style={styles.widget} image={Class} text="Klassen verwalten" color={Colors.grey} />
+        <Widget style={styles.widget} image={Teacher} text="Lehrer verwalten" color={Colors.grey} />
+        <Widget
+          style={styles.widget}
+          image={Student}
+          text="Schüler verwalten"
+          color={Colors.grey}
+        />
+        <Widget style={styles.widget} image={Room} text="Räume verwalten" color={Colors.grey} />
       </div>
     );
   }
