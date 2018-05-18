@@ -20,7 +20,7 @@ let profile = mongoose.model('profile', schema.profile);
 
 //TODO PERMISSION
 //TODO get all || admin
-//TODO post || verwalter
+//TODO post || manager
 //TODO patch || admin
 
 app.route('/')
@@ -49,7 +49,7 @@ app.route('/')
     })
 
     .post((req, res, next) => {
-        account.findOne({'username': req.body.username}).populate('profile').exec(function (err, result) {
+        account.findOne({'username': req.body.username}).populate('profile') .populate('address').exec(function (err, result) {
             if (err) throw err;
             if (result === null) {
                 let newAccount = account(req.body);

@@ -18,11 +18,11 @@ let subject = mongoose.model('subject', schema.subject);
 
 
 //TODO PERMISSION
-//TODO get all || verwalter
-//TODO get id || lehrer
-//TODO post || verwalter
-//TODO delelte || verwalter
-//TODO patch || verwalter
+//TODO get all || manager
+//TODO get id || teacher
+//TODO post || manager
+//TODO delelte || manager
+//TODO patch || manager
 
 
 //just for input subject array!!!!!!

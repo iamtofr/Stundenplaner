@@ -18,11 +18,11 @@ let room = mongoose.model('room', schema.room);
 
 
 //TODO PERMISSION
-//TODO get all || lehrer
-//TODO get id || schüler
-//TODO post || verwalter
-//TODO delelte || verwalter
-//TODO patch || verwalter
+//TODO get all || teacher
+//TODO get id || student
+//TODO post || manager
+//TODO delelte || manager
+//TODO patch || manager
 
 
 
