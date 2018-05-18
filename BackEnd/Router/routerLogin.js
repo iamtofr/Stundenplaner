@@ -20,7 +20,7 @@ let profile = mongoose.model('profile', schema.profile);
 
 //TODO PERMISSION
 //TODO get all || admin
-//TODO post || manager
+//TODO post || verwalter
 //TODO patch || admin
 
 app.route('/')

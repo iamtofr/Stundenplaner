@@ -15,7 +15,7 @@ function findPerm(token) {
             path: 'role'
         }
     }).exec().then((result) => {
-        if (!result) throw "Ich bin ein Error!";
+        if (!result) throw "Ich bin ein Error!" +console.log(result);
         console.log('funktion', result, result.profile);
         console.log(result.profile.role);
         let roleName = result.profile.role.name;

@@ -18,11 +18,11 @@ let role = mongoose.model('role', schema.role);
 
 
 //TODO PERMISSION
-//TODO get all || manager
-//TODO get id || student
-//TODO post || manager
-//TODO delete || manager
-//TODO patch || manager
+//TODO get all || verwalter
+//TODO get id || schüler
+//TODO post || verwalter
+//TODO delelte || verwalter
+//TODO patch || verwalter
 
 
 app.route('/')

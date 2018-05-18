@@ -18,11 +18,11 @@ let student = mongoose.model('student', schema.student);
 
 
 //TODO PERMISSION
-//TODO get all || teacher
-//TODO get id || student
-//TODO post || manager
-//TODO delete || manager
-//TODO patch || manager
+//TODO get all || lehrer
+//TODO get id || schüler
+//TODO post || verwalter
+//TODO delelte || verwalter
+//TODO patch || verwalter
 
 
 app.route('/')
