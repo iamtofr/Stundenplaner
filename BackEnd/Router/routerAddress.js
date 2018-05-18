@@ -21,7 +21,6 @@ let address = mongoose.model('address', schema.address);
 //TODO get all || verwalter
 //TODO post || verwalter
 
-
 app.route('/')
     .get((req, res, next) => {
             address.find({}, function (err, address) {
