@@ -13,7 +13,7 @@ const initialState = {
   profile: {},
   isLoggedIn: false,
 };
-4;
+
 export default (state = initialState, action) => {
   switch (action.type) {
     case types.LOGIN:

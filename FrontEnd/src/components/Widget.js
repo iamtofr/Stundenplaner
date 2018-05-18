@@ -42,7 +42,7 @@ class Widget extends Component {
       >
         <div style={styles.content}>
           <p style={styles.label}>{text}</p>
-          <img style={styles.image} src={image || Logo} />
+          <img style={styles.image} src={image || Logo} alt={text} />
         </div>
       </button>
     );
