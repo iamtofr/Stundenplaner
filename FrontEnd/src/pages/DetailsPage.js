@@ -4,10 +4,10 @@ import Stundenplan from '../components/Stundenplan';
 const styles = {
   container: {
     height: '100vh',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
+    //display: 'flex',
+    //flexDirection: 'column',
+    //justifyContent: 'center',
+    //alignItems: 'center',
   },
 };
 
@@ -18,7 +18,15 @@ class DetailsPage extends Component {
 
   render() {
     const { title } = this.props.location.state;
-    return <div style={styles.container}>{title === 'Stundenplan' && <Stundenplan />}</div>;
+    return (
+      <div style={styles.container}>
+        {title === 'Accounts' && <Stundenplan />}
+        {title === 'Stundenplan' && <Stundenplan />}
+        {title === 'Klassen' && <Stundenplan />}
+        {title === 'Lehrer' && <Stundenplan />}
+        {title === 'Schüler' && <Stundenplan />}
+      </div>
+    );
   }
 }
 
