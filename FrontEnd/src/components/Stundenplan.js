@@ -1,5 +1,6 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import * as Colors from '../constants/Colors';
+import Course  from '../components/Course';
 
 let styles = {
     button: {
@@ -16,19 +17,10 @@ let styles = {
 
 class Button extends Component {
     render() {
-        const {style, text, color, onClick} = this.props;
+        const { style, text, color, onClick } = this.props;
 
         return (
-            <button
-                style={{...styles.button, ...style, ...{backgroundColor: color}}}
-                type="submit"
-                 onClick = {event => {
-                    event.preventDefault();
-                    onClick();
-                }}
-            >
-                {text}
-            </button>
+            <Course subject="Biologie" room="303" initials="GT"/>
         );
     }
 }

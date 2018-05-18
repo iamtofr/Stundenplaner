@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import LandingPage from './pages/LandingPage';
 import Dashboard from './pages/Dashboard';
+import DetailsPage from './pages/DetailsPage';
 
 const App = ({ store, persistor }) => (
   <Provider store={store}>
@@ -12,6 +13,7 @@ const App = ({ store, persistor }) => (
         <div>
           <Route exact path="/" component={LandingPage} />
           <Route path="/dashboard" component={Dashboard} />
+          <Route path="/details" component={DetailsPage} />
         </div>
       </Router>
     </PersistGate>
