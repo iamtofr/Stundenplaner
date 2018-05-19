@@ -1,0 +1,33 @@
+[{
+  "course": {
+    "id": 3,
+    "grade": 5,
+    "letter": "A",
+    "studentSize": 25
+  },
+  "subject":{
+    "id": 2,
+    "name": "Mathe",
+    "grade": 5,
+    "occurences": 2,
+    "requaredRoomType": "general"
+  },
+  "period": {
+    "id": 4,
+    "weekday": 1,
+    "timeSlot": 1
+  },
+  "rooms" : {
+    "id": 0,
+    "roomNr": 125,
+    "house": "A",
+    "seats": 25,
+    "barrierFree": true,
+    "equipment": "Beamer, Lautspraecher",
+    "roomType": "Sporthalle"
+  },
+  "teacher": {
+    "id": 1,
+    "subjectSpezialisation": ["Mathe", "Physik"]
+  }
+}]
