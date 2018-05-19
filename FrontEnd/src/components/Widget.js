@@ -1,28 +1,24 @@
 import React, { Component } from 'react';
 import * as Colors from '../constants/Colors';
-import Logo from '../assets/logo.svg';
 
 const styles = {
   widget: {
-    alignSelf: 'center',
-    padding: 20,
-    border: 0,
+    height: '100%',
     borderRadius: 10,
-    color: Colors.light,
-    fontSize: 16,
-    boxShadow: `0px 1px 2px ${Colors.darkBlue}`,
-    outline: 0,
+    overflow: 'hidden',
+    backgroundColor: Colors.lightGrey,
   },
   content: {
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center',
+    padding: 20,
   },
   label: {
-    fontSize: 24,
-    padding: 0,
     margin: 0,
     marginBottom: 20,
+    padding: 0,
+    fontSize: 18,
+    fontWeight: 'bold',
   },
   image: {
     width: 150,
@@ -32,19 +28,15 @@ const styles = {
 
 class Widget extends Component {
   render() {
-    const { style, image, text, color, onClick } = this.props;
+    const { style, text, children } = this.props;
 
     return (
-      <button
-        style={{ ...styles.widget, ...style, ...{ backgroundColor: color } }}
-        type="button"
-        onClick={onClick}
-      >
+      <div style={{ ...styles.widget, ...style }}>
         <div style={styles.content}>
           <p style={styles.label}>{text}</p>
-          <img style={styles.image} src={image || Logo} alt={text} />
+          {children}
         </div>
-      </button>
+      </div>
     );
   }
 }

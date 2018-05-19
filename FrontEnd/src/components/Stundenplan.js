@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import GridLayout from 'react-grid-layout';
 import 'react-grid-layout/css/styles.css';
 import 'react-resizable/css/styles.css';
-import Course from '../components/Course';
 import * as Colors from '../constants/Colors';
 
 const styles = {
@@ -110,7 +109,6 @@ class Stundenplan extends Component {
         margin={[5, 5]}
         verticalCompact={false}
         isResizable={false}
-        onLayoutChange={layout => console.log(layout)}
       >
         {this.generateDOM()}
       </GridLayout>

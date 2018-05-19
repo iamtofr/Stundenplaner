@@ -1,26 +1,25 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
+import GridLayout from 'react-grid-layout';
+import 'react-grid-layout/css/styles.css';
+import 'react-resizable/css/styles.css';
 import { actions as appActions } from '../reducers/app';
 import Widget from '../components/Widget';
+import Link from '../components/Link';
 import * as Colors from '../constants/Colors';
-import Accounts from '../assets/Accounts.svg';
-import Timetable from '../assets/Timetable.svg';
-import Class from '../assets/Class.svg';
-import Teacher from '../assets/TeacherProfile.svg';
-import Student from '../assets/StudentList.svg';
-import Room from '../assets/Room.svg';
+import iconList from '../assets/iconList.svg';
+import iconCreate from '../assets/iconCreate.svg';
+import iconEdit from '../assets/iconEdit.svg';
+import iconAdd from '../assets/iconAdd.svg';
 
 const styles = {
   container: {
-    height: '100vh',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexWrap: 'wrap',
+    width: 1000,
   },
-  widget: {
-    margin: 10,
+  link: {
+    marginBottom: 10,
+    color: Colors.darkBlue,
   },
 };
 
@@ -36,88 +35,230 @@ class Dashboard extends Component {
     }
 
     return (
-      <div style={styles.container}>
-        <Widget
-          style={styles.widget}
-          image={Accounts}
-          text="Accounts verwalten"
-          color={Colors.grey}
-          onClick={() => {
-            this.props.logout();
-            this.props.history.push('/');
-          }}
-        />
-        <Widget
-          style={styles.widget}
-          image={Timetable}
-          text="Stundenpläne verwalten"
-          color={Colors.grey}
-          onClick={() => {
-            this.props.history.push({
-              pathname: '/details',
-              state: {
-                title: 'Stundenplan',
-              },
-            });
-          }}
-        />
-        <Widget
-          style={styles.widget}
-          image={Class}
-          text="Klassen verwalten"
-          color={Colors.grey}
-          onClick={() => {
-            this.props.history.push({
-              pathname: '/details',
-              state: {
-                title: 'Klassen',
-              },
-            });
-          }}
-        />
-        <Widget
-          style={styles.widget}
-          image={Teacher}
-          text="Lehrer verwalten"
-          color={Colors.grey}
-          onClick={() => {
-            this.props.history.push({
-              pathname: '/details',
-              state: {
-                title: 'Lehrer',
-              },
-            });
-          }}
-        />
-        <Widget
-          style={styles.widget}
-          image={Student}
-          text="Schüler verwalten"
-          color={Colors.grey}
-          onClick={() => {
-            this.props.history.push({
-              pathname: '/details',
-              state: {
-                title: 'Schüler',
-              },
-            });
-          }}
-        />
-        <Widget
-          style={styles.widget}
-          image={Room}
-          text="Räume verwalten"
-          color={Colors.grey}
-          onClick={() => {
-            this.props.history.push({
-              pathname: '/details',
-              state: {
-                title: 'Räume',
-              },
-            });
-          }}
-        />
-      </div>
+      <GridLayout style={styles.container} width={1200} cols={3} rowHeight={20} margin={[10, 10]}>
+        <div key="Stundenpläne" data-grid={{ x: 0, y: 0, w: 1, h: 6 }}>
+          <Widget style={styles.widget} text="Stundenpläne">
+            <Link
+              icon={iconList}
+              text="Stundenplanliste anzeigen"
+              onClick={() => {
+                this.props.history.push({
+                  pathname: '/details',
+                  state: {
+                    title: 'Stundenpläne',
+                  },
+                });
+              }}
+            />
+            <Link
+              icon={iconCreate}
+              text="Stundenplan erstellen"
+              onClick={() => {
+                this.props.history.push({
+                  pathname: '/details',
+                  state: {
+                    title: 'Stundenpläne',
+                  },
+                });
+              }}
+            />
+            <Link
+              icon={iconEdit}
+              text="Stundenplan bearbeiten"
+              onClick={() => {
+                this.props.history.push({
+                  pathname: '/details',
+                  state: {
+                    title: 'Stundenpläne',
+                  },
+                });
+              }}
+            />
+          </Widget>
+        </div>
+        <div key="Klassen" data-grid={{ x: 0, y: 0, w: 1, h: 5 }}>
+          <Widget style={styles.widget} text="Klassen">
+            <Link
+              icon={iconList}
+              text="Klassenliste anzeigen"
+              onClick={() => {
+                this.props.history.push({
+                  pathname: '/details',
+                  state: {
+                    title: 'Klassen',
+                  },
+                });
+              }}
+            />
+            <Link
+              icon={iconCreate}
+              text="Klasse erstellen"
+              onClick={() => {
+                this.props.history.push({
+                  pathname: '/details',
+                  state: {
+                    title: 'Klassen',
+                  },
+                });
+              }}
+            />
+          </Widget>
+        </div>
+        <div key="Fächer" data-grid={{ x: 0, y: 0, w: 1, h: 5 }}>
+          <Widget style={styles.widget} text="Fächer">
+            <Link
+              icon={iconList}
+              text="Fächerliste anzeigen"
+              onClick={() => {
+                this.props.history.push({
+                  pathname: '/details',
+                  state: {
+                    title: 'Fächer',
+                  },
+                });
+              }}
+            />
+            <Link
+              icon={iconCreate}
+              text="Fach erstellen"
+              onClick={() => {
+                this.props.history.push({
+                  pathname: '/details',
+                  state: {
+                    title: 'Fächer',
+                  },
+                });
+              }}
+            />
+          </Widget>
+        </div>
+        <div key="Accounts" data-grid={{ x: 0, y: 0, w: 1, h: 6 }}>
+          <Widget style={styles.widget} text="Accounts">
+            <Link
+              icon={iconList}
+              text="Accountliste anzeigen"
+              onClick={() => {
+                this.props.history.push({
+                  pathname: '/details',
+                  state: {
+                    title: 'Accounts',
+                  },
+                });
+              }}
+            />
+            <Link
+              icon={iconAdd}
+              text="Account erstellen"
+              onClick={() => {
+                this.props.history.push({
+                  pathname: '/details',
+                  state: {
+                    title: 'Accounts',
+                  },
+                });
+              }}
+            />
+            <Link
+              icon={iconAdd}
+              text="Ausloggen"
+              onClick={() => {
+                this.props.logout();
+                this.props.history.push('/');
+              }}
+            />
+          </Widget>
+        </div>
+        <div key="Schüler" data-grid={{ x: 1, y: 0, w: 1, h: 7 }}>
+          <Widget style={styles.widget} text="Schüler">
+            <Link
+              icon={iconList}
+              text="Schülerliste anzeigen"
+              onClick={() => {
+                this.props.history.push({
+                  pathname: '/details',
+                  state: {
+                    title: 'Schüler',
+                  },
+                });
+              }}
+            />
+            <Link
+              icon={iconAdd}
+              text="Schüler erstellen"
+              onClick={() => {
+                this.props.history.push({
+                  pathname: '/details',
+                  state: {
+                    title: 'Schüler',
+                  },
+                });
+              }}
+            />
+          </Widget>
+        </div>
+        <div key="Lehrer" data-grid={{ x: 1, y: 0, w: 1, h: 7 }}>
+          <Widget style={styles.widget} text="Lehrer">
+            <Link
+              icon={iconList}
+              text="Lehrerliste anzeigen"
+              onClick={() => {
+                this.props.history.push({
+                  pathname: '/details',
+                  state: {
+                    title: 'Lehrer',
+                  },
+                });
+              }}
+            />
+            <Link
+              icon={iconAdd}
+              text="Lehrer erstellen"
+              onClick={() => {
+                this.props.history.push({
+                  pathname: '/details',
+                  state: {
+                    title: 'Lehrer',
+                  },
+                });
+              }}
+            />
+          </Widget>
+        </div>
+        <div key="Räume" data-grid={{ x: 1, y: 0, w: 1, h: 7 }}>
+          <Widget style={styles.widget} text="Räume">
+            <Link
+              icon={iconList}
+              text="Raumliste anzeigen"
+              onClick={() => {
+                this.props.history.push({
+                  pathname: '/details',
+                  state: {
+                    title: 'Räume',
+                  },
+                });
+              }}
+            />
+            <Link
+              icon={iconCreate}
+              text="Raum erstellen"
+              onClick={() => {
+                this.props.history.push({
+                  pathname: '/details',
+                  state: {
+                    title: 'Räume',
+                  },
+                });
+              }}
+            />
+          </Widget>
+        </div>
+        <div key="Kalender" data-grid={{ x: 2, y: 0, w: 1, h: 15 }}>
+          <Widget style={styles.widget} text="Kalender" />
+        </div>
+        <div key="Wetter" data-grid={{ x: 2, y: 2, w: 1, h: 6 }}>
+          <Widget style={styles.widget} text="Wetter" />
+        </div>
+      </GridLayout>
     );
   }
 }
