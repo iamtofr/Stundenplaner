@@ -68,22 +68,40 @@ const styles = {
 };
 
 class Profile extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
-      profile: props,
+      profile: {},
     };
   }
 
+  componentDidMount() {
+    fetch('https://api.stundenplaner.online:5443/profile/5af5cf0420c6f43d9b506f02?token=1234')
+      .then(response => response.json())
+      .then(responseJson => {
+        this.setState({
+          profile: responseJson,
+        });
+      })
+      .catch(err => {
+        console.log(err);
+        this.setState({
+          passwordError: 'Benutzername oder Passwort falsch.',
+        });
+      });
+  }
+
   render() {
-    const { profile } = this.props;
-    profile.initials = `${profile.surname.substring(0, 1)}${profile.name.substring(0, 1)}`;
-    const date = new Date(profile.dateOfBirth);
-    profile.dateOfBirth = date.toLocaleDateString('de', {
-      day: '2-digit',
-      month: '2-digit',
-      year: 'numeric',
-    });
+    const { profile } = this.state;
+    if (profile.id) {
+      profile.initials = `${profile.surname.substring(0, 1)}${profile.name.substring(0, 1)}`;
+      const date = new Date(profile.dateOfBirth);
+      profile.dateOfBirth = date.toLocaleDateString('de', {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric',
+      });
+    }
 
     return (
       <div style={styles.container}>

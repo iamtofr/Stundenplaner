@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Stundenplan from '../components/Stundenplan';
+import Profile from '../components/Profile';
 
 const styles = {
   container: {
@@ -14,7 +15,13 @@ class DetailsPage extends Component {
 
   render() {
     const { title } = this.props.location.state;
-    return <div style={styles.container}>{title === 'Stundenplan' && <Stundenplan />}</div>;
+
+    return (
+      <div style={styles.container}>
+        {title === 'Stundenplan' && <Stundenplan />}
+        {title === 'Profil' && <Profile />}
+      </div>
+    );
   }
 }
 

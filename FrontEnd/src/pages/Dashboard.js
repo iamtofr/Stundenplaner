@@ -171,7 +171,7 @@ class Dashboard extends Component {
                 this.props.history.push({
                   pathname: '/details',
                   state: {
-                    title: 'Schüler',
+                    title: 'Profil',
                   },
                 });
               }}
@@ -199,7 +199,7 @@ class Dashboard extends Component {
                 this.props.history.push({
                   pathname: '/details',
                   state: {
-                    title: 'Lehrer',
+                    title: 'Profil',
                   },
                 });
               }}
