@@ -47,7 +47,7 @@ class Dashboard extends Component {
                 this.props.history.push({
                   pathname: '/details',
                   state: {
-                    title: 'Stundenpläne',
+                    title: 'Stundenplan',
                   },
                 });
               }}
@@ -59,7 +59,7 @@ class Dashboard extends Component {
                 this.props.history.push({
                   pathname: '/details',
                   state: {
-                    title: 'Stundenpläne',
+                    title: 'Stundenplan',
                   },
                 });
               }}
@@ -71,7 +71,7 @@ class Dashboard extends Component {
                 this.props.history.push({
                   pathname: '/details',
                   state: {
-                    title: 'Stundenpläne',
+                    title: 'Stundenplan',
                   },
                 });
               }}

@@ -14,7 +14,7 @@ class DetailsPage extends Component {
 
   render() {
     const { title } = this.props.location.state;
-    return <div style={styles.container}>{title === 'Stundenpläne' && <Stundenplan />}</div>;
+    return <div style={styles.container}>{title === 'Stundenplan' && <Stundenplan />}</div>;
   }
 }
 
