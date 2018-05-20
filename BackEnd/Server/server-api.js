@@ -1,16 +1,19 @@
 "use strict";
 
 const fs = require('fs');
-const privateKey = fs.readFileSync('/etc/letsencrypt/live/api.stundenplaner.online/privkey.pem', 'utf8');
-const certificate = fs.readFileSync('/etc/letsencrypt/live/api.stundenplaner.online/cert.pem', 'utf8');
+const privateKey = fs.readFileSync('/etc/letsencrypt/live/www.stundenplaner.online/privkey.pem', 'utf8');
+const certificate = fs.readFileSync('/etc/letsencrypt/live/www.stundenplaner.online/cert.pem', 'utf8');
+const ca = fs.readFileSync('/etc/letsencrypt/live/www.stundenplaner.online/chain.pem', 'utf8');
+const dhparam = fs.readFileSync('/etc/letsencrypt/live/www.stundenplaner.online/dhparam.pem');
 
-const credentials = {key: privateKey, cert: certificate};
+const credentials = { key: privateKey, cert: certificate, ca: ca, dhparam: dhparam };
 const express = require('express');
 const app = express();
 const http = require('http');
 const https = require('https');
+const helmet = require('helmet');
 
-const routerPermissionControll = require('../Router/routerPermission')
+const routerPermissionControll = require('../Router/routerPermission');
 const routerProfile = require('../Router/routerProfile');
 const routerAddress = require('../Router/routerAddress');
 const routerCourse = require('../Router/routerCourse');
@@ -25,11 +28,12 @@ const routerLogin = require('../Router/routerLogin');
 // const cors = require('../Tools/cors');
 // app.use(cors);
 
-app.use(function (req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
 });
+app.use(helmet());
 
 app.use('/login', routerLogin);
 
@@ -48,24 +52,24 @@ app.use('/address', routerAddress);
 const server = http.createServer(app);
 
 server.listen(5080, '85.214.37.34', (err) => {
-    if (err !== undefined) {
-        console.log('Error on startup: ${err}');
-    }
-    else {
-        console.log('Listening on port 80');
-    }
+  if (err !== undefined) {
+    console.log('Error on startup: ${err}');
+  }
+  else {
+    console.log('Listening on port 80');
+  }
 });
 
 
 const serverHttps = https.createServer(credentials, app);
 
 serverHttps.listen(5443, '85.214.37.34', (err) => {
-    if (err !== undefined) {
-        console.log('Error on startup: ${err}');
-    }
-    else {
-        console.log('Listening on port 443');
-    }
+  if (err !== undefined) {
+    console.log('Error on startup: ${err}');
+  }
+  else {
+    console.log('Listening on port 443');
+  }
 });
 
 
