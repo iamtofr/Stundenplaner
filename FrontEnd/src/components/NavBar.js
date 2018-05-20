@@ -30,6 +30,7 @@ const styles = {
     marginRight: 5,
     border: 0,
     outline: 0,
+    background: 0,
   },
   label: {
     margin: 0,
