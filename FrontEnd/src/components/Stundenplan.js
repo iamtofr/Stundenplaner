@@ -1,29 +1,16 @@
 import React, { Component } from 'react';
-import GridLayout from 'react-grid-layout';
+import RGL, { WidthProvider } from 'react-grid-layout';
 import 'react-grid-layout/css/styles.css';
 import 'react-resizable/css/styles.css';
+import Course from '../components/Course';
 import * as Colors from '../constants/Colors';
+
+const GridLayout = WidthProvider(RGL);
 
 const styles = {
   container: {
-    width: 1000,
+    width: '100%',
     backgroundColor: Colors.lightGrey,
-  },
-  cell: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 5,
-    backgroundColor: Colors.blue,
-  },
-  label: {
-    margin: 0,
-    padding: 5,
-    fontSize: 16,
-    whiteSpace: 'nowrap',
-    textOverflow: 'ellipsis',
-    overflow: 'hidden',
-    color: Colors.light,
   },
 };
 
@@ -87,10 +74,8 @@ class Stundenplan extends Component {
     const array = [];
     for (let i = 0; i < items.length; i++) {
       array.push(
-        <div style={styles.cell} key={i}>
-          <p style={styles.label}>
-            {items[i].subject} / {items[i].room} / {items[i].teacher}
-          </p>
+        <div key={i}>
+          <Course subject={items[i].subject} room={items[i].room} initials={items[i].teacher} />
         </div>,
       );
     }
@@ -103,12 +88,12 @@ class Stundenplan extends Component {
       <GridLayout
         style={styles.container}
         layout={this.state.layout}
-        width={1000}
         cols={5}
         rowHeight={40}
         margin={[5, 5]}
-        verticalCompact={false}
+        compactType={null}
         isResizable={false}
+        preventCollision
       >
         {this.generateDOM()}
       </GridLayout>

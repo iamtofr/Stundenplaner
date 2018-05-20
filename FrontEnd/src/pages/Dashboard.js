@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import GridLayout from 'react-grid-layout';
-import 'react-grid-layout/css/styles.css';
+import RGL, { WidthProvider } from 'react-grid-layout';
 import 'react-resizable/css/styles.css';
+import 'react-grid-layout/css/styles.css';
 import { actions as appActions } from '../reducers/app';
 import Widget from '../components/Widget';
 import Link from '../components/Link';
@@ -13,9 +13,11 @@ import iconCreate from '../assets/iconCreate.svg';
 import iconEdit from '../assets/iconEdit.svg';
 import iconAdd from '../assets/iconAdd.svg';
 
+const GridLayout = WidthProvider(RGL);
+
 const styles = {
   container: {
-    width: 1000,
+    width: '100%',
   },
   link: {
     marginBottom: 10,
@@ -35,7 +37,7 @@ class Dashboard extends Component {
     }
 
     return (
-      <GridLayout style={styles.container} width={1200} cols={3} rowHeight={20} margin={[10, 10]}>
+      <GridLayout style={styles.container} cols={3} rowHeight={20} margin={[10, 10]}>
         <div key="Stundenpläne" data-grid={{ x: 0, y: 0, w: 1, h: 6 }}>
           <Widget style={styles.widget} text="Stundenpläne">
             <Link
@@ -132,7 +134,7 @@ class Dashboard extends Component {
             />
           </Widget>
         </div>
-        <div key="Accounts" data-grid={{ x: 0, y: 0, w: 1, h: 6 }}>
+        <div key="Accounts" data-grid={{ x: 0, y: 0, w: 1, h: 5 }}>
           <Widget style={styles.widget} text="Accounts">
             <Link
               icon={iconList}
@@ -156,14 +158,6 @@ class Dashboard extends Component {
                     title: 'Accounts',
                   },
                 });
-              }}
-            />
-            <Link
-              icon={iconAdd}
-              text="Ausloggen"
-              onClick={() => {
-                this.props.logout();
-                this.props.history.push('/');
               }}
             />
           </Widget>

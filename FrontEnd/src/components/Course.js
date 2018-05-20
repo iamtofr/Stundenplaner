@@ -1,25 +1,49 @@
 import React, { Component } from 'react';
-import Button from '../components/Button';
 import * as Colors from '../constants/Colors';
 
 const styles = {
   course: {
-    width: 200,
-    padding: `8px 12px 8px 12px`,
-    border: 0,
+    height: '100%',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
     borderRadius: 5,
-    color: Colors.light,
-    fontSize: 16,
-    boxShadow: `0px 1px 2px ${Colors.darkBlue}`,
+    overflow: 'hidden',
     backgroundColor: Colors.blue,
+  },
+  label: {
+    margin: 0,
+    padding: 5,
+    fontSize: 16,
+    whiteSpace: 'nowrap',
+    textOverflow: 'ellipsis',
+    overflow: 'hidden',
+    color: Colors.light,
   },
 };
 
 class Course extends Component {
+  constructor() {
+    super();
+    this.state = {
+      hover: false,
+    };
+  }
+
   render() {
-    const { subject, room, initials } = this.props;
+    const { style, subject, room, initials } = this.props;
+    const cursor = this.state.hover ? { cursor: 'move' } : { cursor: 'normal' };
     const label = `${subject} / ${room} / ${initials}`;
-    return <div style={styles.course}>{label}</div>;
+
+    return (
+      <div
+        style={{ ...styles.course, ...style, ...cursor }}
+        onMouseEnter={() => this.setState({ hover: true })}
+        onMouseLeave={() => this.setState({ hover: false })}
+      >
+        <p style={styles.label}>{label}</p>
+      </div>
+    );
   }
 }
 

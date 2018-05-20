@@ -19,6 +19,7 @@ const styles = {
     padding: 0,
     fontSize: 18,
     fontWeight: 'bold',
+    color: Colors.darkBlue,
   },
   image: {
     width: 150,
@@ -27,11 +28,23 @@ const styles = {
 };
 
 class Widget extends Component {
+  constructor() {
+    super();
+    this.state = {
+      hover: false,
+    };
+  }
+
   render() {
     const { style, text, children } = this.props;
+    const cursor = this.state.hover ? { cursor: 'move' } : { cursor: 'normal' };
 
     return (
-      <div style={{ ...styles.widget, ...style }}>
+      <div
+        style={{ ...styles.widget, ...style, ...cursor }}
+        onMouseEnter={() => this.setState({ hover: true })}
+        onMouseLeave={() => this.setState({ hover: false })}
+      >
         <div style={styles.content}>
           <p style={styles.label}>{text}</p>
           {children}

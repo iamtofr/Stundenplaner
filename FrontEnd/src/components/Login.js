@@ -4,10 +4,10 @@ import { connect } from 'react-redux';
 import { actions as appActions } from '../reducers/app';
 import Button from './Button';
 import * as Colors from '../constants/Colors';
-import iconUser from '../assets/user.svg';
-import iconPassword from '../assets/password.svg';
-import iconVisible from '../assets/visible.svg';
-import iconInvisible from '../assets/invisible.svg';
+import iconUser from '../assets/iconUser.svg';
+import iconPassword from '../assets/iconPassword.svg';
+import iconVisible from '../assets/iconVisible.svg';
+import iconInvisible from '../assets/iconInvisible.svg';
 
 const styles = {
   container: {
