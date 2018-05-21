@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import Stundenplan from '../components/Stundenplan';
 import Profile from '../components/Profile';
 
@@ -14,7 +15,8 @@ class DetailsPage extends Component {
   }
 
   render() {
-    const { title } = this.props.location.state;
+    const title = this.props.location.state.title;
+    console.log(title);
 
     return (
       <div style={styles.container}>
@@ -25,4 +27,4 @@ class DetailsPage extends Component {
   }
 }
 
-export default DetailsPage;
+export default withRouter(DetailsPage);

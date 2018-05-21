@@ -7,3 +7,17 @@ export const green = '#60c884';
 export const red = '#e33f46';
 export const grey = '#6f6f6f';
 export const lightGrey = '#e4e4e4';
+
+export const subject0 = '#CC6666';
+export const subject1 = '#CC9566';
+export const subject2 = '#CCC466';
+export const subject3 = '#A4CC66';
+export const subject4 = '#75CC66';
+export const subject5 = '#66CC85';
+export const subject6 = '#66CCB4';
+export const subject7 = '#66B4CC';
+export const subject8 = '#6685CC';
+export const subject9 = '#7566CC';
+export const subject10 = '#A466CC';
+export const subject11 = '#CC66C4';
+export const subject12 = '#CC6695';

@@ -4,13 +4,51 @@ import 'react-grid-layout/css/styles.css';
 import 'react-resizable/css/styles.css';
 import Course from '../components/Course';
 import * as Colors from '../constants/Colors';
+import Grid from '../assets/Grid.png';
 
 const GridLayout = WidthProvider(RGL);
 
 const styles = {
   container: {
-    width: '100%',
-    backgroundColor: Colors.lightGrey,
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  days: {
+    display: 'flex',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    marginLeft: 100,
+  },
+  day: {
+    padding: 10,
+    margin: 0,
+  },
+  content: {
+    display: 'flex',
+    border: `1px solid ${Colors.grey}`,
+  },
+  hours: {
+    height: 495,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-around',
+    alignItems: 'flex-end',
+    marginTop: 2.5,
+    marginBottom: 2.5,
+  },
+  hour: {
+    padding: 10,
+    margin: 0,
+  },
+  background: {
+    flex: 1,
+    padding: 0,
+    backgroundImage: `url(${Grid})`,
+    backgroundSize: '100% 100%',
+    backgroundRepeat: 'no-repeat',
+  },
+  timetable: {
+    flex: 1,
   },
 };
 
@@ -83,20 +121,45 @@ class Stundenplan extends Component {
   }
 
   render() {
-    console.log(this.state.layout);
     return (
-      <GridLayout
-        style={styles.container}
-        layout={this.state.layout}
-        cols={5}
-        rowHeight={40}
-        margin={[5, 5]}
-        compactType={null}
-        isResizable={false}
-        preventCollision
-      >
-        {this.generateDOM()}
-      </GridLayout>
+      <div style={styles.container}>
+        <div style={styles.days}>
+          <p style={styles.day}>Montag</p>
+          <p style={styles.day}>Dienstag</p>
+          <p style={styles.day}>Mittwoch</p>
+          <p style={styles.day}>Donnerstag</p>
+          <p style={styles.day}>Freitag</p>
+        </div>
+        <div style={styles.content}>
+          <div style={styles.hours}>
+            <p style={styles.hour}>1. Stunde</p>
+            <p style={styles.hour}>2. Stunde</p>
+            <p style={styles.hour}>3. Stunde</p>
+            <p style={styles.hour}>4. Stunde</p>
+            <p style={styles.hour}>5. Stunde</p>
+            <p style={styles.hour}>6. Stunde</p>
+            <p style={styles.hour}>7. Stunde</p>
+            <p style={styles.hour}>8. Stunde</p>
+            <p style={styles.hour}>9. Stunde</p>
+            <p style={styles.hour}>10. Stunde</p>
+          </div>
+          <div style={styles.background}>
+            <GridLayout
+              style={styles.timetable}
+              layout={this.state.layout}
+              cols={5}
+              rowHeight={40}
+              containerPadding={[5, 5]}
+              margin={[10, 10]}
+              compactType={null}
+              isResizable={false}
+              preventCollision
+            >
+              {this.generateDOM()}
+            </GridLayout>
+          </div>
+        </div>
+      </div>
     );
   }
 }
