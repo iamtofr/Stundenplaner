@@ -25,9 +25,6 @@ const routerTeacher = require('../Router/routerTeacher');
 const routerRole = require('../Router/routerRole');
 const routerLogin = require('../Router/routerLogin');
 
-// const cors = require('../Tools/cors');
-// app.use(cors);
-
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
@@ -48,7 +45,6 @@ app.use('/student', routerStudent);
 app.use('/teacher', routerTeacher);
 app.use('/address', routerAddress);
 
-
 const server = http.createServer(app);
 
 server.listen(5080, '85.214.37.34', (err) => {
@@ -60,7 +56,6 @@ server.listen(5080, '85.214.37.34', (err) => {
   }
 });
 
-
 const serverHttps = https.createServer(credentials, app);
 
 serverHttps.listen(5443, '85.214.37.34', (err) => {
@@ -71,5 +66,3 @@ serverHttps.listen(5443, '85.214.37.34', (err) => {
     console.log('Listening on port 443');
   }
 });
-
-
