@@ -4,6 +4,11 @@ import Button from './Button';
 import * as Colors from '../constants/Colors';
 import Logo from '../assets/logo.svg';
 
+const socket = new WebSocket('wss://api.stundenplaner.online:9443');
+socket.onopen = () => {
+  socket.send('Olli connected!');
+};
+
 const styles = {
   container: {
     display: 'flex',
@@ -302,7 +307,14 @@ class Profile extends Component {
         </div>
         <div style={styles.buttons}>
           <Button style={styles.button} text="Ausdrucken" color={Colors.grey} />
-          <Button style={styles.button} text="Speichern" color={Colors.green} />
+          <Button
+            style={styles.button}
+            text="Speichern"
+            color={Colors.green}
+            onClick={() => {
+              socket.send('Olli sagt Hallo!');
+            }}
+          />
           <Button style={styles.button} text="Abbruch" color={Colors.red} />
         </div>
       </div>

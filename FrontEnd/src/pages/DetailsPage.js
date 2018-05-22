@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
 import Stundenplan from '../components/Stundenplan';
 import Profile from '../components/Profile';
 
@@ -10,13 +11,14 @@ const styles = {
 };
 
 class DetailsPage extends Component {
-  componentDidMount() {
-    document.title = `StundenPlaner - ${this.props.location.state.title}`;
-  }
-
   render() {
+    if (!this.props.isLoggedIn) {
+      this.props.history.push('/');
+      return null;
+    }
+
     const title = this.props.location.state.title;
-    console.log(title);
+    document.title = `StundenPlaner - ${title}`;
 
     return (
       <div style={styles.container}>
@@ -27,4 +29,8 @@ class DetailsPage extends Component {
   }
 }
 
-export default withRouter(DetailsPage);
+const mapStateToProps = state => ({
+  isLoggedIn: state.app.isLoggedIn,
+});
+
+export default withRouter(connect(mapStateToProps)(DetailsPage));

@@ -258,13 +258,7 @@ class Dashboard extends Component {
 }
 
 const mapStateToProps = state => ({
-  token: state.app.token,
-  profile: state.app.profile,
   isLoggedIn: state.app.isLoggedIn,
 });
 
-const mapDispatchToProps = {
-  logout: appActions.logout,
-};
-
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Dashboard));
+export default withRouter(connect(mapStateToProps)(Dashboard));
