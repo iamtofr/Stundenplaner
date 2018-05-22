@@ -20,9 +20,11 @@ import java.awt.Component;
 import java.io.File;
 import javax.swing.WindowConstants;
 
+import de.stundenplaner.solver.calculator.CurriculumIncrementalScoreCalculator;
 import org.optaplanner.core.api.domain.solution.PlanningSolution;
 import org.optaplanner.core.api.solver.Solver;
 import org.optaplanner.core.api.solver.SolverFactory;
+import org.optaplanner.core.config.score.director.ScoreDirectorFactoryConfig;
 import org.optaplanner.examples.common.business.SolutionBusiness;
 import org.optaplanner.examples.common.persistence.AbstractSolutionExporter;
 import org.optaplanner.examples.common.persistence.AbstractSolutionImporter;
@@ -39,120 +41,123 @@ import org.slf4j.LoggerFactory;
  */
 public abstract class CommonApp<Solution_> extends LoggingMain {
 
-    /**
-     * The path to the data directory, preferably with unix slashes for portability.
-     * For example: -D{@value #DATA_DIR_SYSTEM_PROPERTY}=sources/data/
-     */
-    public static final String DATA_DIR_SYSTEM_PROPERTY = "org.optaplanner.examples.dataDir";
+  /**
+   * The path to the data directory, preferably with unix slashes for portability.
+   * For example: -D{@value #DATA_DIR_SYSTEM_PROPERTY}=sources/data/
+   */
+  public static final String DATA_DIR_SYSTEM_PROPERTY = "org.optaplanner.examples.dataDir";
 
-    public static File determineDataDir(String dataDirName) {
-        String dataDirPath = System.getProperty(DATA_DIR_SYSTEM_PROPERTY, "data/");
-        File dataDir = new File(dataDirPath, dataDirName);
-        if (!dataDir.exists()) {
-            throw new IllegalStateException("The directory dataDir (" + dataDir.getAbsolutePath()
-                    + ") does not exist.\n" +
-                    " Either the working directory should be set to the directory that contains the data directory" +
-                    " (which is not the data directory itself), or the system property "
-                    + DATA_DIR_SYSTEM_PROPERTY + " should be set properly.\n" +
-                    " The data directory is different in a git clone (optaplanner/optaplanner-examples/data)" +
-                    " and in a release zip (examples/sources/data).\n" +
-                    " In an IDE (IntelliJ, Eclipse, NetBeans), open the \"Run configuration\""
-                    + " to change \"Working directory\" (or add the system property in \"VM options\").");
-        }
-        return dataDir;
+  public static File determineDataDir(String dataDirName) {
+    String dataDirPath = System.getProperty(DATA_DIR_SYSTEM_PROPERTY, "data/");
+    File dataDir = new File(dataDirPath, dataDirName);
+    if (!dataDir.exists()) {
+      throw new IllegalStateException("The directory dataDir (" + dataDir.getAbsolutePath()
+        + ") does not exist.\n" +
+        " Either the working directory should be set to the directory that contains the data directory" +
+        " (which is not the data directory itself), or the system property "
+        + DATA_DIR_SYSTEM_PROPERTY + " should be set properly.\n" +
+        " The data directory is different in a git clone (optaplanner/optaplanner-examples/data)" +
+        " and in a release zip (examples/sources/data).\n" +
+        " In an IDE (IntelliJ, Eclipse, NetBeans), open the \"Run configuration\""
+        + " to change \"Working directory\" (or add the system property in \"VM options\").");
     }
+    return dataDir;
+  }
 
-    protected static final Logger logger = LoggerFactory.getLogger(CommonApp.class);
+  protected static final Logger logger = LoggerFactory.getLogger(CommonApp.class);
 
-    /**
-     * Some examples are not compatible with every native LookAndFeel.
-     * For example, NurseRosteringPanel is incompatible with Mac.
-     */
-    public static void prepareSwingEnvironment() {
-        SwingUncaughtExceptionHandler.register();
-        SwingUtils.fixateLookAndFeel();
-    }
+  /**
+   * Some examples are not compatible with every native LookAndFeel.
+   * For example, NurseRosteringPanel is incompatible with Mac.
+   */
+  public static void prepareSwingEnvironment() {
+    SwingUncaughtExceptionHandler.register();
+    SwingUtils.fixateLookAndFeel();
+  }
 
-    protected final String name;
-    protected final String description;
-    protected final String solverConfig;
-    protected final String dataDirName;
-    protected final String iconResource;
+  protected final String name;
+  protected final String description;
+  protected final String solverConfig;
+  protected final String dataDirName;
+  protected final String iconResource;
 
-    protected SolverAndPersistenceFrame<Solution_> solverAndPersistenceFrame;
-    protected SolutionBusiness<Solution_> solutionBusiness;
+  protected SolverAndPersistenceFrame<Solution_> solverAndPersistenceFrame;
+  protected SolutionBusiness<Solution_> solutionBusiness;
 
-    protected CommonApp(String name, String description, String solverConfig, String dataDirName, String iconResource) {
-        this.name = name;
-        this.description = description;
-        this.solverConfig = solverConfig;
-        this.dataDirName = dataDirName;
-        this.iconResource = iconResource;
-    }
+  protected CommonApp(String name, String description, String solverConfig, String dataDirName, String iconResource) {
+    this.name = name;
+    this.description = description;
+    this.solverConfig = solverConfig;
+    this.dataDirName = dataDirName;
+    this.iconResource = iconResource;
+  }
 
-    public String getName() {
-        return name;
-    }
+  public String getName() {
+    return name;
+  }
 
-    public String getDescription() {
-        return description;
-    }
+  public String getDescription() {
+    return description;
+  }
 
-    public String getSolverConfig() {
-        return solverConfig;
-    }
+  public String getSolverConfig() {
+    return solverConfig;
+  }
 
-    public String getDataDirName() {
-        return dataDirName;
-    }
+  public String getDataDirName() {
+    return dataDirName;
+  }
 
-    public String getIconResource() {
-        return iconResource;
-    }
+  public String getIconResource() {
+    return iconResource;
+  }
 
-    public void init() {
-        init(null, true);
-    }
+  public void init() {
+    init(null, true);
+  }
 
-    public void init(Component centerForComponent, boolean exitOnClose) {
-        solutionBusiness = createSolutionBusiness();
-        solverAndPersistenceFrame = new SolverAndPersistenceFrame<>(solutionBusiness, createSolutionPanel());
-        solverAndPersistenceFrame.setDefaultCloseOperation(exitOnClose ? WindowConstants.EXIT_ON_CLOSE : WindowConstants.DISPOSE_ON_CLOSE);
-        solverAndPersistenceFrame.init(centerForComponent);
-        solverAndPersistenceFrame.setVisible(true);
-    }
+  public void init(Component centerForComponent, boolean exitOnClose) {
+    solutionBusiness = createSolutionBusiness();
+    solverAndPersistenceFrame = new SolverAndPersistenceFrame<>(solutionBusiness, createSolutionPanel());
+    solverAndPersistenceFrame.setDefaultCloseOperation(exitOnClose ? WindowConstants.EXIT_ON_CLOSE : WindowConstants.DISPOSE_ON_CLOSE);
+    solverAndPersistenceFrame.init(centerForComponent);
+    solverAndPersistenceFrame.setVisible(true);
+  }
 
-    public SolutionBusiness<Solution_> createSolutionBusiness() {
-        SolutionBusiness<Solution_> solutionBusiness = new SolutionBusiness<>(this);
-        solutionBusiness.setSolver(createSolver());
-        solutionBusiness.setDataDir(determineDataDir(dataDirName));
-        solutionBusiness.setSolutionFileIO(createSolutionFileIO());
-        solutionBusiness.setImporters(createSolutionImporters());
-        solutionBusiness.setExporter(createSolutionExporter());
-        solutionBusiness.updateDataDirs();
-        return solutionBusiness;
-    }
+  public SolutionBusiness<Solution_> createSolutionBusiness() {
+    SolutionBusiness<Solution_> solutionBusiness = new SolutionBusiness<>(this);
+    solutionBusiness.setSolver(createSolver());
+    solutionBusiness.setDataDir(determineDataDir(dataDirName));
+    solutionBusiness.setSolutionFileIO(createSolutionFileIO());
+    solutionBusiness.setImporters(createSolutionImporters());
+    solutionBusiness.setExporter(createSolutionExporter());
+    solutionBusiness.updateDataDirs();
+    return solutionBusiness;
+  }
 
-    protected Solver<Solution_> createSolver() {
-        SolverFactory<Solution_> solverFactory = SolverFactory.createFromXmlResource(solverConfig);
-        return solverFactory.buildSolver();
-    }
+  protected Solver<Solution_> createSolver() {
+    SolverFactory<Solution_> solverFactory = SolverFactory.createFromXmlResource(solverConfig);
+    solverFactory.getSolverConfig().setScoreDirectorFactoryConfig(new ScoreDirectorFactoryConfig());
+    solverFactory.getSolverConfig().getScoreDirectorFactoryConfig().setIncrementalScoreCalculatorClass(CurriculumIncrementalScoreCalculator.class);
+    return solverFactory.buildSolver();
+  }
 
-    protected abstract SolutionPanel<Solution_> createSolutionPanel();
+  protected abstract SolutionPanel<Solution_> createSolutionPanel();
 
-    /**
-     * Used for the unsolved and solved directories,
-     * not for the import and output directories, in the data directory.
-     * @return never null
-     */
-    public abstract SolutionFileIO<Solution_> createSolutionFileIO();
+  /**
+   * Used for the unsolved and solved directories,
+   * not for the import and output directories, in the data directory.
+   *
+   * @return never null
+   */
+  public abstract SolutionFileIO<Solution_> createSolutionFileIO();
 
-    protected AbstractSolutionImporter[] createSolutionImporters() {
-        return new AbstractSolutionImporter[]{};
-    }
+  protected AbstractSolutionImporter[] createSolutionImporters() {
+    return new AbstractSolutionImporter[]{};
+  }
 
-    protected AbstractSolutionExporter createSolutionExporter() {
-        return null;
-    }
+  protected AbstractSolutionExporter createSolutionExporter() {
+    return null;
+  }
 
 }

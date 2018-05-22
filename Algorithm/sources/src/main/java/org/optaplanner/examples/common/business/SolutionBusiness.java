@@ -24,8 +24,11 @@ import java.util.Map;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.swing.SwingUtilities;
 
+import de.stundenplaner.domain.CourseSchedule;
+import de.stundenplaner.solver.CourseConflict;
 import org.apache.commons.io.FileUtils;
 import org.optaplanner.core.api.domain.solution.PlanningSolution;
+import org.optaplanner.core.api.domain.solution.Solution;
 import org.optaplanner.core.api.score.Score;
 import org.optaplanner.core.api.score.constraint.ConstraintMatchTotal;
 import org.optaplanner.core.api.score.constraint.Indictment;
@@ -279,6 +282,7 @@ public class SolutionBusiness<Solution_> {
 
     public void openSolution(File file) {
         Solution_ solution = solutionFileIO.read(file);
+//      Solution_ solution = new CourseSchedule();
         logger.info("Opened: {}", file);
         solutionFileName = file.getName();
         guiScoreDirector.setWorkingSolution(solution);

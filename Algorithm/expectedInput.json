@@ -1,0 +1,35 @@
+{
+  "periods": [{
+    "id": 0,
+    "weekDay": 0,
+    "timeSlot": 0
+  }],
+  "teachers": [{
+    "id": 2,
+    "subjectSpecialisation": [{
+      "id": 123
+    }]
+  }],
+  "rooms": [{
+    "id": 3,
+    "roomNr": 666,
+    "house": "A",
+    "seats": 20,
+    "barrierFree": true,
+    "equipment": ["beamer", "Lautsprecher"],
+    "roomType": "Sport"
+  }],
+  "courses": [{
+    "id": 4,
+    "grade": 4,
+    "letter": "a",
+    "studentSize": 20
+  }],
+  "subjects": [{
+    "id": 123,
+    "name": "Mathe",
+    "grade": 4,
+    "occurrences": 5,
+    "requiredRoomType": "Sport"
+  }]
+}
