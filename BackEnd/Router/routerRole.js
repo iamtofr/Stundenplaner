@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/stundenplaner');
 const express = require('express');
 const app = express.Router();
-
+const permission = require('../Tools/permissions');
 const schema = require('../Schemas/schemas');
 
 app.use(bodyParser.json());
@@ -27,43 +27,63 @@ let role = mongoose.model('role', schema.role);
 
 app.route('/')
     .get((req, res, next) => {
-        role.find({}, function (err, role) {
-            if (err) throw err;
-            res.status(200).json(role);
-        });
+        if(req.perm >= permission.manager){
+            role.find({}, function (err, role) {
+                if (err) throw err;
+                res.status(200).json(role);
+            });
+        } else {
+            res.status(403).json("Unauthorized");
+        }
     })
 
     .post((req, res, next) => {
-        let newRole = role(req.body);
-        newRole.save(function (err) {
-            if (err) throw err;
-            console.log('Role created!');
-        });
-        res.status(201).json(newRole)
+        if(req.perm >= permission.manager){
+            let newRole = role(req.body);
+            newRole.save(function (err) {
+                if (err) throw err;
+                console.log('Role created!');
+            });
+            res.status(201).json(newRole)
+        } else {
+            res.status(403).json("Unauthorized");
+        }
     })
 
     .patch((req, res, next) => {
-        let query = {'_id': req.body._id};
-        role.findOneAndUpdate(query, req.body, {upsert: true, new: true}, function (err, role) {
-            if (err) return res.send(500, {error: err});
-            res.status(200).json(role);
-        });
+        if(req.perm >= permission.manager){
+            let query = {'_id': req.body._id};
+            role.findOneAndUpdate(query, req.body, {upsert: true, new: true}, function (err, role) {
+                if (err) return res.send(500, {error: err});
+                res.status(200).json(role);
+            });
+        } else {
+            res.status(403).json("Unauthorized");
+        }
     });
 
 app.route('/:id')
     .get((req, res, next) => {
-        let query = {'_id': req.params.id};
-        role.find(query, function (err, role) {
-            if (err) throw err;
-            res.status(200).json(role);
-        })
+        if(req.perm >= permission.student){
+            let query = {'_id': req.params.id};
+            role.find(query, function (err, role) {
+                if (err) throw err;
+                res.status(200).json(role);
+            })
+        } else {
+            res.status(403).json("Unauthorized");
+        }
     })
 
     .delete((req, res, next) => {
-        role.remove({_id: req.params.id}, function (err) {
-            if (err) return res.send(500, {error: err});
-            res.status(200).json();
-        });
+        if(req.perm >= permission.manager){
+            role.remove({_id: req.params.id}, function (err) {
+                if (err) return res.send(500, {error: err});
+                res.status(200).json();
+            });
+        } else {
+            res.status(403).json("Unauthorized");
+        }
     });
 
 
