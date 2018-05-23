@@ -1,17 +1,21 @@
 "use strict";
 
 const fs = require('fs');
-const privateKey = fs.readFileSync('/etc/letsencrypt/live/www.stundenplaner.online/privkey.pem', 'utf8');
-const certificate = fs.readFileSync('/etc/letsencrypt/live/www.stundenplaner.online/cert.pem', 'utf8');
-const chain = fs.readFileSync('/etc/letsencrypt/live/www.stundenplaner.online/chain.pem', 'utf8');
-const dhparam = fs.readFileSync('/etc/letsencrypt/live/www.stundenplaner.online/dhparam4096.pem');
-
-const credentials = { key: privateKey, cert: certificate, ca: chain, dhparam: dhparam };
+const WebSocket = require('ws');
 const express = require('express');
-const app = express();
-const http = require('http');
 const https = require('https');
 const helmet = require('helmet');
+
+const app = express();
+
+/**
+ * SSL
+ */
+const privateKey = fs.readFileSync('/etc/letsencrypt/live/www.stundenplaner.online/privkey.pem', 'utf8');
+const certificate = fs.readFileSync('/etc/letsencrypt/live/www.stundenplaner.online/cert.pem', 'utf8');
+const ca = fs.readFileSync('/etc/letsencrypt/live/www.stundenplaner.online/chain.pem', 'utf8');
+const dhparam = fs.readFileSync('/etc/letsencrypt/live/www.stundenplaner.online/dhparam4096.pem');
+const credentials = { key: privateKey, cert: certificate, ca: ca, dhparam: dhparam };
 
 const routerPermissionControll = require('../Router/routerPermission');
 const routerProfile = require('../Router/routerProfile');
@@ -26,6 +30,7 @@ const routerRole = require('../Router/routerRole');
 const routerLogin = require('../Router/routerLogin');
 
 const cors = require('../Tools/cors');
+
 app.use(cors);
 
 app.use(function(req, res, next) {
@@ -36,8 +41,9 @@ app.use(function(req, res, next) {
 
 app.use(helmet());
 
-app.use('/login', routerLogin);
+app.use('/', express.static('/var/www/stundenplaner/FrontEnd/build'));
 
+app.use('/login', routerLogin);
 app.use(routerPermissionControll);
 app.use('/profile', routerProfile);
 app.use('/subject', routerSubject);
@@ -50,21 +56,16 @@ app.use('/teacher', routerTeacher);
 app.use('/address', routerAddress);
 
 
-const server = http.createServer(app);
+/**
+ * HTTPS Server
+ */
+const server = https.createServer(credentials, app);
 
-server.listen(5080, '85.214.37.34', (err) => {
-  if (err !== undefined) {
-    console.log('Error on startup: ${err}');
-  }
-  else {
-    console.log('Listening on port 80');
-  }
-});
-
-
-const serverHttps = https.createServer(credentials, app);
-
-serverHttps.listen(5443, '85.214.37.34', (err) => {
+/**
+ * Websocket Server
+ */
+const wss = new WebSocket.Server({ server });
+server.listen(443, '85.214.37.34', (err) => {
   if (err !== undefined) {
     console.log('Error on startup: ${err}');
   }
@@ -74,3 +75,10 @@ serverHttps.listen(5443, '85.214.37.34', (err) => {
 });
 
 
+wss.on('connection', function connection(ws) {
+  console.log('connected');
+  ws.on('message',function incoming(message) {
+    console.log(message);
+    ws.send('geht')
+  })
+});
