@@ -24,7 +24,8 @@ let getData = (data) => {
   return fromGetData;
 };
 
-let buildAlgorithm = async () => {
+
+async function buildAlgo() {
   try {
     let toAlgo = {
       periods: await getData(period),
@@ -39,6 +40,25 @@ let buildAlgorithm = async () => {
   catch (err) {
     console.log('hier error von collectData: ', err)
   }
-};
-console.log(buildAlgorithm().then(1));
-module.exports.buildAlgorithm = buildAlgorithm;
+}
+
+// let buildAlgorithm = async () => {
+//   try {
+//     let toAlgo = {
+//       periods: await getData(period),
+//       rooms: await getData(room),
+//       teachers: await getData(teacher),
+//       courses: await getData(course),
+//       subjects: await getData(subject),
+//     };
+//     // console.log('ich bin von hier du sack', toAlgo);
+//     return Promise.resolve(toAlgo);
+//   }
+//   catch (err) {
+//     console.log('hier error von collectData: ', err)
+//   }
+// };
+
+
+console.log(buildAlgo().then(1));
+module.exports.buildAlgorithm = buildAlgo;
