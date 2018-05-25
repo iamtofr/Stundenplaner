@@ -100,7 +100,7 @@ class Login extends Component {
 
   handleLogin = () => {
     console.log('handleLogin: ' + this.state.name + ', ' + this.state.password);
-    fetch('https://api.stundenplaner.online:5443/login', {
+    fetch('https://stundenplaner.online/login', {
       method: 'POST',
       headers: {
         Accept: 'application/json',

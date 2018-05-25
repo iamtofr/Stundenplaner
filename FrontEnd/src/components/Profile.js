@@ -4,7 +4,7 @@ import Button from './Button';
 import * as Colors from '../constants/Colors';
 import Logo from '../assets/logo.svg';
 
-const socket = new WebSocket('wss://api.stundenplaner.online:9443');
+const socket = new WebSocket('wss://stundenplaner.online');
 socket.onopen = () => {
   socket.send('Olli connected!');
 };
@@ -81,7 +81,7 @@ class Profile extends Component {
   }
 
   componentDidMount() {
-    fetch('https://api.stundenplaner.online:5443/profile/5af5cf0420c6f43d9b506f02?token=1234')
+    fetch('https://stundenplaner.online/profile/5af5cf0420c6f43d9b506f02?token=1234')
       .then(response => response.json())
       .then(responseJson => {
         this.setState({
