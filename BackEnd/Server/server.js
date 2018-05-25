@@ -5,6 +5,15 @@ const WebSocket = require('ws');
 const express = require('express');
 const https = require('https');
 const helmet = require('helmet');
+const toAlgorithm = require('../Algorithm/collectData');
+
+
+
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/stundenplaner');
+const Schema = require('../Schemas/schemas');
+const period = mongoose.model('period', Schema.period);
+
 
 const app = express();
 
@@ -20,6 +29,7 @@ const credentials = { key: privateKey, cert: certificate, ca: ca, dhparam: dhpar
 const routerPermissionControll = require('../Router/routerPermission');
 const routerProfile = require('../Router/routerProfile');
 const routerAddress = require('../Router/routerAddress');
+const routerPeriod = require('../Router/routerPeriod');
 const routerCourse = require('../Router/routerCourse');
 const routerLecture = require('../Router/routerLecture');
 const routerRoom = require('../Router/routerRoom');
@@ -54,6 +64,7 @@ app.use('/room', routerRoom);
 app.use('/student', routerStudent);
 app.use('/teacher', routerTeacher);
 app.use('/address', routerAddress);
+app.use('/period', routerPeriod);
 
 
 /**
@@ -65,6 +76,7 @@ const server = https.createServer(credentials, app);
  * Websocket Server
  */
 const wss = new WebSocket.Server({ server });
+
 server.listen(443, '85.214.37.34', (err) => {
   if (err !== undefined) {
     console.log('Error on startup: ${err}');
@@ -77,8 +89,10 @@ server.listen(443, '85.214.37.34', (err) => {
 
 wss.on('connection', function connection(ws) {
   console.log('connected');
-  ws.on('message',function incoming(message) {
+  ws.on('message', function incoming(message) {
     console.log(message);
-    ws.send('geht')
+    period.find({}).exec((err, result) => {
+      ws.send(result);
+    });
   })
 });
