@@ -11,38 +11,34 @@ const subject = mongoose.model('subject', Schema.subject);
 
 
 /**
- * collect Data from DB and push to array
+ * collect Data from DB
  * @param data
  * @returns {*[]}
  */
 let getData = (data) => {
-  console.log('test info');
-  data.find({}).exec().then((result,err) => {
+  let fromGetData = data.find({}).exec().then((result, err) => {
       if (err) throw err;
       return result;
     }
   );
+  return fromGetData;
 };
 
 let buildAlgorithm = async () => {
-
-  let test = {
-    name: 'test'
-  };
-  return test;
-  // try {
-  //   let toAlgo = {
-  //     periods: await getData(period),
-  //     rooms: await getData(room),
-  //     teachers: await getData(teacher),
-  //     courses: await getData(course),
-  //     subjects: await getData(subject),
-  //   };
-  //   return toAlgo;
-  // }
-  // catch (err) {
-  //   console.log('hier error von collectData: ', err)
-  // }
+  try {
+    let toAlgo = {
+      periods: await getData(period),
+      rooms: await getData(room),
+      teachers: await getData(teacher),
+      courses: await getData(course),
+      subjects: await getData(subject),
+    };
+    // console.log('ich bin von hier du sack', toAlgo);
+    return Promise.resolve(toAlgo);
+  }
+  catch (err) {
+    console.log('hier error von collectData: ', err)
+  }
 };
-
-module.exports = JSON.stringify(buildAlgorithm());
+console.log(buildAlgorithm().then(1));
+module.exports.buildAlgorithm = buildAlgorithm;

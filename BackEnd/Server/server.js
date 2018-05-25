@@ -8,7 +8,6 @@ const helmet = require('helmet');
 const toAlgorithm = require('../Algorithm/collectData');
 
 
-
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/stundenplaner');
 const Schema = require('../Schemas/schemas');
@@ -90,9 +89,6 @@ server.listen(443, '85.214.37.34', (err) => {
 wss.on('connection', function connection(ws) {
   console.log('connected');
   ws.on('message', function incoming(message) {
-    console.log(message);
-    period.find({}).exec((err, result) => {
-      ws.send(result);
-    });
+      ws.send(JSON.stringify(toAlgorithm.buildAlgorithm()));
   })
 });
