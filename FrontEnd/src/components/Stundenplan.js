@@ -17,7 +17,7 @@ const styles = {
     display: 'flex',
     justifyContent: 'space-around',
     alignItems: 'center',
-    marginLeft: 100,
+    marginLeft: 175,
   },
   day: {
     padding: 10,
@@ -25,7 +25,35 @@ const styles = {
   },
   content: {
     display: 'flex',
+  },
+  classes: {
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  class: {
+    display: 'flex',
+    flex: 1,
+    alignItems: 'center',
+    padding: 0,
+    borderStyle: 'solid',
+    borderColor: Colors.grey,
+    borderWidth: `1px 0px 1px 1px`,
+  },
+  classLabel: {
+    padding: 10,
+    margin: 0,
+    transform: 'rotate(-90deg)',
+    fontWeight: 'bold',
+  },
+  activeTimetable: {
+    display: 'flex',
+    flex: 1,
     border: `1px solid ${Colors.grey}`,
+  },
+  activeClass: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-around',
   },
   hours: {
     height: 495,
@@ -91,18 +119,19 @@ class Stundenplan extends Component {
     this.state = {
       layout,
       items,
+      activeClass: '5A',
     };
   }
 
   generateLayout() {
     const array = [];
-    for (let i = 0; i < items.length; i++) {
+    for (let i = 0; i < 5 * 10; i++) {
       array.push({
         x: Math.floor(i / 6),
         y: i % 6,
         w: 1,
         h: 1,
-        i: items[i].id,
+        i: i.toString(),
       });
     }
     return array;
@@ -131,32 +160,51 @@ class Stundenplan extends Component {
           <p style={styles.day}>Freitag</p>
         </div>
         <div style={styles.content}>
-          <div style={styles.hours}>
-            <p style={styles.hour}>1. Stunde</p>
-            <p style={styles.hour}>2. Stunde</p>
-            <p style={styles.hour}>3. Stunde</p>
-            <p style={styles.hour}>4. Stunde</p>
-            <p style={styles.hour}>5. Stunde</p>
-            <p style={styles.hour}>6. Stunde</p>
-            <p style={styles.hour}>7. Stunde</p>
-            <p style={styles.hour}>8. Stunde</p>
-            <p style={styles.hour}>9. Stunde</p>
-            <p style={styles.hour}>10. Stunde</p>
+          <div style={styles.classes}>
+            <div style={styles.class} onClick={() => this.setState({ activeClass: '5A' })}>
+              <p style={styles.classLabel}>5A</p>
+            </div>
+            <div style={styles.class} onClick={() => this.setState({ activeClass: '5B' })}>
+              <p style={styles.classLabel}>5B</p>
+            </div>
+            <div style={styles.class} onClick={() => this.setState({ activeClass: '6A' })}>
+              <p style={styles.classLabel}>6A</p>
+            </div>
+            <div style={styles.class} onClick={() => this.setState({ activeClass: '6B' })}>
+              <p style={styles.classLabel}>6B</p>
+            </div>
           </div>
-          <div style={styles.background}>
-            <GridLayout
-              style={styles.timetable}
-              layout={this.state.layout}
-              cols={5}
-              rowHeight={40}
-              containerPadding={[5, 5]}
-              margin={[10, 10]}
-              compactType={null}
-              isResizable={false}
-              preventCollision
-            >
-              {this.generateDOM()}
-            </GridLayout>
+          <div style={styles.activeTimetable}>
+            <div style={styles.activeClass}>
+              <p style={styles.classLabel}>{this.state.activeClass}</p>
+            </div>
+            <div style={styles.hours}>
+              <p style={styles.hour}>1. Stunde</p>
+              <p style={styles.hour}>2. Stunde</p>
+              <p style={styles.hour}>3. Stunde</p>
+              <p style={styles.hour}>4. Stunde</p>
+              <p style={styles.hour}>5. Stunde</p>
+              <p style={styles.hour}>6. Stunde</p>
+              <p style={styles.hour}>7. Stunde</p>
+              <p style={styles.hour}>8. Stunde</p>
+              <p style={styles.hour}>9. Stunde</p>
+              <p style={styles.hour}>10. Stunde</p>
+            </div>
+            <div style={styles.background}>
+              <GridLayout
+                style={styles.timetable}
+                layout={this.state.layout}
+                cols={5}
+                rowHeight={40}
+                containerPadding={[5, 5]}
+                margin={[10, 10]}
+                compactType={null}
+                isResizable={false}
+                preventCollision
+              >
+                {this.generateDOM()}
+              </GridLayout>
+            </div>
           </div>
         </div>
       </div>

@@ -75,6 +75,8 @@ class Course extends Component {
       case 'Latein':
         color = { backgroundColor: Colors.subject12 };
         break;
+      default:
+        color = { backgroundColor: Colors.blue };
     }
 
     return (

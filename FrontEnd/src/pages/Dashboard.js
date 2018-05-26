@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import RGL, { WidthProvider } from 'react-grid-layout';
 import 'react-resizable/css/styles.css';
 import 'react-grid-layout/css/styles.css';
-import { actions as appActions } from '../reducers/app';
 import Widget from '../components/Widget';
 import Link from '../components/Link';
 import * as Colors from '../constants/Colors';

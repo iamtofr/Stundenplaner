@@ -3,10 +3,12 @@ export const yellow = '#F2D55C';
 export const lightBlue = '#92BAE6';
 export const blue = '#5688EF';
 export const darkBlue = '#294163';
-export const green = '#60c884';
-export const red = '#e33f46';
-export const grey = '#6f6f6f';
-export const lightGrey = '#e4e4e4';
+export const green = '#60C884';
+export const red = '#E33F46';
+export const grey = '#6F6F6F';
+export const lightGrey = '#E4E4E4';
+export const black = '#000000';
+export const white = '#FFFFFF';
 
 export const subject0 = '#CC6666';
 export const subject1 = '#CC9566';
