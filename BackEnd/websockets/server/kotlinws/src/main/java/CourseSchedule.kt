@@ -1,25 +1,22 @@
 
-import java.time.Period
+data class CourseSchedule(
 
+  val periods: List<Period>,
 
-class CourseSchedule {
-
-  //@get:ValueRangeProvider(id = "allPeriods")
-  var periods: List<Period>? = null
-
-  var teachers: List<Teacher>? = null
+  val teachers: List<Teacher>,
 
   //@get:ValueRangeProvider(id = "allRooms")
-  var rooms: List<Room>? = null
+  val rooms: List<Room>,
 
-  var courses: List<Course>? = null
+  val courses: List<Course>,
 
-  var subjects: List<Subject>? = null
+  val subjects: List<Subject>
 
   //@get:PlanningEntityCollectionProperty
-  var lectures: List<Lecture>? = null
+ // val lectures: List<String>
 
   //@get:PlanningScore
   //var score: HardSoftScore? = null
 
-}
+)
+
