@@ -35,7 +35,7 @@ async function buildAlgo() {
       subjects: await getData(subject),
     };
     // console.log('ich bin von hier du sack', toAlgo);
-    return Promise.resolve(toAlgo);
+    return await toAlgo;
   }
   catch (err) {
     console.log('hier error von collectData: ', err)
@@ -60,5 +60,5 @@ async function buildAlgo() {
 // };
 
 
-console.log(buildAlgo().then(1));
+console.log(buildAlgo().then((data) => console.log(data)));
 module.exports.buildAlgorithm = buildAlgo;

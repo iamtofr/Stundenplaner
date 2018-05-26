@@ -89,6 +89,7 @@ server.listen(443, '85.214.37.34', (err) => {
 wss.on('connection', function connection(ws) {
   console.log('connected');
   ws.on('message', function incoming(message) {
-      ws.send(JSON.stringify(toAlgorithm.buildAlgorithm()));
+     // ws.send(JSON.stringify(toAlgorithm.buildAlgorithm()));
+      toAlgorithm.buildAlgorithm().then((data) => ws.send(JSON.stringify(data)));
   })
 });
