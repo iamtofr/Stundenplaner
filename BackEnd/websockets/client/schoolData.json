@@ -1,33 +1,67 @@
 [{
-  "course": {
-    "id": 3,
-    "grade": 5,
-    "letter": "A",
-    "studentSize": 25
-  },
-  "subject":{
-    "id": 2,
-    "name": "Mathe",
-    "grade": 5,
-    "occurences": 2,
-    "requaredRoomType": "general"
-  },
-  "period": {
-    "id": 4,
-    "weekday": 1,
-    "timeSlot": 1
-  },
-  "rooms" : {
-    "id": 0,
-    "roomNr": 125,
-    "house": "A",
-    "seats": 25,
-    "barrierFree": true,
-    "equipment": "Beamer, Lautspraecher",
-    "roomType": "Sporthalle"
-  },
-  "teacher": {
-    "id": 1,
-    "subjectSpezialisation": ["Mathe", "Physik"]
-  }
+    "subjects": [{
+            "id": 7,
+            "name": "Mathematik",
+            "occurrences" : 4,
+            "requiredRoomType" : "general"
+        },
+        {
+          "id": 8,
+          "name": "Biologie",
+          "occurrences" : 2,
+          "requiredRoomType" : "general"
+        }
+    ],
+    "teachers": [{
+            "id": 1,
+            "subjectSpecialisations": [10, 11]
+        },
+        {
+            "id": 2,
+            "subjectSpecialisations": [10, 12]
+        }
+    ],
+    "rooms": [{
+            "id": 5,
+            "number": 302,
+            "seats": 20,
+            "house": "Hauptgebäude",
+            "equipment": ["Beamer"],
+            "type": "general",
+            "barrierFree": true
+        },
+        {
+            "id": 6,
+            "number": 301,
+            "seats": 20,
+            "house": "Hauptgebäude",
+            "equipment": ["Beamer"],
+            "type": "Chemie",
+            "barrierFree": true
+        }
+    ],
+    "courses": [{
+            "id": 3,
+            "grade": 5,
+            "letter": "A",
+            "studentSize": 25
+        },
+        {
+            "id": 4,
+            "grade": 5,
+            "letter": "A",
+            "studentSize": 25
+        }
+    ],
+    "periods": [{
+            "id": 9,
+            "weekday": 0,
+            "timeSlot": 0
+        },
+        {
+          "id": 10,
+          "weekday": 0,
+          "timeSlot": 1
+        }
+    ]
 }]
