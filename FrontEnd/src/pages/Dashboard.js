@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import RGL, { WidthProvider } from 'react-grid-layout';
 import 'react-resizable/css/styles.css';
 import 'react-grid-layout/css/styles.css';
-import { actions as appActions } from '../reducers/app';
 import Widget from '../components/Widget';
 import Link from '../components/Link';
 import * as Colors from '../constants/Colors';
@@ -258,13 +257,7 @@ class Dashboard extends Component {
 }
 
 const mapStateToProps = state => ({
-  token: state.app.token,
-  profile: state.app.profile,
   isLoggedIn: state.app.isLoggedIn,
 });
 
-const mapDispatchToProps = {
-  logout: appActions.logout,
-};
-
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Dashboard));
+export default withRouter(connect(mapStateToProps)(Dashboard));
