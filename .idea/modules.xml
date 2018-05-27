@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Algorithm/sources/src/main/main.iml" filepath="$PROJECT_DIR$/Algorithm/sources/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Die-Stundenplaner.iml" filepath="$PROJECT_DIR$/.idea/Die-Stundenplaner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Algorithm/stundenplaner-algorithm.iml" filepath="$PROJECT_DIR$/Algorithm/stundenplaner-algorithm.iml" />
     </modules>
   </component>
 </project>

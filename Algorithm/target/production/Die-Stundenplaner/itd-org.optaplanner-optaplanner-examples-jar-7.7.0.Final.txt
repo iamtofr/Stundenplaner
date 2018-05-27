@@ -1,0 +1,15 @@
+Found 14 illegal transitive type dependencies in artifact 'org.optaplanner:optaplanner-examples:jar:7.7.0.Final':
+1.) com.google.common.math.BigIntegerMath
+2.) kotlin.Metadata
+3.) kotlin.Pair
+4.) kotlin.TuplesKt
+5.) kotlin.TypeCastException
+6.) kotlin.collections.CollectionsKt
+7.) kotlin.collections.MapsKt
+8.) kotlin.jvm.internal.DefaultConstructorMarker
+9.) kotlin.jvm.internal.Intrinsics
+10.) kotlin.ranges.RangesKt
+11.) kotlin.text.Regex
+12.) org.jetbrains.annotations.NotNull
+13.) org.jetbrains.annotations.Nullable
+14.) org.optaplanner.persistence.xstream.impl.domain.solution.XStreamSolutionFileIO
