@@ -42,23 +42,6 @@ async function buildAlgo() {
   }
 }
 
-// let buildAlgorithm = async () => {
-//   try {
-//     let toAlgo = {
-//       periods: await getData(period),
-//       rooms: await getData(room),
-//       teachers: await getData(teacher),
-//       courses: await getData(course),
-//       subjects: await getData(subject),
-//     };
-//     // console.log('ich bin von hier du sack', toAlgo);
-//     return Promise.resolve(toAlgo);
-//   }
-//   catch (err) {
-//     console.log('hier error von collectData: ', err)
-//   }
-// };
-
 
 console.log(buildAlgo().then((data) => console.log(data)));
 module.exports.buildAlgorithm = buildAlgo;
