@@ -9,27 +9,27 @@ const account = mongoose.model('account', schema.account);
 mongoose.Promise = Promise;
 
 function findPerm(token) {
-  return account.findOne({'token': token}).populate({
-    path: 'profile',
-    populate: {
-      path: 'role'
-    }
-  }).exec().then((result) => {
-    if (!result) throw "Ich bin ein Error!" +console.log(result);
-    console.log('funktion', result, result.profile);
-    console.log(result.profile.role);
-    let roleName = result.profile.role.name;
-    if (roleName === 'Schüler') {
-      console.log("Schüler: " + roleName);
-      return 0;
-    } else if (roleName === 'Lehrer') {
-      return 3;
-    } else if (roleName === 'Verwalter') {
-      return 6;
-    } else if (roleName === 'Admin') {
-      return 9;
-    }
-  });
+    return account.findOne({'token': token}).populate({
+        path: 'profile',
+        populate: {
+            path: 'role'
+        }
+    }).exec().then((result) => {
+        if (!result) throw "Ich bin ein Error!: " +console.log(result);
+        console.log('funktion', result, result.profile);
+        console.log(result.profile.role);
+        let roleName = result.profile.role.name;
+        if (roleName === 'Schüler') {
+            console.log("Schüler: " + roleName);
+            return 0;
+        } else if (roleName === 'Lehrer') {
+            return 3;
+        } else if (roleName === 'Verwalter') {
+            return 6;
+        } else if (roleName === 'Admin') {
+            return 9;
+        }
+    });
 }
 
 app.use(async (req, res, next) => {

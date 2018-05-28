@@ -13,6 +13,8 @@ let student = require('./schemaStudent.js');
 let subject = require('./schemaSubject.js');
 let teacher = require('./schemaTeacher.js');
 let curriculum = require('./schemaCuriculum.js');
+let toAlgorithm = require('./schemaToAlgorithm');
+
 
 
 const collection = {
@@ -28,6 +30,8 @@ const collection = {
   subject: subject,
   teacher: teacher,
   curriculum: curriculum,
+  toAlgorithm: toAlgorithm,
+
 };
 
 module.exports = collection;

@@ -5,13 +5,14 @@ const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/stundenplaner');
 const express = require('express');
 const app = express.Router();
+const permission = require('../Tools/permissions');
 
 const schema = require('../Schemas/schemas');
 
 app.use(bodyParser.json());
 app.use((req, res, next) => {
-    console.log(req.body);
-    next();
+  console.log(req.body);
+  next();
 });
 let account = mongoose.model('account', schema.account);
 let profile = mongoose.model('profile', schema.profile);
@@ -75,6 +76,7 @@ app.route('/')
     });
 
 
+
 app.route('/:id')
     .get((req, res, next) => {
         if(req.perm >= permission.manager){
@@ -106,24 +108,26 @@ app.route('/:id')
         } else {
             res.status(403).json("Unauthorized");
         }
+
     });
 
 
-app.all('*', (req, res, next) => {
-    res.status(404).set('Content-Type', 'text/html');
 
-    // respond with html page
-    if (req.accepts('html')) {
-        res.send('404 Not found');
-    }
-    // respond with json
-    else if (req.accepts('json')) {
-        res.send('404 (json) Not found');
-    }
-    // default to plain-text
-    else {
-        res.send('404 (Text) Not found');
-    }
+app.all('*', (req, res, next) => {
+  res.status(404).set('Content-Type', 'text/html');
+
+  // respond with html page
+  if (req.accepts('html')) {
+    res.send('404 Not found');
+  }
+  // respond with json
+  else if (req.accepts('json')) {
+    res.send('404 (json) Not found');
+  }
+  // default to plain-text
+  else {
+    res.send('404 (Text) Not found');
+  }
 });
 
 module.exports = app;

@@ -13,6 +13,9 @@
     "react-scripts": "1.1.4",
     "redux": "^4.0.0",
     "redux-persist": "^5.9.1"
+    "helmet": "latest",
+    "express": "latest",
+    "ws": "latest"
   },
   "scripts": {
     "start": "react-scripts start",
