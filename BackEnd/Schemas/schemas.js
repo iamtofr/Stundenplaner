@@ -12,20 +12,22 @@ let room = require('./schemaRoom.js');
 let student = require('./schemaStudent.js');
 let subject = require('./schemaSubject.js');
 let teacher = require('./schemaTeacher.js');
+let curriculum = require('./schemaCuriculum.js');
 
 
 const collection = {
-    account: account,
-    address: address,
-    course: course,
-    lecture: lecture,
-    period: period,
-    profile: profile,
-    role: role,
-    room: room,
-    student: student,
-    subject: subject,
-    teacher: teacher
+  account: account,
+  address: address,
+  course: course,
+  lecture: lecture,
+  period: period,
+  profile: profile,
+  role: role,
+  room: room,
+  student: student,
+  subject: subject,
+  teacher: teacher,
+  curriculum: curriculum,
 };
 
 module.exports = collection;
