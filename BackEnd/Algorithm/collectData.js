@@ -42,6 +42,5 @@ async function buildAlgo() {
   }
 }
 
-
 console.log(buildAlgo().then((data) => console.log(data)));
 module.exports.buildAlgorithm = buildAlgo;
