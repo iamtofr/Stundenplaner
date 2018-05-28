@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/stundenplaner');
 const express = require('express');
 const app = express.Router();
+const permission = require('../Tools/permissions');
 
 const schema = require('../Schemas/schemas');
 
@@ -28,43 +29,63 @@ let student = mongoose.model('student', schema.student);
 app.route('/')
 
     .get((req, res, next) => {
-        student.findAll({}).populate('profile').exec(function (err, result) {
-            if (err) throw err;
-            res.status(200).json(result);
-        });
+        if(req.perm >= permission.teacher){
+            student.findAll({}).populate('profile').exec(function (err, result) {
+                if (err) throw err;
+                res.status(200).json(result);
+            });
+        } else {
+            res.status(403).json("Unauthorized");
+        }
     })
 
     .post((req, res, next) => {
-        let newStudent = profile(req.body);
-        newStudent.save(function (err) {
-            if (err) throw err;
-            console.log('Student created!');
-        });
-        res.status(201).json(newStudent)
+        if(req.perm >= permission.manager){
+            let newStudent = profile(req.body);
+            newStudent.save(function (err) {
+                if (err) throw err;
+                console.log('Student created!');
+            });
+            res.status(201).json(newStudent);
+        } else {
+            res.status(403).json("Unauthorized");
+        }
     })
 
     .patch((req, res, next) => {
-        let query = {'_id': req.body._id};
-        student.findOneAndUpdate(query, req.body, {upsert: true, new: true}, function (err, student) {
-            if (err) return res.send(500, {error: err});
-            res.status(200).json(student);
-        });
+        if(req.perm >= permission.manager){
+            let query = {'_id': req.body._id};
+            student.findOneAndUpdate(query, req.body, {upsert: true, new: true}, function (err, student) {
+                if (err) return res.send(500, {error: err});
+                res.status(200).json(student);
+            });
+        } else {
+            res.status(403).json("Unauthorized");
+        }
     });
 
 
 app.route('/:id')
     .get((req, res, next) => {
-        student.findOne({_id: req.params.id}).populate('profile').exec(function (err, result) {
-            if (err) throw err;
-            res.status(200).json(result);
-        });
+        if(req.perm >= permission.student){
+            student.findOne({_id: req.params.id}).populate('profile').exec(function (err, result) {
+                if (err) throw err;
+                res.status(200).json(result);
+            });
+        } else {
+            res.status(403).json("Unauthorized");
+        }
     })
 
     .delete((req,res,next)=>{
-        student.remove({ _id: req.params.id }, function (err) {
-            if (err) return res.send(500, {error: err});
-            res.status(200).json();
-        });
+        if(req.perm >= permission.manager){
+            student.remove({ _id: req.params.id }, function (err) {
+                if (err) return res.send(500, {error: err});
+                res.status(200).json();
+            });
+        } else {
+            res.status(403).json("Unauthorized");
+        }
     });
 
 
