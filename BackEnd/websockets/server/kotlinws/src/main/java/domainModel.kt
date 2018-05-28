@@ -2,42 +2,55 @@ import java.time.Period
 
 
 data class Subject(
-  val name: String,
-  val grade: Int,
-  val occurrences: Int,
-  val requiredEquipment: String?,
-  val requiredRoomType: String = "general"
-) {
-  val requiredTeacher: ArrayList<Teacher> = ArrayList()
-}
+        val id: Int,
+        val name: String,
+  //val grade: Int,
+        val occurrences: Int,
+  //val requiredEquipment: String?,
+        val requiredRoomType: String
+)
+//{
+//  val requiredTeacher: ArrayList<Teacher> = ArrayList()
+//}
 
 data class Teacher(
-  private val subjectSpecialization: List<Subject>
-) {
-  init {
-    subjectSpecialization
-      .forEach { subject -> subject.requiredTeacher.add(this) }
-  }
-}
+        val id: Int,
+        val subjectSpecialisations: List<Int>
+       // private val subjectSpecialization: List<Subject>
+)
+//{
+//  init {
+//    subjectSpecialization
+//      .forEach { subject -> subject.requiredTeacher.add(this) }
+//  }
+//}
 
 data class Course(
-  val grade: Int,
-  val letter: String,
-  var studentSize: Int
+        val id: Int,
+        val grade: Int,
+        val letter: String,
+        var studentSize: Int
 )
 
-data class Day(
-        val periods: MutableList<Period>,
-        private val weekDay: Int
+data class Period(
+        val id: Int,
+        val weekday: Int,
+        val timeSlot: Int
 )
+
+//data class Day(
+//        val periods: MutableList<Period>,
+//        private val weekDay: Int
+//)
 
 data class Room(
-  val roomNr: Int,
-  val house: String,
-  val seats: Int,
-  val barrierFree: Boolean,
-  val equipment: List<String>,
-  val roomType: String = "general"
+        val id: Int,
+        val number: Int,
+        val seats: Int,
+        val house: String,
+        val equipment: List<String>,
+        val type: String = "general",
+        val barrierFree: Boolean
 )
 
 data class Lecture(

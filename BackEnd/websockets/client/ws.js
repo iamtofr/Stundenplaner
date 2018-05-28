@@ -18,17 +18,20 @@ function sendMessage(type, data) {
     console.log("sending message ",JSON.stringify(msg, null, 1));
     ws.send(JSON.stringify(msg));
 }
+
 const GET_LECTURES = "getLectures";
 const CONNECTION_STATUS = "connectionStatus";
 const SCHEDULE_DATA = "scheduleData";
 const ERROR = "msgError";
 
 //const ws = new WebSocket('wss://d3a7394e.ngrok.io/api.stundenplaner.online/', {
-const ws = new WebSocket('ws://192.168.0.48:9000/api.stundenplaner.online/', {
+//const ws = new WebSocket('ws://192.168.0.48:9000/api.stundenplaner.online/', {
+  const ws = new WebSocket('ws://10.48.205.33:9000/api.stundenplaner.online/', {
+//const ws = new WebSocket('ws://141.64.174.15:9000/api.stundenplaner.online/', {
     origin: 'https://websocket.org'
 });
 
-var data = fs.readFileSync('schoolData.json', 'utf8');
+var data = fs.readFileSync('schoolDataCourse.json', 'utf8');
 var jsonData = JSON.parse(data);
 var schoolData = JSON.stringify(jsonData);
 
@@ -65,7 +68,7 @@ ws.on('message', function incoming(incMessage) {
                         var incJson = JSON.parse(serverMessage.data);
                         var icnJsonStr = JSON.stringify(incJson);
                         fs.writeFile('schedule.json', icnJsonStr, 'utf8', function () {
-                          console.log ('File saved');
+                          console.log ('File saved to schedule.json');
                         });
                     } catch (err) {
                       console.log(serverMessage.data.toString());

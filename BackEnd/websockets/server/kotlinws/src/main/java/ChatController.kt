@@ -1,6 +1,7 @@
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
+import com.fasterxml.jackson.module.kotlin.readValue
 import org.eclipse.jetty.websocket.api.Session
 import org.eclipse.jetty.websocket.api.annotations.OnWebSocketClose
 import org.eclipse.jetty.websocket.api.annotations.OnWebSocketConnect
@@ -38,6 +39,12 @@ class ChatWSHandler {
             "getLectures" -> {
                 val schoolData = json.get("data").asText()
                 println(schoolData)
+
+                val mapper = jacksonObjectMapper()
+
+                println("=== JSON to Kotlin Object ===")
+                var courseSchedule: List<CourseSchedule> = mapper.readValue(schoolData)
+                println(courseSchedule)
 
                 emit(session, Message("scheduleData", "{\"id\":3,\"grade\":5,\"letter\":\"A\",\"studentSize\":25}"))
 
