@@ -13,23 +13,21 @@ const subject = mongoose.model('subject', Schema.subject);
 /**
  *
  * @param data
- * @returns {Promise<any>}
+ * @returns
  */
 let getData = (data) => {
-  let fromGetData = data.find({}).exec().then((result, err) => {
+  return data.find({}).exec().then((result, err) => {
       if (err) throw err;
       return result;
     }
   );
-  return fromGetData;
 };
 
 let calcStudentSize = (courses) => {
 
  courses.forEach((course)=> {
-   let size = course.students.length;
+   course.studentSize = course.students.length;
    course.students = [];
-   course.students.push(size);
  });
   return courses;
 };
@@ -41,8 +39,8 @@ async function buildAlgo() {
       periods: await getData(period),
       rooms: await getData(room),
       teachers: await getData(teacher),
-      // courses: calcStudentSize(await getData(course)),
-      courses: (await getData(course)),
+      courses: calcStudentSize(await getData(course)),
+      // courses: (await getData(course)),
       subjects: await getData(subject),
     };
     // console.log('ich bin von hier du sack', toAlgo);
