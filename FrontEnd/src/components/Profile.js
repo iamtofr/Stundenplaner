@@ -290,7 +290,12 @@ class Profile extends Component {
           </div>
           <div style={styles.side}>
             <img style={styles.avatar} src={profile.photo || Logo} alt="Avatar" />
-            <Button style={styles.button} text="Löschen" color={Colors.grey} />
+            <Button
+            style={styles.button}
+            text="Löschen"
+            color={Colors.blue}
+            hoverColor = {Colors.lightBlue}
+            />
             <div style={styles.infoBox}>
               <p style={styles.title}>Notizen</p>
               <textarea
@@ -306,16 +311,17 @@ class Profile extends Component {
           </div>
         </div>
         <div style={styles.buttons}>
-          <Button style={styles.button} text="Ausdrucken" color={Colors.grey} />
+          <Button style={styles.button} text="Ausdrucken" color={Colors.blue} hoverColor = {Colors.lightBlue}/>
           <Button
             style={styles.button}
             text="Speichern"
             color={Colors.green}
+            hoverColor = {Colors.lightGreen}
             onClick={() => {
               socket.send('Olli sagt Hallo!');
             }}
           />
-          <Button style={styles.button} text="Abbruch" color={Colors.red} />
+          <Button style={styles.button} text="Abbruch" color={Colors.red} hoverColor = {Colors.lightRed}/>
         </div>
       </div>
     );
