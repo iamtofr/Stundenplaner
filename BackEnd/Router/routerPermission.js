@@ -1,3 +1,9 @@
+/**
+ * This module defines the permission for the Validation of HTTP Requests.
+ * Mongoose is used as framework.
+ *
+ */
+
 'use strict';
 
 const mongoose = require('mongoose');
@@ -8,12 +14,21 @@ const account = mongoose.model('account', schema.account);
 
 mongoose.Promise = Promise;
 
+/**
+ *
+ * @param token     The token for validation
+ * @return
+ */
 function findPerm(token) {
     return account.findOne({'token': token}).populate({
         path: 'profile',
         populate: {
             path: 'role'
         }
+
+        /**
+         * @return  A number which are represented the role specification
+         */
     }).exec().then((result) => {
         if (!result) throw "Ich bin ein Error!: " +console.log(result);
         console.log('funktion', result, result.profile);

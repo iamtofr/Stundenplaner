@@ -1,3 +1,11 @@
+/**
+ * This module defines the routes and HTTP Requests of periods.
+ * Mongoose is used as framework.
+ *
+ * @module routes/period
+ * @type {Router}
+ */
+
 'use strict';
 
 const bodyParser = require('body-parser');

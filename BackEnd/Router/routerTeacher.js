@@ -1,3 +1,12 @@
+/**
+ * This module defines the routes and HTTP Requests of teachers.
+ * All HTTP Requests are validated with a permission before they are executed.
+ * Mongoose is used as framework.
+ *
+ * @module routes/teacher
+ * @type {Router}
+ */
+
 'use strict';
 
 const bodyParser = require('body-parser');

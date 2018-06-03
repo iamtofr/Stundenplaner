@@ -1,3 +1,11 @@
+/**
+ * This module defines the routes and HTTP Requests of lectures.
+ * Mongoose is used as framework.
+ *
+ * @module routes/lecture
+ * @type {Router}
+ */
+
 'use strict';
 
 const bodyParser = require('body-parser');

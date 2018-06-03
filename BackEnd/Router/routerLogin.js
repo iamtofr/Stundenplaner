@@ -1,3 +1,12 @@
+/**
+ * This module defines the routes and HTTP Requests of accounts.
+ * All HTTP Requests are validated with a permission before they are executed.
+ * Mongoose is used as framework.
+ *
+ * @module routes/account
+ * @type {Router}
+ */
+
 'use strict';
 
 const bodyParser = require('body-parser');

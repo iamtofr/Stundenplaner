@@ -1,3 +1,12 @@
+/**
+ * This module defines the routes and HTTP Requests of profiles.
+ * All HTTP Requests are validated with a permission before they are executed.
+ * Mongoose is used as framework.
+ *
+ * @module routes/profile
+ * @type {Router}
+ */
+
 'use strict';
 
 const bodyParser = require('body-parser');
@@ -21,9 +30,14 @@ app.use(function (req, res, next) {
 //TODO delete || manager
 //TODO patch || jeder, jedoch muss im frontend sichergestellt werden, dass ein student/teacher nur auf seine id patcht
 
-
+/**
+ * instantiate profile with schema of profile
+ */
 let profile = mongoose.model('profile', schema.profile);
 
+/**
+ * HTTP Requests for Address Routes
+ */
 app.route('/')
     .get((req, res, next) => {
         if (req.perm >= permission.manager) {
@@ -32,7 +46,7 @@ app.route('/')
                 res.status(200).json(profile);
             });
         } else {
-            res.status(401).json("Unauthorized");
+            res.status(403).json("Unauthorized");
         }
     })
 
@@ -51,7 +65,7 @@ app.route('/')
             });
             res.status(201).json(newProfile)
         } else {
-            res.status(401).json("Unauthorized");
+            res.status(403).json("Unauthorized");
         }
 
     })
@@ -65,7 +79,7 @@ app.route('/')
                 res.status(200).json(profile);
             });
         } else {
-            res.status(401).json("Unauthorized");
+            res.status(403).json("Unauthorized");
         }
     });
 
@@ -92,6 +106,9 @@ app.route('/')
 //         res.status(201).json(newSubject)
 //     });
 
+/**
+ * HTTP Requests for Address Routes by id
+ */
 app.route('/:id')
     .get((req, res, next) => {
         if (req.perm >= permission.student) {
@@ -100,7 +117,7 @@ app.route('/:id')
                 res.status(200).json(result);
             });
         } else {
-            res.status(401).json("Unauthorized");
+            res.status(403).json("Unauthorized");
         }
 
     })
@@ -112,7 +129,7 @@ app.route('/:id')
                 res.status(200).json();
             });
         } else {
-            res.status(401).json("Unauthorized");
+            res.status(403).json("Unauthorized");
         }
     });
 
