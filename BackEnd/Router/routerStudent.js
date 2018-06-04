@@ -32,7 +32,7 @@ let student = mongoose.model('student', schema.student);
 app.route('/')
     .get((req, res, next) => {
         if(req.perm >= permission.teacher){
-            student.findAll({}).populate('profile').exec(function (err, result) {
+            student.find({}).populate('profile').exec(function (err, result) {
                 if (err) throw err;
                 res.status(200).json(result);
             });

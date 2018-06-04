@@ -6,6 +6,7 @@ import NavBar from './components/NavBar';
 import LandingPage from './pages/LandingPage';
 import Dashboard from './pages/Dashboard';
 import DetailsPage from './pages/DetailsPage';
+import Footer from './components/Footer';
 
 const styles = {
   container: {
@@ -36,6 +37,7 @@ const App = ({ store, persistor }) => {
               <Route path="/dashboard" component={Dashboard} />
               <Route path="/details" component={NavBar} />
               <Route path="/details" component={DetailsPage} />
+              <Route path="/" component={Footer} />
             </div>
             <div style={styles.side} />
           </div>
