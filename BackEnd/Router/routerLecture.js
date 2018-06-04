@@ -24,8 +24,9 @@ app.use(function (req, res, next) {
 
 let lecture = mongoose.model('lecture', schema.lecture);
 
-
-
+/**
+ * HTTP Requests for Address Routes
+ */
 app.route('/')
     .get((req, res, next) => {
         lecture.findAll({})
@@ -57,7 +58,9 @@ app.route('/')
         });
     });
 
-
+/**
+ * HTTP Requests for Address Routes by id
+ */
 app.route('/:id')
     .get((req, res, next) => {
         lecture.findOne({_id: req.params.id})
@@ -79,7 +82,9 @@ app.route('/:id')
     });
 
 
-
+/**
+ * Error Requests of wrong accept types
+ */
 app.all('*', (req, res, next) => {
     res.status(404).set('Content-Type', 'text/html');
 

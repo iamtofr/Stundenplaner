@@ -24,12 +24,6 @@ app.use(function (req, res, next) {
     next();
 });
 
-//TODO get all || manager
-//TODO get id || student
-//TODO post || manager
-//TODO delete || manager
-//TODO patch || jeder, jedoch muss im frontend sichergestellt werden, dass ein student/teacher nur auf seine id patcht
-
 /**
  * instantiate profile with schema of profile
  */
@@ -133,7 +127,9 @@ app.route('/:id')
         }
     });
 
-
+/**
+ * Error Requests of wrong accept types
+ */
 app.all('*', (req, res, next) => {
     res.status(404).set('Content-Type', 'text/html');
 

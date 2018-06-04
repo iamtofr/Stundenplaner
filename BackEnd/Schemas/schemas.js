@@ -1,3 +1,10 @@
+/**
+ * This module defines a collection of all schemas.
+ * It using mongoose as framework.
+ *
+ * @type {collection}
+ */
+
 'use Strict';
 
 

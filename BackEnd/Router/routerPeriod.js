@@ -19,6 +19,9 @@ app.use(bodyParser.json());
 
 let period = mongoose.model('period', schema.period);
 
+/**
+ * HTTP Requests for Address Routes
+ */
 app.route('/')
     .get((req, res, next) => {
         period.find({}, function (err, period) {
@@ -39,6 +42,9 @@ app.route('/')
         res.status(201).json(newPeriod)
     });
 
+/**
+ * HTTP Requests for Address Routes by id
+ */
 app.route('/:id')
     .get((req, res, next) => {
         let query = {'_id': req.params.id};
@@ -48,6 +54,9 @@ app.route('/:id')
         });
     });
 
+/**
+ * Error Requests of wrong accept types
+ */
 app.all('*', (req, res, next) => {
     res.status(404).set('Content-Type', 'text/html');
 

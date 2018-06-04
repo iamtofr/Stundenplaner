@@ -26,17 +26,10 @@ app.use(function (req, res, next) {
 
 let student = mongoose.model('student', schema.student);
 
-
-//TODO PERMISSION
-//TODO get all || teacher
-//TODO get id || student
-//TODO post || manager
-//TODO delelte || manager
-//TODO patch || manager
-
-
+/**
+ * HTTP Requests for Address Routes
+ */
 app.route('/')
-
     .get((req, res, next) => {
         if(req.perm >= permission.teacher){
             student.findAll({}).populate('profile').exec(function (err, result) {
@@ -73,7 +66,9 @@ app.route('/')
         }
     });
 
-
+/**
+ * HTTP Requests for Address Routes by id
+ */
 app.route('/:id')
     .get((req, res, next) => {
         if(req.perm >= permission.student){
@@ -98,7 +93,9 @@ app.route('/:id')
     });
 
 
-
+/**
+ * Error Requests of wrong accept types
+ */
 app.all('*', (req, res, next) => {
     res.status(404).set('Content-Type', 'text/html');
 
