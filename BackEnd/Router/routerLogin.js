@@ -75,37 +75,24 @@ app.route('/')
         res.status(200).json(result);
       } else res.status(401).json();
     });
+  });
 
 /**
  * HTTP Requests for Address Routes by id
  */
 app.route('/:id')
-    .get((req, res, next) => {
-        if(req.perm >= permission.manager){
-            account.findById(req.params.id)
-                .exec(function (err, resultAccount) {
-                    let newProfile = profile.findById(resultAccount.profile);
-                    newProfile
-                        .populate('role')
-                        .populate('address')  //TODO falsch gepopulatet muss verschachtelt werden
-                        .exec(function (err, result) {
-                            if (err) throw err;
-                            resultAccount.profile = result;
-                            res.status(200).json(resultAccount);
-                        });
-                });
-        } else {
-            res.status(403).json("Unauthorized");
-        }
-    })
-
-
-    .delete((req, res, next) => {
-        if(req.perm >= permission.admin){
-            //TODO body must be checked if user/passwd is present and match with db entry
-            account.remove({_id: req.params.id}, function (err) {
-                if (err) return res.send(500, {error: err});
-                res.status(200).json();
+  .get((req, res, next) => {
+    if (req.perm >= permission.manager) {
+      account.findById(req.params.id)
+        .exec(function(err, resultAccount) {
+          let newProfile = profile.findById(resultAccount.profile);
+          newProfile
+            .populate('role')
+            .populate('address')  //TODO falsch gepopulatet muss verschachtelt werden
+            .exec(function(err, result) {
+              if (err) throw err;
+              resultAccount.profile = result;
+              res.status(200).json(resultAccount);
             });
         });
     } else {
@@ -113,6 +100,17 @@ app.route('/:id')
     }
   })
 
+  .delete((req, res, next) => {
+    if (req.perm >= permission.admin) {
+      //TODO body must be checked if user/passwd is present and match with db entry
+      account.remove({ _id: req.params.id }, function(err) {
+        if (err) return res.send(500, { error: err });
+        res.status(200).json();
+      });
+    } else {
+      res.status(403).json("Unauthorized");
+    }
+  })
 
   .delete((req, res, next) => {
     if (req.perm >= permission.admin) {
