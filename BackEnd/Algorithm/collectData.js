@@ -11,17 +11,25 @@ const subject = mongoose.model('subject', Schema.subject);
 
 
 /**
- * collect Data from DB
+ *
  * @param data
- * @returns {*[]}
+ * @returns
  */
 let getData = (data) => {
-  let fromGetData = data.find({}).exec().then((result, err) => {
+  return data.find({}).exec().then((result, err) => {
       if (err) throw err;
       return result;
     }
   );
-  return fromGetData;
+};
+
+let calcStudentSize = (courses) => {
+
+ courses.forEach((course)=> {
+   course.studentSize = course.students.length;
+   course.students = [];
+ });
+  return courses;
 };
 
 
@@ -31,16 +39,17 @@ async function buildAlgo() {
       periods: await getData(period),
       rooms: await getData(room),
       teachers: await getData(teacher),
-      courses: await getData(course),
+      courses: calcStudentSize(await getData(course)),
+      // courses: (await getData(course)),
       subjects: await getData(subject),
     };
     // console.log('ich bin von hier du sack', toAlgo);
-    return await toAlgo;
+    return toAlgo;
   }
   catch (err) {
     console.log('hier error von collectData: ', err)
   }
 }
 
-console.log(buildAlgo().then((data) => console.log(data)));
+// console.log(buildAlgo().then((data) => console.log(data)));
 module.exports.buildAlgorithm = buildAlgo;

@@ -27,7 +27,7 @@ let course = mongoose.model('course', schema.course);
 app.route('/')
     .get((req, res, next) => {
         if (req.perm >= permission.manager) {
-            course.find({}).populate('students').exec(function (err, result) {
+            course.find({}).populate('student').exec(function (err, result) {
                 if (err) throw err;
                 res.status(200).json(result);
             });
