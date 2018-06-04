@@ -6,15 +6,43 @@ import 'react-resizable/css/styles.css';
 import { actions as appActions } from '../reducers/app';
 import Course from '../components/Course';
 import * as Colors from '../constants/Colors';
+import iconClose from '../assets/iconClose.svg';
 import Grid from '../assets/Grid.png';
 
 const GridLayout = WidthProvider(RGL);
 
 const styles = {
+  all: {
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  header: {
+    height: 42,
+    display: 'flex',
+    flex: 1,
+    borderWidth: `1px 1px 0px 1px`,
+    borderStyle: 'solid',
+    borderColor: Colors.grey,
+  },
+  close: {
+    padding: 10,
+    marginRight: 100,
+  },
+  days: {
+    display: 'flex',
+    flex: 1,
+    justifyContent: 'space-around',
+    alignItems: 'center',
+  },
+  day: {
+    padding: 10,
+    margin: 0,
+  },
   container: {
     display: 'flex',
     flex: 1,
     border: `1px solid ${Colors.grey}`,
+    marginBottom: 5,
   },
   classLabel: {
     padding: 10,
@@ -41,6 +69,7 @@ const styles = {
     margin: 0,
   },
   background: {
+    height: 500,
     flex: 1,
     padding: 0,
     backgroundImage: `url(${Grid})`,
@@ -52,45 +81,12 @@ const styles = {
   },
 };
 
-const items = [
-  { id: '0', subject: 'Deutsch', room: '303', teacher: 'DE' },
-  { id: '1', subject: 'Englisch', room: '303', teacher: 'EN' },
-  { id: '2', subject: 'Mathe', room: '303', teacher: 'MA' },
-  { id: '3', subject: 'Chemie', room: '303', teacher: 'CH' },
-  { id: '4', subject: 'Biologie', room: '303', teacher: 'BI' },
-  { id: '5', subject: 'Physik', room: '303', teacher: 'PH' },
-  { id: '6', subject: 'Sport', room: '303', teacher: 'SP' },
-  { id: '7', subject: 'Musik', room: '303', teacher: 'MU' },
-  { id: '8', subject: 'Französisch', room: '303', teacher: 'FR' },
-  { id: '9', subject: 'Kunst', room: '303', teacher: 'KU' },
-  { id: '10', subject: 'Politik', room: '303', teacher: 'PO' },
-  { id: '11', subject: 'Geschichte', room: '303', teacher: 'GE' },
-  { id: '12', subject: 'Latein', room: '303', teacher: 'LA' },
-  { id: '13', subject: 'Deutsch', room: '303', teacher: 'DE' },
-  { id: '14', subject: 'Englisch', room: '303', teacher: 'EN' },
-  { id: '15', subject: 'Mathe', room: '303', teacher: 'MA' },
-  { id: '16', subject: 'Chemie', room: '303', teacher: 'CH' },
-  { id: '17', subject: 'Biologie', room: '303', teacher: 'BI' },
-  { id: '18', subject: 'Physik', room: '303', teacher: 'PH' },
-  { id: '19', subject: 'Sport', room: '303', teacher: 'SP' },
-  { id: '20', subject: 'Musik', room: '303', teacher: 'MU' },
-  { id: '21', subject: 'Französisch', room: '303', teacher: 'FR' },
-  { id: '22', subject: 'Kunst', room: '303', teacher: 'KU' },
-  { id: '23', subject: 'Politik', room: '303', teacher: 'PO' },
-  { id: '24', subject: 'Geschichte', room: '303', teacher: 'GE' },
-  { id: '25', subject: 'Latein', room: '303', teacher: 'LA' },
-  { id: '26', subject: 'Deutsch', room: '303', teacher: 'DE' },
-  { id: '27', subject: 'Englisch', room: '303', teacher: 'EN' },
-  { id: '28', subject: 'Mathe', room: '303', teacher: 'MA' },
-];
-
 class Timetable extends Component {
   constructor() {
     super();
     const layout = this.generateLayout();
     this.state = {
       layout,
-      //items,
     };
   }
 
@@ -110,57 +106,76 @@ class Timetable extends Component {
   }
 
   generateDOM() {
-    const { lectures } = this.props;
+    const { schoolClass, lectures } = this.props;
     const array = [];
 
     lectures.forEach(lecture => {
-      const index = lecture.period.day * 10 + lecture.period.slot;
-      array.push(
-        <div key={index}>
-          <Course subject={lecture.subject} room={lecture.room} initials={lecture.teacher} />
-        </div>,
-      );
+      if (lecture.course === schoolClass) {
+        const index = lecture.period.day * 10 + lecture.period.slot;
+        array.push(
+          <div key={index}>
+            <Course subject={lecture.subject} room={lecture.room} initials={lecture.teacher} />
+          </div>,
+        );
+      }
     });
 
     return array;
   }
 
   render() {
-    const { schoolClass, lectures } = this.props;
+    const { schoolClass, lectures, onClose } = this.props;
 
     console.log(lectures);
 
     return (
-      <div style={styles.container}>
-        <div style={styles.class}>
-          <p style={styles.classLabel}>{schoolClass}</p>
+      <div style={styles.all}>
+        <div style={styles.header}>
+          <img
+            style={styles.close}
+            src={iconClose}
+            onClick={() => onClose()}
+            alt="closeTimetable"
+          />
+          <div style={styles.days}>
+            <p style={styles.day}>Montag</p>
+            <p style={styles.day}>Dienstag</p>
+            <p style={styles.day}>Mittwoch</p>
+            <p style={styles.day}>Donnerstag</p>
+            <p style={styles.day}>Freitag</p>
+          </div>
         </div>
-        <div style={styles.hours}>
-          <p style={styles.hour}>1. Stunde</p>
-          <p style={styles.hour}>2. Stunde</p>
-          <p style={styles.hour}>3. Stunde</p>
-          <p style={styles.hour}>4. Stunde</p>
-          <p style={styles.hour}>5. Stunde</p>
-          <p style={styles.hour}>6. Stunde</p>
-          <p style={styles.hour}>7. Stunde</p>
-          <p style={styles.hour}>8. Stunde</p>
-          <p style={styles.hour}>9. Stunde</p>
-          <p style={styles.hour}>10. Stunde</p>
-        </div>
-        <div style={styles.background}>
-          <GridLayout
-            style={styles.timetable}
-            layout={this.state.layout}
-            cols={5}
-            rowHeight={40}
-            containerPadding={[5, 5]}
-            margin={[10, 10]}
-            compactType={null}
-            isResizable={false}
-            preventCollision
-          >
-            {this.generateDOM()}
-          </GridLayout>
+        <div style={styles.container}>
+          <div style={styles.class}>
+            <p style={styles.classLabel}>{schoolClass}</p>
+          </div>
+          <div style={styles.hours}>
+            <p style={styles.hour}>1. Stunde</p>
+            <p style={styles.hour}>2. Stunde</p>
+            <p style={styles.hour}>3. Stunde</p>
+            <p style={styles.hour}>4. Stunde</p>
+            <p style={styles.hour}>5. Stunde</p>
+            <p style={styles.hour}>6. Stunde</p>
+            <p style={styles.hour}>7. Stunde</p>
+            <p style={styles.hour}>8. Stunde</p>
+            <p style={styles.hour}>9. Stunde</p>
+            <p style={styles.hour}>10. Stunde</p>
+          </div>
+          <div style={styles.background}>
+            <GridLayout
+              style={styles.timetable}
+              layout={this.state.layout}
+              cols={5}
+              rowHeight={40}
+              containerPadding={[5, 5]}
+              margin={[10, 10]}
+              compactType={null}
+              isResizable={false}
+              preventCollision
+            >
+              {this.generateDOM()}
+            </GridLayout>
+          </div>
         </div>
       </div>
     );
