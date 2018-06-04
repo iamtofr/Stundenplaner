@@ -3,6 +3,7 @@ import TextInput from './TextInput';
 import Button from './Button';
 import * as Colors from '../constants/Colors';
 import Logo from '../assets/logo.svg';
+import ProfilBar from "./ProfilBar";
 
 const socket = new WebSocket('wss://stundenplaner.online');
 socket.onopen = () => {
@@ -95,6 +96,14 @@ class Profile extends Component {
         });
       });
   }
+    printDiv = (divName) => {
+      let printContents = document.getElementById(divName).parentNode.innerHTML;
+      let originalContents = document.body.innerHTML;
+
+      document.body.innerHTML = printContents;
+      window.print();
+      document.body.innerHTML = originalContents;
+  };
 
   render() {
     const { profile } = this.state;
@@ -110,6 +119,7 @@ class Profile extends Component {
 
     return (
       <div style={styles.container}>
+        <ProfilBar/>
         <div style={styles.info}>
           <div style={styles.data}>
             <div style={styles.infoBox}>
@@ -289,7 +299,7 @@ class Profile extends Component {
             </div>
           </div>
           <div style={styles.side}>
-            <img style={styles.avatar} src={profile.photo || Logo} alt="Avatar" />
+            <img id="avatar" style={styles.avatar} src={profile.photo || Logo} alt="Avatar" />
             <Button
             style={styles.button}
             text="Löschen"
@@ -311,7 +321,16 @@ class Profile extends Component {
           </div>
         </div>
         <div style={styles.buttons}>
-          <Button style={styles.button} text="Ausdrucken" color={Colors.blue} hoverColor = {Colors.lightBlue}/>
+          <Button
+          style={styles.button}
+          text="Ausdrucken"
+          color={Colors.blue}
+          hoverColor = {Colors.lightBlue}
+          onClick={() => {
+            console.log('Print schedule');
+            this.printDiv('avatar');
+          }}
+          />
           <Button
             style={styles.button}
             text="Speichern"
