@@ -30,6 +30,19 @@ const styles = {
         margin: 0,
 
     },
+    activetab: {
+        display: 'inline-block',
+        boxSizing: 'border-box',
+        lineHeight: '50px',
+        height: '50px',
+        width: 120,
+        textAlign: 'center',
+        margin: 0,
+        borderBottom: '2px',
+        borderBottomColor: Colors.yellow,
+        borderBottomStyle: 'solid',
+
+    },
     link: {
         textTransform: 'uppercase',
         fontWeight: '500',
@@ -45,24 +58,15 @@ const styles = {
         bottom: 0,
         background: Colors.yellow,
         position: 'absolute'
-    }
+     }
 };
 
 class ProfilBar extends Component {
     constructor() {
         super();
         this.state = {
-            indicatorPos: '0px',
+            activeTab: true,
         };
-        //console.log(NavLink.location);
-    }
-
-    handleActiveLink = (e) => {
-        let curpos = Math.floor(e.target.offsetLeft) + 'px';
-
-        this.setState = {
-            indicatorPos: curpos
-        }
     };
 
 
@@ -77,27 +81,11 @@ class ProfilBar extends Component {
                     <ul style={styles.tabs}>
                         <li style={styles.tab}>
                             <NavLink style={{...styles.link, ...pos}}
-
-                                     activeStyle={{}}
-                                     onClick = {
-                                         event => {
-                                             event.preventDefault();
-                                             this.handleActiveLink(event);
-                                             //let curEl = event.target;
-                                             //console.log(curEl.offsetLeft);
-                                         }
-                                     }
+                                     activeStyle={styles.activetab}
                                      to="">Schuler</NavLink></li>
                         <li style={styles.tab}>
                             <NavLink style={styles.link}
-                                     activeStyle={{color: 'red'}}
-                               onClick = {
-                                   event => {
-                                       event.preventDefault();
-                                       this.handleActiveLink(event);
-                                       console.log(event.target.offsetLeft);
-                                   }
-                               }
+                                     activeStyle={styles.activetab}
                                to="/lehrer">Lehrer</NavLink></li>
                         <li style={styles.tab}>
                             <NavLink style={styles.link}
@@ -111,7 +99,7 @@ class ProfilBar extends Component {
                             <NavLink style={styles.link}
                                      activeStyle={{color: 'red'}}
                                      to="/account">Account</NavLink></li>
-                        <li style={styles.indicator}></li>
+                        {/*<li style={styles.indicator}></li>*/}
                     </ul>
                 </div>
             </nav>
