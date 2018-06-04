@@ -1,3 +1,12 @@
+/**
+ * This module defines the routes and HTTP Requests of courses.
+ * All HTTP Requests are validated with a permission before they are executed.
+ * Mongoose is used as framework.
+ *
+ * @module routes/course
+ * @type {Router}
+ */
+
 'use strict';
 
 const bodyParser = require('body-parser');
@@ -16,14 +25,9 @@ app.use(function (req, res, next) {
 
 let course = mongoose.model('course', schema.course);
 
-
-//TODO PERMISSION
-//TODO get all || manager
-//TODO get id || teacher
-//TODO post || manager
-//TODO delelte || manager
-//TODO patch || manager
-
+/**
+ * HTTP Requests for Address Routes
+ */
 app.route('/')
     .get((req, res, next) => {
         if (req.perm >= permission.manager) {
@@ -61,7 +65,9 @@ app.route('/')
         }
     });
 
-
+/**
+ * HTTP Requests for Address Routes by id
+ */
 app.route('/:id')
     .get((req, res, next) => {
         if (req.perm >= permission.teacher) {
@@ -85,7 +91,9 @@ app.route('/:id')
         }
     });
 
-
+/**
+ * Error Requests of wrong accept types
+ */
 app.all('*', (req, res, next) => {
     res.status(404).set('Content-Type', 'text/html');
 

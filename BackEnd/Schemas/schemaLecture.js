@@ -1,3 +1,10 @@
+/**
+ * This module defines a schema of lectures.
+ * It using mongoose as framework.
+ *
+ * @type {Schema}
+ */
+
 const mongoose = require('mongoose');
 let Schema = mongoose.Schema;
 

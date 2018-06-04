@@ -1,3 +1,12 @@
+/**
+ * This module defines the routes and HTTP Requests of accounts.
+ * All HTTP Requests are validated with a permission before they are executed.
+ * Mongoose is used as framework.
+ *
+ * @module routes/account
+ * @type {Router}
+ */
+
 'use strict';
 
 const bodyParser = require('body-parser');
@@ -18,10 +27,9 @@ let account = mongoose.model('account', schema.account);
 let profile = mongoose.model('profile', schema.profile);
 
 
-//TODO PERMISSION
-//TODO get all || admin
-//TODO patch || admin
-
+/**
+ * HTTP Requests for Address Routes
+ */
 app.route('/')
   .get((req, res, next) => {
     if (req.perm >= permission.admin) {
@@ -67,9 +75,10 @@ app.route('/')
         res.status(200).json(result);
       } else res.status(401).json();
     });
-  });
 
-
+/**
+ * HTTP Requests for Address Routes by id
+ */
 app.route('/:id')
     .get((req, res, next) => {
         if(req.perm >= permission.manager){
@@ -118,7 +127,9 @@ app.route('/:id')
 
   });
 
-
+/**
+ * Error Requests of wrong accept types
+ */
 app.all('*', (req, res, next) => {
   res.status(404).set('Content-Type', 'text/html');
 

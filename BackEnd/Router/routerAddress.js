@@ -1,3 +1,12 @@
+/**
+ * This module defines the routes and HTTP Requests of address.
+ * All HTTP Requests are validated with a permission before they are executed.
+ * Mongoose is used as framework.
+ *
+ * @module routes/address
+ * @type {Router}
+ */
+
 'use strict';
 
 const bodyParser = require('body-parser');
@@ -17,10 +26,9 @@ app.use(function (req, res, next) {
 
 let address = mongoose.model('address', schema.address);
 
-//TODO PERMISSION
-//TODO get all || verwalter
-//TODO post || verwalter
-
+/**
+ * HTTP Requests for Address Routes
+ */
 app.route('/')
     .get((req, res, next) => {
         if(req.perm >= permission.manager){
@@ -46,6 +54,9 @@ app.route('/')
         }
     });
 
+/**
+ * HTTP Requests for Address Routes by id
+ */
 app.route('/:id')
     .get((req, res, next) => {
         if(req.Perm >= permission.teacher){
@@ -59,6 +70,9 @@ app.route('/:id')
         }
     });
 
+/**
+ * Error Requests of wrong accept types
+ */
 app.all('*', (req, res, next) => {
     res.status(404).set('Content-Type', 'text/html');
 

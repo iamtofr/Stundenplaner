@@ -1,3 +1,10 @@
+/**
+ * This module defines a schema of accounts.
+ * It using mongoose as framework.
+ *
+ * @type {Schema}
+ */
+
 const mongoose = require('mongoose');
 let Schema = mongoose.Schema;
 

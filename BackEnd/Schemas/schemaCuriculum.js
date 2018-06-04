@@ -1,3 +1,10 @@
+/**
+ * This module defines a schema of curriculums.
+ * It using mongoose as framework.
+ *
+ * @type {Schema}
+ */
+
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const schemaIn = require('../Schemas/schemas');
