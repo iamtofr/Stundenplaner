@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import * as Colors from '../constants/Colors';
 import Modal from 'react-modal';
 
-
 const customStyles = {
   content: {
     top: '50%',
@@ -225,6 +224,5 @@ class Footer extends Component {
     );
   }
 }
-
 
 export default Footer;
