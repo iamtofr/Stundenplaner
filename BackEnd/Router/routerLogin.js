@@ -20,97 +20,89 @@ let profile = mongoose.model('profile', schema.profile);
 
 //TODO PERMISSION
 //TODO get all || admin
-//TODO post || manager
 //TODO patch || admin
 
 app.route('/')
-    .get((req, res, next) => {
-        if (req.perm >= permission.admin) {
-            account.findOne({})
-                .exec(function (err, resultAccount) {
-                    let newProfile = profile.findById(resultAccount.profile);
-                    newProfile
-                        .populate('role')
-                        .populate('address')
-                        .exec(function (err, result) {
-                            if (err) throw err;
-                            resultAccount.profile = result;
-                            res.status(200).json(resultAccount);
-                        });
-                });
-        } else {
-            res.status(403).json("Unauthorized");
-        }
-    })
-
-    .patch((req, res, next) => {
-        if(req.perm >= permission.admin){
-            let query = {'_id': req.body.id};
-            account.findOneAndUpdate(query, req.body, {upsert: true, new: true}, function (err, account) {
-                if (err) return res.send(500, {error: err});
-                res.status(200).json(account);
+  .get((req, res, next) => {
+    if (req.perm >= permission.admin) {
+      account.findOne({})
+        .exec(function(err, resultAccount) {
+          let newProfile = profile.findById(resultAccount.profile);
+          newProfile
+            .populate('role')
+            .populate('address')
+            .exec(function(err, result) {
+              if (err) throw err;
+              resultAccount.profile = result;
+              res.status(200).json(resultAccount);
             });
-        } else {
-            res.status(403).json("Unauthorized");
-        }
-    })
+        });
+    } else {
+      res.status(403).json("Unauthorized");
+    }
+  })
 
-    .post((req, res, next) => {
-        if(req.perm >= permission.manager){
-            account.findOne({'username': req.body.username}).populate('profile').populate('address').exec(function (err, result) {
-                if (err) throw err;
-                if (result === null) {
-                    let newAccount = account(req.body);
-                    newAccount.save(function (err) {
-                        if (err) throw err;
-                        res.status(201).json(newAccount);
-                    })
-                } else if (req.body.password === result.password) {
-                    res.status(200).json(result);
-                } else res.status(401).json();
+  .patch((req, res, next) => {
+    if (req.perm >= permission.admin) {
+      let query = { '_id': req.body.id };
+      account.findOneAndUpdate(query, req.body, { upsert: true, new: true }, function(err, account) {
+        if (err) return res.send(500, { error: err });
+        res.status(200).json(account);
+      });
+    } else {
+      res.status(403).json("Unauthorized");
+    }
+  })
 
-            });
-        } else {
-            res.status(403).json("Unauthorized");
-        }
+  .post((req, res, next) => {
+    account.findOne({ 'username': req.body.username }).populate('profile').populate('address').exec(function(err, result) {
+      if (err) throw err;
+      if (result === null) {
+        let newAccount = account(req.body);
+        newAccount.save(function(err) {
+          if (err) throw err;
+          res.status(201).json(newAccount);
+        })
+      } else if (req.body.password === result.password) {
+        res.status(200).json(result);
+      } else res.status(401).json();
     });
-
+  });
 
 
 app.route('/:id')
-    .get((req, res, next) => {
-        if(req.perm >= permission.manager){
-            account.findById(req.params.id)
-                .exec(function (err, resultAccount) {
-                    let newProfile = profile.findById(resultAccount.profile);
-                    newProfile
-                        .populate('role')
-                        .populate('address')
-                        .exec(function (err, result) {
-                            if (err) throw err;
-                            resultAccount.profile = result;
-                            res.status(200).json(resultAccount);
-                        });
-                });
-        } else {
-            res.status(403).json("Unauthorized");
-        }
-    })
-
-
-    .delete((req, res, next) => {
-        if(req.perm >= permission.admin){
-            //TODO body must be checked if user/passwd is present and match with db entry
-            account.remove({_id: req.params.id}, function (err) {
-                if (err) return res.send(500, {error: err});
-                res.status(200).json();
+  .get((req, res, next) => {
+    if (req.perm >= permission.manager) {
+      account.findById(req.params.id)
+        .exec(function(err, resultAccount) {
+          let newProfile = profile.findById(resultAccount.profile);
+          newProfile
+            .populate('role')
+            .populate('address')
+            .exec(function(err, result) {
+              if (err) throw err;
+              resultAccount.profile = result;
+              res.status(200).json(resultAccount);
             });
-        } else {
-            res.status(403).json("Unauthorized");
-        }
+        });
+    } else {
+      res.status(403).json("Unauthorized");
+    }
+  })
 
-    });
 
+  .delete((req, res, next) => {
+    if (req.perm >= permission.admin) {
+      //TODO body must be checked if user/passwd is present and match with db entry
+      account.remove({ _id: req.params.id }, function(err) {
+        if (err) return res.send(500, { error: err });
+        res.status(200).json();
+      });
+    } else {
+      res.status(403).json("Unauthorized");
+    }
+
+  });
 
 
 app.all('*', (req, res, next) => {
