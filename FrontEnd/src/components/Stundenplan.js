@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { actions as appActions } from '../reducers/app';
 import Timetable from './Timetable';
 import * as Colors from '../constants/Colors';
 
@@ -56,10 +54,6 @@ class Stundenplan extends Component {
     };
   }
 
-  componentDidMount() {
-    this.props.setLectures();
-  }
-
   addTimetable(schoolClass) {
     const classes = this.state.activeClasses;
     classes.push(schoolClass);
@@ -71,13 +65,12 @@ class Stundenplan extends Component {
   renderTimetables() {
     const array = [];
     for (let i = 0; i < this.state.activeClasses.length; i++) {
-      array.push(<Timetable schoolClass={this.state.activeClasses[i]} />);
+      array.push(<Timetable schoolClass={this.state.activeClasses[i]} key={i.toString()} />);
     }
     return array;
   }
 
   render() {
-    console.log(this.props.lectures);
     return (
       <div style={styles.container}>
         <div style={styles.days}>
@@ -109,12 +102,4 @@ class Stundenplan extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  lectures: state.app.lectures,
-});
-
-const mapDispatchToProps = {
-  setLectures: appActions.setLectures,
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Stundenplan);
+export default Stundenplan;

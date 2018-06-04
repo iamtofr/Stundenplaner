@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import RGL, { WidthProvider } from 'react-grid-layout';
 import 'react-grid-layout/css/styles.css';
 import 'react-resizable/css/styles.css';
+import { actions as appActions } from '../reducers/app';
 import Course from '../components/Course';
 import * as Colors from '../constants/Colors';
 import Grid from '../assets/Grid.png';
@@ -82,13 +84,13 @@ const items = [
   { id: '28', subject: 'Mathe', room: '303', teacher: 'MA' },
 ];
 
-class Stundenplan extends Component {
+class Timetable extends Component {
   constructor() {
     super();
     const layout = this.generateLayout();
     this.state = {
       layout,
-      items,
+      //items,
     };
   }
 
@@ -96,30 +98,38 @@ class Stundenplan extends Component {
     const array = [];
     for (let i = 0; i < 5 * 10; i++) {
       array.push({
-        x: Math.floor(i / 6),
-        y: i % 6,
+        x: Math.floor(i / 10),
+        y: i % 10,
         w: 1,
         h: 1,
         i: i.toString(),
       });
     }
+    console.log(array);
     return array;
   }
 
   generateDOM() {
+    const { lectures } = this.props;
     const array = [];
-    for (let i = 0; i < items.length; i++) {
+
+    lectures.forEach(lecture => {
+      const index = lecture.period.day * 10 + lecture.period.slot;
       array.push(
-        <div key={i}>
-          <Course subject={items[i].subject} room={items[i].room} initials={items[i].teacher} />
+        <div key={index}>
+          <Course subject={lecture.subject} room={lecture.room} initials={lecture.teacher} />
         </div>,
       );
-    }
+    });
+
     return array;
   }
 
   render() {
-    const { schoolClass } = this.props;
+    const { schoolClass, lectures } = this.props;
+
+    console.log(lectures);
+
     return (
       <div style={styles.container}>
         <div style={styles.class}>
@@ -157,4 +167,12 @@ class Stundenplan extends Component {
   }
 }
 
-export default Stundenplan;
+const mapStateToProps = state => ({
+  lectures: state.app.lectures,
+});
+
+const mapDispatchToProps = {
+  setLectures: appActions.setLectures,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Timetable);
