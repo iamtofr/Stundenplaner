@@ -170,7 +170,7 @@ class Dashboard extends Component {
                 this.props.history.push({
                   pathname: '/details',
                   state: {
-                    title: 'Profil',
+                    title: 'Schülerliste',
                   },
                 });
               }}

@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Stundenplan from '../components/Stundenplan';
 import Profile from '../components/Profile';
+import Liste from '../components/ProfileList';
 
 const styles = {
   container: {
@@ -24,6 +25,7 @@ class DetailsPage extends Component {
       <div style={styles.container}>
         {title === 'Stundenplan' && <Stundenplan />}
         {title === 'Profil' && <Profile />}
+        {title === 'Schülerliste' && <Liste />}
       </div>
     );
   }
