@@ -97,7 +97,7 @@ class Footer extends Component {
           contentLabel="Example Modal"
         >
 
-          <h0 ref={subtitle => this.subtitle = subtitle}>Impressum</h0>
+          <p ref={subtitle => this.subtitle = subtitle}>Impressum</p>
           {/*<button onClick={this.closeModal}>close</button>*/}
           <div><p style={styles.text}>
             {"stundenplaner.online Privacy Policy\n" +
