@@ -1,17 +1,26 @@
 export const types = {
   LOGIN: 'APP/LOGIN',
   LOGOUT: 'APP/LOGOUT',
+  SET_LECTURES: 'APP/SET_LECTURES',
 };
 
 export const actions = {
   login: data => ({ type: types.LOGIN, data }),
   logout: () => ({ type: types.LOGOUT }),
+  setLectures: data => ({ type: types.SET_LECTURES, data }),
+};
+
+const parseLectures = () => {
+  return {
+    test: 'test',
+  };
 };
 
 const initialState = {
   token: '',
   profile: {},
   isLoggedIn: false,
+  lectures: {},
 };
 
 export default (state = initialState, action) => {
@@ -27,6 +36,10 @@ export default (state = initialState, action) => {
         token: '',
         profile: {},
         isLoggedIn: false,
+      };
+    case types.SET_LECTURES:
+      return {
+        lectures: parseLectures,
       };
     default:
       return state;
