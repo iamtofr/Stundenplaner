@@ -10,7 +10,6 @@ import Footer from './components/Footer';
 
 const styles = {
   container: {
-    height: '100vh',
     display: 'flex',
   },
   content: {
