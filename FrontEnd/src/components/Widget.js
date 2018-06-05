@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import * as Colors from '../constants/Colors';
+import iconClose from '../assets/iconClose.svg';
 
 const styles = {
   widget: {
     height: '100%',
-    borderRadius: 10,
+    borderRadius: 8,
     overflow: 'hidden',
     backgroundColor: Colors.lightGrey,
+    boxShadow: [`0px 0px 2px rgba(0, 0, 0, 0.12)`, `0px 2px 2px rgba(0, 0, 0, 0.24)`],
   },
   content: {
     display: 'flex',
@@ -25,6 +27,21 @@ const styles = {
     width: 150,
     height: 150,
   },
+    closebutton: {
+      position: 'absolute',
+        padding: 0,
+        top: 14,
+        right: 14,
+        background: 0,
+       border: 0,
+
+    },
+    icon: {
+    margin: 0,
+        width: 24,
+        height: 24,
+    }
+
 };
 
 class Widget extends Component {
@@ -32,13 +49,14 @@ class Widget extends Component {
     super();
     this.state = {
       hover: false,
+        buttonhover: false
     };
   }
 
   render() {
-    const { style, text, children } = this.props;
+    const { style, text, children, onClose } = this.props;
     const cursor = this.state.hover ? { cursor: 'move' } : { cursor: 'normal' };
-
+    const color = this.state.buttonhover ? {opacity: 0.87, cursor: 'normal'} : {opacity: 0.54, cursor: 'pointer'};
     return (
       <div
         style={{ ...styles.widget, ...style, ...cursor }}
@@ -46,6 +64,14 @@ class Widget extends Component {
         onMouseLeave={() => this.setState({ hover: false })}
       >
         <div style={styles.content}>
+            {onClose &&
+          <span style={{...styles.closebutton, ...color}}
+                  onMouseEnter={() => this.setState({ buttonhover: true })}
+                  onMouseLeave={() => this.setState({ buttonhover: false })}
+                onClick={ () => onClose()}
+          >
+            <img style={styles.icon} src={iconClose} />
+          </span> }
           <p style={styles.label}>{text}</p>
           {children}
         </div>

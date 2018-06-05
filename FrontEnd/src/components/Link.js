@@ -24,7 +24,10 @@ class Link extends Component {
     return (
       <div style={styles.container}>
         {icon && <img style={styles.icon} src={icon} alt={text} />}
-        <a style={{ ...styles.link, ...style }} href="" onClick={onClick}>
+        <a style={{ ...styles.link, ...style }} href="" onClick={event => {
+            event.preventDefault();
+            onClick();
+        }}>
           {text}
         </a>
       </div>

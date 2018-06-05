@@ -1,7 +1,4 @@
 import React, {Component} from 'react';
-import {withRouter}  from 'react-router-dom';
-import {connect} from 'react-redux';
-import {actions as appActions} from '../reducers/app';
 import * as Colors from '../constants/Colors';
 import { NavLink } from 'react-router-dom';
 
@@ -12,7 +9,7 @@ const styles = {
         height: 'auto',
         position: 'relative',
         background: Colors.mediumBlue,
-
+        boxShadow: [`0px 0px 2px rgba(0, 0, 0, 0.12)`, `0px 2px 2px rgba(0, 0, 0, 0.24)`],
     },
     tabs: {
         position: 'relative',
@@ -99,7 +96,6 @@ class ProfilBar extends Component {
                             <NavLink style={styles.link}
                                      activeStyle={{color: 'red'}}
                                      to="/account">Account</NavLink></li>
-                        {/*<li style={styles.indicator}></li>*/}
                     </ul>
                 </div>
             </nav>
