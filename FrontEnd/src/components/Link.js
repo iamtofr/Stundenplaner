@@ -30,12 +30,14 @@ class Link extends Component {
     const cursor = this.state.hover ? { cursor: 'pointer' } : { cursor: 'normal' };
 
     return (
-      <div style={{...styles.container, ...cursor}}
-           onMouseEnter={() => this.setState({hover: true})}
-           onMouseLeave={() => this.setState({hover: false})}
-           onClick={() => onClick()}>
-          {icon && <img style={styles.icon} src={icon} alt={text} />}
-          <a style={{ ...styles.link, ...style }} href="" onClick={event => event.preventDefault()} >
+      <div
+        style={{ ...styles.container, ...cursor }}
+        onMouseEnter={() => this.setState({ hover: true })}
+        onMouseLeave={() => this.setState({ hover: false })}
+        onClick={() => onClick()}
+      >
+        {icon && <img style={styles.icon} src={icon} alt={text} />}
+        <a style={{ ...styles.link, ...style }} href="" onClick={event => event.preventDefault()}>
           {text}
         </a>
       </div>

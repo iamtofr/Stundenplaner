@@ -3,12 +3,7 @@ import TextInput from './TextInput';
 import Button from './Button';
 import * as Colors from '../constants/Colors';
 import Logo from '../assets/logo.svg';
-import ProfilBar from "./ProfilBar";
-
-const socket = new WebSocket('wss://stundenplaner.online');
-socket.onopen = () => {
-  socket.send('Olli connected!');
-};
+import ProfilBar from './ProfilBar';
 
 const styles = {
   container: {
@@ -93,13 +88,13 @@ class Profile extends Component {
         console.log(err);
       });
   }
-    printDiv = (divName) => {
-      let printContents = document.getElementById(divName).parentNode.innerHTML;
-      let originalContents = document.body.innerHTML;
+  printDiv = divName => {
+    let printContents = document.getElementById(divName).parentNode.innerHTML;
+    let originalContents = document.body.innerHTML;
 
-      document.body.innerHTML = printContents;
-      window.print();
-      document.body.innerHTML = originalContents;
+    document.body.innerHTML = printContents;
+    window.print();
+    document.body.innerHTML = originalContents;
   };
 
   render() {
@@ -116,7 +111,7 @@ class Profile extends Component {
 
     return (
       <div style={styles.container}>
-        <ProfilBar/>
+        <ProfilBar />
         <div style={styles.info}>
           <div style={styles.data}>
             <div style={styles.infoBox}>
@@ -298,10 +293,10 @@ class Profile extends Component {
           <div style={styles.side}>
             <img id="avatar" style={styles.avatar} src={profile.photo || Logo} alt="Avatar" />
             <Button
-            style={styles.button}
-            text="Löschen"
-            color={Colors.blue}
-            hoverColor = {Colors.lightBlue}
+              style={styles.button}
+              text="Löschen"
+              color={Colors.blue}
+              hoverColor={Colors.lightBlue}
             />
             <div style={styles.infoBox}>
               <p style={styles.title}>Notizen</p>
@@ -319,25 +314,27 @@ class Profile extends Component {
         </div>
         <div style={styles.buttons}>
           <Button
-          style={styles.button}
-          text="Ausdrucken"
-          color={Colors.blue}
-          hoverColor = {Colors.lightBlue}
-          onClick={() => {
-            console.log('Print schedule');
-            this.printDiv('avatar');
-          }}
+            style={styles.button}
+            text="Ausdrucken"
+            color={Colors.blue}
+            hoverColor={Colors.lightBlue}
+            onClick={() => {
+              console.log('Print schedule');
+              this.printDiv('avatar');
+            }}
           />
           <Button
             style={styles.button}
             text="Speichern"
             color={Colors.green}
-            hoverColor = {Colors.lightGreen}
-            onClick={() => {
-              socket.send('Olli sagt Hallo!');
-            }}
+            hoverColor={Colors.lightGreen}
           />
-          <Button style={styles.button} text="Abbruch" color={Colors.red} hoverColor = {Colors.lightRed}/>
+          <Button
+            style={styles.button}
+            text="Abbruch"
+            color={Colors.red}
+            hoverColor={Colors.lightRed}
+          />
         </div>
       </div>
     );
