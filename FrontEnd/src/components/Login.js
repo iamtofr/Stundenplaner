@@ -52,7 +52,7 @@ const styles = {
 };
 
 class Login extends Component {
-  constructor() { //fuer State wichtig
+  constructor() {
     super();
     this.state = {
       name: '',
@@ -80,7 +80,6 @@ class Login extends Component {
       nameError: '',
       passwordError: '',
     });
-//TODO name ueberpruefen
     if (!this.state.name) {
       this.setState({
         nameError: 'Bitte gib einen Namen ein.',
@@ -114,7 +113,7 @@ class Login extends Component {
       .then(response => response.json())
       .then(responseJson => {
         console.log(responseJson);
-        this.props.login({ //redux
+        this.props.login({
           username: this.state.name,
           password: this.state.password,
           token: responseJson.token,
