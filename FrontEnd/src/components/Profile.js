@@ -91,9 +91,6 @@ class Profile extends Component {
       })
       .catch(err => {
         console.log(err);
-        this.setState({
-          passwordError: 'Benutzername oder Passwort falsch.',
-        });
       });
   }
     printDiv = (divName) => {
