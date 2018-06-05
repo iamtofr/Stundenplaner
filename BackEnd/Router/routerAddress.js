@@ -1,3 +1,12 @@
+/**
+ * This module defines the routes and HTTP Requests of address.
+ * All HTTP Requests are validated with a permission before they are executed.
+ * Mongoose is used as framework.
+ *
+ * @module routes/address
+ * @type {Router}
+ */
+
 'use strict';
 
 const bodyParser = require('body-parser');
@@ -17,37 +26,53 @@ app.use(function (req, res, next) {
 
 let address = mongoose.model('address', schema.address);
 
-//TODO PERMISSION
-//TODO get all || manager
-//TODO post || manager
-
-
+/**
+ * HTTP Requests for Address Routes
+ */
 app.route('/')
     .get((req, res, next) => {
+        if(req.perm >= permission.manager){
             address.find({}, function (err, address) {
                 if (err) throw err;
                 res.status(200).json(address);
             });
+        } else {
+            res.status(403).json("Unauthorized");
+        }
     })
 
     .post((req, res, next) => {
-        let newAddress = address(req.body);
-        newAddress.save(function (err) {
-            if (err) throw err;
-            console.log('Address created!');
-        });
-        res.status(201).json(newAddress)
+        if(req.perm >= permission.manager){
+            let newAddress = address(req.body);
+            newAddress.save(function (err) {
+                if (err) throw err;
+                console.log('Address created!');
+            });
+            res.status(201).json(newAddress);
+        } else {
+            res.status(403).json("Unauthorized");
+        }
     });
 
+/**
+ * HTTP Requests for Address Routes by id
+ */
 app.route('/:id')
     .get((req, res, next) => {
-        let query ={'_id': req.params.id};
-        address.find(query, function (err, address) {
-            if (err) throw err;
-            res.status(200).json(address);
-        });
+        if(req.Perm >= permission.teacher){
+            let query ={'_id': req.params.id};
+            address.find(query, function (err, address) {
+                if (err) throw err;
+                res.status(200).json(address);
+            });
+        } else {
+            res.status(403).json("Unauthorized");
+        }
     });
 
+/**
+ * Error Requests of wrong accept types
+ */
 app.all('*', (req, res, next) => {
     res.status(404).set('Content-Type', 'text/html');
 

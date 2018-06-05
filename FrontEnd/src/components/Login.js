@@ -1,20 +1,21 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { actions as appActions } from '../reducers/app';
 import Button from './Button';
 import * as Colors from '../constants/Colors';
-import iconUser from '../assets/user.svg';
-import iconPassword from '../assets/password.svg';
-import iconVisible from '../assets/visible.svg';
-import iconInvisible from '../assets/invisible.svg';
+import iconUser from '../assets/iconUser.svg';
+import iconPassword from '../assets/iconPassword.svg';
+import iconVisible from '../assets/iconVisible.svg';
+import iconInvisible from '../assets/iconInvisible.svg';
 
 const styles = {
   container: {
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center',
     borderRadius: 10,
-    backgroundColor: Colors.light,
   },
-  inputField: {
+  textInput: {
     display: 'flex',
     alignItems: 'flex-end',
   },
@@ -34,18 +35,24 @@ const styles = {
     borderBottom: `1px solid ${Colors.darkBlue}`,
     fontSize: 18,
     color: Colors.darkBlue,
-    backgroundColor: Colors.light,
+    background: 0,
     outline: 0,
   },
   error: {
     height: 20,
     marginLeft: 35,
+    fontSize: 14,
     color: 'red',
+  },
+  link: {
+    alignSelf: 'center',
+    marginTop: 30,
+    color: Colors.darkBlue,
   },
 };
 
 class Login extends Component {
-  constructor() {
+  constructor() { //fuer State wichtig
     super();
     this.state = {
       name: '',
@@ -56,25 +63,71 @@ class Login extends Component {
     };
   }
 
-  onClick = () => {
+  componentDidMount() {
+    if (this.props.isLoggedIn) {
+      this.props.history.push('/dashboard');
+    }
+  }
+
+  submitForm = () => {
+    if (this.isValid()) {
+      this.handleLogin();
+    }
+  };
+
+  isValid = () => {
     this.setState({
       nameError: '',
       passwordError: '',
     });
-
+//TODO name ueberpruefen
     if (!this.state.name) {
-      return this.setState({
+      this.setState({
         nameError: 'Bitte gib einen Namen ein.',
       });
+      return false;
     }
 
     if (!this.state.password) {
-      return this.setState({
+      this.setState({
         passwordError: 'Bitte gib ein Passwort ein.',
       });
+      return false;
     }
 
-    this.props.onSubmit();
+    return true;
+  };
+
+  handleLogin = () => {
+    console.log('handleLogin: ' + this.state.name + ', ' + this.state.password);
+    fetch('https://stundenplaner.online/login', {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        username: this.state.name,
+        password: this.state.password,
+      }),
+    })
+      .then(response => response.json())
+      .then(responseJson => {
+        console.log(responseJson);
+        this.props.login({ //redux
+          username: this.state.name,
+          password: this.state.password,
+          token: responseJson.token,
+          profile: responseJson.profile,
+        });
+        this.props.history.push('/dashboard');
+      })
+      .catch(err => {
+        console.log(err);
+        this.setState({
+          passwordError: 'Benutzername oder Passwort falsch.',
+        });
+      });
   };
 
   onVisiblityClick = () => {
@@ -83,10 +136,14 @@ class Login extends Component {
     });
   };
 
+  onLinkClicked = e => {
+    e.preventDefault();
+  };
+
   render() {
     return (
       <form style={styles.container}>
-        <div style={styles.inputField}>
+        <div style={styles.textInput}>
           <img style={styles.icon} src={iconUser} alt="userIcon" />
           <div style={styles.column}>
             <p style={styles.label}>Login</p>
@@ -96,14 +153,14 @@ class Login extends Component {
               value={this.state.name}
               onChange={event =>
                 this.setState({
-                  name: event.target.value,
+                  name: event.target.value.trim(),
                 })
               }
             />
           </div>
         </div>
         <p style={styles.error}>{this.state.nameError}</p>
-        <div style={styles.inputField}>
+        <div style={styles.textInput}>
           <img style={styles.icon} src={iconPassword} alt="passwordIcon" />
           <div style={styles.column}>
             <p style={styles.label}>Passwort</p>
@@ -113,7 +170,7 @@ class Login extends Component {
               value={this.state.password}
               onChange={event =>
                 this.setState({
-                  password: event.target.value,
+                  password: event.target.value.trim(),
                 })
               }
             />
@@ -126,10 +183,21 @@ class Login extends Component {
           />
         </div>
         <p style={styles.error}>{this.state.passwordError}</p>
-        <Button margin={50} text="Einloggen" onClick={this.onClick} />
+        <Button text="Einloggen" color={Colors.blue} onClick={this.submitForm} />
+        <a style={styles.link} href="" onClick={this.onLinkClicked}>
+          Passwort vergessen
+        </a>
       </form>
     );
   }
 }
 
-export default Login;
+const mapStateToProps = state => ({
+  isLoggedIn: state.app.isLoggedIn,
+});
+
+const mapDispatchToProps = {
+  login: appActions.login,
+};
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Login));

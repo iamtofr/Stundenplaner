@@ -1,3 +1,10 @@
+/**
+ * This module defines a collection of all schemas.
+ * It using mongoose as framework.
+ *
+ * @type {collection}
+ */
+
 'use Strict';
 
 
@@ -12,7 +19,9 @@ let room = require('./schemaRoom.js');
 let student = require('./schemaStudent.js');
 let subject = require('./schemaSubject.js');
 let teacher = require('./schemaTeacher.js');
-let toAlgorithm = require('./schemaToAlgorithm');
+let curriculum = require('./schemaCuriculum.js');
+let toAlgorithm = require('./schemaToAlgorithm.js');
+
 
 
 const collection = {
@@ -27,7 +36,9 @@ const collection = {
   student: student,
   subject: subject,
   teacher: teacher,
+  curriculum: curriculum,
   toAlgorithm: toAlgorithm,
+
 };
 
 module.exports = collection;
