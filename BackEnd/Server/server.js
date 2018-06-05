@@ -90,17 +90,18 @@ server.listen(443, '85.214.37.34', (err) => {
 wss.on('connection', function connection(ws) {
   console.log('connected');
   ws.on('message', function incoming(message) {
-      toAlgorithm.buildAlgorithm().then((schoolData) => {
-        let websocketClient = new WebsocketClient(schoolData, (resolvedSchoolData) => {
-          console.log(resolvedSchoolData);
-          let newCurriculum = Curriculum(resolvedSchoolData);
-          newCurriculum.save(function(err) {
-            if (err) throw err;
-            console.log('Curriculum created!');
-          });
-          // ws.send(JSON.stringify(newCurriculum));
-          ws.send(JSON.stringify({test: "geht"}));
+    toAlgorithm.buildAlgorithm().then((schoolData) => {
+      ws.send(JSON.stringify({ test: "geht" }));
+      let websocketClient = new WebsocketClient(schoolData, (resolvedSchoolData) => {
+        //TODO das hier muss dann weg
+        console.log(resolvedSchoolData);
+        let newCurriculum = Curriculum(resolvedSchoolData);
+        newCurriculum.save(function(err) {
+          if (err) throw err;
+          console.log('Curriculum created!');
         });
+        // ws.send(JSON.stringify(newCurriculum));
       });
+    });
   })
 });
