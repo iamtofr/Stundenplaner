@@ -6,12 +6,14 @@ const express = require('express');
 const https = require('https');
 const helmet = require('helmet');
 const toAlgorithm = require('../Algorithm/collectData');
+const WebsocketClient = require('./client');
 
 
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/stundenplaner');
 const Schema = require('../Schemas/schemas');
 const period = mongoose.model('period', Schema.period);
+const Curriculum = mongoose.model('curiculum', Schema.curriculum);
 
 
 const app = express();
@@ -85,13 +87,19 @@ server.listen(443, '85.214.37.34', (err) => {
   }
 });
 
-
 wss.on('connection', function connection(ws) {
   console.log('connected');
   ws.on('message', function incoming(message) {
-      toAlgorithm.buildAlgorithm().then((data) => ws.send(JSON.stringify({
-        msgType: "calculateCurriculum",
-        data: data
-      })));
+      toAlgorithm.buildAlgorithm().then((schoolData) => {
+        let websocketClient = new WebsocketClient(schoolData, (resolvedSchoolData) => {
+          console.log(resolvedSchoolData);
+          let newCurriculum = Curriculum(resolvedSchoolData);
+          newCurriculum.save(function(err) {
+            if (err) throw err;
+            console.log('Curriculum created!');
+          });
+          ws.send(JSON.stringify(newCurriculum));
+        });
+      });
   })
 });
