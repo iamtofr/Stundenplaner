@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="EntryPointsManager">
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="org.eclipse.jetty.websocket.api.annotations.OnWebSocketClose" />
       <item index="1" class="java.lang.String" itemvalue="org.eclipse.jetty.websocket.api.annotations.OnWebSocketConnect" />
-      <item index="2" class="java.lang.String" itemvalue="org.eclipse.jetty.websocket.api.annotations.OnWebSocketMessage" />
+      <item index="2" class="java.lang.String" itemvalue="org.eclipse.jetty.websocket.api.annotations.OnWebSocketError" />
+      <item index="3" class="java.lang.String" itemvalue="org.eclipse.jetty.websocket.api.annotations.OnWebSocketMessage" />
     </list>
   </component>
   <component name="JavaScriptSettings">
@@ -15,6 +16,7 @@
       <list>
         <option value="$PROJECT_DIR$/Algorithm/sources/pom.xml" />
         <option value="$PROJECT_DIR$/Algorithm/pom.xml" />
+        <option value="$PROJECT_DIR$/BackEnd/websockets/server/pom.xml" />
       </list>
     </option>
   </component>

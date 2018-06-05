@@ -1,14 +1,14 @@
 //package de.stundenplaner.solver
 //
-//import de.stundenplaner.domain.CourseSchedule
+//import de.stundenplaner.domain.SchoolSchedule
 //import de.stundenplaner.domain.Period
 //import org.apache.commons.lang3.builder.CompareToBuilder
 //import org.optaplanner.core.impl.heuristic.selector.common.decorator.SelectionSorterWeightFactory
 //
 //
-//class PeriodStrengthWeightFactory : SelectionSorterWeightFactory<CourseSchedule, Period> {
+//class PeriodStrengthWeightFactory : SelectionSorterWeightFactory<SchoolSchedule, Period> {
 //
-//  override fun createSorterWeight(schedule: CourseSchedule, period: Period): PeriodStrengthWeight {
+//  override fun createSorterWeight(schedule: SchoolSchedule, period: Period): PeriodStrengthWeight {
 //    var unavailablePeriodPenaltyCount = 0
 //    for ((_, period1) in schedule.unavailablePeriodPenaltyList!!)
 //      if (period1 == period)
@@ -26,7 +26,7 @@
 //        .append(other.unavailablePeriodPenaltyCount, unavailablePeriodPenaltyCount) // Descending
 //        .append(period.day.dayIndex, other.period.day.dayIndex)
 //        .append(period.timeSlot.timeSlotIndex, other.period.timeSlot.timeSlotIndex)
-//        .append(period.id, other.period.id)
+//        .append(period._id, other.period._id)
 //        .toComparison()
 //
 //  }

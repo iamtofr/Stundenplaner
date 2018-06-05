@@ -1,58 +1,74 @@
 package online.stundenplaner.domain
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo
+import com.fasterxml.jackson.annotation.JsonIgnore
+import com.fasterxml.jackson.annotation.ObjectIdGenerators
 import online.stundenplaner.persistence.Persistable
 
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator::class, property = "_id")
 data class Subject(
-  val name: String,
+  val name: String?,
   val grade: Int,
   val occurrences: Int,
   val requiredEquipment: String?,
-  val requiredRoomType: String = "general"
+  val requiredRoomType: String?
 ) : Persistable() {
-  val requiredTeacher: ArrayList<Teacher> = ArrayList()
+  @JsonIgnore
+  val requiredTeacher: MutableSet<Teacher> = mutableSetOf()
 }
 
-data class Teacher(
-  private val subjectSpecialization: List<Subject>
-) : Persistable() {
-  init {
-    subjectSpecialization
-      .forEach { subject -> subject.requiredTeacher.add(this) }
-  }
-}
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator::class, property = "_id")
+class Teacher(
+  val subjectSpecialisations: List<Subject>
+) : Persistable()
 
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator::class, property = "_id")
 data class Course(
   val grade: Int,
   val letter: String,
-  var studentSize: Int
+  @JsonIgnore var studentSize: Int
 ) : Persistable()
 
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator::class, property = "_id")
 data class Day(
-  val periods: MutableList<Period>,
-  private val weekDay: Int
+  val periods: MutableMap<Int, Period>,
+  val weekday: Int
 ) : Persistable() {
+
   fun addPeriod(period: Period) {
-    periods.add(period.timeSlot, period)
+    periods[period.timeSlot] = period
   }
 
   companion object {
-    val DAYS = Array(7, { i -> Day(ArrayList(), i) })
+    val DAYS = mutableListOf<Day>()
   }
+
 }
 
-class Period(val timeSlot: Int, weekDay: Int) : Persistable() {
-  val day: Day = Day.DAYS[weekDay]
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator::class, property = "_id")
+data class Period(var timeSlot: Int, val weekday: Int) : Persistable() {
+  @JsonIgnore
+  val day: Day
 
   init {
+    timeSlot--
+    var day = Day.DAYS.find { it.weekday == weekday }
+
+    if (day == null) {
+      day = Day(HashMap(), weekday)
+      Day.DAYS.add(day)
+    }
+
     day.addPeriod(this)
+    this.day = day
   }
 }
 
 data class Room(
-  val roomNr: Int,
+  val number: Int,
   val house: String,
   val seats: Int,
   val barrierFree: Boolean,
   val equipment: List<String>,
-  val roomType: String = "general"
+  val roomType: String?
 ) : Persistable()

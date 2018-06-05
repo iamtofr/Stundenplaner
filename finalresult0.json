@@ -1,0 +1,5692 @@
+[
+  {
+    "course": {
+      "_id": "5b01e616c63f5c5a1ff60655",
+      "grade": 1,
+      "letter": "a",
+      "studentSize": 10
+    },
+    "subject": {
+      "_id": "5af1f2c2b92d56788ad85b20",
+      "name": "Mathematik",
+      "grade": 0,
+      "occurrences": 4,
+      "requiredEquipment": null,
+      "requiredRoomType": ""
+    },
+    "pinned": false,
+    "period": {
+      "_id": "5b084da7d95dde43bcdd0768",
+      "timeSlot": 1,
+      "weekday": 1
+    },
+    "room": {
+      "_id": "5b05222b6486e702a80a9c2e",
+      "number": 29,
+      "house": "A",
+      "seats": 14,
+      "barrierFree": true,
+      "equipment": [
+        "Rollos",
+        "Wasseranschluss",
+        "Beamer",
+        "Wasseranschluss"
+      ],
+      "roomType": "Klassenraum"
+    },
+    "teacher": {
+      "_id": "5b01a5a7b99f3749247a359c",
+      "subjectSpecialisations": [
+        "5af1f2c2b92d56788ad85b20",
+        {
+          "_id": "5af1f2c2b92d56788ad85b2a",
+          "name": "Deutsch",
+          "grade": 0,
+          "occurrences": 4,
+          "requiredEquipment": null,
+          "requiredRoomType": ""
+        }
+      ]
+    }
+  },
+  {
+    "course": "5b01e616c63f5c5a1ff60655",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": {
+      "_id": "5b084da7d95dde43bcdd0772",
+      "timeSlot": 5,
+      "weekday": 2
+    },
+    "room": {
+      "_id": "5b05222b6486e702a80a9c33",
+      "number": 93,
+      "house": "A",
+      "seats": 13,
+      "barrierFree": true,
+      "equipment": [
+        "Whiteboard",
+        "Rollos",
+        "Computer",
+        "Kartenhalter"
+      ],
+      "roomType": "Klassenraum"
+    },
+    "teacher": {
+      "_id": "5b01a961b99f3749247a35aa",
+      "subjectSpecialisations": [
+        {
+          "_id": "5af1f2c2b92d56788ad85b7a",
+          "name": "Geschichte",
+          "grade": 0,
+          "occurrences": 2,
+          "requiredEquipment": null,
+          "requiredRoomType": ""
+        },
+        "5af1f2c2b92d56788ad85b20"
+      ]
+    }
+  },
+  {
+    "course": "5b01e616c63f5c5a1ff60655",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": {
+      "_id": "5b084da7d95dde43bcdd0776",
+      "timeSlot": 3,
+      "weekday": 3
+    },
+    "room": {
+      "_id": "5b05222b6486e702a80a9c36",
+      "number": 33,
+      "house": "A",
+      "seats": 10,
+      "barrierFree": false,
+      "equipment": [
+        "Computer",
+        "Smartboard",
+        "Overheadprojektor",
+        "Beamer"
+      ],
+      "roomType": "Klassenraum"
+    },
+    "teacher": {
+      "_id": "5b01a844b99f3749247a35a7",
+      "subjectSpecialisations": [
+        "5af1f2c2b92d56788ad85b20",
+        {
+          "_id": "5af1f2c2b92d56788ad85b34",
+          "name": "Erdkunde",
+          "grade": 0,
+          "occurrences": 2,
+          "requiredEquipment": null,
+          "requiredRoomType": ""
+        }
+      ]
+    }
+  },
+  {
+    "course": "5b01e616c63f5c5a1ff60655",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": {
+      "_id": "5b084da7d95dde43bcdd0784",
+      "timeSlot": 5,
+      "weekday": 5
+    },
+    "room": {
+      "_id": "5b05222b6486e702a80a9c34",
+      "number": 73,
+      "house": "A",
+      "seats": 14,
+      "barrierFree": false,
+      "equipment": [
+        "Wasseranschluss",
+        "Overheadprojektor",
+        "Smartboard",
+        "Whiteboard"
+      ],
+      "roomType": "Klassenraum"
+    },
+    "teacher": {
+      "_id": "5b01a6e7b99f3749247a35a1",
+      "subjectSpecialisations": [
+        {
+          "_id": "5af201af312ace7f6644c7b0",
+          "name": "Musik",
+          "grade": 0,
+          "occurrences": 2,
+          "requiredEquipment": null,
+          "requiredRoomType": "Musik"
+        },
+        "5af1f2c2b92d56788ad85b20"
+      ]
+    }
+  },
+  {
+    "course": "5b01e616c63f5c5a1ff60655",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": {
+      "_id": "5b084da7d95dde43bcdd077f",
+      "timeSlot": 6,
+      "weekday": 4
+    },
+    "room": {
+      "_id": "5b05222b6486e702a80a9c2a",
+      "number": 45,
+      "house": "A",
+      "seats": 11,
+      "barrierFree": false,
+      "equipment": [
+        "Rollos",
+        "Smartboard",
+        "Wasseranschluss",
+        "Smartboard"
+      ],
+      "roomType": "Klassenraum"
+    },
+    "teacher": {
+      "_id": "5b01a720b99f3749247a35a2",
+      "subjectSpecialisations": [
+        "5af1f2c2b92d56788ad85b2a",
+        "5af1f2c2b92d56788ad85b34"
+      ]
+    }
+  },
+  {
+    "course": "5b01e616c63f5c5a1ff60655",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": {
+      "_id": "5b084da7d95dde43bcdd077e",
+      "timeSlot": 5,
+      "weekday": 4
+    },
+    "room": {
+      "_id": "5b05222b6486e702a80a9c2d",
+      "number": 73,
+      "house": "A",
+      "seats": 10,
+      "barrierFree": false,
+      "equipment": [
+        "Smartboard",
+        "Smartboard",
+        "Whiteboard",
+        "Smartboard"
+      ],
+      "roomType": "Klassenraum"
+    },
+    "teacher": "5b01a720b99f3749247a35a2"
+  },
+  {
+    "course": "5b01e616c63f5c5a1ff60655",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": {
+      "_id": "5b084da7d95dde43bcdd077d",
+      "timeSlot": 4,
+      "weekday": 4
+    },
+    "room": {
+      "_id": "5b05252c6486e702a80a9c42",
+      "number": 78,
+      "house": "P",
+      "seats": 13,
+      "barrierFree": true,
+      "equipment": [
+        "Wasseranschluss",
+        "Whiteboard",
+        "Kartenhalter",
+        "Overheadprojektor"
+      ],
+      "roomType": "Physik"
+    },
+    "teacher": {
+      "_id": "5b01aac1b99f3749247a35ab",
+      "subjectSpecialisations": [
+        "5af1f2c2b92d56788ad85b2a",
+        {
+          "_id": "5af1f2c2b92d56788ad85b3e",
+          "name": "Biologie",
+          "grade": 0,
+          "occurrences": 2,
+          "requiredEquipment": null,
+          "requiredRoomType": "Biologie"
+        }
+      ]
+    }
+  },
+  {
+    "course": "5b01e616c63f5c5a1ff60655",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": {
+      "_id": "5b084da7d95dde43bcdd076e",
+      "timeSlot": 1,
+      "weekday": 2
+    },
+    "room": {
+      "_id": "5b05222b6486e702a80a9c39",
+      "number": 34,
+      "house": "A",
+      "seats": 11,
+      "barrierFree": true,
+      "equipment": [
+        "Smartboard",
+        "Whiteboard",
+        "Rollos",
+        "Smartboard"
+      ],
+      "roomType": "Klassenraum"
+    },
+    "teacher": "5b01a720b99f3749247a35a2"
+  },
+  {
+    "course": "5b01e616c63f5c5a1ff60655",
+    "subject": "5af1f2c2b92d56788ad85b34",
+    "pinned": false,
+    "period": {
+      "_id": "5b084da7d95dde43bcdd077b",
+      "timeSlot": 2,
+      "weekday": 4
+    },
+    "room": {
+      "_id": "5b05222b6486e702a80a9c37",
+      "number": 18,
+      "house": "A",
+      "seats": 13,
+      "barrierFree": false,
+      "equipment": [
+        "Kartenhalter",
+        "Smartboard",
+        "Beamer",
+        "Smartboard"
+      ],
+      "roomType": "Klassenraum"
+    },
+    "teacher": {
+      "_id": "5b01a5feb99f3749247a359d",
+      "subjectSpecialisations": [
+        "5af1f2c2b92d56788ad85b34",
+        "5af1f2c2b92d56788ad85b3e"
+      ]
+    }
+  },
+  {
+    "course": "5b01e616c63f5c5a1ff60655",
+    "subject": "5af1f2c2b92d56788ad85b34",
+    "pinned": false,
+    "period": {
+      "_id": "5b084da7d95dde43bcdd0770",
+      "timeSlot": 3,
+      "weekday": 2
+    },
+    "room": {
+      "_id": "5b05263c6486e702a80a9c48",
+      "number": 72,
+      "house": "S",
+      "seats": 10,
+      "barrierFree": true,
+      "equipment": [
+        "Beamer",
+        "Overheadprojektor",
+        "Overheadprojektor",
+        "Beamer"
+      ],
+      "roomType": "Sport"
+    },
+    "teacher": "5b01a5feb99f3749247a359d"
+  },
+  {
+    "course": "5b01e616c63f5c5a1ff60655",
+    "subject": "5af1f2c2b92d56788ad85b3e",
+    "pinned": false,
+    "period": {
+      "_id": "5b084da7d95dde43bcdd0773",
+      "timeSlot": 6,
+      "weekday": 2
+    },
+    "room": "5b05222b6486e702a80a9c33",
+    "teacher": {
+      "_id": "5b01a8a6b99f3749247a35a8",
+      "subjectSpecialisations": [
+        "5af1f2c2b92d56788ad85b3e",
+        {
+          "_id": "5af1f2c2b92d56788ad85b52",
+          "name": "Physik",
+          "grade": 0,
+          "occurrences": 2,
+          "requiredEquipment": null,
+          "requiredRoomType": "Physik"
+        }
+      ]
+    }
+  },
+  {
+    "course": "5b01e616c63f5c5a1ff60655",
+    "subject": "5af1f2c2b92d56788ad85b3e",
+    "pinned": false,
+    "period": {
+      "_id": "5b084da7d95dde43bcdd0785",
+      "timeSlot": 6,
+      "weekday": 5
+    },
+    "room": "5b05222b6486e702a80a9c36",
+    "teacher": "5b01a5feb99f3749247a359d"
+  },
+  {
+    "course": "5b01e616c63f5c5a1ff60655",
+    "subject": {
+      "_id": "5af1f2c2b92d56788ad85b48",
+      "name": "Englisch",
+      "grade": 0,
+      "occurrences": 4,
+      "requiredEquipment": null,
+      "requiredRoomType": ""
+    },
+    "pinned": false,
+    "period": {
+      "_id": "5b084da7d95dde43bcdd0777",
+      "timeSlot": 4,
+      "weekday": 3
+    },
+    "room": {
+      "_id": "5b0526566486e702a80a9c4c",
+      "number": 26,
+      "house": "M",
+      "seats": 14,
+      "barrierFree": true,
+      "equipment": [
+        "Overheadprojektor",
+        "Overheadprojektor",
+        "Computer",
+        "Overheadprojektor"
+      ],
+      "roomType": "Musik"
+    },
+    "teacher": {
+      "_id": "5b01aaf6b99f3749247a35ac",
+      "subjectSpecialisations": [
+        "5af1f2c2b92d56788ad85b48",
+        {
+          "_id": "5af1f2c2b92d56788ad85b5c",
+          "name": "Chemie",
+          "grade": 0,
+          "occurrences": 2,
+          "requiredEquipment": null,
+          "requiredRoomType": "Chemie"
+        }
+      ]
+    }
+  },
+  {
+    "course": "5b01e616c63f5c5a1ff60655",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": {
+      "_id": "5b084da7d95dde43bcdd0774",
+      "timeSlot": 1,
+      "weekday": 3
+    },
+    "room": {
+      "_id": "5b05222b6486e702a80a9c38",
+      "number": 77,
+      "house": "A",
+      "seats": 15,
+      "barrierFree": false,
+      "equipment": [
+        "Overheadprojektor",
+        "Rollos",
+        "Kartenhalter",
+        "Computer"
+      ],
+      "roomType": "Klassenraum"
+    },
+    "teacher": "5b01aaf6b99f3749247a35ac"
+  },
+  {
+    "course": "5b01e616c63f5c5a1ff60655",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": {
+      "_id": "5b084da7d95dde43bcdd0769",
+      "timeSlot": 2,
+      "weekday": 1
+    },
+    "room": "5b05263c6486e702a80a9c48",
+    "teacher": {
+      "_id": "5b01a74eb99f3749247a35a3",
+      "subjectSpecialisations": [
+        "5af1f2c2b92d56788ad85b3e",
+        "5af1f2c2b92d56788ad85b48"
+      ]
+    }
+  },
+  {
+    "course": "5b01e616c63f5c5a1ff60655",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": {
+      "_id": "5b084da7d95dde43bcdd0771",
+      "timeSlot": 4,
+      "weekday": 2
+    },
+    "room": {
+      "_id": "5b05222b6486e702a80a9c3a",
+      "number": 13,
+      "house": "A",
+      "seats": 13,
+      "barrierFree": true,
+      "equipment": [
+        "Beamer",
+        "Computer",
+        "Wasseranschluss",
+        "Rollos"
+      ],
+      "roomType": "Klassenraum"
+    },
+    "teacher": {
+      "_id": "5b01a641b99f3749247a359e",
+      "subjectSpecialisations": [
+        "5af1f2c2b92d56788ad85b48",
+        "5af1f2c2b92d56788ad85b52"
+      ]
+    }
+  },
+  {
+    "course": "5b01e616c63f5c5a1ff60655",
+    "subject": "5af1f2c2b92d56788ad85b52",
+    "pinned": false,
+    "period": {
+      "_id": "5b084da7d95dde43bcdd0779",
+      "timeSlot": 6,
+      "weekday": 3
+    },
+    "room": {
+      "_id": "5b0526226486e702a80a9c44",
+      "number": 80,
+      "house": "C",
+      "seats": 10,
+      "barrierFree": true,
+      "equipment": [
+        "Whiteboard",
+        "Smartboard",
+        "Beamer",
+        "Rollos"
+      ],
+      "roomType": "Chemie"
+    },
+    "teacher": {
+      "_id": "5b01a786b99f3749247a35a4",
+      "subjectSpecialisations": [
+        "5af1f2c2b92d56788ad85b52",
+        "5af1f2c2b92d56788ad85b5c"
+      ]
+    }
+  },
+  {
+    "course": "5b01e616c63f5c5a1ff60655",
+    "subject": "5af1f2c2b92d56788ad85b52",
+    "pinned": false,
+    "period": {
+      "_id": "5b084da7d95dde43bcdd077a",
+      "timeSlot": 1,
+      "weekday": 4
+    },
+    "room": "5b05222b6486e702a80a9c38",
+    "teacher": "5b01a8a6b99f3749247a35a8"
+  },
+  {
+    "course": "5b01e616c63f5c5a1ff60655",
+    "subject": "5af1f2c2b92d56788ad85b5c",
+    "pinned": false,
+    "period": {
+      "_id": "5b084da7d95dde43bcdd0780",
+      "timeSlot": 1,
+      "weekday": 5
+    },
+    "room": {
+      "_id": "5b0524f66486e702a80a9c40",
+      "number": 51,
+      "house": "B",
+      "seats": 15,
+      "barrierFree": true,
+      "equipment": [
+        "Kartenhalter",
+        "Wasseranschluss",
+        "Kartenhalter",
+        "Computer"
+      ],
+      "roomType": "Biologie"
+    },
+    "teacher": {
+      "_id": "5b01a8e2b99f3749247a35a9",
+      "subjectSpecialisations": [
+        "5af1f2c2b92d56788ad85b5c",
+        {
+          "_id": "5af1f2c2b92d56788ad85b70",
+          "name": "WiSo",
+          "grade": 0,
+          "occurrences": 2,
+          "requiredEquipment": null,
+          "requiredRoomType": ""
+        }
+      ]
+    }
+  },
+  {
+    "course": "5b01e616c63f5c5a1ff60655",
+    "subject": "5af1f2c2b92d56788ad85b5c",
+    "pinned": false,
+    "period": {
+      "_id": "5b084da7d95dde43bcdd0781",
+      "timeSlot": 2,
+      "weekday": 5
+    },
+    "room": {
+      "_id": "5b0524f66486e702a80a9c3f",
+      "number": 62,
+      "house": "B",
+      "seats": 14,
+      "barrierFree": true,
+      "equipment": [
+        "Overheadprojektor",
+        "Computer",
+        "Beamer",
+        "Whiteboard"
+      ],
+      "roomType": "Biologie"
+    },
+    "teacher": "5b01a8e2b99f3749247a35a9"
+  },
+  {
+    "course": "5b01e616c63f5c5a1ff60655",
+    "subject": {
+      "_id": "5af1f2c2b92d56788ad85b66",
+      "name": "Sport",
+      "grade": 0,
+      "occurrences": 4,
+      "requiredEquipment": null,
+      "requiredRoomType": "Sport"
+    },
+    "pinned": false,
+    "period": {
+      "_id": "5b084da7d95dde43bcdd0783",
+      "timeSlot": 4,
+      "weekday": 5
+    },
+    "room": "5b0526566486e702a80a9c4c",
+    "teacher": {
+      "_id": "5b01a7b3b99f3749247a35a5",
+      "subjectSpecialisations": [
+        "5af1f2c2b92d56788ad85b66",
+        "5af1f2c2b92d56788ad85b70"
+      ]
+    }
+  },
+  {
+    "course": "5b01e616c63f5c5a1ff60655",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": {
+      "_id": "5b084da7d95dde43bcdd076a",
+      "timeSlot": 3,
+      "weekday": 1
+    },
+    "room": "5b05222b6486e702a80a9c36",
+    "teacher": {
+      "_id": "5b01a673b99f3749247a359f",
+      "subjectSpecialisations": [
+        "5af1f2c2b92d56788ad85b5c",
+        "5af1f2c2b92d56788ad85b66"
+      ]
+    }
+  },
+  {
+    "course": "5b01e616c63f5c5a1ff60655",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": {
+      "_id": "5b084da7d95dde43bcdd0778",
+      "timeSlot": 5,
+      "weekday": 3
+    },
+    "room": {
+      "_id": "5b0524f66486e702a80a9c3e",
+      "number": 63,
+      "house": "B",
+      "seats": 15,
+      "barrierFree": false,
+      "equipment": [
+        "Whiteboard",
+        "Beamer",
+        "Kartenhalter",
+        "Beamer"
+      ],
+      "roomType": "Biologie"
+    },
+    "teacher": "5b01a7b3b99f3749247a35a5"
+  },
+  {
+    "course": "5b01e616c63f5c5a1ff60655",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": {
+      "_id": "5b084da7d95dde43bcdd076b",
+      "timeSlot": 4,
+      "weekday": 1
+    },
+    "room": {
+      "_id": "5b05252c6486e702a80a9c43",
+      "number": 8,
+      "house": "P",
+      "seats": 10,
+      "barrierFree": true,
+      "equipment": [
+        "Computer",
+        "Rollos",
+        "Rollos",
+        "Rollos"
+      ],
+      "roomType": "Physik"
+    },
+    "teacher": {
+      "_id": "5b01ab2ab99f3749247a35ad",
+      "subjectSpecialisations": [
+        "5af1f2c2b92d56788ad85b66",
+        "5af1f2c2b92d56788ad85b7a"
+      ]
+    }
+  },
+  {
+    "course": "5b01e616c63f5c5a1ff60655",
+    "subject": "5af1f2c2b92d56788ad85b70",
+    "pinned": false,
+    "period": {
+      "_id": "5b084da7d95dde43bcdd0782",
+      "timeSlot": 3,
+      "weekday": 5
+    },
+    "room": "5b05222b6486e702a80a9c2e",
+    "teacher": {
+      "_id": "5b01ae52b99f3749247a35bc",
+      "subjectSpecialisations": [
+        "5af1f2c2b92d56788ad85b70",
+        "5af1f2c2b92d56788ad85b34"
+      ]
+    }
+  },
+  {
+    "course": "5b01e616c63f5c5a1ff60655",
+    "subject": "5af1f2c2b92d56788ad85b70",
+    "pinned": false,
+    "period": {
+      "_id": "5b084da7d95dde43bcdd077c",
+      "timeSlot": 3,
+      "weekday": 4
+    },
+    "room": {
+      "_id": "5b05222b6486e702a80a9c31",
+      "number": 97,
+      "house": "A",
+      "seats": 14,
+      "barrierFree": false,
+      "equipment": [
+        "Rollos",
+        "Overheadprojektor",
+        "Overheadprojektor",
+        "Overheadprojektor"
+      ],
+      "roomType": "Klassenraum"
+    },
+    "teacher": "5b01ae52b99f3749247a35bc"
+  },
+  {
+    "course": "5b01e616c63f5c5a1ff60655",
+    "subject": "5af1f2c2b92d56788ad85b7a",
+    "pinned": false,
+    "period": {
+      "_id": "5b084da7d95dde43bcdd076c",
+      "timeSlot": 5,
+      "weekday": 1
+    },
+    "room": {
+      "_id": "5b0526226486e702a80a9c45",
+      "number": 16,
+      "house": "C",
+      "seats": 15,
+      "barrierFree": true,
+      "equipment": [
+        "Wasseranschluss",
+        "Whiteboard",
+        "Overheadprojektor",
+        "Overheadprojektor"
+      ],
+      "roomType": "Chemie"
+    },
+    "teacher": {
+      "_id": "5b01a6aab99f3749247a35a0",
+      "subjectSpecialisations": [
+        "5af1f2c2b92d56788ad85b70",
+        "5af1f2c2b92d56788ad85b7a"
+      ]
+    }
+  },
+  {
+    "course": "5b01e616c63f5c5a1ff60655",
+    "subject": "5af1f2c2b92d56788ad85b7a",
+    "pinned": false,
+    "period": {
+      "_id": "5b084da7d95dde43bcdd0775",
+      "timeSlot": 2,
+      "weekday": 3
+    },
+    "room": {
+      "_id": "5b0526226486e702a80a9c46",
+      "number": 20,
+      "house": "C",
+      "seats": 11,
+      "barrierFree": true,
+      "equipment": [
+        "Kartenhalter",
+        "Wasseranschluss",
+        "Wasseranschluss",
+        "Computer"
+      ],
+      "roomType": "Chemie"
+    },
+    "teacher": "5b01a6aab99f3749247a35a0"
+  },
+  {
+    "course": "5b01e616c63f5c5a1ff60655",
+    "subject": "5af201af312ace7f6644c7b0",
+    "pinned": false,
+    "period": {
+      "_id": "5b084da7d95dde43bcdd076f",
+      "timeSlot": 2,
+      "weekday": 2
+    },
+    "room": "5b05222b6486e702a80a9c39",
+    "teacher": {
+      "_id": "5b01ab61b99f3749247a35ae",
+      "subjectSpecialisations": [
+        "5af201af312ace7f6644c7b0"
+      ]
+    }
+  },
+  {
+    "course": "5b01e616c63f5c5a1ff60655",
+    "subject": "5af201af312ace7f6644c7b0",
+    "pinned": false,
+    "period": {
+      "_id": "5b084da7d95dde43bcdd076d",
+      "timeSlot": 6,
+      "weekday": 1
+    },
+    "room": {
+      "_id": "5b05222b6486e702a80a9c35",
+      "number": 50,
+      "house": "A",
+      "seats": 14,
+      "barrierFree": false,
+      "equipment": [
+        "Whiteboard",
+        "Wasseranschluss",
+        "Wasseranschluss",
+        "Smartboard"
+      ],
+      "roomType": "Klassenraum"
+    },
+    "teacher": {
+      "_id": "5b01a80ab99f3749247a35a6",
+      "subjectSpecialisations": [
+        "5af1f2c2b92d56788ad85b7a",
+        "5af201af312ace7f6644c7b0"
+      ]
+    }
+  },
+  {
+    "course": {
+      "_id": "5b01e6b3c63f5c5a1ff60656",
+      "grade": 1,
+      "letter": "b",
+      "studentSize": 12
+    },
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0779",
+    "room": "5b0526566486e702a80a9c4c",
+    "teacher": "5b01a5a7b99f3749247a359c"
+  },
+  {
+    "course": "5b01e6b3c63f5c5a1ff60656",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0778",
+    "room": {
+      "_id": "5b05222b6486e702a80a9c2b",
+      "number": 34,
+      "house": "A",
+      "seats": 14,
+      "barrierFree": true,
+      "equipment": [
+        "Overheadprojektor",
+        "Beamer",
+        "Whiteboard",
+        "Smartboard"
+      ],
+      "roomType": "Klassenraum"
+    },
+    "teacher": "5b01a5a7b99f3749247a359c"
+  },
+  {
+    "course": "5b01e6b3c63f5c5a1ff60656",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076e",
+    "room": "5b0524f66486e702a80a9c3f",
+    "teacher": "5b01a5a7b99f3749247a359c"
+  },
+  {
+    "course": "5b01e6b3c63f5c5a1ff60656",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0773",
+    "room": {
+      "_id": "5b05222b6486e702a80a9c3b",
+      "number": 48,
+      "house": "A",
+      "seats": 12,
+      "barrierFree": false,
+      "equipment": [
+        "Computer",
+        "Beamer",
+        "Kartenhalter",
+        "Smartboard"
+      ],
+      "roomType": "Klassenraum"
+    },
+    "teacher": "5b01a6e7b99f3749247a35a1"
+  },
+  {
+    "course": "5b01e6b3c63f5c5a1ff60656",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0780",
+    "room": "5b0526226486e702a80a9c45",
+    "teacher": "5b01aac1b99f3749247a35ab"
+  },
+  {
+    "course": "5b01e6b3c63f5c5a1ff60656",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076d",
+    "room": "5b05222b6486e702a80a9c37",
+    "teacher": "5b01a720b99f3749247a35a2"
+  },
+  {
+    "course": "5b01e6b3c63f5c5a1ff60656",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076c",
+    "room": "5b05222b6486e702a80a9c37",
+    "teacher": {
+      "_id": "5b01ae26b99f3749247a35bb",
+      "subjectSpecialisations": [
+        "5af1f2c2b92d56788ad85b7a",
+        "5af1f2c2b92d56788ad85b2a"
+      ]
+    }
+  },
+  {
+    "course": "5b01e6b3c63f5c5a1ff60656",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0768",
+    "room": "5b05222b6486e702a80a9c31",
+    "teacher": "5b01a720b99f3749247a35a2"
+  },
+  {
+    "course": "5b01e6b3c63f5c5a1ff60656",
+    "subject": "5af1f2c2b92d56788ad85b34",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076b",
+    "room": {
+      "_id": "5b0526566486e702a80a9c4a",
+      "number": 53,
+      "house": "M",
+      "seats": 15,
+      "barrierFree": true,
+      "equipment": [
+        "Computer",
+        "Kartenhalter",
+        "Wasseranschluss",
+        "Kartenhalter"
+      ],
+      "roomType": "Musik"
+    },
+    "teacher": "5b01a720b99f3749247a35a2"
+  },
+  {
+    "course": "5b01e6b3c63f5c5a1ff60656",
+    "subject": "5af1f2c2b92d56788ad85b34",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0769",
+    "room": "5b05222b6486e702a80a9c33",
+    "teacher": "5b01a5feb99f3749247a359d"
+  },
+  {
+    "course": "5b01e6b3c63f5c5a1ff60656",
+    "subject": "5af1f2c2b92d56788ad85b3e",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076a",
+    "room": "5b0524f66486e702a80a9c3f",
+    "teacher": "5b01a5feb99f3749247a359d"
+  },
+  {
+    "course": "5b01e6b3c63f5c5a1ff60656",
+    "subject": "5af1f2c2b92d56788ad85b3e",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0781",
+    "room": "5b0526566486e702a80a9c4c",
+    "teacher": "5b01a8a6b99f3749247a35a8"
+  },
+  {
+    "course": "5b01e6b3c63f5c5a1ff60656",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0772",
+    "room": "5b0524f66486e702a80a9c3e",
+    "teacher": "5b01a74eb99f3749247a35a3"
+  },
+  {
+    "course": "5b01e6b3c63f5c5a1ff60656",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0771",
+    "room": {
+      "_id": "5b05222b6486e702a80a9c32",
+      "number": 5,
+      "house": "A",
+      "seats": 15,
+      "barrierFree": false,
+      "equipment": [
+        "Wasseranschluss",
+        "Computer",
+        "Beamer",
+        "Smartboard"
+      ],
+      "roomType": "Klassenraum"
+    },
+    "teacher": "5b01a74eb99f3749247a35a3"
+  },
+  {
+    "course": "5b01e6b3c63f5c5a1ff60656",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0770",
+    "room": "5b05222b6486e702a80a9c32",
+    "teacher": "5b01a641b99f3749247a359e"
+  },
+  {
+    "course": "5b01e6b3c63f5c5a1ff60656",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0782",
+    "room": "5b0524f66486e702a80a9c3e",
+    "teacher": "5b01aaf6b99f3749247a35ac"
+  },
+  {
+    "course": "5b01e6b3c63f5c5a1ff60656",
+    "subject": "5af1f2c2b92d56788ad85b52",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0777",
+    "room": "5b05222b6486e702a80a9c34",
+    "teacher": "5b01a8a6b99f3749247a35a8"
+  },
+  {
+    "course": "5b01e6b3c63f5c5a1ff60656",
+    "subject": "5af1f2c2b92d56788ad85b52",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0783",
+    "room": "5b05222b6486e702a80a9c3b",
+    "teacher": "5b01a786b99f3749247a35a4"
+  },
+  {
+    "course": "5b01e6b3c63f5c5a1ff60656",
+    "subject": "5af1f2c2b92d56788ad85b5c",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0784",
+    "room": "5b0524f66486e702a80a9c3f",
+    "teacher": "5b01a786b99f3749247a35a4"
+  },
+  {
+    "course": "5b01e6b3c63f5c5a1ff60656",
+    "subject": "5af1f2c2b92d56788ad85b5c",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077a",
+    "room": "5b05222b6486e702a80a9c3b",
+    "teacher": "5b01a8e2b99f3749247a35a9"
+  },
+  {
+    "course": "5b01e6b3c63f5c5a1ff60656",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076f",
+    "room": "5b05252c6486e702a80a9c42",
+    "teacher": "5b01a673b99f3749247a359f"
+  },
+  {
+    "course": "5b01e6b3c63f5c5a1ff60656",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077f",
+    "room": "5b05222b6486e702a80a9c31",
+    "teacher": "5b01a7b3b99f3749247a35a5"
+  },
+  {
+    "course": "5b01e6b3c63f5c5a1ff60656",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077e",
+    "room": "5b0524f66486e702a80a9c3e",
+    "teacher": "5b01ab2ab99f3749247a35ad"
+  },
+  {
+    "course": "5b01e6b3c63f5c5a1ff60656",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077d",
+    "room": {
+      "_id": "5b05222b6486e702a80a9c3d",
+      "number": 2,
+      "house": "A",
+      "seats": 13,
+      "barrierFree": true,
+      "equipment": [
+        "Smartboard",
+        "Computer",
+        "Whiteboard",
+        "Beamer"
+      ],
+      "roomType": "Klassenraum"
+    },
+    "teacher": "5b01a7b3b99f3749247a35a5"
+  },
+  {
+    "course": "5b01e6b3c63f5c5a1ff60656",
+    "subject": "5af1f2c2b92d56788ad85b70",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077c",
+    "room": {
+      "_id": "5b0526566486e702a80a9c4b",
+      "number": 93,
+      "house": "M",
+      "seats": 14,
+      "barrierFree": false,
+      "equipment": [
+        "Beamer",
+        "Kartenhalter",
+        "Smartboard",
+        "Computer"
+      ],
+      "roomType": "Musik"
+    },
+    "teacher": "5b01a6aab99f3749247a35a0"
+  },
+  {
+    "course": "5b01e6b3c63f5c5a1ff60656",
+    "subject": "5af1f2c2b92d56788ad85b70",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077b",
+    "room": "5b05252c6486e702a80a9c42",
+    "teacher": "5b01a6aab99f3749247a35a0"
+  },
+  {
+    "course": "5b01e6b3c63f5c5a1ff60656",
+    "subject": "5af1f2c2b92d56788ad85b7a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0776",
+    "room": {
+      "_id": "5b05263c6486e702a80a9c47",
+      "number": 69,
+      "house": "S",
+      "seats": 14,
+      "barrierFree": true,
+      "equipment": [
+        "Computer",
+        "Whiteboard",
+        "Kartenhalter",
+        "Smartboard"
+      ],
+      "roomType": "Sport"
+    },
+    "teacher": "5b01a6aab99f3749247a35a0"
+  },
+  {
+    "course": "5b01e6b3c63f5c5a1ff60656",
+    "subject": "5af1f2c2b92d56788ad85b7a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0775",
+    "room": "5b0526566486e702a80a9c4c",
+    "teacher": "5b01a961b99f3749247a35aa"
+  },
+  {
+    "course": "5b01e6b3c63f5c5a1ff60656",
+    "subject": "5af201af312ace7f6644c7b0",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0774",
+    "room": "5b05222b6486e702a80a9c3b",
+    "teacher": "5b01a6e7b99f3749247a35a1"
+  },
+  {
+    "course": "5b01e6b3c63f5c5a1ff60656",
+    "subject": "5af201af312ace7f6644c7b0",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0785",
+    "room": "5b05222b6486e702a80a9c35",
+    "teacher": "5b01a80ab99f3749247a35a6"
+  },
+  {
+    "course": {
+      "_id": "5b01e734c63f5c5a1ff60657",
+      "grade": 2,
+      "letter": "a",
+      "studentSize": 11
+    },
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076d",
+    "room": "5b0526566486e702a80a9c4a",
+    "teacher": "5b01a961b99f3749247a35aa"
+  },
+  {
+    "course": "5b01e734c63f5c5a1ff60657",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076c",
+    "room": {
+      "_id": "5b05263c6486e702a80a9c49",
+      "number": 46,
+      "house": "S",
+      "seats": 11,
+      "barrierFree": true,
+      "equipment": [
+        "Beamer",
+        "Smartboard",
+        "Overheadprojektor",
+        "Overheadprojektor"
+      ],
+      "roomType": "Sport"
+    },
+    "teacher": "5b01a961b99f3749247a35aa"
+  },
+  {
+    "course": "5b01e734c63f5c5a1ff60657",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0773",
+    "room": "5b0524f66486e702a80a9c3e",
+    "teacher": "5b01a844b99f3749247a35a7"
+  },
+  {
+    "course": "5b01e734c63f5c5a1ff60657",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076b",
+    "room": "5b05222b6486e702a80a9c39",
+    "teacher": "5b01a844b99f3749247a35a7"
+  },
+  {
+    "course": "5b01e734c63f5c5a1ff60657",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0772",
+    "room": "5b05222b6486e702a80a9c37",
+    "teacher": "5b01a5a7b99f3749247a359c"
+  },
+  {
+    "course": "5b01e734c63f5c5a1ff60657",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0768",
+    "room": "5b0524f66486e702a80a9c3e",
+    "teacher": "5b01ae26b99f3749247a35bb"
+  },
+  {
+    "course": "5b01e734c63f5c5a1ff60657",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076a",
+    "room": "5b0526566486e702a80a9c4b",
+    "teacher": "5b01a5a7b99f3749247a359c"
+  },
+  {
+    "course": "5b01e734c63f5c5a1ff60657",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0771",
+    "room": "5b05222b6486e702a80a9c35",
+    "teacher": "5b01ae26b99f3749247a35bb"
+  },
+  {
+    "course": "5b01e734c63f5c5a1ff60657",
+    "subject": "5af1f2c2b92d56788ad85b34",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0774",
+    "room": {
+      "_id": "5b05222b6486e702a80a9c29",
+      "number": 93,
+      "house": "A",
+      "seats": 11,
+      "barrierFree": true,
+      "equipment": [
+        "Smartboard",
+        "Rollos",
+        "Smartboard",
+        "Smartboard"
+      ],
+      "roomType": "Klassenraum"
+    },
+    "teacher": "5b01ae52b99f3749247a35bc"
+  },
+  {
+    "course": "5b01e734c63f5c5a1ff60657",
+    "subject": "5af1f2c2b92d56788ad85b34",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0775",
+    "room": {
+      "_id": "5b05222b6486e702a80a9c30",
+      "number": 19,
+      "house": "A",
+      "seats": 12,
+      "barrierFree": true,
+      "equipment": [
+        "Beamer",
+        "Smartboard",
+        "Smartboard",
+        "Smartboard"
+      ],
+      "roomType": "Klassenraum"
+    },
+    "teacher": "5b01a844b99f3749247a35a7"
+  },
+  {
+    "course": "5b01e734c63f5c5a1ff60657",
+    "subject": "5af1f2c2b92d56788ad85b3e",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0770",
+    "room": "5b05222b6486e702a80a9c39",
+    "teacher": "5b01a74eb99f3749247a35a3"
+  },
+  {
+    "course": "5b01e734c63f5c5a1ff60657",
+    "subject": "5af1f2c2b92d56788ad85b3e",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0776",
+    "room": "5b0526226486e702a80a9c46",
+    "teacher": "5b01a8a6b99f3749247a35a8"
+  },
+  {
+    "course": "5b01e734c63f5c5a1ff60657",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0769",
+    "room": "5b0524f66486e702a80a9c3f",
+    "teacher": "5b01aaf6b99f3749247a35ac"
+  },
+  {
+    "course": "5b01e734c63f5c5a1ff60657",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0777",
+    "room": "5b05222b6486e702a80a9c32",
+    "teacher": "5b01a74eb99f3749247a35a3"
+  },
+  {
+    "course": "5b01e734c63f5c5a1ff60657",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076e",
+    "room": "5b05222b6486e702a80a9c3a",
+    "teacher": "5b01aaf6b99f3749247a35ac"
+  },
+  {
+    "course": "5b01e734c63f5c5a1ff60657",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076f",
+    "room": "5b05222b6486e702a80a9c31",
+    "teacher": "5b01a74eb99f3749247a35a3"
+  },
+  {
+    "course": "5b01e734c63f5c5a1ff60657",
+    "subject": "5af1f2c2b92d56788ad85b52",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0779",
+    "room": "5b0524f66486e702a80a9c40",
+    "teacher": "5b01a8a6b99f3749247a35a8"
+  },
+  {
+    "course": "5b01e734c63f5c5a1ff60657",
+    "subject": "5af1f2c2b92d56788ad85b52",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0778",
+    "room": "5b05222b6486e702a80a9c39",
+    "teacher": "5b01a8a6b99f3749247a35a8"
+  },
+  {
+    "course": "5b01e734c63f5c5a1ff60657",
+    "subject": "5af1f2c2b92d56788ad85b5c",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077f",
+    "room": "5b05263c6486e702a80a9c49",
+    "teacher": "5b01a673b99f3749247a359f"
+  },
+  {
+    "course": "5b01e734c63f5c5a1ff60657",
+    "subject": "5af1f2c2b92d56788ad85b5c",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077e",
+    "room": "5b05252c6486e702a80a9c42",
+    "teacher": "5b01a786b99f3749247a35a4"
+  },
+  {
+    "course": "5b01e734c63f5c5a1ff60657",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077d",
+    "room": "5b05263c6486e702a80a9c47",
+    "teacher": "5b01a673b99f3749247a359f"
+  },
+  {
+    "course": "5b01e734c63f5c5a1ff60657",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077c",
+    "room": "5b0524f66486e702a80a9c3e",
+    "teacher": "5b01ab2ab99f3749247a35ad"
+  },
+  {
+    "course": "5b01e734c63f5c5a1ff60657",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077b",
+    "room": "5b0526226486e702a80a9c46",
+    "teacher": "5b01a673b99f3749247a359f"
+  },
+  {
+    "course": "5b01e734c63f5c5a1ff60657",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077a",
+    "room": "5b0524f66486e702a80a9c40",
+    "teacher": "5b01a673b99f3749247a359f"
+  },
+  {
+    "course": "5b01e734c63f5c5a1ff60657",
+    "subject": "5af1f2c2b92d56788ad85b70",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0785",
+    "room": "5b05222b6486e702a80a9c3b",
+    "teacher": "5b01ae52b99f3749247a35bc"
+  },
+  {
+    "course": "5b01e734c63f5c5a1ff60657",
+    "subject": "5af1f2c2b92d56788ad85b70",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0784",
+    "room": "5b05222b6486e702a80a9c30",
+    "teacher": "5b01a8e2b99f3749247a35a9"
+  },
+  {
+    "course": "5b01e734c63f5c5a1ff60657",
+    "subject": "5af1f2c2b92d56788ad85b7a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0783",
+    "room": "5b05222b6486e702a80a9c33",
+    "teacher": "5b01a6aab99f3749247a35a0"
+  },
+  {
+    "course": "5b01e734c63f5c5a1ff60657",
+    "subject": "5af1f2c2b92d56788ad85b7a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0782",
+    "room": "5b05222b6486e702a80a9c38",
+    "teacher": "5b01ae26b99f3749247a35bb"
+  },
+  {
+    "course": "5b01e734c63f5c5a1ff60657",
+    "subject": "5af201af312ace7f6644c7b0",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0780",
+    "room": "5b05222b6486e702a80a9c2e",
+    "teacher": "5b01ab61b99f3749247a35ae"
+  },
+  {
+    "course": "5b01e734c63f5c5a1ff60657",
+    "subject": "5af201af312ace7f6644c7b0",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0781",
+    "room": "5b05222b6486e702a80a9c3a",
+    "teacher": "5b01ab61b99f3749247a35ae"
+  },
+  {
+    "course": {
+      "_id": "5b01e7b0c63f5c5a1ff60658",
+      "grade": 2,
+      "letter": "b",
+      "studentSize": 15
+    },
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0780",
+    "room": "5b0526566486e702a80a9c4a",
+    "teacher": "5b01a5a7b99f3749247a359c"
+  },
+  {
+    "course": "5b01e7b0c63f5c5a1ff60658",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0781",
+    "room": "5b0526566486e702a80a9c4a",
+    "teacher": "5b01a844b99f3749247a35a7"
+  },
+  {
+    "course": "5b01e7b0c63f5c5a1ff60658",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0782",
+    "room": "5b0526566486e702a80a9c4a",
+    "teacher": "5b01a5a7b99f3749247a359c"
+  },
+  {
+    "course": "5b01e7b0c63f5c5a1ff60658",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0785",
+    "room": {
+      "_id": "5b05222b6486e702a80a9c2c",
+      "number": 18,
+      "house": "A",
+      "seats": 15,
+      "barrierFree": true,
+      "equipment": [
+        "Kartenhalter",
+        "Kartenhalter",
+        "Wasseranschluss",
+        "Smartboard"
+      ],
+      "roomType": "Klassenraum"
+    },
+    "teacher": "5b01a5a7b99f3749247a359c"
+  },
+  {
+    "course": "5b01e7b0c63f5c5a1ff60658",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0784",
+    "room": "5b0524f66486e702a80a9c40",
+    "teacher": "5b01ae26b99f3749247a35bb"
+  },
+  {
+    "course": "5b01e7b0c63f5c5a1ff60658",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0783",
+    "room": "5b0526566486e702a80a9c4a",
+    "teacher": "5b01a720b99f3749247a35a2"
+  },
+  {
+    "course": "5b01e7b0c63f5c5a1ff60658",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077f",
+    "room": "5b0526226486e702a80a9c45",
+    "teacher": "5b01a5a7b99f3749247a359c"
+  },
+  {
+    "course": "5b01e7b0c63f5c5a1ff60658",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077e",
+    "room": "5b05222b6486e702a80a9c2c",
+    "teacher": "5b01ae26b99f3749247a35bb"
+  },
+  {
+    "course": "5b01e7b0c63f5c5a1ff60658",
+    "subject": "5af1f2c2b92d56788ad85b34",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077d",
+    "room": "5b0526226486e702a80a9c45",
+    "teacher": "5b01ae52b99f3749247a35bc"
+  },
+  {
+    "course": "5b01e7b0c63f5c5a1ff60658",
+    "subject": "5af1f2c2b92d56788ad85b34",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0774",
+    "room": "5b0524f66486e702a80a9c3e",
+    "teacher": "5b01a5feb99f3749247a359d"
+  },
+  {
+    "course": "5b01e7b0c63f5c5a1ff60658",
+    "subject": "5af1f2c2b92d56788ad85b3e",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077b",
+    "room": "5b05222b6486e702a80a9c2c",
+    "teacher": "5b01a74eb99f3749247a35a3"
+  },
+  {
+    "course": "5b01e7b0c63f5c5a1ff60658",
+    "subject": "5af1f2c2b92d56788ad85b3e",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077a",
+    "room": "5b0526566486e702a80a9c4a",
+    "teacher": "5b01a5feb99f3749247a359d"
+  },
+  {
+    "course": "5b01e7b0c63f5c5a1ff60658",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0779",
+    "room": {
+      "_id": "5b05222b6486e702a80a9c2f",
+      "number": 67,
+      "house": "A",
+      "seats": 10,
+      "barrierFree": false,
+      "equipment": [
+        "Computer",
+        "Kartenhalter",
+        "Overheadprojektor",
+        "Overheadprojektor"
+      ],
+      "roomType": "Klassenraum"
+    },
+    "teacher": "5b01a641b99f3749247a359e"
+  },
+  {
+    "course": "5b01e7b0c63f5c5a1ff60658",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0778",
+    "room": "5b05222b6486e702a80a9c38",
+    "teacher": "5b01aaf6b99f3749247a35ac"
+  },
+  {
+    "course": "5b01e7b0c63f5c5a1ff60658",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0777",
+    "room": "5b05222b6486e702a80a9c2c",
+    "teacher": "5b01a74eb99f3749247a35a3"
+  },
+  {
+    "course": "5b01e7b0c63f5c5a1ff60658",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0776",
+    "room": "5b05222b6486e702a80a9c2c",
+    "teacher": "5b01aaf6b99f3749247a35ac"
+  },
+  {
+    "course": "5b01e7b0c63f5c5a1ff60658",
+    "subject": "5af1f2c2b92d56788ad85b52",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0775",
+    "room": "5b0524f66486e702a80a9c40",
+    "teacher": "5b01a786b99f3749247a35a4"
+  },
+  {
+    "course": "5b01e7b0c63f5c5a1ff60658",
+    "subject": "5af1f2c2b92d56788ad85b52",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0773",
+    "room": "5b0526566486e702a80a9c4a",
+    "teacher": "5b01a786b99f3749247a35a4"
+  },
+  {
+    "course": "5b01e7b0c63f5c5a1ff60658",
+    "subject": "5af1f2c2b92d56788ad85b5c",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0771",
+    "room": "5b05222b6486e702a80a9c38",
+    "teacher": "5b01aaf6b99f3749247a35ac"
+  },
+  {
+    "course": "5b01e7b0c63f5c5a1ff60658",
+    "subject": "5af1f2c2b92d56788ad85b5c",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076e",
+    "room": "5b0524f66486e702a80a9c40",
+    "teacher": "5b01a8e2b99f3749247a35a9"
+  },
+  {
+    "course": "5b01e7b0c63f5c5a1ff60658",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0772",
+    "room": "5b05222b6486e702a80a9c38",
+    "teacher": "5b01a7b3b99f3749247a35a5"
+  },
+  {
+    "course": "5b01e7b0c63f5c5a1ff60658",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077c",
+    "room": "5b05222b6486e702a80a9c38",
+    "teacher": "5b01a7b3b99f3749247a35a5"
+  },
+  {
+    "course": "5b01e7b0c63f5c5a1ff60658",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0770",
+    "room": "5b0524f66486e702a80a9c40",
+    "teacher": "5b01a673b99f3749247a359f"
+  },
+  {
+    "course": "5b01e7b0c63f5c5a1ff60658",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076f",
+    "room": "5b05222b6486e702a80a9c2c",
+    "teacher": "5b01ab2ab99f3749247a35ad"
+  },
+  {
+    "course": "5b01e7b0c63f5c5a1ff60658",
+    "subject": "5af1f2c2b92d56788ad85b70",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076d",
+    "room": "5b0524f66486e702a80a9c3e",
+    "teacher": "5b01a6aab99f3749247a35a0"
+  },
+  {
+    "course": "5b01e7b0c63f5c5a1ff60658",
+    "subject": "5af1f2c2b92d56788ad85b70",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076c",
+    "room": "5b05222b6486e702a80a9c38",
+    "teacher": "5b01a8e2b99f3749247a35a9"
+  },
+  {
+    "course": "5b01e7b0c63f5c5a1ff60658",
+    "subject": "5af1f2c2b92d56788ad85b7a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076b",
+    "room": "5b0526226486e702a80a9c45",
+    "teacher": "5b01a961b99f3749247a35aa"
+  },
+  {
+    "course": "5b01e7b0c63f5c5a1ff60658",
+    "subject": "5af1f2c2b92d56788ad85b7a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0768",
+    "room": "5b05222b6486e702a80a9c32",
+    "teacher": "5b01a961b99f3749247a35aa"
+  },
+  {
+    "course": "5b01e7b0c63f5c5a1ff60658",
+    "subject": "5af201af312ace7f6644c7b0",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0769",
+    "room": "5b0526226486e702a80a9c45",
+    "teacher": "5b01a6e7b99f3749247a35a1"
+  },
+  {
+    "course": "5b01e7b0c63f5c5a1ff60658",
+    "subject": "5af201af312ace7f6644c7b0",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076a",
+    "room": "5b05222b6486e702a80a9c32",
+    "teacher": "5b01a80ab99f3749247a35a6"
+  },
+  {
+    "course": {
+      "_id": "5b01e838c63f5c5a1ff60659",
+      "grade": 3,
+      "letter": "a",
+      "studentSize": 13
+    },
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0779",
+    "room": "5b0526226486e702a80a9c45",
+    "teacher": "5b01a961b99f3749247a35aa"
+  },
+  {
+    "course": "5b01e838c63f5c5a1ff60659",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0769",
+    "room": "5b05222b6486e702a80a9c3d",
+    "teacher": "5b01a961b99f3749247a35aa"
+  },
+  {
+    "course": "5b01e838c63f5c5a1ff60659",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0777",
+    "room": "5b05222b6486e702a80a9c33",
+    "teacher": "5b01a961b99f3749247a35aa"
+  },
+  {
+    "course": "5b01e838c63f5c5a1ff60659",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0776",
+    "room": "5b0526226486e702a80a9c45",
+    "teacher": "5b01a961b99f3749247a35aa"
+  },
+  {
+    "course": "5b01e838c63f5c5a1ff60659",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0775",
+    "room": "5b05222b6486e702a80a9c35",
+    "teacher": "5b01a5a7b99f3749247a359c"
+  },
+  {
+    "course": "5b01e838c63f5c5a1ff60659",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0774",
+    "room": "5b05222b6486e702a80a9c32",
+    "teacher": "5b01a5a7b99f3749247a359c"
+  },
+  {
+    "course": "5b01e838c63f5c5a1ff60659",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0778",
+    "room": "5b05222b6486e702a80a9c32",
+    "teacher": "5b01ae26b99f3749247a35bb"
+  },
+  {
+    "course": "5b01e838c63f5c5a1ff60659",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0773",
+    "room": "5b05222b6486e702a80a9c35",
+    "teacher": "5b01ae26b99f3749247a35bb"
+  },
+  {
+    "course": "5b01e838c63f5c5a1ff60659",
+    "subject": "5af1f2c2b92d56788ad85b34",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0772",
+    "room": "5b05252c6486e702a80a9c42",
+    "teacher": "5b01ae52b99f3749247a35bc"
+  },
+  {
+    "course": "5b01e838c63f5c5a1ff60659",
+    "subject": "5af1f2c2b92d56788ad85b34",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0771",
+    "room": "5b0526566486e702a80a9c4a",
+    "teacher": "5b01ae52b99f3749247a35bc"
+  },
+  {
+    "course": "5b01e838c63f5c5a1ff60659",
+    "subject": "5af1f2c2b92d56788ad85b3e",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0770",
+    "room": {
+      "_id": "5b05222b6486e702a80a9c3c",
+      "number": 8,
+      "house": "A",
+      "seats": 14,
+      "barrierFree": false,
+      "equipment": [
+        "Whiteboard",
+        "Kartenhalter",
+        "Kartenhalter",
+        "Smartboard"
+      ],
+      "roomType": "Klassenraum"
+    },
+    "teacher": "5b01aac1b99f3749247a35ab"
+  },
+  {
+    "course": "5b01e838c63f5c5a1ff60659",
+    "subject": "5af1f2c2b92d56788ad85b3e",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076f",
+    "room": "5b0526566486e702a80a9c4b",
+    "teacher": "5b01a5feb99f3749247a359d"
+  },
+  {
+    "course": "5b01e838c63f5c5a1ff60659",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077d",
+    "room": "5b05222b6486e702a80a9c33",
+    "teacher": "5b01a641b99f3749247a359e"
+  },
+  {
+    "course": "5b01e838c63f5c5a1ff60659",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077f",
+    "room": "5b05222b6486e702a80a9c2c",
+    "teacher": "5b01aaf6b99f3749247a35ac"
+  },
+  {
+    "course": "5b01e838c63f5c5a1ff60659",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077e",
+    "room": "5b05222b6486e702a80a9c35",
+    "teacher": "5b01a641b99f3749247a359e"
+  },
+  {
+    "course": "5b01e838c63f5c5a1ff60659",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076d",
+    "room": "5b05222b6486e702a80a9c2e",
+    "teacher": "5b01aaf6b99f3749247a35ac"
+  },
+  {
+    "course": "5b01e838c63f5c5a1ff60659",
+    "subject": "5af1f2c2b92d56788ad85b52",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076c",
+    "room": "5b05222b6486e702a80a9c3a",
+    "teacher": "5b01a8a6b99f3749247a35a8"
+  },
+  {
+    "course": "5b01e838c63f5c5a1ff60659",
+    "subject": "5af1f2c2b92d56788ad85b52",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0768",
+    "room": "5b05222b6486e702a80a9c33",
+    "teacher": "5b01a786b99f3749247a35a4"
+  },
+  {
+    "course": "5b01e838c63f5c5a1ff60659",
+    "subject": "5af1f2c2b92d56788ad85b5c",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077c",
+    "room": "5b05252c6486e702a80a9c42",
+    "teacher": "5b01a673b99f3749247a359f"
+  },
+  {
+    "course": "5b01e838c63f5c5a1ff60659",
+    "subject": "5af1f2c2b92d56788ad85b5c",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077b",
+    "room": "5b0524f66486e702a80a9c40",
+    "teacher": "5b01a8e2b99f3749247a35a9"
+  },
+  {
+    "course": "5b01e838c63f5c5a1ff60659",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077a",
+    "room": "5b05222b6486e702a80a9c2c",
+    "teacher": "5b01a7b3b99f3749247a35a5"
+  },
+  {
+    "course": "5b01e838c63f5c5a1ff60659",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076b",
+    "room": "5b05222b6486e702a80a9c3d",
+    "teacher": "5b01a7b3b99f3749247a35a5"
+  },
+  {
+    "course": "5b01e838c63f5c5a1ff60659",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076e",
+    "room": "5b05222b6486e702a80a9c38",
+    "teacher": "5b01ab2ab99f3749247a35ad"
+  },
+  {
+    "course": "5b01e838c63f5c5a1ff60659",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076a",
+    "room": "5b05222b6486e702a80a9c2e",
+    "teacher": "5b01a7b3b99f3749247a35a5"
+  },
+  {
+    "course": "5b01e838c63f5c5a1ff60659",
+    "subject": "5af1f2c2b92d56788ad85b70",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0785",
+    "room": "5b05263c6486e702a80a9c47",
+    "teacher": "5b01a8e2b99f3749247a35a9"
+  },
+  {
+    "course": "5b01e838c63f5c5a1ff60659",
+    "subject": "5af1f2c2b92d56788ad85b70",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0780",
+    "room": "5b0524f66486e702a80a9c3e",
+    "teacher": "5b01a7b3b99f3749247a35a5"
+  },
+  {
+    "course": "5b01e838c63f5c5a1ff60659",
+    "subject": "5af1f2c2b92d56788ad85b7a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0781",
+    "room": "5b05222b6486e702a80a9c38",
+    "teacher": "5b01a80ab99f3749247a35a6"
+  },
+  {
+    "course": "5b01e838c63f5c5a1ff60659",
+    "subject": "5af1f2c2b92d56788ad85b7a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0782",
+    "room": "5b05222b6486e702a80a9c2b",
+    "teacher": "5b01a6aab99f3749247a35a0"
+  },
+  {
+    "course": "5b01e838c63f5c5a1ff60659",
+    "subject": "5af201af312ace7f6644c7b0",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0783",
+    "room": "5b05222b6486e702a80a9c38",
+    "teacher": "5b01ab61b99f3749247a35ae"
+  },
+  {
+    "course": "5b01e838c63f5c5a1ff60659",
+    "subject": "5af201af312ace7f6644c7b0",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0784",
+    "room": "5b0524f66486e702a80a9c3e",
+    "teacher": "5b01a80ab99f3749247a35a6"
+  },
+  {
+    "course": {
+      "_id": "5b01e8abc63f5c5a1ff6065a",
+      "grade": 3,
+      "letter": "b",
+      "studentSize": 12
+    },
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077f",
+    "room": "5b05222b6486e702a80a9c30",
+    "teacher": "5b01a844b99f3749247a35a7"
+  },
+  {
+    "course": "5b01e8abc63f5c5a1ff6065a",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077e",
+    "room": "5b05222b6486e702a80a9c32",
+    "teacher": "5b01a961b99f3749247a35aa"
+  },
+  {
+    "course": "5b01e8abc63f5c5a1ff6065a",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077d",
+    "room": "5b0526566486e702a80a9c4c",
+    "teacher": "5b01a844b99f3749247a35a7"
+  },
+  {
+    "course": "5b01e8abc63f5c5a1ff6065a",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077c",
+    "room": "5b05222b6486e702a80a9c34",
+    "teacher": "5b01a6e7b99f3749247a35a1"
+  },
+  {
+    "course": "5b01e8abc63f5c5a1ff6065a",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0782",
+    "room": "5b05222b6486e702a80a9c30",
+    "teacher": "5b01aac1b99f3749247a35ab"
+  },
+  {
+    "course": "5b01e8abc63f5c5a1ff6065a",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0778",
+    "room": "5b05263c6486e702a80a9c47",
+    "teacher": "5b01aac1b99f3749247a35ab"
+  },
+  {
+    "course": "5b01e8abc63f5c5a1ff6065a",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0783",
+    "room": "5b05222b6486e702a80a9c35",
+    "teacher": "5b01a5a7b99f3749247a359c"
+  },
+  {
+    "course": "5b01e8abc63f5c5a1ff6065a",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0776",
+    "room": "5b0526566486e702a80a9c4c",
+    "teacher": "5b01ae26b99f3749247a35bb"
+  },
+  {
+    "course": "5b01e8abc63f5c5a1ff6065a",
+    "subject": "5af1f2c2b92d56788ad85b34",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0780",
+    "room": "5b05222b6486e702a80a9c37",
+    "teacher": "5b01a5feb99f3749247a359d"
+  },
+  {
+    "course": "5b01e8abc63f5c5a1ff6065a",
+    "subject": "5af1f2c2b92d56788ad85b34",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076c",
+    "room": "5b0526566486e702a80a9c4c",
+    "teacher": "5b01a5feb99f3749247a359d"
+  },
+  {
+    "course": "5b01e8abc63f5c5a1ff6065a",
+    "subject": "5af1f2c2b92d56788ad85b3e",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0775",
+    "room": "5b05222b6486e702a80a9c3c",
+    "teacher": "5b01a74eb99f3749247a35a3"
+  },
+  {
+    "course": "5b01e8abc63f5c5a1ff6065a",
+    "subject": "5af1f2c2b92d56788ad85b3e",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076b",
+    "room": "5b05222b6486e702a80a9c3c",
+    "teacher": "5b01a5feb99f3749247a359d"
+  },
+  {
+    "course": "5b01e8abc63f5c5a1ff6065a",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0774",
+    "room": "5b05222b6486e702a80a9c2e",
+    "teacher": "5b01a641b99f3749247a359e"
+  },
+  {
+    "course": "5b01e8abc63f5c5a1ff6065a",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0785",
+    "room": "5b05222b6486e702a80a9c34",
+    "teacher": "5b01a74eb99f3749247a35a3"
+  },
+  {
+    "course": "5b01e8abc63f5c5a1ff6065a",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0783",
+    "room": "5b05263c6486e702a80a9c47",
+    "teacher": "5b01a74eb99f3749247a35a3"
+  },
+  {
+    "course": "5b01e8abc63f5c5a1ff6065a",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076d",
+    "room": "5b05222b6486e702a80a9c3b",
+    "teacher": "5b01a74eb99f3749247a35a3"
+  },
+  {
+    "course": "5b01e8abc63f5c5a1ff6065a",
+    "subject": "5af1f2c2b92d56788ad85b52",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077b",
+    "room": "5b05222b6486e702a80a9c33",
+    "teacher": "5b01a8a6b99f3749247a35a8"
+  },
+  {
+    "course": "5b01e8abc63f5c5a1ff6065a",
+    "subject": "5af1f2c2b92d56788ad85b52",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0777",
+    "room": "5b05252c6486e702a80a9c42",
+    "teacher": "5b01a786b99f3749247a35a4"
+  },
+  {
+    "course": "5b01e8abc63f5c5a1ff6065a",
+    "subject": "5af1f2c2b92d56788ad85b5c",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0769",
+    "room": "5b05222b6486e702a80a9c35",
+    "teacher": "5b01a8e2b99f3749247a35a9"
+  },
+  {
+    "course": "5b01e8abc63f5c5a1ff6065a",
+    "subject": "5af1f2c2b92d56788ad85b5c",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076a",
+    "room": "5b05222b6486e702a80a9c37",
+    "teacher": "5b01a786b99f3749247a35a4"
+  },
+  {
+    "course": "5b01e8abc63f5c5a1ff6065a",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077a",
+    "room": "5b05222b6486e702a80a9c31",
+    "teacher": "5b01ab2ab99f3749247a35ad"
+  },
+  {
+    "course": "5b01e8abc63f5c5a1ff6065a",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0779",
+    "room": "5b05222b6486e702a80a9c3b",
+    "teacher": "5b01ab2ab99f3749247a35ad"
+  },
+  {
+    "course": "5b01e8abc63f5c5a1ff6065a",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076e",
+    "room": "5b05222b6486e702a80a9c2c",
+    "teacher": "5b01a7b3b99f3749247a35a5"
+  },
+  {
+    "course": "5b01e8abc63f5c5a1ff6065a",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0768",
+    "room": "5b05222b6486e702a80a9c2f",
+    "teacher": "5b01ab2ab99f3749247a35ad"
+  },
+  {
+    "course": "5b01e8abc63f5c5a1ff6065a",
+    "subject": "5af1f2c2b92d56788ad85b70",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0781",
+    "room": "5b05222b6486e702a80a9c37",
+    "teacher": "5b01ae52b99f3749247a35bc"
+  },
+  {
+    "course": "5b01e8abc63f5c5a1ff6065a",
+    "subject": "5af1f2c2b92d56788ad85b70",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0773",
+    "room": "5b05263c6486e702a80a9c47",
+    "teacher": "5b01a6aab99f3749247a35a0"
+  },
+  {
+    "course": "5b01e8abc63f5c5a1ff6065a",
+    "subject": "5af1f2c2b92d56788ad85b7a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076f",
+    "room": "5b0526566486e702a80a9c4a",
+    "teacher": "5b01a80ab99f3749247a35a6"
+  },
+  {
+    "course": "5b01e8abc63f5c5a1ff6065a",
+    "subject": "5af1f2c2b92d56788ad85b7a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0770",
+    "room": "5b05222b6486e702a80a9c2e",
+    "teacher": "5b01a961b99f3749247a35aa"
+  },
+  {
+    "course": "5b01e8abc63f5c5a1ff6065a",
+    "subject": "5af201af312ace7f6644c7b0",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0772",
+    "room": "5b0524f66486e702a80a9c3f",
+    "teacher": "5b01a80ab99f3749247a35a6"
+  },
+  {
+    "course": "5b01e8abc63f5c5a1ff6065a",
+    "subject": "5af201af312ace7f6644c7b0",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0771",
+    "room": "5b05222b6486e702a80a9c30",
+    "teacher": "5b01ab61b99f3749247a35ae"
+  },
+  {
+    "course": {
+      "_id": "5b01e97dc63f5c5a1ff6065b",
+      "grade": 4,
+      "letter": "a",
+      "studentSize": 14
+    },
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0780",
+    "room": "5b0526566486e702a80a9c4c",
+    "teacher": "5b01a6e7b99f3749247a35a1"
+  },
+  {
+    "course": "5b01e97dc63f5c5a1ff6065b",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0781",
+    "room": "5b05222b6486e702a80a9c3c",
+    "teacher": "5b01a961b99f3749247a35aa"
+  },
+  {
+    "course": "5b01e97dc63f5c5a1ff6065b",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076b",
+    "room": "5b05222b6486e702a80a9c2e",
+    "teacher": "5b01a5a7b99f3749247a359c"
+  },
+  {
+    "course": "5b01e97dc63f5c5a1ff6065b",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0785",
+    "room": "5b0524f66486e702a80a9c3e",
+    "teacher": "5b01a961b99f3749247a35aa"
+  },
+  {
+    "course": "5b01e97dc63f5c5a1ff6065b",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0784",
+    "room": "5b0526566486e702a80a9c4a",
+    "teacher": "5b01a720b99f3749247a35a2"
+  },
+  {
+    "course": "5b01e97dc63f5c5a1ff6065b",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0783",
+    "room": "5b0524f66486e702a80a9c3e",
+    "teacher": "5b01ae26b99f3749247a35bb"
+  },
+  {
+    "course": "5b01e97dc63f5c5a1ff6065b",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077a",
+    "room": "5b05222b6486e702a80a9c2b",
+    "teacher": "5b01a720b99f3749247a35a2"
+  },
+  {
+    "course": "5b01e97dc63f5c5a1ff6065b",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077b",
+    "room": "5b05222b6486e702a80a9c38",
+    "teacher": "5b01a720b99f3749247a35a2"
+  },
+  {
+    "course": "5b01e97dc63f5c5a1ff6065b",
+    "subject": "5af1f2c2b92d56788ad85b34",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077c",
+    "room": "5b05222b6486e702a80a9c36",
+    "teacher": "5b01a5feb99f3749247a359d"
+  },
+  {
+    "course": "5b01e97dc63f5c5a1ff6065b",
+    "subject": "5af1f2c2b92d56788ad85b34",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077d",
+    "room": "5b05222b6486e702a80a9c35",
+    "teacher": "5b01a720b99f3749247a35a2"
+  },
+  {
+    "course": "5b01e97dc63f5c5a1ff6065b",
+    "subject": "5af1f2c2b92d56788ad85b3e",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077f",
+    "room": "5b05222b6486e702a80a9c34",
+    "teacher": "5b01a74eb99f3749247a35a3"
+  },
+  {
+    "course": "5b01e97dc63f5c5a1ff6065b",
+    "subject": "5af1f2c2b92d56788ad85b3e",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077e",
+    "room": {
+      "_id": "5b05252c6486e702a80a9c41",
+      "number": 4,
+      "house": "P",
+      "seats": 10,
+      "barrierFree": false,
+      "equipment": [
+        "Beamer",
+        "Overheadprojektor",
+        "Kartenhalter",
+        "Wasseranschluss"
+      ],
+      "roomType": "Physik"
+    },
+    "teacher": "5b01a5feb99f3749247a359d"
+  },
+  {
+    "course": "5b01e97dc63f5c5a1ff6065b",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0773",
+    "room": "5b0526566486e702a80a9c4c",
+    "teacher": "5b01aaf6b99f3749247a35ac"
+  },
+  {
+    "course": "5b01e97dc63f5c5a1ff6065b",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076e",
+    "room": "5b0526566486e702a80a9c4a",
+    "teacher": "5b01a74eb99f3749247a35a3"
+  },
+  {
+    "course": "5b01e97dc63f5c5a1ff6065b",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0772",
+    "room": "5b0526566486e702a80a9c4c",
+    "teacher": "5b01aaf6b99f3749247a35ac"
+  },
+  {
+    "course": "5b01e97dc63f5c5a1ff6065b",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0782",
+    "room": "5b05222b6486e702a80a9c2c",
+    "teacher": "5b01a74eb99f3749247a35a3"
+  },
+  {
+    "course": "5b01e97dc63f5c5a1ff6065b",
+    "subject": "5af1f2c2b92d56788ad85b52",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0770",
+    "room": "5b0526566486e702a80a9c4b",
+    "teacher": "5b01a8a6b99f3749247a35a8"
+  },
+  {
+    "course": "5b01e97dc63f5c5a1ff6065b",
+    "subject": "5af1f2c2b92d56788ad85b52",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076f",
+    "room": "5b05222b6486e702a80a9c3c",
+    "teacher": "5b01a786b99f3749247a35a4"
+  },
+  {
+    "course": "5b01e97dc63f5c5a1ff6065b",
+    "subject": "5af1f2c2b92d56788ad85b5c",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0779",
+    "room": "5b0524f66486e702a80a9c3f",
+    "teacher": "5b01a673b99f3749247a359f"
+  },
+  {
+    "course": "5b01e97dc63f5c5a1ff6065b",
+    "subject": "5af1f2c2b92d56788ad85b5c",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0778",
+    "room": "5b0524f66486e702a80a9c40",
+    "teacher": "5b01a786b99f3749247a35a4"
+  },
+  {
+    "course": "5b01e97dc63f5c5a1ff6065b",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0777",
+    "room": "5b05222b6486e702a80a9c2e",
+    "teacher": "5b01a673b99f3749247a359f"
+  },
+  {
+    "course": "5b01e97dc63f5c5a1ff6065b",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0776",
+    "room": "5b05222b6486e702a80a9c3c",
+    "teacher": "5b01ab2ab99f3749247a35ad"
+  },
+  {
+    "course": "5b01e97dc63f5c5a1ff6065b",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0775",
+    "room": "5b05252c6486e702a80a9c43",
+    "teacher": "5b01a7b3b99f3749247a35a5"
+  },
+  {
+    "course": "5b01e97dc63f5c5a1ff6065b",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0774",
+    "room": "5b05222b6486e702a80a9c2c",
+    "teacher": "5b01a673b99f3749247a359f"
+  },
+  {
+    "course": "5b01e97dc63f5c5a1ff6065b",
+    "subject": "5af1f2c2b92d56788ad85b70",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076d",
+    "room": "5b0526566486e702a80a9c4b",
+    "teacher": "5b01a8e2b99f3749247a35a9"
+  },
+  {
+    "course": "5b01e97dc63f5c5a1ff6065b",
+    "subject": "5af1f2c2b92d56788ad85b70",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076c",
+    "room": "5b05222b6486e702a80a9c3c",
+    "teacher": "5b01a7b3b99f3749247a35a5"
+  },
+  {
+    "course": "5b01e97dc63f5c5a1ff6065b",
+    "subject": "5af1f2c2b92d56788ad85b7a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0771",
+    "room": "5b05222b6486e702a80a9c2b",
+    "teacher": "5b01a961b99f3749247a35aa"
+  },
+  {
+    "course": "5b01e97dc63f5c5a1ff6065b",
+    "subject": "5af1f2c2b92d56788ad85b7a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076a",
+    "room": "5b0526226486e702a80a9c45",
+    "teacher": "5b01a6aab99f3749247a35a0"
+  },
+  {
+    "course": "5b01e97dc63f5c5a1ff6065b",
+    "subject": "5af201af312ace7f6644c7b0",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0769",
+    "room": "5b0524f66486e702a80a9c40",
+    "teacher": "5b01a80ab99f3749247a35a6"
+  },
+  {
+    "course": "5b01e97dc63f5c5a1ff6065b",
+    "subject": "5af201af312ace7f6644c7b0",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0768",
+    "room": "5b0524f66486e702a80a9c3f",
+    "teacher": "5b01ab61b99f3749247a35ae"
+  },
+  {
+    "course": {
+      "_id": "5b01e9fcc63f5c5a1ff6065c",
+      "grade": 5,
+      "letter": "a",
+      "studentSize": 12
+    },
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0771",
+    "room": "5b05222b6486e702a80a9c33",
+    "teacher": "5b01a5a7b99f3749247a359c"
+  },
+  {
+    "course": "5b01e9fcc63f5c5a1ff6065c",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077b",
+    "room": "5b05222b6486e702a80a9c2b",
+    "teacher": "5b01a961b99f3749247a35aa"
+  },
+  {
+    "course": "5b01e9fcc63f5c5a1ff6065c",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077f",
+    "room": "5b0524f66486e702a80a9c40",
+    "teacher": "5b01a961b99f3749247a35aa"
+  },
+  {
+    "course": "5b01e9fcc63f5c5a1ff6065c",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077e",
+    "room": "5b0524f66486e702a80a9c40",
+    "teacher": "5b01a5a7b99f3749247a359c"
+  },
+  {
+    "course": "5b01e9fcc63f5c5a1ff6065c",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076e",
+    "room": "5b05222b6486e702a80a9c34",
+    "teacher": "5b01ae26b99f3749247a35bb"
+  },
+  {
+    "course": "5b01e9fcc63f5c5a1ff6065c",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077d",
+    "room": "5b05222b6486e702a80a9c2e",
+    "teacher": "5b01a5a7b99f3749247a359c"
+  },
+  {
+    "course": "5b01e9fcc63f5c5a1ff6065c",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077c",
+    "room": "5b05263c6486e702a80a9c47",
+    "teacher": "5b01a5a7b99f3749247a359c"
+  },
+  {
+    "course": "5b01e9fcc63f5c5a1ff6065c",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0779",
+    "room": "5b05222b6486e702a80a9c33",
+    "teacher": "5b01ae26b99f3749247a35bb"
+  },
+  {
+    "course": "5b01e9fcc63f5c5a1ff6065c",
+    "subject": "5af1f2c2b92d56788ad85b34",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0778",
+    "room": "5b05222b6486e702a80a9c35",
+    "teacher": "5b01a5feb99f3749247a359d"
+  },
+  {
+    "course": "5b01e9fcc63f5c5a1ff6065c",
+    "subject": "5af1f2c2b92d56788ad85b34",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076d",
+    "room": "5b0524f66486e702a80a9c3f",
+    "teacher": "5b01a844b99f3749247a35a7"
+  },
+  {
+    "course": "5b01e9fcc63f5c5a1ff6065c",
+    "subject": "5af1f2c2b92d56788ad85b3e",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076c",
+    "room": "5b05252c6486e702a80a9c42",
+    "teacher": "5b01a74eb99f3749247a35a3"
+  },
+  {
+    "course": "5b01e9fcc63f5c5a1ff6065c",
+    "subject": "5af1f2c2b92d56788ad85b3e",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0768",
+    "room": "5b0526566486e702a80a9c4a",
+    "teacher": "5b01a74eb99f3749247a35a3"
+  },
+  {
+    "course": "5b01e9fcc63f5c5a1ff6065c",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077a",
+    "room": "5b0524f66486e702a80a9c3e",
+    "teacher": "5b01aaf6b99f3749247a35ac"
+  },
+  {
+    "course": "5b01e9fcc63f5c5a1ff6065c",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0769",
+    "room": "5b0526566486e702a80a9c4c",
+    "teacher": "5b01a641b99f3749247a359e"
+  },
+  {
+    "course": "5b01e9fcc63f5c5a1ff6065c",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076a",
+    "room": "5b05222b6486e702a80a9c33",
+    "teacher": "5b01a74eb99f3749247a35a3"
+  },
+  {
+    "course": "5b01e9fcc63f5c5a1ff6065c",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0781",
+    "room": "5b05222b6486e702a80a9c2e",
+    "teacher": "5b01a641b99f3749247a359e"
+  },
+  {
+    "course": "5b01e9fcc63f5c5a1ff6065c",
+    "subject": "5af1f2c2b92d56788ad85b52",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0780",
+    "room": "5b05222b6486e702a80a9c32",
+    "teacher": "5b01a641b99f3749247a359e"
+  },
+  {
+    "course": "5b01e9fcc63f5c5a1ff6065c",
+    "subject": "5af1f2c2b92d56788ad85b52",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0782",
+    "room": "5b0526226486e702a80a9c45",
+    "teacher": "5b01a8a6b99f3749247a35a8"
+  },
+  {
+    "course": "5b01e9fcc63f5c5a1ff6065c",
+    "subject": "5af1f2c2b92d56788ad85b5c",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0785",
+    "room": "5b05222b6486e702a80a9c32",
+    "teacher": "5b01a673b99f3749247a359f"
+  },
+  {
+    "course": "5b01e9fcc63f5c5a1ff6065c",
+    "subject": "5af1f2c2b92d56788ad85b5c",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076b",
+    "room": "5b0524f66486e702a80a9c3e",
+    "teacher": "5b01a786b99f3749247a35a4"
+  },
+  {
+    "course": "5b01e9fcc63f5c5a1ff6065c",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0777",
+    "room": "5b0524f66486e702a80a9c3f",
+    "teacher": "5b01a7b3b99f3749247a35a5"
+  },
+  {
+    "course": "5b01e9fcc63f5c5a1ff6065c",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0776",
+    "room": "5b05222b6486e702a80a9c31",
+    "teacher": "5b01a673b99f3749247a359f"
+  },
+  {
+    "course": "5b01e9fcc63f5c5a1ff6065c",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0784",
+    "room": "5b05222b6486e702a80a9c2e",
+    "teacher": "5b01a7b3b99f3749247a35a5"
+  },
+  {
+    "course": "5b01e9fcc63f5c5a1ff6065c",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0783",
+    "room": "5b05263c6486e702a80a9c49",
+    "teacher": "5b01a673b99f3749247a359f"
+  },
+  {
+    "course": "5b01e9fcc63f5c5a1ff6065c",
+    "subject": "5af1f2c2b92d56788ad85b70",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0772",
+    "room": "5b05222b6486e702a80a9c2c",
+    "teacher": "5b01a8e2b99f3749247a35a9"
+  },
+  {
+    "course": "5b01e9fcc63f5c5a1ff6065c",
+    "subject": "5af1f2c2b92d56788ad85b70",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0773",
+    "room": "5b05222b6486e702a80a9c38",
+    "teacher": "5b01ae52b99f3749247a35bc"
+  },
+  {
+    "course": "5b01e9fcc63f5c5a1ff6065c",
+    "subject": "5af1f2c2b92d56788ad85b7a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0774",
+    "room": "5b05222b6486e702a80a9c34",
+    "teacher": "5b01a6aab99f3749247a35a0"
+  },
+  {
+    "course": "5b01e9fcc63f5c5a1ff6065c",
+    "subject": "5af1f2c2b92d56788ad85b7a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0775",
+    "room": "5b0526566486e702a80a9c4b",
+    "teacher": "5b01ae26b99f3749247a35bb"
+  },
+  {
+    "course": "5b01e9fcc63f5c5a1ff6065c",
+    "subject": "5af201af312ace7f6644c7b0",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0770",
+    "room": "5b0526566486e702a80a9c4a",
+    "teacher": "5b01a80ab99f3749247a35a6"
+  },
+  {
+    "course": "5b01e9fcc63f5c5a1ff6065c",
+    "subject": "5af201af312ace7f6644c7b0",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076f",
+    "room": "5b0524f66486e702a80a9c3f",
+    "teacher": "5b01a6e7b99f3749247a35a1"
+  },
+  {
+    "course": {
+      "_id": "5b01ea6cc63f5c5a1ff6065d",
+      "grade": 5,
+      "letter": "b",
+      "studentSize": 13
+    },
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0779",
+    "room": "5b05222b6486e702a80a9c35",
+    "teacher": "5b01a844b99f3749247a35a7"
+  },
+  {
+    "course": "5b01ea6cc63f5c5a1ff6065d",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0778",
+    "room": "5b05222b6486e702a80a9c33",
+    "teacher": "5b01a961b99f3749247a35aa"
+  },
+  {
+    "course": "5b01ea6cc63f5c5a1ff6065d",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0777",
+    "room": "5b0526566486e702a80a9c4a",
+    "teacher": "5b01a6e7b99f3749247a35a1"
+  },
+  {
+    "course": "5b01ea6cc63f5c5a1ff6065d",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0776",
+    "room": "5b05222b6486e702a80a9c37",
+    "teacher": "5b01a6e7b99f3749247a35a1"
+  },
+  {
+    "course": "5b01ea6cc63f5c5a1ff6065d",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0775",
+    "room": "5b05222b6486e702a80a9c38",
+    "teacher": "5b01a720b99f3749247a35a2"
+  },
+  {
+    "course": "5b01ea6cc63f5c5a1ff6065d",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0774",
+    "room": "5b0526566486e702a80a9c4a",
+    "teacher": "5b01ae26b99f3749247a35bb"
+  },
+  {
+    "course": "5b01ea6cc63f5c5a1ff6065d",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077f",
+    "room": "5b0526566486e702a80a9c4a",
+    "teacher": "5b01ae26b99f3749247a35bb"
+  },
+  {
+    "course": "5b01ea6cc63f5c5a1ff6065d",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077e",
+    "room": "5b05222b6486e702a80a9c2b",
+    "teacher": "5b01aac1b99f3749247a35ab"
+  },
+  {
+    "course": "5b01ea6cc63f5c5a1ff6065d",
+    "subject": "5af1f2c2b92d56788ad85b34",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076e",
+    "room": "5b05222b6486e702a80a9c37",
+    "teacher": "5b01ae52b99f3749247a35bc"
+  },
+  {
+    "course": "5b01ea6cc63f5c5a1ff6065d",
+    "subject": "5af1f2c2b92d56788ad85b34",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077c",
+    "room": "5b05222b6486e702a80a9c2b",
+    "teacher": "5b01a844b99f3749247a35a7"
+  },
+  {
+    "course": "5b01ea6cc63f5c5a1ff6065d",
+    "subject": "5af1f2c2b92d56788ad85b3e",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0772",
+    "room": "5b05222b6486e702a80a9c2b",
+    "teacher": "5b01aac1b99f3749247a35ab"
+  },
+  {
+    "course": "5b01ea6cc63f5c5a1ff6065d",
+    "subject": "5af1f2c2b92d56788ad85b3e",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0771",
+    "room": "5b0524f66486e702a80a9c40",
+    "teacher": "5b01a5feb99f3749247a359d"
+  },
+  {
+    "course": "5b01ea6cc63f5c5a1ff6065d",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077d",
+    "room": "5b05222b6486e702a80a9c2b",
+    "teacher": "5b01a74eb99f3749247a35a3"
+  },
+  {
+    "course": "5b01ea6cc63f5c5a1ff6065d",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0781",
+    "room": "5b0526566486e702a80a9c4b",
+    "teacher": "5b01aaf6b99f3749247a35ac"
+  },
+  {
+    "course": "5b01ea6cc63f5c5a1ff6065d",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077b",
+    "room": "5b05222b6486e702a80a9c31",
+    "teacher": "5b01a641b99f3749247a359e"
+  },
+  {
+    "course": "5b01ea6cc63f5c5a1ff6065d",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077a",
+    "room": "5b05222b6486e702a80a9c34",
+    "teacher": "5b01a74eb99f3749247a35a3"
+  },
+  {
+    "course": "5b01ea6cc63f5c5a1ff6065d",
+    "subject": "5af1f2c2b92d56788ad85b52",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0770",
+    "room": "5b05252c6486e702a80a9c42",
+    "teacher": "5b01a786b99f3749247a35a4"
+  },
+  {
+    "course": "5b01ea6cc63f5c5a1ff6065d",
+    "subject": "5af1f2c2b92d56788ad85b52",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076f",
+    "room": "5b05222b6486e702a80a9c2b",
+    "teacher": "5b01a641b99f3749247a359e"
+  },
+  {
+    "course": "5b01ea6cc63f5c5a1ff6065d",
+    "subject": "5af1f2c2b92d56788ad85b5c",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0780",
+    "room": "5b05222b6486e702a80a9c3c",
+    "teacher": "5b01a786b99f3749247a35a4"
+  },
+  {
+    "course": "5b01ea6cc63f5c5a1ff6065d",
+    "subject": "5af1f2c2b92d56788ad85b5c",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0768",
+    "room": "5b05222b6486e702a80a9c3d",
+    "teacher": "5b01a673b99f3749247a359f"
+  },
+  {
+    "course": "5b01ea6cc63f5c5a1ff6065d",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076d",
+    "room": "5b0526566486e702a80a9c4c",
+    "teacher": "5b01a7b3b99f3749247a35a5"
+  },
+  {
+    "course": "5b01ea6cc63f5c5a1ff6065d",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076c",
+    "room": "5b05222b6486e702a80a9c34",
+    "teacher": "5b01a673b99f3749247a359f"
+  },
+  {
+    "course": "5b01ea6cc63f5c5a1ff6065d",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0773",
+    "room": "5b05222b6486e702a80a9c3d",
+    "teacher": "5b01ab2ab99f3749247a35ad"
+  },
+  {
+    "course": "5b01ea6cc63f5c5a1ff6065d",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076b",
+    "room": "5b05222b6486e702a80a9c33",
+    "teacher": "5b01a673b99f3749247a359f"
+  },
+  {
+    "course": "5b01ea6cc63f5c5a1ff6065d",
+    "subject": "5af1f2c2b92d56788ad85b70",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0782",
+    "room": "5b05222b6486e702a80a9c34",
+    "teacher": "5b01a8e2b99f3749247a35a9"
+  },
+  {
+    "course": "5b01ea6cc63f5c5a1ff6065d",
+    "subject": "5af1f2c2b92d56788ad85b70",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0785",
+    "room": "5b05222b6486e702a80a9c2e",
+    "teacher": "5b01a6aab99f3749247a35a0"
+  },
+  {
+    "course": "5b01ea6cc63f5c5a1ff6065d",
+    "subject": "5af1f2c2b92d56788ad85b7a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0784",
+    "room": "5b0526566486e702a80a9c4c",
+    "teacher": "5b01a6aab99f3749247a35a0"
+  },
+  {
+    "course": "5b01ea6cc63f5c5a1ff6065d",
+    "subject": "5af1f2c2b92d56788ad85b7a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0769",
+    "room": "5b05222b6486e702a80a9c34",
+    "teacher": "5b01a6aab99f3749247a35a0"
+  },
+  {
+    "course": "5b01ea6cc63f5c5a1ff6065d",
+    "subject": "5af201af312ace7f6644c7b0",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0783",
+    "room": "5b05222b6486e702a80a9c2e",
+    "teacher": "5b01a80ab99f3749247a35a6"
+  },
+  {
+    "course": "5b01ea6cc63f5c5a1ff6065d",
+    "subject": "5af201af312ace7f6644c7b0",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076a",
+    "room": "5b05222b6486e702a80a9c3d",
+    "teacher": "5b01ab61b99f3749247a35ae"
+  },
+  {
+    "course": {
+      "_id": "5b01eb44c63f5c5a1ff6065e",
+      "grade": 6,
+      "letter": "a",
+      "studentSize": 12
+    },
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0780",
+    "room": "5b05222b6486e702a80a9c38",
+    "teacher": "5b01a961b99f3749247a35aa"
+  },
+  {
+    "course": "5b01eb44c63f5c5a1ff6065e",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077b",
+    "room": "5b05222b6486e702a80a9c2e",
+    "teacher": "5b01a844b99f3749247a35a7"
+  },
+  {
+    "course": "5b01eb44c63f5c5a1ff6065e",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0781",
+    "room": "5b0524f66486e702a80a9c40",
+    "teacher": "5b01a5a7b99f3749247a359c"
+  },
+  {
+    "course": "5b01eb44c63f5c5a1ff6065e",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076e",
+    "room": "5b05222b6486e702a80a9c32",
+    "teacher": "5b01a6e7b99f3749247a35a1"
+  },
+  {
+    "course": "5b01eb44c63f5c5a1ff6065e",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0772",
+    "room": "5b05222b6486e702a80a9c3c",
+    "teacher": "5b01a720b99f3749247a35a2"
+  },
+  {
+    "course": "5b01eb44c63f5c5a1ff6065e",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0771",
+    "room": "5b05222b6486e702a80a9c2c",
+    "teacher": "5b01aac1b99f3749247a35ab"
+  },
+  {
+    "course": "5b01eb44c63f5c5a1ff6065e",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0770",
+    "room": "5b0526226486e702a80a9c45",
+    "teacher": "5b01a720b99f3749247a35a2"
+  },
+  {
+    "course": "5b01eb44c63f5c5a1ff6065e",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076f",
+    "room": "5b05222b6486e702a80a9c3a",
+    "teacher": "5b01a5a7b99f3749247a359c"
+  },
+  {
+    "course": "5b01eb44c63f5c5a1ff6065e",
+    "subject": "5af1f2c2b92d56788ad85b34",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0779",
+    "room": "5b05222b6486e702a80a9c2c",
+    "teacher": "5b01a5feb99f3749247a359d"
+  },
+  {
+    "course": "5b01eb44c63f5c5a1ff6065e",
+    "subject": "5af1f2c2b92d56788ad85b34",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0778",
+    "room": "5b05222b6486e702a80a9c3c",
+    "teacher": "5b01a720b99f3749247a35a2"
+  },
+  {
+    "course": "5b01eb44c63f5c5a1ff6065e",
+    "subject": "5af1f2c2b92d56788ad85b3e",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077c",
+    "room": "5b05222b6486e702a80a9c2c",
+    "teacher": "5b01aac1b99f3749247a35ab"
+  },
+  {
+    "course": "5b01eb44c63f5c5a1ff6065e",
+    "subject": "5af1f2c2b92d56788ad85b3e",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076c",
+    "room": "5b0526566486e702a80a9c4b",
+    "teacher": "5b01aac1b99f3749247a35ab"
+  },
+  {
+    "course": "5b01eb44c63f5c5a1ff6065e",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076d",
+    "room": "5b05252c6486e702a80a9c42",
+    "teacher": "5b01a641b99f3749247a359e"
+  },
+  {
+    "course": "5b01eb44c63f5c5a1ff6065e",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0773",
+    "room": "5b05222b6486e702a80a9c34",
+    "teacher": "5b01a74eb99f3749247a35a3"
+  },
+  {
+    "course": "5b01eb44c63f5c5a1ff6065e",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0776",
+    "room": "5b0524f66486e702a80a9c3f",
+    "teacher": "5b01a74eb99f3749247a35a3"
+  },
+  {
+    "course": "5b01eb44c63f5c5a1ff6065e",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0768",
+    "room": "5b05263c6486e702a80a9c47",
+    "teacher": "5b01aaf6b99f3749247a35ac"
+  },
+  {
+    "course": "5b01eb44c63f5c5a1ff6065e",
+    "subject": "5af1f2c2b92d56788ad85b52",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076b",
+    "room": "5b05222b6486e702a80a9c3a",
+    "teacher": "5b01a641b99f3749247a359e"
+  },
+  {
+    "course": "5b01eb44c63f5c5a1ff6065e",
+    "subject": "5af1f2c2b92d56788ad85b52",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0769",
+    "room": "5b05252c6486e702a80a9c42",
+    "teacher": "5b01a786b99f3749247a35a4"
+  },
+  {
+    "course": "5b01eb44c63f5c5a1ff6065e",
+    "subject": "5af1f2c2b92d56788ad85b5c",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077f",
+    "room": "5b05222b6486e702a80a9c3b",
+    "teacher": "5b01a786b99f3749247a35a4"
+  },
+  {
+    "course": "5b01eb44c63f5c5a1ff6065e",
+    "subject": "5af1f2c2b92d56788ad85b5c",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076a",
+    "room": "5b0526566486e702a80a9c4c",
+    "teacher": "5b01a786b99f3749247a35a4"
+  },
+  {
+    "course": "5b01eb44c63f5c5a1ff6065e",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077e",
+    "room": "5b0526226486e702a80a9c45",
+    "teacher": "5b01a7b3b99f3749247a35a5"
+  },
+  {
+    "course": "5b01eb44c63f5c5a1ff6065e",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077d",
+    "room": "5b05222b6486e702a80a9c2d",
+    "teacher": "5b01ab2ab99f3749247a35ad"
+  },
+  {
+    "course": "5b01eb44c63f5c5a1ff6065e",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0785",
+    "room": "5b05222b6486e702a80a9c37",
+    "teacher": "5b01a7b3b99f3749247a35a5"
+  },
+  {
+    "course": "5b01eb44c63f5c5a1ff6065e",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0782",
+    "room": "5b05222b6486e702a80a9c31",
+    "teacher": "5b01a7b3b99f3749247a35a5"
+  },
+  {
+    "course": "5b01eb44c63f5c5a1ff6065e",
+    "subject": "5af1f2c2b92d56788ad85b70",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0777",
+    "room": "5b05263c6486e702a80a9c47",
+    "teacher": "5b01a6aab99f3749247a35a0"
+  },
+  {
+    "course": "5b01eb44c63f5c5a1ff6065e",
+    "subject": "5af1f2c2b92d56788ad85b70",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077a",
+    "room": "5b05222b6486e702a80a9c3d",
+    "teacher": "5b01a6aab99f3749247a35a0"
+  },
+  {
+    "course": "5b01eb44c63f5c5a1ff6065e",
+    "subject": "5af1f2c2b92d56788ad85b7a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0784",
+    "room": "5b0526226486e702a80a9c46",
+    "teacher": "5b01a961b99f3749247a35aa"
+  },
+  {
+    "course": "5b01eb44c63f5c5a1ff6065e",
+    "subject": "5af1f2c2b92d56788ad85b7a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0783",
+    "room": "5b05222b6486e702a80a9c34",
+    "teacher": "5b01a961b99f3749247a35aa"
+  },
+  {
+    "course": "5b01eb44c63f5c5a1ff6065e",
+    "subject": "5af201af312ace7f6644c7b0",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0774",
+    "room": "5b05222b6486e702a80a9c33",
+    "teacher": "5b01ab61b99f3749247a35ae"
+  },
+  {
+    "course": "5b01eb44c63f5c5a1ff6065e",
+    "subject": "5af201af312ace7f6644c7b0",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0775",
+    "room": "5b05222b6486e702a80a9c31",
+    "teacher": "5b01a6e7b99f3749247a35a1"
+  },
+  {
+    "course": {
+      "_id": "5b01ebb3c63f5c5a1ff6065f",
+      "grade": 6,
+      "letter": "b",
+      "studentSize": 11
+    },
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076f",
+    "room": "5b0526226486e702a80a9c46",
+    "teacher": "5b01a844b99f3749247a35a7"
+  },
+  {
+    "course": "5b01ebb3c63f5c5a1ff6065f",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076c",
+    "room": "5b05222b6486e702a80a9c32",
+    "teacher": "5b01a844b99f3749247a35a7"
+  },
+  {
+    "course": "5b01ebb3c63f5c5a1ff6065f",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0768",
+    "room": "5b0526566486e702a80a9c4c",
+    "teacher": "5b01a6e7b99f3749247a35a1"
+  },
+  {
+    "course": "5b01ebb3c63f5c5a1ff6065f",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077a",
+    "room": "5b0526566486e702a80a9c4c",
+    "teacher": "5b01a961b99f3749247a35aa"
+  },
+  {
+    "course": "5b01ebb3c63f5c5a1ff6065f",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0769",
+    "room": "5b05222b6486e702a80a9c2c",
+    "teacher": "5b01ae26b99f3749247a35bb"
+  },
+  {
+    "course": "5b01ebb3c63f5c5a1ff6065f",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0779",
+    "room": "5b05222b6486e702a80a9c37",
+    "teacher": "5b01a720b99f3749247a35a2"
+  },
+  {
+    "course": "5b01ebb3c63f5c5a1ff6065f",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0780",
+    "room": "5b05252c6486e702a80a9c42",
+    "teacher": "5b01ae26b99f3749247a35bb"
+  },
+  {
+    "course": "5b01ebb3c63f5c5a1ff6065f",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0781",
+    "room": "5b05263c6486e702a80a9c47",
+    "teacher": "5b01ae26b99f3749247a35bb"
+  },
+  {
+    "course": "5b01ebb3c63f5c5a1ff6065f",
+    "subject": "5af1f2c2b92d56788ad85b34",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0776",
+    "room": "5b05222b6486e702a80a9c2a",
+    "teacher": "5b01ae52b99f3749247a35bc"
+  },
+  {
+    "course": "5b01ebb3c63f5c5a1ff6065f",
+    "subject": "5af1f2c2b92d56788ad85b34",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076a",
+    "room": "5b05222b6486e702a80a9c3c",
+    "teacher": "5b01ae52b99f3749247a35bc"
+  },
+  {
+    "course": "5b01ebb3c63f5c5a1ff6065f",
+    "subject": "5af1f2c2b92d56788ad85b3e",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0782",
+    "room": "5b05222b6486e702a80a9c32",
+    "teacher": "5b01a5feb99f3749247a359d"
+  },
+  {
+    "course": "5b01ebb3c63f5c5a1ff6065f",
+    "subject": "5af1f2c2b92d56788ad85b3e",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0777",
+    "room": "5b05222b6486e702a80a9c2a",
+    "teacher": "5b01a5feb99f3749247a359d"
+  },
+  {
+    "course": "5b01ebb3c63f5c5a1ff6065f",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077c",
+    "room": "5b0526226486e702a80a9c45",
+    "teacher": "5b01aaf6b99f3749247a35ac"
+  },
+  {
+    "course": "5b01ebb3c63f5c5a1ff6065f",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0785",
+    "room": "5b05222b6486e702a80a9c30",
+    "teacher": "5b01aaf6b99f3749247a35ac"
+  },
+  {
+    "course": "5b01ebb3c63f5c5a1ff6065f",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076b",
+    "room": "5b05222b6486e702a80a9c2c",
+    "teacher": "5b01a74eb99f3749247a35a3"
+  },
+  {
+    "course": "5b01ebb3c63f5c5a1ff6065f",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0783",
+    "room": "5b05222b6486e702a80a9c2a",
+    "teacher": "5b01aaf6b99f3749247a35ac"
+  },
+  {
+    "course": "5b01ebb3c63f5c5a1ff6065f",
+    "subject": "5af1f2c2b92d56788ad85b52",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0784",
+    "room": "5b05222b6486e702a80a9c2b",
+    "teacher": "5b01a8a6b99f3749247a35a8"
+  },
+  {
+    "course": "5b01ebb3c63f5c5a1ff6065f",
+    "subject": "5af1f2c2b92d56788ad85b52",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076e",
+    "room": "5b05222b6486e702a80a9c2b",
+    "teacher": "5b01a8a6b99f3749247a35a8"
+  },
+  {
+    "course": "5b01ebb3c63f5c5a1ff6065f",
+    "subject": "5af1f2c2b92d56788ad85b5c",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0770",
+    "room": "5b05222b6486e702a80a9c30",
+    "teacher": "5b01a8e2b99f3749247a35a9"
+  },
+  {
+    "course": "5b01ebb3c63f5c5a1ff6065f",
+    "subject": "5af1f2c2b92d56788ad85b5c",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0771",
+    "room": "5b0526226486e702a80a9c46",
+    "teacher": "5b01a673b99f3749247a359f"
+  },
+  {
+    "course": "5b01ebb3c63f5c5a1ff6065f",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0773",
+    "room": "5b05222b6486e702a80a9c2b",
+    "teacher": "5b01a7b3b99f3749247a35a5"
+  },
+  {
+    "course": "5b01ebb3c63f5c5a1ff6065f",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0772",
+    "room": "5b05222b6486e702a80a9c2a",
+    "teacher": "5b01a673b99f3749247a359f"
+  },
+  {
+    "course": "5b01ebb3c63f5c5a1ff6065f",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0774",
+    "room": "5b0526566486e702a80a9c4b",
+    "teacher": "5b01ab2ab99f3749247a35ad"
+  },
+  {
+    "course": "5b01ebb3c63f5c5a1ff6065f",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0775",
+    "room": "5b05222b6486e702a80a9c37",
+    "teacher": "5b01ab2ab99f3749247a35ad"
+  },
+  {
+    "course": "5b01ebb3c63f5c5a1ff6065f",
+    "subject": "5af1f2c2b92d56788ad85b70",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077b",
+    "room": "5b0526226486e702a80a9c45",
+    "teacher": "5b01a7b3b99f3749247a35a5"
+  },
+  {
+    "course": "5b01ebb3c63f5c5a1ff6065f",
+    "subject": "5af1f2c2b92d56788ad85b70",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0778",
+    "room": "5b0526566486e702a80a9c4b",
+    "teacher": "5b01a8e2b99f3749247a35a9"
+  },
+  {
+    "course": "5b01ebb3c63f5c5a1ff6065f",
+    "subject": "5af1f2c2b92d56788ad85b7a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076d",
+    "room": "5b05222b6486e702a80a9c29",
+    "teacher": "5b01ae26b99f3749247a35bb"
+  },
+  {
+    "course": "5b01ebb3c63f5c5a1ff6065f",
+    "subject": "5af1f2c2b92d56788ad85b7a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077d",
+    "room": "5b0524f66486e702a80a9c3e",
+    "teacher": "5b01a80ab99f3749247a35a6"
+  },
+  {
+    "course": "5b01ebb3c63f5c5a1ff6065f",
+    "subject": "5af201af312ace7f6644c7b0",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077f",
+    "room": "5b0526566486e702a80a9c4c",
+    "teacher": "5b01a80ab99f3749247a35a6"
+  },
+  {
+    "course": "5b01ebb3c63f5c5a1ff6065f",
+    "subject": "5af201af312ace7f6644c7b0",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077e",
+    "room": "5b05222b6486e702a80a9c3a",
+    "teacher": "5b01a80ab99f3749247a35a6"
+  },
+  {
+    "course": {
+      "_id": "5b01ec26c63f5c5a1ff60660",
+      "grade": 7,
+      "letter": "a",
+      "studentSize": 10
+    },
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0772",
+    "room": "5b05252c6486e702a80a9c41",
+    "teacher": "5b01a6e7b99f3749247a35a1"
+  },
+  {
+    "course": "5b01ec26c63f5c5a1ff60660",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077e",
+    "room": "5b05222b6486e702a80a9c36",
+    "teacher": "5b01a844b99f3749247a35a7"
+  },
+  {
+    "course": "5b01ec26c63f5c5a1ff60660",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0785",
+    "room": "5b05263c6486e702a80a9c49",
+    "teacher": "5b01a6e7b99f3749247a35a1"
+  },
+  {
+    "course": "5b01ec26c63f5c5a1ff60660",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0778",
+    "room": "5b05252c6486e702a80a9c41",
+    "teacher": "5b01a6e7b99f3749247a35a1"
+  },
+  {
+    "course": "5b01ec26c63f5c5a1ff60660",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076b",
+    "room": "5b05222b6486e702a80a9c36",
+    "teacher": "5b01ae26b99f3749247a35bb"
+  },
+  {
+    "course": "5b01ec26c63f5c5a1ff60660",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076c",
+    "room": "5b05252c6486e702a80a9c43",
+    "teacher": "5b01a720b99f3749247a35a2"
+  },
+  {
+    "course": "5b01ec26c63f5c5a1ff60660",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0774",
+    "room": "5b0524f66486e702a80a9c40",
+    "teacher": "5b01a720b99f3749247a35a2"
+  },
+  {
+    "course": "5b01ec26c63f5c5a1ff60660",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077b",
+    "room": "5b05222b6486e702a80a9c39",
+    "teacher": "5b01a5a7b99f3749247a359c"
+  },
+  {
+    "course": "5b01ec26c63f5c5a1ff60660",
+    "subject": "5af1f2c2b92d56788ad85b34",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076a",
+    "room": "5b05222b6486e702a80a9c3b",
+    "teacher": "5b01a720b99f3749247a35a2"
+  },
+  {
+    "course": "5b01ec26c63f5c5a1ff60660",
+    "subject": "5af1f2c2b92d56788ad85b34",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0777",
+    "room": "5b05222b6486e702a80a9c3c",
+    "teacher": "5b01ae52b99f3749247a35bc"
+  },
+  {
+    "course": "5b01ec26c63f5c5a1ff60660",
+    "subject": "5af1f2c2b92d56788ad85b3e",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077c",
+    "room": "5b05222b6486e702a80a9c33",
+    "teacher": "5b01a8a6b99f3749247a35a8"
+  },
+  {
+    "course": "5b01ec26c63f5c5a1ff60660",
+    "subject": "5af1f2c2b92d56788ad85b3e",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0769",
+    "room": "5b0526566486e702a80a9c4a",
+    "teacher": "5b01a8a6b99f3749247a35a8"
+  },
+  {
+    "course": "5b01ec26c63f5c5a1ff60660",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076e",
+    "room": "5b05222b6486e702a80a9c35",
+    "teacher": "5b01a641b99f3749247a359e"
+  },
+  {
+    "course": "5b01ec26c63f5c5a1ff60660",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077f",
+    "room": "5b0524f66486e702a80a9c3f",
+    "teacher": "5b01a641b99f3749247a359e"
+  },
+  {
+    "course": "5b01ec26c63f5c5a1ff60660",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0768",
+    "room": "5b05252c6486e702a80a9c42",
+    "teacher": "5b01a641b99f3749247a359e"
+  },
+  {
+    "course": "5b01ec26c63f5c5a1ff60660",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0773",
+    "room": "5b05222b6486e702a80a9c3a",
+    "teacher": "5b01a641b99f3749247a359e"
+  },
+  {
+    "course": "5b01ec26c63f5c5a1ff60660",
+    "subject": "5af1f2c2b92d56788ad85b52",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0780",
+    "room": "5b05252c6486e702a80a9c41",
+    "teacher": "5b01a8a6b99f3749247a35a8"
+  },
+  {
+    "course": "5b01ec26c63f5c5a1ff60660",
+    "subject": "5af1f2c2b92d56788ad85b52",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076d",
+    "room": "5b05222b6486e702a80a9c31",
+    "teacher": "5b01a8a6b99f3749247a35a8"
+  },
+  {
+    "course": "5b01ec26c63f5c5a1ff60660",
+    "subject": "5af1f2c2b92d56788ad85b5c",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0781",
+    "room": "5b0524f66486e702a80a9c3e",
+    "teacher": "5b01a786b99f3749247a35a4"
+  },
+  {
+    "course": "5b01ec26c63f5c5a1ff60660",
+    "subject": "5af1f2c2b92d56788ad85b5c",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0779",
+    "room": "5b05222b6486e702a80a9c36",
+    "teacher": "5b01aaf6b99f3749247a35ac"
+  },
+  {
+    "course": "5b01ec26c63f5c5a1ff60660",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077d",
+    "room": "5b05252c6486e702a80a9c43",
+    "teacher": "5b01a673b99f3749247a359f"
+  },
+  {
+    "course": "5b01ec26c63f5c5a1ff60660",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0784",
+    "room": "5b0526226486e702a80a9c45",
+    "teacher": "5b01a673b99f3749247a359f"
+  },
+  {
+    "course": "5b01ec26c63f5c5a1ff60660",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0776",
+    "room": "5b05252c6486e702a80a9c43",
+    "teacher": "5b01a7b3b99f3749247a35a5"
+  },
+  {
+    "course": "5b01ec26c63f5c5a1ff60660",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0783",
+    "room": "5b05252c6486e702a80a9c42",
+    "teacher": "5b01ab2ab99f3749247a35ad"
+  },
+  {
+    "course": "5b01ec26c63f5c5a1ff60660",
+    "subject": "5af1f2c2b92d56788ad85b70",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0771",
+    "room": "5b05222b6486e702a80a9c37",
+    "teacher": "5b01a6aab99f3749247a35a0"
+  },
+  {
+    "course": "5b01ec26c63f5c5a1ff60660",
+    "subject": "5af1f2c2b92d56788ad85b70",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0770",
+    "room": "5b0526566486e702a80a9c4c",
+    "teacher": "5b01ae52b99f3749247a35bc"
+  },
+  {
+    "course": "5b01ec26c63f5c5a1ff60660",
+    "subject": "5af1f2c2b92d56788ad85b7a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076f",
+    "room": "5b0526226486e702a80a9c45",
+    "teacher": "5b01a6aab99f3749247a35a0"
+  },
+  {
+    "course": "5b01ec26c63f5c5a1ff60660",
+    "subject": "5af1f2c2b92d56788ad85b7a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077a",
+    "room": "5b0526226486e702a80a9c44",
+    "teacher": "5b01a80ab99f3749247a35a6"
+  },
+  {
+    "course": "5b01ec26c63f5c5a1ff60660",
+    "subject": "5af201af312ace7f6644c7b0",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0782",
+    "room": "5b05222b6486e702a80a9c39",
+    "teacher": "5b01a80ab99f3749247a35a6"
+  },
+  {
+    "course": "5b01ec26c63f5c5a1ff60660",
+    "subject": "5af201af312ace7f6644c7b0",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0775",
+    "room": "5b05252c6486e702a80a9c42",
+    "teacher": "5b01ab61b99f3749247a35ae"
+  },
+  {
+    "course": {
+      "_id": "5b01ec9cc63f5c5a1ff60661",
+      "grade": 7,
+      "letter": "b",
+      "studentSize": 9
+    },
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0780",
+    "room": "5b05263c6486e702a80a9c47",
+    "teacher": "5b01a844b99f3749247a35a7"
+  },
+  {
+    "course": "5b01ec9cc63f5c5a1ff60661",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0778",
+    "room": "5b05222b6486e702a80a9c3a",
+    "teacher": "5b01a844b99f3749247a35a7"
+  },
+  {
+    "course": "5b01ec9cc63f5c5a1ff60661",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077a",
+    "room": "5b0526566486e702a80a9c4b",
+    "teacher": "5b01a5a7b99f3749247a359c"
+  },
+  {
+    "course": "5b01ec9cc63f5c5a1ff60661",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0777",
+    "room": "5b05222b6486e702a80a9c29",
+    "teacher": "5b01a844b99f3749247a35a7"
+  },
+  {
+    "course": "5b01ec9cc63f5c5a1ff60661",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076a",
+    "room": "5b05263c6486e702a80a9c48",
+    "teacher": "5b01aac1b99f3749247a35ab"
+  },
+  {
+    "course": "5b01ec9cc63f5c5a1ff60661",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076f",
+    "room": "5b05222b6486e702a80a9c36",
+    "teacher": "5b01a720b99f3749247a35a2"
+  },
+  {
+    "course": "5b01ec9cc63f5c5a1ff60661",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0782",
+    "room": "5b05222b6486e702a80a9c3b",
+    "teacher": "5b01a720b99f3749247a35a2"
+  },
+  {
+    "course": "5b01ec9cc63f5c5a1ff60661",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077f",
+    "room": "5b05222b6486e702a80a9c37",
+    "teacher": "5b01aac1b99f3749247a35ab"
+  },
+  {
+    "course": "5b01ec9cc63f5c5a1ff60661",
+    "subject": "5af1f2c2b92d56788ad85b34",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076e",
+    "room": "5b05222b6486e702a80a9c2f",
+    "teacher": "5b01a5feb99f3749247a359d"
+  },
+  {
+    "course": "5b01ec9cc63f5c5a1ff60661",
+    "subject": "5af1f2c2b92d56788ad85b34",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076d",
+    "room": "5b05222b6486e702a80a9c2d",
+    "teacher": "5b01ae52b99f3749247a35bc"
+  },
+  {
+    "course": "5b01ec9cc63f5c5a1ff60661",
+    "subject": "5af1f2c2b92d56788ad85b3e",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0783",
+    "room": "5b05263c6486e702a80a9c48",
+    "teacher": "5b01a8a6b99f3749247a35a8"
+  },
+  {
+    "course": "5b01ec9cc63f5c5a1ff60661",
+    "subject": "5af1f2c2b92d56788ad85b3e",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0774",
+    "room": "5b05222b6486e702a80a9c35",
+    "teacher": "5b01a74eb99f3749247a35a3"
+  },
+  {
+    "course": "5b01ec9cc63f5c5a1ff60661",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0773",
+    "room": "5b05263c6486e702a80a9c48",
+    "teacher": "5b01a74eb99f3749247a35a3"
+  },
+  {
+    "course": "5b01ec9cc63f5c5a1ff60661",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0775",
+    "room": "5b05222b6486e702a80a9c33",
+    "teacher": "5b01aaf6b99f3749247a35ac"
+  },
+  {
+    "course": "5b01ec9cc63f5c5a1ff60661",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0772",
+    "room": "5b05222b6486e702a80a9c36",
+    "teacher": "5b01a641b99f3749247a359e"
+  },
+  {
+    "course": "5b01ec9cc63f5c5a1ff60661",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0784",
+    "room": "5b05263c6486e702a80a9c48",
+    "teacher": "5b01a641b99f3749247a359e"
+  },
+  {
+    "course": "5b01ec9cc63f5c5a1ff60661",
+    "subject": "5af1f2c2b92d56788ad85b52",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0785",
+    "room": "5b05222b6486e702a80a9c3a",
+    "teacher": "5b01a8a6b99f3749247a35a8"
+  },
+  {
+    "course": "5b01ec9cc63f5c5a1ff60661",
+    "subject": "5af1f2c2b92d56788ad85b52",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0776",
+    "room": "5b05222b6486e702a80a9c39",
+    "teacher": "5b01a786b99f3749247a35a4"
+  },
+  {
+    "course": "5b01ec9cc63f5c5a1ff60661",
+    "subject": "5af1f2c2b92d56788ad85b5c",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0771",
+    "room": "5b05222b6486e702a80a9c31",
+    "teacher": "5b01a8e2b99f3749247a35a9"
+  },
+  {
+    "course": "5b01ec9cc63f5c5a1ff60661",
+    "subject": "5af1f2c2b92d56788ad85b5c",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076c",
+    "room": "5b0524f66486e702a80a9c3f",
+    "teacher": "5b01a786b99f3749247a35a4"
+  },
+  {
+    "course": "5b01ec9cc63f5c5a1ff60661",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0781",
+    "room": "5b05222b6486e702a80a9c2c",
+    "teacher": "5b01ab2ab99f3749247a35ad"
+  },
+  {
+    "course": "5b01ec9cc63f5c5a1ff60661",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0769",
+    "room": "5b05222b6486e702a80a9c3a",
+    "teacher": "5b01a7b3b99f3749247a35a5"
+  },
+  {
+    "course": "5b01ec9cc63f5c5a1ff60661",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0770",
+    "room": "5b0526226486e702a80a9c46",
+    "teacher": "5b01a7b3b99f3749247a35a5"
+  },
+  {
+    "course": "5b01ec9cc63f5c5a1ff60661",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077b",
+    "room": "5b0526566486e702a80a9c4a",
+    "teacher": "5b01ab2ab99f3749247a35ad"
+  },
+  {
+    "course": "5b01ec9cc63f5c5a1ff60661",
+    "subject": "5af1f2c2b92d56788ad85b70",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076b",
+    "room": "5b0526566486e702a80a9c4c",
+    "teacher": "5b01ae52b99f3749247a35bc"
+  },
+  {
+    "course": "5b01ec9cc63f5c5a1ff60661",
+    "subject": "5af1f2c2b92d56788ad85b70",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0779",
+    "room": "5b05252c6486e702a80a9c42",
+    "teacher": "5b01ae52b99f3749247a35bc"
+  },
+  {
+    "course": "5b01ec9cc63f5c5a1ff60661",
+    "subject": "5af1f2c2b92d56788ad85b7a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077c",
+    "room": "5b05252c6486e702a80a9c43",
+    "teacher": "5b01a80ab99f3749247a35a6"
+  },
+  {
+    "course": "5b01ec9cc63f5c5a1ff60661",
+    "subject": "5af1f2c2b92d56788ad85b7a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077d",
+    "room": "5b05222b6486e702a80a9c37",
+    "teacher": "5b01a6aab99f3749247a35a0"
+  },
+  {
+    "course": "5b01ec9cc63f5c5a1ff60661",
+    "subject": "5af201af312ace7f6644c7b0",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077e",
+    "room": "5b0526226486e702a80a9c44",
+    "teacher": "5b01a6e7b99f3749247a35a1"
+  },
+  {
+    "course": "5b01ec9cc63f5c5a1ff60661",
+    "subject": "5af201af312ace7f6644c7b0",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0768",
+    "room": "5b05222b6486e702a80a9c29",
+    "teacher": "5b01a80ab99f3749247a35a6"
+  },
+  {
+    "course": {
+      "_id": "5b01ecfdc63f5c5a1ff60662",
+      "grade": 8,
+      "letter": "a",
+      "studentSize": 10
+    },
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0782",
+    "room": "5b05222b6486e702a80a9c36",
+    "teacher": "5b01a6e7b99f3749247a35a1"
+  },
+  {
+    "course": "5b01ecfdc63f5c5a1ff60662",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0769",
+    "room": "5b05263c6486e702a80a9c49",
+    "teacher": "5b01a844b99f3749247a35a7"
+  },
+  {
+    "course": "5b01ecfdc63f5c5a1ff60662",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0783",
+    "room": "5b05222b6486e702a80a9c31",
+    "teacher": "5b01a844b99f3749247a35a7"
+  },
+  {
+    "course": "5b01ecfdc63f5c5a1ff60662",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076f",
+    "room": "5b05222b6486e702a80a9c2f",
+    "teacher": "5b01a961b99f3749247a35aa"
+  },
+  {
+    "course": "5b01ecfdc63f5c5a1ff60662",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0779",
+    "room": "5b05222b6486e702a80a9c32",
+    "teacher": "5b01aac1b99f3749247a35ab"
+  },
+  {
+    "course": "5b01ecfdc63f5c5a1ff60662",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0770",
+    "room": "5b05222b6486e702a80a9c3d",
+    "teacher": "5b01a720b99f3749247a35a2"
+  },
+  {
+    "course": "5b01ecfdc63f5c5a1ff60662",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0776",
+    "room": "5b05222b6486e702a80a9c30",
+    "teacher": "5b01a720b99f3749247a35a2"
+  },
+  {
+    "course": "5b01ecfdc63f5c5a1ff60662",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077a",
+    "room": "5b05222b6486e702a80a9c2d",
+    "teacher": "5b01aac1b99f3749247a35ab"
+  },
+  {
+    "course": "5b01ecfdc63f5c5a1ff60662",
+    "subject": "5af1f2c2b92d56788ad85b34",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077c",
+    "room": "5b0526226486e702a80a9c46",
+    "teacher": "5b01a720b99f3749247a35a2"
+  },
+  {
+    "course": "5b01ecfdc63f5c5a1ff60662",
+    "subject": "5af1f2c2b92d56788ad85b34",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077d",
+    "room": "5b05222b6486e702a80a9c3c",
+    "teacher": "5b01a5feb99f3749247a359d"
+  },
+  {
+    "course": "5b01ecfdc63f5c5a1ff60662",
+    "subject": "5af1f2c2b92d56788ad85b3e",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076d",
+    "room": "5b05222b6486e702a80a9c34",
+    "teacher": "5b01a5feb99f3749247a359d"
+  },
+  {
+    "course": "5b01ecfdc63f5c5a1ff60662",
+    "subject": "5af1f2c2b92d56788ad85b3e",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0773",
+    "room": "5b05222b6486e702a80a9c3c",
+    "teacher": "5b01aac1b99f3749247a35ab"
+  },
+  {
+    "course": "5b01ecfdc63f5c5a1ff60662",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0784",
+    "room": "5b05222b6486e702a80a9c31",
+    "teacher": "5b01a74eb99f3749247a35a3"
+  },
+  {
+    "course": "5b01ecfdc63f5c5a1ff60662",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0775",
+    "room": "5b05222b6486e702a80a9c36",
+    "teacher": "5b01a641b99f3749247a359e"
+  },
+  {
+    "course": "5b01ecfdc63f5c5a1ff60662",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0780",
+    "room": "5b05222b6486e702a80a9c29",
+    "teacher": "5b01a74eb99f3749247a35a3"
+  },
+  {
+    "course": "5b01ecfdc63f5c5a1ff60662",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0785",
+    "room": "5b05252c6486e702a80a9c42",
+    "teacher": "5b01a641b99f3749247a359e"
+  },
+  {
+    "course": "5b01ecfdc63f5c5a1ff60662",
+    "subject": "5af1f2c2b92d56788ad85b52",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077d",
+    "room": "5b05263c6486e702a80a9c48",
+    "teacher": "5b01a786b99f3749247a35a4"
+  },
+  {
+    "course": "5b01ecfdc63f5c5a1ff60662",
+    "subject": "5af1f2c2b92d56788ad85b52",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0771",
+    "room": "5b05222b6486e702a80a9c2d",
+    "teacher": "5b01a786b99f3749247a35a4"
+  },
+  {
+    "course": "5b01ecfdc63f5c5a1ff60662",
+    "subject": "5af1f2c2b92d56788ad85b5c",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0777",
+    "room": "5b05252c6486e702a80a9c41",
+    "teacher": "5b01a8e2b99f3749247a35a9"
+  },
+  {
+    "course": "5b01ecfdc63f5c5a1ff60662",
+    "subject": "5af1f2c2b92d56788ad85b5c",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0772",
+    "room": "5b05252c6486e702a80a9c43",
+    "teacher": "5b01a786b99f3749247a35a4"
+  },
+  {
+    "course": "5b01ecfdc63f5c5a1ff60662",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077e",
+    "room": "5b05222b6486e702a80a9c34",
+    "teacher": "5b01a673b99f3749247a359f"
+  },
+  {
+    "course": "5b01ecfdc63f5c5a1ff60662",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077f",
+    "room": "5b05252c6486e702a80a9c43",
+    "teacher": "5b01ab2ab99f3749247a35ad"
+  },
+  {
+    "course": "5b01ecfdc63f5c5a1ff60662",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0781",
+    "room": "5b05222b6486e702a80a9c35",
+    "teacher": "5b01a7b3b99f3749247a35a5"
+  },
+  {
+    "course": "5b01ecfdc63f5c5a1ff60662",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0778",
+    "room": "5b0526566486e702a80a9c4a",
+    "teacher": "5b01ab2ab99f3749247a35ad"
+  },
+  {
+    "course": "5b01ecfdc63f5c5a1ff60662",
+    "subject": "5af1f2c2b92d56788ad85b70",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076b",
+    "room": "5b05263c6486e702a80a9c47",
+    "teacher": "5b01a8e2b99f3749247a35a9"
+  },
+  {
+    "course": "5b01ecfdc63f5c5a1ff60662",
+    "subject": "5af1f2c2b92d56788ad85b70",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0768",
+    "room": "5b05222b6486e702a80a9c2b",
+    "teacher": "5b01a6aab99f3749247a35a0"
+  },
+  {
+    "course": "5b01ecfdc63f5c5a1ff60662",
+    "subject": "5af1f2c2b92d56788ad85b7a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076c",
+    "room": "5b05222b6486e702a80a9c29",
+    "teacher": "5b01a80ab99f3749247a35a6"
+  },
+  {
+    "course": "5b01ecfdc63f5c5a1ff60662",
+    "subject": "5af1f2c2b92d56788ad85b7a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077b",
+    "room": "5b05222b6486e702a80a9c30",
+    "teacher": "5b01ae26b99f3749247a35bb"
+  },
+  {
+    "course": "5b01ecfdc63f5c5a1ff60662",
+    "subject": "5af201af312ace7f6644c7b0",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076a",
+    "room": "5b05222b6486e702a80a9c2f",
+    "teacher": "5b01a6e7b99f3749247a35a1"
+  },
+  {
+    "course": "5b01ecfdc63f5c5a1ff60662",
+    "subject": "5af201af312ace7f6644c7b0",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076e",
+    "room": "5b0526566486e702a80a9c4c",
+    "teacher": "5b01ab61b99f3749247a35ae"
+  },
+  {
+    "course": {
+      "_id": "5b01edadc63f5c5a1ff60663",
+      "grade": 8,
+      "letter": "b",
+      "studentSize": 11
+    },
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0773",
+    "room": "5b0526566486e702a80a9c4b",
+    "teacher": "5b01a961b99f3749247a35aa"
+  },
+  {
+    "course": "5b01edadc63f5c5a1ff60663",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076d",
+    "room": "5b05222b6486e702a80a9c2c",
+    "teacher": "5b01a6e7b99f3749247a35a1"
+  },
+  {
+    "course": "5b01edadc63f5c5a1ff60663",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076c",
+    "room": "5b0524f66486e702a80a9c3e",
+    "teacher": "5b01a6e7b99f3749247a35a1"
+  },
+  {
+    "course": "5b01edadc63f5c5a1ff60663",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0768",
+    "room": "5b0524f66486e702a80a9c40",
+    "teacher": "5b01a844b99f3749247a35a7"
+  },
+  {
+    "course": "5b01edadc63f5c5a1ff60663",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0769",
+    "room": "5b05263c6486e702a80a9c47",
+    "teacher": "5b01a5a7b99f3749247a359c"
+  },
+  {
+    "course": "5b01edadc63f5c5a1ff60663",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076b",
+    "room": "5b0526566486e702a80a9c4b",
+    "teacher": "5b01aac1b99f3749247a35ab"
+  },
+  {
+    "course": "5b01edadc63f5c5a1ff60663",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076a",
+    "room": "5b05222b6486e702a80a9c2b",
+    "teacher": "5b01ae26b99f3749247a35bb"
+  },
+  {
+    "course": "5b01edadc63f5c5a1ff60663",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0772",
+    "room": "5b0526226486e702a80a9c45",
+    "teacher": "5b01ae26b99f3749247a35bb"
+  },
+  {
+    "course": "5b01edadc63f5c5a1ff60663",
+    "subject": "5af1f2c2b92d56788ad85b34",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0785",
+    "room": "5b0526226486e702a80a9c46",
+    "teacher": "5b01a844b99f3749247a35a7"
+  },
+  {
+    "course": "5b01edadc63f5c5a1ff60663",
+    "subject": "5af1f2c2b92d56788ad85b34",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0784",
+    "room": "5b05222b6486e702a80a9c3b",
+    "teacher": "5b01a844b99f3749247a35a7"
+  },
+  {
+    "course": "5b01edadc63f5c5a1ff60663",
+    "subject": "5af1f2c2b92d56788ad85b3e",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0774",
+    "room": "5b05222b6486e702a80a9c37",
+    "teacher": "5b01aac1b99f3749247a35ab"
+  },
+  {
+    "course": "5b01edadc63f5c5a1ff60663",
+    "subject": "5af1f2c2b92d56788ad85b3e",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0775",
+    "room": "5b05222b6486e702a80a9c34",
+    "teacher": "5b01a5feb99f3749247a359d"
+  },
+  {
+    "course": "5b01edadc63f5c5a1ff60663",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0779",
+    "room": "5b05222b6486e702a80a9c3d",
+    "teacher": "5b01a74eb99f3749247a35a3"
+  },
+  {
+    "course": "5b01edadc63f5c5a1ff60663",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0778",
+    "room": "5b05222b6486e702a80a9c2e",
+    "teacher": "5b01a641b99f3749247a359e"
+  },
+  {
+    "course": "5b01edadc63f5c5a1ff60663",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0777",
+    "room": "5b05222b6486e702a80a9c3a",
+    "teacher": "5b01a641b99f3749247a359e"
+  },
+  {
+    "course": "5b01edadc63f5c5a1ff60663",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0776",
+    "room": "5b05222b6486e702a80a9c34",
+    "teacher": "5b01a641b99f3749247a359e"
+  },
+  {
+    "course": "5b01edadc63f5c5a1ff60663",
+    "subject": "5af1f2c2b92d56788ad85b52",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0782",
+    "room": "5b05222b6486e702a80a9c3d",
+    "teacher": "5b01a786b99f3749247a35a4"
+  },
+  {
+    "course": "5b01edadc63f5c5a1ff60663",
+    "subject": "5af1f2c2b92d56788ad85b52",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0783",
+    "room": "5b0524f66486e702a80a9c3f",
+    "teacher": "5b01a641b99f3749247a359e"
+  },
+  {
+    "course": "5b01edadc63f5c5a1ff60663",
+    "subject": "5af1f2c2b92d56788ad85b5c",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076e",
+    "room": "5b05222b6486e702a80a9c3b",
+    "teacher": "5b01a786b99f3749247a35a4"
+  },
+  {
+    "course": "5b01edadc63f5c5a1ff60663",
+    "subject": "5af1f2c2b92d56788ad85b5c",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076f",
+    "room": "5b05222b6486e702a80a9c32",
+    "teacher": "5b01a8e2b99f3749247a35a9"
+  },
+  {
+    "course": "5b01edadc63f5c5a1ff60663",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0771",
+    "room": "5b05222b6486e702a80a9c3c",
+    "teacher": "5b01ab2ab99f3749247a35ad"
+  },
+  {
+    "course": "5b01edadc63f5c5a1ff60663",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0770",
+    "room": "5b05222b6486e702a80a9c35",
+    "teacher": "5b01ab2ab99f3749247a35ad"
+  },
+  {
+    "course": "5b01edadc63f5c5a1ff60663",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0780",
+    "room": "5b05222b6486e702a80a9c34",
+    "teacher": "5b01ab2ab99f3749247a35ad"
+  },
+  {
+    "course": "5b01edadc63f5c5a1ff60663",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0781",
+    "room": "5b05222b6486e702a80a9c3b",
+    "teacher": "5b01a673b99f3749247a359f"
+  },
+  {
+    "course": "5b01edadc63f5c5a1ff60663",
+    "subject": "5af1f2c2b92d56788ad85b70",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077f",
+    "room": "5b0524f66486e702a80a9c3e",
+    "teacher": "5b01ae52b99f3749247a35bc"
+  },
+  {
+    "course": "5b01edadc63f5c5a1ff60663",
+    "subject": "5af1f2c2b92d56788ad85b70",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077e",
+    "room": "5b05263c6486e702a80a9c49",
+    "teacher": "5b01ae52b99f3749247a35bc"
+  },
+  {
+    "course": "5b01edadc63f5c5a1ff60663",
+    "subject": "5af1f2c2b92d56788ad85b7a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077d",
+    "room": "5b0526566486e702a80a9c4a",
+    "teacher": "5b01ae26b99f3749247a35bb"
+  },
+  {
+    "course": "5b01edadc63f5c5a1ff60663",
+    "subject": "5af1f2c2b92d56788ad85b7a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077c",
+    "room": "5b0526566486e702a80a9c4c",
+    "teacher": "5b01ae26b99f3749247a35bb"
+  },
+  {
+    "course": "5b01edadc63f5c5a1ff60663",
+    "subject": "5af201af312ace7f6644c7b0",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077b",
+    "room": "5b05222b6486e702a80a9c32",
+    "teacher": "5b01a80ab99f3749247a35a6"
+  },
+  {
+    "course": "5b01edadc63f5c5a1ff60663",
+    "subject": "5af201af312ace7f6644c7b0",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077a",
+    "room": "5b05222b6486e702a80a9c37",
+    "teacher": "5b01ab61b99f3749247a35ae"
+  },
+  {
+    "course": {
+      "_id": "5b01ee4cc63f5c5a1ff60664",
+      "grade": 9,
+      "letter": "a",
+      "studentSize": 10
+    },
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076d",
+    "room": "5b05263c6486e702a80a9c47",
+    "teacher": "5b01a5a7b99f3749247a359c"
+  },
+  {
+    "course": "5b01ee4cc63f5c5a1ff60664",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0774",
+    "room": "5b05222b6486e702a80a9c36",
+    "teacher": "5b01a844b99f3749247a35a7"
+  },
+  {
+    "course": "5b01ee4cc63f5c5a1ff60664",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0777",
+    "room": "5b05222b6486e702a80a9c2f",
+    "teacher": "5b01a5a7b99f3749247a359c"
+  },
+  {
+    "course": "5b01ee4cc63f5c5a1ff60664",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0776",
+    "room": "5b05252c6486e702a80a9c41",
+    "teacher": "5b01a5a7b99f3749247a359c"
+  },
+  {
+    "course": "5b01ee4cc63f5c5a1ff60664",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076e",
+    "room": "5b05222b6486e702a80a9c31",
+    "teacher": "5b01aac1b99f3749247a35ab"
+  },
+  {
+    "course": "5b01ee4cc63f5c5a1ff60664",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077b",
+    "room": "5b0526566486e702a80a9c4c",
+    "teacher": "5b01aac1b99f3749247a35ab"
+  },
+  {
+    "course": "5b01ee4cc63f5c5a1ff60664",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0770",
+    "room": "5b05222b6486e702a80a9c3a",
+    "teacher": "5b01a5a7b99f3749247a359c"
+  },
+  {
+    "course": "5b01ee4cc63f5c5a1ff60664",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0785",
+    "room": "5b05222b6486e702a80a9c39",
+    "teacher": "5b01ae26b99f3749247a35bb"
+  },
+  {
+    "course": "5b01ee4cc63f5c5a1ff60664",
+    "subject": "5af1f2c2b92d56788ad85b34",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076c",
+    "room": "5b05222b6486e702a80a9c31",
+    "teacher": "5b01ae52b99f3749247a35bc"
+  },
+  {
+    "course": "5b01ee4cc63f5c5a1ff60664",
+    "subject": "5af1f2c2b92d56788ad85b34",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0773",
+    "room": "5b05252c6486e702a80a9c43",
+    "teacher": "5b01a720b99f3749247a35a2"
+  },
+  {
+    "course": "5b01ee4cc63f5c5a1ff60664",
+    "subject": "5af1f2c2b92d56788ad85b3e",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076b",
+    "room": "5b0524f66486e702a80a9c3f",
+    "teacher": "5b01a8a6b99f3749247a35a8"
+  },
+  {
+    "course": "5b01ee4cc63f5c5a1ff60664",
+    "subject": "5af1f2c2b92d56788ad85b3e",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0784",
+    "room": "5b05222b6486e702a80a9c38",
+    "teacher": "5b01aac1b99f3749247a35ab"
+  },
+  {
+    "course": "5b01ee4cc63f5c5a1ff60664",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0772",
+    "room": "5b05222b6486e702a80a9c32",
+    "teacher": "5b01a74eb99f3749247a35a3"
+  },
+  {
+    "course": "5b01ee4cc63f5c5a1ff60664",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076a",
+    "room": "5b0526566486e702a80a9c4a",
+    "teacher": "5b01aaf6b99f3749247a35ac"
+  },
+  {
+    "course": "5b01ee4cc63f5c5a1ff60664",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0781",
+    "room": "5b05263c6486e702a80a9c48",
+    "teacher": "5b01a74eb99f3749247a35a3"
+  },
+  {
+    "course": "5b01ee4cc63f5c5a1ff60664",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077a",
+    "room": "5b05252c6486e702a80a9c43",
+    "teacher": "5b01a641b99f3749247a359e"
+  },
+  {
+    "course": "5b01ee4cc63f5c5a1ff60664",
+    "subject": "5af1f2c2b92d56788ad85b52",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0768",
+    "room": "5b05263c6486e702a80a9c49",
+    "teacher": "5b01a8a6b99f3749247a35a8"
+  },
+  {
+    "course": "5b01ee4cc63f5c5a1ff60664",
+    "subject": "5af1f2c2b92d56788ad85b52",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0775",
+    "room": "5b05222b6486e702a80a9c3b",
+    "teacher": "5b01a8a6b99f3749247a35a8"
+  },
+  {
+    "course": "5b01ee4cc63f5c5a1ff60664",
+    "subject": "5af1f2c2b92d56788ad85b5c",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077c",
+    "room": "5b05222b6486e702a80a9c3c",
+    "teacher": "5b01a8e2b99f3749247a35a9"
+  },
+  {
+    "course": "5b01ee4cc63f5c5a1ff60664",
+    "subject": "5af1f2c2b92d56788ad85b5c",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0783",
+    "room": "5b05252c6486e702a80a9c41",
+    "teacher": "5b01a8e2b99f3749247a35a9"
+  },
+  {
+    "course": "5b01ee4cc63f5c5a1ff60664",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076a",
+    "room": "5b05222b6486e702a80a9c3a",
+    "teacher": "5b01ab2ab99f3749247a35ad"
+  },
+  {
+    "course": "5b01ee4cc63f5c5a1ff60664",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0780",
+    "room": "5b05222b6486e702a80a9c2c",
+    "teacher": "5b01a673b99f3749247a359f"
+  },
+  {
+    "course": "5b01ee4cc63f5c5a1ff60664",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0771",
+    "room": "5b05222b6486e702a80a9c34",
+    "teacher": "5b01a7b3b99f3749247a35a5"
+  },
+  {
+    "course": "5b01ee4cc63f5c5a1ff60664",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0782",
+    "room": "5b05263c6486e702a80a9c47",
+    "teacher": "5b01ab2ab99f3749247a35ad"
+  },
+  {
+    "course": "5b01ee4cc63f5c5a1ff60664",
+    "subject": "5af1f2c2b92d56788ad85b70",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076f",
+    "room": "5b05252c6486e702a80a9c43",
+    "teacher": "5b01ae52b99f3749247a35bc"
+  },
+  {
+    "course": "5b01ee4cc63f5c5a1ff60664",
+    "subject": "5af1f2c2b92d56788ad85b70",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077e",
+    "room": "5b05222b6486e702a80a9c30",
+    "teacher": "5b01a8e2b99f3749247a35a9"
+  },
+  {
+    "course": "5b01ee4cc63f5c5a1ff60664",
+    "subject": "5af1f2c2b92d56788ad85b7a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0769",
+    "room": "5b05222b6486e702a80a9c3c",
+    "teacher": "5b01ab2ab99f3749247a35ad"
+  },
+  {
+    "course": "5b01ee4cc63f5c5a1ff60664",
+    "subject": "5af1f2c2b92d56788ad85b7a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0778",
+    "room": "5b05252c6486e702a80a9c43",
+    "teacher": "5b01a80ab99f3749247a35a6"
+  },
+  {
+    "course": "5b01ee4cc63f5c5a1ff60664",
+    "subject": "5af201af312ace7f6644c7b0",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077d",
+    "room": "5b05222b6486e702a80a9c31",
+    "teacher": "5b01ab61b99f3749247a35ae"
+  },
+  {
+    "course": "5b01ee4cc63f5c5a1ff60664",
+    "subject": "5af201af312ace7f6644c7b0",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0779",
+    "room": "5b05222b6486e702a80a9c3c",
+    "teacher": "5b01a6e7b99f3749247a35a1"
+  },
+  {
+    "course": {
+      "_id": "5b01eeacc63f5c5a1ff60665",
+      "grade": 9,
+      "letter": "b",
+      "studentSize": 11
+    },
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077a",
+    "room": "5b05222b6486e702a80a9c2a",
+    "teacher": "5b01a6e7b99f3749247a35a1"
+  },
+  {
+    "course": "5b01eeacc63f5c5a1ff60665",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077b",
+    "room": "5b05222b6486e702a80a9c35",
+    "teacher": "5b01a6e7b99f3749247a35a1"
+  },
+  {
+    "course": "5b01eeacc63f5c5a1ff60665",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077c",
+    "room": "5b05222b6486e702a80a9c3b",
+    "teacher": "5b01a961b99f3749247a35aa"
+  },
+  {
+    "course": "5b01eeacc63f5c5a1ff60665",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0773",
+    "room": "5b0526226486e702a80a9c45",
+    "teacher": "5b01a5a7b99f3749247a359c"
+  },
+  {
+    "course": "5b01eeacc63f5c5a1ff60665",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0780",
+    "room": "5b0526566486e702a80a9c4b",
+    "teacher": "5b01a720b99f3749247a35a2"
+  },
+  {
+    "course": "5b01eeacc63f5c5a1ff60665",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0781",
+    "room": "5b05222b6486e702a80a9c29",
+    "teacher": "5b01aac1b99f3749247a35ab"
+  },
+  {
+    "course": "5b01eeacc63f5c5a1ff60665",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076d",
+    "room": "5b05222b6486e702a80a9c2a",
+    "teacher": "5b01aac1b99f3749247a35ab"
+  },
+  {
+    "course": "5b01eeacc63f5c5a1ff60665",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0785",
+    "room": "5b0526566486e702a80a9c4b",
+    "teacher": "5b01a720b99f3749247a35a2"
+  },
+  {
+    "course": "5b01eeacc63f5c5a1ff60665",
+    "subject": "5af1f2c2b92d56788ad85b34",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0782",
+    "room": "5b05252c6486e702a80a9c42",
+    "teacher": "5b01a844b99f3749247a35a7"
+  },
+  {
+    "course": "5b01eeacc63f5c5a1ff60665",
+    "subject": "5af1f2c2b92d56788ad85b34",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0783",
+    "room": "5b05222b6486e702a80a9c30",
+    "teacher": "5b01ae52b99f3749247a35bc"
+  },
+  {
+    "course": "5b01eeacc63f5c5a1ff60665",
+    "subject": "5af1f2c2b92d56788ad85b3e",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0784",
+    "room": "5b05222b6486e702a80a9c3c",
+    "teacher": "5b01a5feb99f3749247a359d"
+  },
+  {
+    "course": "5b01eeacc63f5c5a1ff60665",
+    "subject": "5af1f2c2b92d56788ad85b3e",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077f",
+    "room": "5b05222b6486e702a80a9c29",
+    "teacher": "5b01a8a6b99f3749247a35a8"
+  },
+  {
+    "course": "5b01eeacc63f5c5a1ff60665",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076c",
+    "room": "5b05222b6486e702a80a9c2a",
+    "teacher": "5b01aaf6b99f3749247a35ac"
+  },
+  {
+    "course": "5b01eeacc63f5c5a1ff60665",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076b",
+    "room": "5b05222b6486e702a80a9c35",
+    "teacher": "5b01a641b99f3749247a359e"
+  },
+  {
+    "course": "5b01eeacc63f5c5a1ff60665",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076a",
+    "room": "5b05222b6486e702a80a9c2a",
+    "teacher": "5b01a641b99f3749247a359e"
+  },
+  {
+    "course": "5b01eeacc63f5c5a1ff60665",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077e",
+    "room": "5b05222b6486e702a80a9c2a",
+    "teacher": "5b01aaf6b99f3749247a35ac"
+  },
+  {
+    "course": "5b01eeacc63f5c5a1ff60665",
+    "subject": "5af1f2c2b92d56788ad85b52",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077d",
+    "room": "5b05222b6486e702a80a9c3a",
+    "teacher": "5b01a8a6b99f3749247a35a8"
+  },
+  {
+    "course": "5b01eeacc63f5c5a1ff60665",
+    "subject": "5af1f2c2b92d56788ad85b52",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0774",
+    "room": "5b05263c6486e702a80a9c47",
+    "teacher": "5b01a8a6b99f3749247a35a8"
+  },
+  {
+    "course": "5b01eeacc63f5c5a1ff60665",
+    "subject": "5af1f2c2b92d56788ad85b5c",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0775",
+    "room": "5b0526566486e702a80a9c4a",
+    "teacher": "5b01a673b99f3749247a359f"
+  },
+  {
+    "course": "5b01eeacc63f5c5a1ff60665",
+    "subject": "5af1f2c2b92d56788ad85b5c",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0776",
+    "room": "5b0526566486e702a80a9c4a",
+    "teacher": "5b01a8e2b99f3749247a35a9"
+  },
+  {
+    "course": "5b01eeacc63f5c5a1ff60665",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076f",
+    "room": "5b05222b6486e702a80a9c34",
+    "teacher": "5b01a7b3b99f3749247a35a5"
+  },
+  {
+    "course": "5b01eeacc63f5c5a1ff60665",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0769",
+    "room": "5b05222b6486e702a80a9c2b",
+    "teacher": "5b01a673b99f3749247a359f"
+  },
+  {
+    "course": "5b01eeacc63f5c5a1ff60665",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0778",
+    "room": "5b05222b6486e702a80a9c37",
+    "teacher": "5b01a673b99f3749247a359f"
+  },
+  {
+    "course": "5b01eeacc63f5c5a1ff60665",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0777",
+    "room": "5b05222b6486e702a80a9c31",
+    "teacher": "5b01ab2ab99f3749247a35ad"
+  },
+  {
+    "course": "5b01eeacc63f5c5a1ff60665",
+    "subject": "5af1f2c2b92d56788ad85b70",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0779",
+    "room": "5b05222b6486e702a80a9c31",
+    "teacher": "5b01a6aab99f3749247a35a0"
+  },
+  {
+    "course": "5b01eeacc63f5c5a1ff60665",
+    "subject": "5af1f2c2b92d56788ad85b70",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0768",
+    "room": "5b05222b6486e702a80a9c3a",
+    "teacher": "5b01a8e2b99f3749247a35a9"
+  },
+  {
+    "course": "5b01eeacc63f5c5a1ff60665",
+    "subject": "5af1f2c2b92d56788ad85b7a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0771",
+    "room": "5b05222b6486e702a80a9c2e",
+    "teacher": "5b01a80ab99f3749247a35a6"
+  },
+  {
+    "course": "5b01eeacc63f5c5a1ff60665",
+    "subject": "5af1f2c2b92d56788ad85b7a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0772",
+    "room": "5b05222b6486e702a80a9c3b",
+    "teacher": "5b01a6aab99f3749247a35a0"
+  },
+  {
+    "course": "5b01eeacc63f5c5a1ff60665",
+    "subject": "5af201af312ace7f6644c7b0",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076e",
+    "room": "5b0524f66486e702a80a9c3e",
+    "teacher": "5b01a80ab99f3749247a35a6"
+  },
+  {
+    "course": "5b01eeacc63f5c5a1ff60665",
+    "subject": "5af201af312ace7f6644c7b0",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0770",
+    "room": "5b05222b6486e702a80a9c3b",
+    "teacher": "5b01ab61b99f3749247a35ae"
+  },
+  {
+    "course": {
+      "_id": "5b01ef19c63f5c5a1ff60666",
+      "grade": 10,
+      "letter": "a",
+      "studentSize": 10
+    },
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076a",
+    "room": "5b05252c6486e702a80a9c41",
+    "teacher": "5b01a844b99f3749247a35a7"
+  },
+  {
+    "course": "5b01ef19c63f5c5a1ff60666",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077a",
+    "room": "5b05222b6486e702a80a9c2e",
+    "teacher": "5b01a844b99f3749247a35a7"
+  },
+  {
+    "course": "5b01ef19c63f5c5a1ff60666",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076c",
+    "room": "5b05252c6486e702a80a9c41",
+    "teacher": "5b01a5a7b99f3749247a359c"
+  },
+  {
+    "course": "5b01ef19c63f5c5a1ff60666",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0774",
+    "room": "5b05252c6486e702a80a9c41",
+    "teacher": "5b01a961b99f3749247a35aa"
+  },
+  {
+    "course": "5b01ef19c63f5c5a1ff60666",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0777",
+    "room": "5b05222b6486e702a80a9c3d",
+    "teacher": "5b01ae26b99f3749247a35bb"
+  },
+  {
+    "course": "5b01ef19c63f5c5a1ff60666",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0776",
+    "room": "5b05222b6486e702a80a9c38",
+    "teacher": "5b01aac1b99f3749247a35ab"
+  },
+  {
+    "course": "5b01ef19c63f5c5a1ff60666",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0769",
+    "room": "5b05222b6486e702a80a9c29",
+    "teacher": "5b01aac1b99f3749247a35ab"
+  },
+  {
+    "course": "5b01ef19c63f5c5a1ff60666",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0775",
+    "room": "5b05222b6486e702a80a9c3d",
+    "teacher": "5b01aac1b99f3749247a35ab"
+  },
+  {
+    "course": "5b01ef19c63f5c5a1ff60666",
+    "subject": "5af1f2c2b92d56788ad85b34",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0772",
+    "room": "5b05222b6486e702a80a9c2f",
+    "teacher": "5b01a5feb99f3749247a359d"
+  },
+  {
+    "course": "5b01ef19c63f5c5a1ff60666",
+    "subject": "5af1f2c2b92d56788ad85b34",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077f",
+    "room": "5b05263c6486e702a80a9c47",
+    "teacher": "5b01a5feb99f3749247a359d"
+  },
+  {
+    "course": "5b01ef19c63f5c5a1ff60666",
+    "subject": "5af1f2c2b92d56788ad85b3e",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0771",
+    "room": "5b05222b6486e702a80a9c39",
+    "teacher": "5b01a8a6b99f3749247a35a8"
+  },
+  {
+    "course": "5b01ef19c63f5c5a1ff60666",
+    "subject": "5af1f2c2b92d56788ad85b3e",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0783",
+    "room": "5b0524f66486e702a80a9c40",
+    "teacher": "5b01aac1b99f3749247a35ab"
+  },
+  {
+    "course": "5b01ef19c63f5c5a1ff60666",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0770",
+    "room": "5b05222b6486e702a80a9c2b",
+    "teacher": "5b01aaf6b99f3749247a35ac"
+  },
+  {
+    "course": "5b01ef19c63f5c5a1ff60666",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076f",
+    "room": "5b05222b6486e702a80a9c2d",
+    "teacher": "5b01aaf6b99f3749247a35ac"
+  },
+  {
+    "course": "5b01ef19c63f5c5a1ff60666",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077d",
+    "room": "5b05222b6486e702a80a9c39",
+    "teacher": "5b01aaf6b99f3749247a35ac"
+  },
+  {
+    "course": "5b01ef19c63f5c5a1ff60666",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077c",
+    "room": "5b05222b6486e702a80a9c3a",
+    "teacher": "5b01a74eb99f3749247a35a3"
+  },
+  {
+    "course": "5b01ef19c63f5c5a1ff60666",
+    "subject": "5af1f2c2b92d56788ad85b52",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077e",
+    "room": "5b05222b6486e702a80a9c29",
+    "teacher": "5b01a8a6b99f3749247a35a8"
+  },
+  {
+    "course": "5b01ef19c63f5c5a1ff60666",
+    "subject": "5af1f2c2b92d56788ad85b52",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076d",
+    "room": "5b05252c6486e702a80a9c43",
+    "teacher": "5b01a786b99f3749247a35a4"
+  },
+  {
+    "course": "5b01ef19c63f5c5a1ff60666",
+    "subject": "5af1f2c2b92d56788ad85b5c",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0773",
+    "room": "5b05222b6486e702a80a9c2f",
+    "teacher": "5b01a8e2b99f3749247a35a9"
+  },
+  {
+    "course": "5b01ef19c63f5c5a1ff60666",
+    "subject": "5af1f2c2b92d56788ad85b5c",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077d",
+    "room": "5b05222b6486e702a80a9c38",
+    "teacher": "5b01a8e2b99f3749247a35a9"
+  },
+  {
+    "course": "5b01ef19c63f5c5a1ff60666",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0782",
+    "room": "5b0524f66486e702a80a9c40",
+    "teacher": "5b01a673b99f3749247a359f"
+  },
+  {
+    "course": "5b01ef19c63f5c5a1ff60666",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0784",
+    "room": "5b05222b6486e702a80a9c2a",
+    "teacher": "5b01ab2ab99f3749247a35ad"
+  },
+  {
+    "course": "5b01ef19c63f5c5a1ff60666",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076e",
+    "room": "5b05252c6486e702a80a9c41",
+    "teacher": "5b01a673b99f3749247a359f"
+  },
+  {
+    "course": "5b01ef19c63f5c5a1ff60666",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0785",
+    "room": "5b05252c6486e702a80a9c43",
+    "teacher": "5b01ab2ab99f3749247a35ad"
+  },
+  {
+    "course": "5b01ef19c63f5c5a1ff60666",
+    "subject": "5af1f2c2b92d56788ad85b70",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0778",
+    "room": "5b0526226486e702a80a9c45",
+    "teacher": "5b01ae52b99f3749247a35bc"
+  },
+  {
+    "course": "5b01ef19c63f5c5a1ff60666",
+    "subject": "5af1f2c2b92d56788ad85b70",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0779",
+    "room": "5b05222b6486e702a80a9c39",
+    "teacher": "5b01a8e2b99f3749247a35a9"
+  },
+  {
+    "course": "5b01ef19c63f5c5a1ff60666",
+    "subject": "5af1f2c2b92d56788ad85b7a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076b",
+    "room": "5b05222b6486e702a80a9c2d",
+    "teacher": "5b01a80ab99f3749247a35a6"
+  },
+  {
+    "course": "5b01ef19c63f5c5a1ff60666",
+    "subject": "5af1f2c2b92d56788ad85b7a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0780",
+    "room": "5b05222b6486e702a80a9c2f",
+    "teacher": "5b01a80ab99f3749247a35a6"
+  },
+  {
+    "course": "5b01ef19c63f5c5a1ff60666",
+    "subject": "5af201af312ace7f6644c7b0",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077b",
+    "room": "5b05222b6486e702a80a9c2f",
+    "teacher": "5b01ab61b99f3749247a35ae"
+  },
+  {
+    "course": "5b01ef19c63f5c5a1ff60666",
+    "subject": "5af201af312ace7f6644c7b0",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0781",
+    "room": "5b05222b6486e702a80a9c2a",
+    "teacher": "5b01a6e7b99f3749247a35a1"
+  },
+  {
+    "course": {
+      "_id": "5b01ef7ac63f5c5a1ff60667",
+      "grade": 10,
+      "letter": "b",
+      "studentSize": 11
+    },
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077f",
+    "room": "5b05222b6486e702a80a9c3a",
+    "teacher": "5b01a6e7b99f3749247a35a1"
+  },
+  {
+    "course": "5b01ef7ac63f5c5a1ff60667",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076e",
+    "room": "5b05222b6486e702a80a9c29",
+    "teacher": "5b01a961b99f3749247a35aa"
+  },
+  {
+    "course": "5b01ef7ac63f5c5a1ff60667",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0771",
+    "room": "5b05222b6486e702a80a9c29",
+    "teacher": "5b01a6e7b99f3749247a35a1"
+  },
+  {
+    "course": "5b01ef7ac63f5c5a1ff60667",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077d",
+    "room": "5b0524f66486e702a80a9c3f",
+    "teacher": "5b01a961b99f3749247a35aa"
+  },
+  {
+    "course": "5b01ef7ac63f5c5a1ff60667",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0784",
+    "room": "5b05222b6486e702a80a9c37",
+    "teacher": "5b01a5a7b99f3749247a359c"
+  },
+  {
+    "course": "5b01ef7ac63f5c5a1ff60667",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077a",
+    "room": "5b0524f66486e702a80a9c3f",
+    "teacher": "5b01ae26b99f3749247a35bb"
+  },
+  {
+    "course": "5b01ef7ac63f5c5a1ff60667",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0768",
+    "room": "5b05222b6486e702a80a9c39",
+    "teacher": "5b01aac1b99f3749247a35ab"
+  },
+  {
+    "course": "5b01ef7ac63f5c5a1ff60667",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0769",
+    "room": "5b05222b6486e702a80a9c39",
+    "teacher": "5b01a720b99f3749247a35a2"
+  },
+  {
+    "course": "5b01ef7ac63f5c5a1ff60667",
+    "subject": "5af1f2c2b92d56788ad85b34",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0780",
+    "room": "5b05222b6486e702a80a9c2a",
+    "teacher": "5b01ae52b99f3749247a35bc"
+  },
+  {
+    "course": "5b01ef7ac63f5c5a1ff60667",
+    "subject": "5af1f2c2b92d56788ad85b34",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0781",
+    "room": "5b05222b6486e702a80a9c34",
+    "teacher": "5b01a720b99f3749247a35a2"
+  },
+  {
+    "course": "5b01ef7ac63f5c5a1ff60667",
+    "subject": "5af1f2c2b92d56788ad85b3e",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0783",
+    "room": "5b05222b6486e702a80a9c2c",
+    "teacher": "5b01a5feb99f3749247a359d"
+  },
+  {
+    "course": "5b01ef7ac63f5c5a1ff60667",
+    "subject": "5af1f2c2b92d56788ad85b3e",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076a",
+    "room": "5b0524f66486e702a80a9c40",
+    "teacher": "5b01a8a6b99f3749247a35a8"
+  },
+  {
+    "course": "5b01ef7ac63f5c5a1ff60667",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0782",
+    "room": "5b05263c6486e702a80a9c49",
+    "teacher": "5b01a641b99f3749247a359e"
+  },
+  {
+    "course": "5b01ef7ac63f5c5a1ff60667",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076c",
+    "room": "5b0526226486e702a80a9c46",
+    "teacher": "5b01a641b99f3749247a359e"
+  },
+  {
+    "course": "5b01ef7ac63f5c5a1ff60667",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076b",
+    "room": "5b05222b6486e702a80a9c37",
+    "teacher": "5b01aaf6b99f3749247a35ac"
+  },
+  {
+    "course": "5b01ef7ac63f5c5a1ff60667",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077e",
+    "room": "5b05222b6486e702a80a9c31",
+    "teacher": "5b01a74eb99f3749247a35a3"
+  },
+  {
+    "course": "5b01ef7ac63f5c5a1ff60667",
+    "subject": "5af1f2c2b92d56788ad85b52",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077c",
+    "room": "5b05222b6486e702a80a9c2a",
+    "teacher": "5b01a641b99f3749247a359e"
+  },
+  {
+    "course": "5b01ef7ac63f5c5a1ff60667",
+    "subject": "5af1f2c2b92d56788ad85b52",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077b",
+    "room": "5b05263c6486e702a80a9c49",
+    "teacher": "5b01a786b99f3749247a35a4"
+  },
+  {
+    "course": "5b01ef7ac63f5c5a1ff60667",
+    "subject": "5af1f2c2b92d56788ad85b5c",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0773",
+    "room": "5b0524f66486e702a80a9c3f",
+    "teacher": "5b01a673b99f3749247a359f"
+  },
+  {
+    "course": "5b01ef7ac63f5c5a1ff60667",
+    "subject": "5af1f2c2b92d56788ad85b5c",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0785",
+    "room": "5b05222b6486e702a80a9c2a",
+    "teacher": "5b01a786b99f3749247a35a4"
+  },
+  {
+    "course": "5b01ef7ac63f5c5a1ff60667",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0776",
+    "room": "5b05222b6486e702a80a9c3a",
+    "teacher": "5b01ab2ab99f3749247a35ad"
+  },
+  {
+    "course": "5b01ef7ac63f5c5a1ff60667",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0772",
+    "room": "5b05222b6486e702a80a9c34",
+    "teacher": "5b01ab2ab99f3749247a35ad"
+  },
+  {
+    "course": "5b01ef7ac63f5c5a1ff60667",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0774",
+    "room": "5b0524f66486e702a80a9c3f",
+    "teacher": "5b01a7b3b99f3749247a35a5"
+  },
+  {
+    "course": "5b01ef7ac63f5c5a1ff60667",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076d",
+    "room": "5b05222b6486e702a80a9c3d",
+    "teacher": "5b01a673b99f3749247a359f"
+  },
+  {
+    "course": "5b01ef7ac63f5c5a1ff60667",
+    "subject": "5af1f2c2b92d56788ad85b70",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0775",
+    "room": "5b05222b6486e702a80a9c2e",
+    "teacher": "5b01ae52b99f3749247a35bc"
+  },
+  {
+    "course": "5b01ef7ac63f5c5a1ff60667",
+    "subject": "5af1f2c2b92d56788ad85b70",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0770",
+    "room": "5b05263c6486e702a80a9c49",
+    "teacher": "5b01a6aab99f3749247a35a0"
+  },
+  {
+    "course": "5b01ef7ac63f5c5a1ff60667",
+    "subject": "5af1f2c2b92d56788ad85b7a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076f",
+    "room": "5b05222b6486e702a80a9c37",
+    "teacher": "5b01ae26b99f3749247a35bb"
+  },
+  {
+    "course": "5b01ef7ac63f5c5a1ff60667",
+    "subject": "5af1f2c2b92d56788ad85b7a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0779",
+    "room": "5b05222b6486e702a80a9c2e",
+    "teacher": "5b01a80ab99f3749247a35a6"
+  },
+  {
+    "course": "5b01ef7ac63f5c5a1ff60667",
+    "subject": "5af201af312ace7f6644c7b0",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0778",
+    "room": "5b0524f66486e702a80a9c3f",
+    "teacher": "5b01ab61b99f3749247a35ae"
+  },
+  {
+    "course": "5b01ef7ac63f5c5a1ff60667",
+    "subject": "5af201af312ace7f6644c7b0",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0777",
+    "room": "5b05222b6486e702a80a9c30",
+    "teacher": "5b01ab61b99f3749247a35ae"
+  },
+  {
+    "course": {
+      "_id": "5b01efe9c63f5c5a1ff60668",
+      "grade": 4,
+      "letter": "b",
+      "studentSize": 10
+    },
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0782",
+    "room": "5b05222b6486e702a80a9c3c",
+    "teacher": "5b01a961b99f3749247a35aa"
+  },
+  {
+    "course": "5b01efe9c63f5c5a1ff60668",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0783",
+    "room": "5b0526226486e702a80a9c45",
+    "teacher": "5b01a6e7b99f3749247a35a1"
+  },
+  {
+    "course": "5b01efe9c63f5c5a1ff60668",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076b",
+    "room": "5b05222b6486e702a80a9c3b",
+    "teacher": "5b01a6e7b99f3749247a35a1"
+  },
+  {
+    "course": "5b01efe9c63f5c5a1ff60668",
+    "subject": "5af1f2c2b92d56788ad85b20",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0772",
+    "room": "5b0526226486e702a80a9c46",
+    "teacher": "5b01a844b99f3749247a35a7"
+  },
+  {
+    "course": "5b01efe9c63f5c5a1ff60668",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0771",
+    "room": "5b05222b6486e702a80a9c36",
+    "teacher": "5b01a720b99f3749247a35a2"
+  },
+  {
+    "course": "5b01efe9c63f5c5a1ff60668",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0770",
+    "room": "5b05222b6486e702a80a9c29",
+    "teacher": "5b01ae26b99f3749247a35bb"
+  },
+  {
+    "course": "5b01efe9c63f5c5a1ff60668",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076f",
+    "room": "5b05222b6486e702a80a9c3b",
+    "teacher": "5b01aac1b99f3749247a35ab"
+  },
+  {
+    "course": "5b01efe9c63f5c5a1ff60668",
+    "subject": "5af1f2c2b92d56788ad85b2a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0785",
+    "room": "5b0524f66486e702a80a9c3f",
+    "teacher": "5b01aac1b99f3749247a35ab"
+  },
+  {
+    "course": "5b01efe9c63f5c5a1ff60668",
+    "subject": "5af1f2c2b92d56788ad85b34",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0781",
+    "room": "5b05222b6486e702a80a9c30",
+    "teacher": "5b01a5feb99f3749247a359d"
+  },
+  {
+    "course": "5b01efe9c63f5c5a1ff60668",
+    "subject": "5af1f2c2b92d56788ad85b34",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0773",
+    "room": "5b05222b6486e702a80a9c29",
+    "teacher": "5b01a5feb99f3749247a359d"
+  },
+  {
+    "course": "5b01efe9c63f5c5a1ff60668",
+    "subject": "5af1f2c2b92d56788ad85b3e",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0776",
+    "room": "5b05222b6486e702a80a9c2f",
+    "teacher": "5b01a5feb99f3749247a359d"
+  },
+  {
+    "course": "5b01efe9c63f5c5a1ff60668",
+    "subject": "5af1f2c2b92d56788ad85b3e",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0777",
+    "room": "5b05222b6486e702a80a9c38",
+    "teacher": "5b01aac1b99f3749247a35ab"
+  },
+  {
+    "course": "5b01efe9c63f5c5a1ff60668",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0778",
+    "room": "5b05222b6486e702a80a9c30",
+    "teacher": "5b01a74eb99f3749247a35a3"
+  },
+  {
+    "course": "5b01efe9c63f5c5a1ff60668",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0780",
+    "room": "5b05222b6486e702a80a9c36",
+    "teacher": "5b01aaf6b99f3749247a35ac"
+  },
+  {
+    "course": "5b01efe9c63f5c5a1ff60668",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077b",
+    "room": "5b0526226486e702a80a9c44",
+    "teacher": "5b01aaf6b99f3749247a35ac"
+  },
+  {
+    "course": "5b01efe9c63f5c5a1ff60668",
+    "subject": "5af1f2c2b92d56788ad85b48",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0784",
+    "room": "5b05222b6486e702a80a9c2f",
+    "teacher": "5b01aaf6b99f3749247a35ac"
+  },
+  {
+    "course": "5b01efe9c63f5c5a1ff60668",
+    "subject": "5af1f2c2b92d56788ad85b52",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077c",
+    "room": "5b05263c6486e702a80a9c48",
+    "teacher": "5b01a786b99f3749247a35a4"
+  },
+  {
+    "course": "5b01efe9c63f5c5a1ff60668",
+    "subject": "5af1f2c2b92d56788ad85b52",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076f",
+    "room": "5b05263c6486e702a80a9c48",
+    "teacher": "5b01a8a6b99f3749247a35a8"
+  },
+  {
+    "course": "5b01efe9c63f5c5a1ff60668",
+    "subject": "5af1f2c2b92d56788ad85b5c",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0774",
+    "room": "5b05222b6486e702a80a9c2b",
+    "teacher": "5b01a786b99f3749247a35a4"
+  },
+  {
+    "course": "5b01efe9c63f5c5a1ff60668",
+    "subject": "5af1f2c2b92d56788ad85b5c",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0775",
+    "room": "5b05222b6486e702a80a9c3a",
+    "teacher": "5b01a8e2b99f3749247a35a9"
+  },
+  {
+    "course": "5b01efe9c63f5c5a1ff60668",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0779",
+    "room": "5b05222b6486e702a80a9c3a",
+    "teacher": "5b01a7b3b99f3749247a35a5"
+  },
+  {
+    "course": "5b01efe9c63f5c5a1ff60668",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0768",
+    "room": "5b05222b6486e702a80a9c2a",
+    "teacher": "5b01a7b3b99f3749247a35a5"
+  },
+  {
+    "course": "5b01efe9c63f5c5a1ff60668",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076d",
+    "room": "5b05263c6486e702a80a9c49",
+    "teacher": "5b01ab2ab99f3749247a35ad"
+  },
+  {
+    "course": "5b01efe9c63f5c5a1ff60668",
+    "subject": "5af1f2c2b92d56788ad85b66",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076c",
+    "room": "5b0526566486e702a80a9c4a",
+    "teacher": "5b01ab2ab99f3749247a35ad"
+  },
+  {
+    "course": "5b01efe9c63f5c5a1ff60668",
+    "subject": "5af1f2c2b92d56788ad85b70",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076e",
+    "room": "5b05263c6486e702a80a9c49",
+    "teacher": "5b01a6aab99f3749247a35a0"
+  },
+  {
+    "course": "5b01efe9c63f5c5a1ff60668",
+    "subject": "5af1f2c2b92d56788ad85b70",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd076a",
+    "room": "5b05222b6486e702a80a9c38",
+    "teacher": "5b01a8e2b99f3749247a35a9"
+  },
+  {
+    "course": "5b01efe9c63f5c5a1ff60668",
+    "subject": "5af1f2c2b92d56788ad85b7a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077f",
+    "room": "5b05222b6486e702a80a9c2b",
+    "teacher": "5b01a6aab99f3749247a35a0"
+  },
+  {
+    "course": "5b01efe9c63f5c5a1ff60668",
+    "subject": "5af1f2c2b92d56788ad85b7a",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077e",
+    "room": "5b05222b6486e702a80a9c2e",
+    "teacher": "5b01a6aab99f3749247a35a0"
+  },
+  {
+    "course": "5b01efe9c63f5c5a1ff60668",
+    "subject": "5af201af312ace7f6644c7b0",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd0769",
+    "room": "5b0526566486e702a80a9c4b",
+    "teacher": "5b01ab61b99f3749247a35ae"
+  },
+  {
+    "course": "5b01efe9c63f5c5a1ff60668",
+    "subject": "5af201af312ace7f6644c7b0",
+    "pinned": false,
+    "period": "5b084da7d95dde43bcdd077d",
+    "room": "5b05222b6486e702a80a9c29",
+    "teacher": "5b01a6e7b99f3749247a35a1"
+  }
+]

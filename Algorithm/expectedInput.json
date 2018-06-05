@@ -12,7 +12,7 @@
   }],
   "rooms": [{
     "id": 3,
-    "roomNr": 666,
+    "number": 666,
     "house": "A",
     "seats": 20,
     "barrierFree": true,

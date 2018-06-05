@@ -6,10 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="kotlin-ws" />
         <module name="stundenplaner-algorithm" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="kotlin-ws" target="1.5" />
       <module name="optaplanner-examples" target="1.5" />
       <module name="stundenplaner-algorithm" target="1.5" />
     </bytecodeTargetLevel>

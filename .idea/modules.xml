@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Die-Stundenplaner.iml" filepath="$PROJECT_DIR$/.idea/Die-Stundenplaner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BackEnd/websockets/server/kotlin-ws.iml" filepath="$PROJECT_DIR$/BackEnd/websockets/server/kotlin-ws.iml" />
       <module fileurl="file://$PROJECT_DIR$/Algorithm/stundenplaner-algorithm.iml" filepath="$PROJECT_DIR$/Algorithm/stundenplaner-algorithm.iml" />
     </modules>
   </component>

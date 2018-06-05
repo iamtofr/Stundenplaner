@@ -1,0 +1,146 @@
+[
+  {
+    "_id": "104",
+    "course": "K-15",
+    "subject": "Mathe",
+    "pinned": false,
+    "period": "M0",
+    "room": "R1-20",
+    "teacher": "L1-Mathe"
+  },
+  {
+    "_id": "105",
+    "course": "K-15",
+    "subject": "Mathe",
+    "pinned": false,
+    "period": "M1",
+    "room": "R1-20",
+    "teacher": "L1-Mathe"
+  },
+  {
+    "_id": "106",
+    "course": "K-15",
+    "subject": "Mathe",
+    "pinned": false,
+    "period": "D0",
+    "room": "R1-20",
+    "teacher": "L1-Mathe"
+  },
+  {
+    "_id": "107",
+    "course": "K-15",
+    "subject": "Mathe",
+    "pinned": false,
+    "period": "D1",
+    "room": "R1-20",
+    "teacher": "L1-Mathe"
+  },
+  {
+    "_id": "108",
+    "course": "K-15",
+    "subject": "Sport",
+    "pinned": false,
+    "period": "M2",
+    "room": "SR1-15",
+    "teacher": "L1-Sport"
+  },
+  {
+    "_id": "109",
+    "course": "K-15",
+    "subject": "Sport",
+    "pinned": false,
+    "period": "M3",
+    "room": "SR1-15",
+    "teacher": "L1-Sport"
+  },
+  {
+    "_id": "110",
+    "course": "K-15",
+    "subject": "Deutsch",
+    "pinned": false,
+    "period": "D2",
+    "room": "R1-20",
+    "teacher": "L1-Mathe"
+  },
+  {
+    "_id": "111",
+    "course": "K-15",
+    "subject": "Deutsch",
+    "pinned": false,
+    "period": "D3",
+    "room": "R1-20",
+    "teacher": "L1-Mathe"
+  },
+  {
+    "_id": "112",
+    "course": "K-10",
+    "subject": "Mathe",
+    "pinned": false,
+    "period": "M0",
+    "room": "R1-10",
+    "teacher": "L2-Mathe"
+  },
+  {
+    "_id": "113",
+    "course": "K-10",
+    "subject": "Mathe",
+    "pinned": false,
+    "period": "M1",
+    "room": "R1-10",
+    "teacher": "L2-Mathe"
+  },
+  {
+    "_id": "114",
+    "course": "K-10",
+    "subject": "Mathe",
+    "pinned": false,
+    "period": "D0",
+    "room": "R1-10",
+    "teacher": "L2-Mathe"
+  },
+  {
+    "_id": "115",
+    "course": "K-10",
+    "subject": "Mathe",
+    "pinned": false,
+    "period": "D1",
+    "room": "R1-10",
+    "teacher": "L2-Mathe"
+  },
+  {
+    "_id": "116",
+    "course": "K-10",
+    "subject": "Sport",
+    "pinned": false,
+    "period": "D2",
+    "room": "SR1-15",
+    "teacher": "L1-Sport"
+  },
+  {
+    "_id": "117",
+    "course": "K-10",
+    "subject": "Sport",
+    "pinned": false,
+    "period": "D3",
+    "room": "SR1-15",
+    "teacher": "L1-Sport"
+  },
+  {
+    "_id": "118",
+    "course": "K-10",
+    "subject": "Deutsch",
+    "pinned": false,
+    "period": "M2",
+    "room": "R1-10",
+    "teacher": "L1-Mathe"
+  },
+  {
+    "_id": "119",
+    "course": "K-10",
+    "subject": "Deutsch",
+    "pinned": false,
+    "period": "M3",
+    "room": "R1-10",
+    "teacher": "L1-Mathe"
+  }
+]

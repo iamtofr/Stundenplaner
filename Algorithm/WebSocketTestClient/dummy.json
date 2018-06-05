@@ -1,0 +1,1245 @@
+{
+  "periods": [
+    {
+      "_id": "5b084da7d95dde43bcdd076a",
+      "weekday": 1,
+      "timeSlot": 3,
+      "__v": 0
+    },
+    {
+      "_id": "5b084da7d95dde43bcdd0769",
+      "weekday": 1,
+      "timeSlot": 2,
+      "__v": 0
+    },
+    {
+      "_id": "5b084da7d95dde43bcdd0768",
+      "weekday": 1,
+      "timeSlot": 1,
+      "__v": 0
+    },
+    {
+      "_id": "5b084da7d95dde43bcdd076b",
+      "weekday": 1,
+      "timeSlot": 4,
+      "__v": 0
+    },
+    {
+      "_id": "5b084da7d95dde43bcdd076c",
+      "weekday": 1,
+      "timeSlot": 5,
+      "__v": 0
+    },
+    {
+      "_id": "5b084da7d95dde43bcdd076f",
+      "weekday": 2,
+      "timeSlot": 2,
+      "__v": 0
+    },
+    {
+      "_id": "5b084da7d95dde43bcdd0770",
+      "weekday": 2,
+      "timeSlot": 3,
+      "__v": 0
+    },
+    {
+      "_id": "5b084da7d95dde43bcdd0774",
+      "weekday": 3,
+      "timeSlot": 1,
+      "__v": 0
+    },
+    {
+      "_id": "5b084da7d95dde43bcdd0775",
+      "weekday": 3,
+      "timeSlot": 2,
+      "__v": 0
+    },
+    {
+      "_id": "5b084da7d95dde43bcdd0779",
+      "weekday": 3,
+      "timeSlot": 6,
+      "__v": 0
+    },
+    {
+      "_id": "5b084da7d95dde43bcdd077a",
+      "weekday": 4,
+      "timeSlot": 1,
+      "__v": 0
+    },
+    {
+      "_id": "5b084da7d95dde43bcdd077e",
+      "weekday": 4,
+      "timeSlot": 5,
+      "__v": 0
+    },
+    {
+      "_id": "5b084da7d95dde43bcdd077f",
+      "weekday": 4,
+      "timeSlot": 6,
+      "__v": 0
+    },
+    {
+      "_id": "5b084da7d95dde43bcdd0783",
+      "weekday": 5,
+      "timeSlot": 4,
+      "__v": 0
+    },
+    {
+      "_id": "5b084da7d95dde43bcdd0784",
+      "weekday": 5,
+      "timeSlot": 5,
+      "__v": 0
+    },
+    {
+      "_id": "5b084da7d95dde43bcdd0771",
+      "weekday": 2,
+      "timeSlot": 4,
+      "__v": 0
+    },
+    {
+      "_id": "5b084da7d95dde43bcdd0776",
+      "weekday": 3,
+      "timeSlot": 3,
+      "__v": 0
+    },
+    {
+      "_id": "5b084da7d95dde43bcdd076d",
+      "weekday": 1,
+      "timeSlot": 6,
+      "__v": 0
+    },
+    {
+      "_id": "5b084da7d95dde43bcdd077b",
+      "weekday": 4,
+      "timeSlot": 2,
+      "__v": 0
+    },
+    {
+      "_id": "5b084da7d95dde43bcdd0772",
+      "weekday": 2,
+      "timeSlot": 5,
+      "__v": 0
+    },
+    {
+      "_id": "5b084da7d95dde43bcdd0780",
+      "weekday": 5,
+      "timeSlot": 1,
+      "__v": 0
+    },
+    {
+      "_id": "5b084da7d95dde43bcdd0777",
+      "weekday": 3,
+      "timeSlot": 4,
+      "__v": 0
+    },
+    {
+      "_id": "5b084da7d95dde43bcdd0785",
+      "weekday": 5,
+      "timeSlot": 6,
+      "__v": 0
+    },
+    {
+      "_id": "5b084da7d95dde43bcdd077c",
+      "weekday": 4,
+      "timeSlot": 3,
+      "__v": 0
+    },
+    {
+      "_id": "5b084da7d95dde43bcdd0781",
+      "weekday": 5,
+      "timeSlot": 2,
+      "__v": 0
+    },
+    {
+      "_id": "5b084da7d95dde43bcdd076e",
+      "weekday": 2,
+      "timeSlot": 1,
+      "__v": 0
+    },
+    {
+      "_id": "5b084da7d95dde43bcdd0773",
+      "weekday": 2,
+      "timeSlot": 6,
+      "__v": 0
+    },
+    {
+      "_id": "5b084da7d95dde43bcdd0778",
+      "weekday": 3,
+      "timeSlot": 5,
+      "__v": 0
+    },
+    {
+      "_id": "5b084da7d95dde43bcdd077d",
+      "weekday": 4,
+      "timeSlot": 4,
+      "__v": 0
+    },
+    {
+      "_id": "5b084da7d95dde43bcdd0782",
+      "weekday": 5,
+      "timeSlot": 3,
+      "__v": 0
+    }
+  ],
+  "rooms": [
+    {
+      "equipment": [
+        "Overheadprojektor",
+        "Beamer",
+        "Whiteboard",
+        "Smartboard"
+      ],
+      "_id": "5b05222b6486e702a80a9c2b",
+      "number": 34,
+      "seats": 14,
+      "house": "A",
+      "roomType": "",
+      "barrierFree": true,
+      "__v": 0
+    },
+    {
+      "equipment": [
+        "Rollos",
+        "Smartboard",
+        "Wasseranschluss",
+        "Smartboard"
+      ],
+      "_id": "5b05222b6486e702a80a9c2a",
+      "number": 45,
+      "seats": 11,
+      "house": "A",
+      "roomType": "",
+      "barrierFree": false,
+      "__v": 0
+    },
+    {
+      "equipment": [
+        "Smartboard",
+        "Rollos",
+        "Smartboard",
+        "Smartboard"
+      ],
+      "_id": "5b05222b6486e702a80a9c29",
+      "number": 93,
+      "seats": 11,
+      "house": "A",
+      "roomType": "",
+      "barrierFree": true,
+      "__v": 0
+    },
+    {
+      "equipment": [
+        "Computer",
+        "Kartenhalter",
+        "Overheadprojektor",
+        "Overheadprojektor"
+      ],
+      "_id": "5b05222b6486e702a80a9c2f",
+      "number": 67,
+      "seats": 10,
+      "house": "A",
+      "roomType": "",
+      "barrierFree": false,
+      "__v": 0
+    },
+    {
+      "equipment": [
+        "Wasseranschluss",
+        "Computer",
+        "Beamer",
+        "Smartboard"
+      ],
+      "_id": "5b05222b6486e702a80a9c32",
+      "number": 5,
+      "seats": 15,
+      "house": "A",
+      "roomType": "",
+      "barrierFree": false,
+      "__v": 0
+    },
+    {
+      "equipment": [
+        "Wasseranschluss",
+        "Overheadprojektor",
+        "Smartboard",
+        "Whiteboard"
+      ],
+      "_id": "5b05222b6486e702a80a9c34",
+      "number": 73,
+      "seats": 14,
+      "house": "A",
+      "roomType": "",
+      "barrierFree": false,
+      "__v": 0
+    },
+    {
+      "equipment": [
+        "Kartenhalter",
+        "Smartboard",
+        "Beamer",
+        "Smartboard"
+      ],
+      "_id": "5b05222b6486e702a80a9c37",
+      "number": 18,
+      "seats": 13,
+      "house": "A",
+      "roomType": "",
+      "barrierFree": false,
+      "__v": 0
+    },
+    {
+      "equipment": [
+        "Smartboard",
+        "Whiteboard",
+        "Rollos",
+        "Smartboard"
+      ],
+      "_id": "5b05222b6486e702a80a9c39",
+      "number": 34,
+      "seats": 11,
+      "house": "A",
+      "roomType": "",
+      "barrierFree": true,
+      "__v": 0
+    },
+    {
+      "equipment": [
+        "Whiteboard",
+        "Kartenhalter",
+        "Kartenhalter",
+        "Smartboard"
+      ],
+      "_id": "5b05222b6486e702a80a9c3c",
+      "number": 8,
+      "seats": 14,
+      "house": "A",
+      "roomType": "",
+      "barrierFree": false,
+      "__v": 0
+    },
+    {
+      "equipment": [
+        "Rollos",
+        "Wasseranschluss",
+        "Beamer",
+        "Wasseranschluss"
+      ],
+      "_id": "5b05222b6486e702a80a9c2e",
+      "number": 29,
+      "seats": 14,
+      "house": "A",
+      "roomType": "",
+      "barrierFree": true,
+      "__v": 0
+    },
+    {
+      "equipment": [
+        "Whiteboard",
+        "Rollos",
+        "Computer",
+        "Kartenhalter"
+      ],
+      "_id": "5b05222b6486e702a80a9c33",
+      "number": 93,
+      "seats": 13,
+      "house": "A",
+      "roomType": "",
+      "barrierFree": true,
+      "__v": 0
+    },
+    {
+      "equipment": [
+        "Overheadprojektor",
+        "Rollos",
+        "Kartenhalter",
+        "Computer"
+      ],
+      "_id": "5b05222b6486e702a80a9c38",
+      "number": 77,
+      "seats": 15,
+      "house": "A",
+      "roomType": "",
+      "barrierFree": false,
+      "__v": 0
+    },
+    {
+      "equipment": [
+        "Smartboard",
+        "Computer",
+        "Whiteboard",
+        "Beamer"
+      ],
+      "_id": "5b05222b6486e702a80a9c3d",
+      "number": 2,
+      "seats": 13,
+      "house": "A",
+      "roomType": "",
+      "barrierFree": true,
+      "__v": 0
+    },
+    {
+      "equipment": [
+        "Kartenhalter",
+        "Kartenhalter",
+        "Wasseranschluss",
+        "Smartboard"
+      ],
+      "_id": "5b05222b6486e702a80a9c2c",
+      "number": 18,
+      "seats": 15,
+      "house": "A",
+      "roomType": "",
+      "barrierFree": true,
+      "__v": 0
+    },
+    {
+      "equipment": [
+        "Beamer",
+        "Smartboard",
+        "Smartboard",
+        "Smartboard"
+      ],
+      "_id": "5b05222b6486e702a80a9c30",
+      "number": 19,
+      "seats": 12,
+      "house": "A",
+      "roomType": "",
+      "barrierFree": true,
+      "__v": 0
+    },
+    {
+      "equipment": [
+        "Whiteboard",
+        "Wasseranschluss",
+        "Wasseranschluss",
+        "Smartboard"
+      ],
+      "_id": "5b05222b6486e702a80a9c35",
+      "number": 50,
+      "seats": 14,
+      "house": "A",
+      "roomType": "",
+      "barrierFree": false,
+      "__v": 0
+    },
+    {
+      "equipment": [
+        "Beamer",
+        "Computer",
+        "Wasseranschluss",
+        "Rollos"
+      ],
+      "_id": "5b05222b6486e702a80a9c3a",
+      "number": 13,
+      "seats": 13,
+      "house": "A",
+      "roomType": "",
+      "barrierFree": true,
+      "__v": 0
+    },
+    {
+      "equipment": [
+        "Smartboard",
+        "Smartboard",
+        "Whiteboard",
+        "Smartboard"
+      ],
+      "_id": "5b05222b6486e702a80a9c2d",
+      "number": 73,
+      "seats": 10,
+      "house": "A",
+      "roomType": "",
+      "barrierFree": false,
+      "__v": 0
+    },
+    {
+      "equipment": [
+        "Rollos",
+        "Overheadprojektor",
+        "Overheadprojektor",
+        "Overheadprojektor"
+      ],
+      "_id": "5b05222b6486e702a80a9c31",
+      "number": 97,
+      "seats": 14,
+      "house": "A",
+      "roomType": "",
+      "barrierFree": false,
+      "__v": 0
+    },
+    {
+      "equipment": [
+        "Computer",
+        "Smartboard",
+        "Overheadprojektor",
+        "Beamer"
+      ],
+      "_id": "5b05222b6486e702a80a9c36",
+      "number": 33,
+      "seats": 10,
+      "house": "A",
+      "roomType": "",
+      "barrierFree": false,
+      "__v": 0
+    },
+    {
+      "equipment": [
+        "Computer",
+        "Beamer",
+        "Kartenhalter",
+        "Smartboard"
+      ],
+      "_id": "5b05222b6486e702a80a9c3b",
+      "number": 48,
+      "seats": 12,
+      "house": "A",
+      "roomType": "",
+      "barrierFree": false,
+      "__v": 0
+    },
+    {
+      "equipment": [
+        "Whiteboard",
+        "Beamer",
+        "Kartenhalter",
+        "Beamer"
+      ],
+      "_id": "5b0524f66486e702a80a9c3e",
+      "number": 63,
+      "seats": 15,
+      "house": "B",
+      "roomType": "Biologie",
+      "barrierFree": false,
+      "__v": 0
+    },
+    {
+      "equipment": [
+        "Overheadprojektor",
+        "Computer",
+        "Beamer",
+        "Whiteboard"
+      ],
+      "_id": "5b0524f66486e702a80a9c3f",
+      "number": 62,
+      "seats": 14,
+      "house": "B",
+      "roomType": "Biologie",
+      "barrierFree": true,
+      "__v": 0
+    },
+    {
+      "equipment": [
+        "Kartenhalter",
+        "Wasseranschluss",
+        "Kartenhalter",
+        "Computer"
+      ],
+      "_id": "5b0524f66486e702a80a9c40",
+      "number": 51,
+      "seats": 15,
+      "house": "B",
+      "roomType": "Biologie",
+      "barrierFree": true,
+      "__v": 0
+    },
+    {
+      "equipment": [
+        "Wasseranschluss",
+        "Whiteboard",
+        "Kartenhalter",
+        "Overheadprojektor"
+      ],
+      "_id": "5b05252c6486e702a80a9c42",
+      "number": 78,
+      "seats": 13,
+      "house": "P",
+      "roomType": "Physik",
+      "barrierFree": true,
+      "__v": 0
+    },
+    {
+      "equipment": [
+        "Computer",
+        "Rollos",
+        "Rollos",
+        "Rollos"
+      ],
+      "_id": "5b05252c6486e702a80a9c43",
+      "number": 8,
+      "seats": 10,
+      "house": "P",
+      "roomType": "Physik",
+      "barrierFree": true,
+      "__v": 0
+    },
+    {
+      "equipment": [
+        "Beamer",
+        "Overheadprojektor",
+        "Kartenhalter",
+        "Wasseranschluss"
+      ],
+      "_id": "5b05252c6486e702a80a9c41",
+      "number": 4,
+      "seats": 10,
+      "house": "P",
+      "roomType": "Physik",
+      "barrierFree": false,
+      "__v": 0
+    },
+    {
+      "equipment": [
+        "Whiteboard",
+        "Smartboard",
+        "Beamer",
+        "Rollos"
+      ],
+      "_id": "5b0526226486e702a80a9c44",
+      "number": 80,
+      "seats": 10,
+      "house": "C",
+      "roomType": "Chemie",
+      "barrierFree": true,
+      "__v": 0
+    },
+    {
+      "equipment": [
+        "Wasseranschluss",
+        "Whiteboard",
+        "Overheadprojektor",
+        "Overheadprojektor"
+      ],
+      "_id": "5b0526226486e702a80a9c45",
+      "number": 16,
+      "seats": 15,
+      "house": "C",
+      "roomType": "Chemie",
+      "barrierFree": true,
+      "__v": 0
+    },
+    {
+      "equipment": [
+        "Kartenhalter",
+        "Wasseranschluss",
+        "Wasseranschluss",
+        "Computer"
+      ],
+      "_id": "5b0526226486e702a80a9c46",
+      "number": 20,
+      "seats": 11,
+      "house": "C",
+      "roomType": "Chemie",
+      "barrierFree": true,
+      "__v": 0
+    },
+    {
+      "equipment": [
+        "Computer",
+        "Whiteboard",
+        "Kartenhalter",
+        "Smartboard"
+      ],
+      "_id": "5b05263c6486e702a80a9c47",
+      "number": 69,
+      "seats": 14,
+      "house": "S",
+      "roomType": "Sport",
+      "barrierFree": true,
+      "__v": 0
+    },
+    {
+      "equipment": [
+        "Beamer",
+        "Overheadprojektor",
+        "Overheadprojektor",
+        "Beamer"
+      ],
+      "_id": "5b05263c6486e702a80a9c48",
+      "number": 72,
+      "seats": 10,
+      "house": "S",
+      "roomType": "Sport",
+      "barrierFree": true,
+      "__v": 0
+    },
+    {
+      "equipment": [
+        "Beamer",
+        "Smartboard",
+        "Overheadprojektor",
+        "Overheadprojektor"
+      ],
+      "_id": "5b05263c6486e702a80a9c49",
+      "number": 46,
+      "seats": 11,
+      "house": "S",
+      "roomType": "Sport",
+      "barrierFree": true,
+      "__v": 0
+    },
+    {
+      "equipment": [
+        "Computer",
+        "Kartenhalter",
+        "Wasseranschluss",
+        "Kartenhalter"
+      ],
+      "_id": "5b0526566486e702a80a9c4a",
+      "number": 53,
+      "seats": 15,
+      "house": "M",
+      "roomType": "Musik",
+      "barrierFree": true,
+      "__v": 0
+    },
+    {
+      "equipment": [
+        "Beamer",
+        "Kartenhalter",
+        "Smartboard",
+        "Computer"
+      ],
+      "_id": "5b0526566486e702a80a9c4b",
+      "number": 93,
+      "seats": 14,
+      "house": "M",
+      "roomType": "Musik",
+      "barrierFree": false,
+      "__v": 0
+    },
+    {
+      "equipment": [
+        "Overheadprojektor",
+        "Overheadprojektor",
+        "Computer",
+        "Overheadprojektor"
+      ],
+      "_id": "5b0526566486e702a80a9c4c",
+      "number": 26,
+      "seats": 14,
+      "house": "M",
+      "roomType": "Musik",
+      "barrierFree": true,
+      "__v": 0
+    }
+  ],
+  "teachers": [
+    {
+      "_id": "5b01a5a7b99f3749247a359c",
+      "subjectSpecialisations": [
+        "5af1f2c2b92d56788ad85b20",
+        "5af1f2c2b92d56788ad85b2a"
+      ],
+      "profile": "5af5cf0420c6f43d9b507007",
+      "__v": 0
+    },
+    {
+      "_id": "5b01a5feb99f3749247a359d",
+      "subjectSpecialisations": [
+        "5af1f2c2b92d56788ad85b34",
+        "5af1f2c2b92d56788ad85b3e"
+      ],
+      "profile": "5af5cf0420c6f43d9b507008",
+      "__v": 0
+    },
+    {
+      "_id": "5b01a641b99f3749247a359e",
+      "subjectSpecialisations": [
+        "5af1f2c2b92d56788ad85b48",
+        "5af1f2c2b92d56788ad85b52"
+      ],
+      "profile": "5af5cf0420c6f43d9b50700b",
+      "__v": 0
+    },
+    {
+      "_id": "5b01a673b99f3749247a359f",
+      "subjectSpecialisations": [
+        "5af1f2c2b92d56788ad85b5c",
+        "5af1f2c2b92d56788ad85b66"
+      ],
+      "profile": "5af5cf0420c6f43d9b506fd3",
+      "__v": 0
+    },
+    {
+      "_id": "5b01a6aab99f3749247a35a0",
+      "subjectSpecialisations": [
+        "5af1f2c2b92d56788ad85b70",
+        "5af1f2c2b92d56788ad85b7a"
+      ],
+      "profile": "5af5cf0420c6f43d9b507009",
+      "__v": 0
+    },
+    {
+      "_id": "5b01a6e7b99f3749247a35a1",
+      "subjectSpecialisations": [
+        "5af201af312ace7f6644c7b0",
+        "5af1f2c2b92d56788ad85b20"
+      ],
+      "profile": "5af5cf0420c6f43d9b506fd8",
+      "__v": 0
+    },
+    {
+      "_id": "5b01a720b99f3749247a35a2",
+      "subjectSpecialisations": [
+        "5af1f2c2b92d56788ad85b2a",
+        "5af1f2c2b92d56788ad85b34"
+      ],
+      "profile": "5af5cf0420c6f43d9b50700c",
+      "__v": 0
+    },
+    {
+      "_id": "5b01a74eb99f3749247a35a3",
+      "subjectSpecialisations": [
+        "5af1f2c2b92d56788ad85b3e",
+        "5af1f2c2b92d56788ad85b48"
+      ],
+      "profile": "5af5cf0420c6f43d9b50700d",
+      "__v": 0
+    },
+    {
+      "_id": "5b01a786b99f3749247a35a4",
+      "subjectSpecialisations": [
+        "5af1f2c2b92d56788ad85b52",
+        "5af1f2c2b92d56788ad85b5c"
+      ],
+      "profile": "5af5cf0420c6f43d9b506fdd",
+      "__v": 0
+    },
+    {
+      "_id": "5b01a7b3b99f3749247a35a5",
+      "subjectSpecialisations": [
+        "5af1f2c2b92d56788ad85b66",
+        "5af1f2c2b92d56788ad85b70"
+      ],
+      "profile": "5af5cf0420c6f43d9b50700e",
+      "__v": 0
+    },
+    {
+      "_id": "5b01a80ab99f3749247a35a6",
+      "subjectSpecialisations": [
+        "5af1f2c2b92d56788ad85b7a",
+        "5af201af312ace7f6644c7b0"
+      ],
+      "profile": "5af5cf0420c6f43d9b506fe2",
+      "__v": 0
+    },
+    {
+      "_id": "5b01a844b99f3749247a35a7",
+      "subjectSpecialisations": [
+        "5af1f2c2b92d56788ad85b20",
+        "5af1f2c2b92d56788ad85b34"
+      ],
+      "profile": "5af5cf0420c6f43d9b506fe7",
+      "__v": 0
+    },
+    {
+      "_id": "5b01a8a6b99f3749247a35a8",
+      "subjectSpecialisations": [
+        "5af1f2c2b92d56788ad85b3e",
+        "5af1f2c2b92d56788ad85b52"
+      ],
+      "profile": "5af5cf0420c6f43d9b507010",
+      "__v": 0
+    },
+    {
+      "_id": "5b01a8e2b99f3749247a35a9",
+      "subjectSpecialisations": [
+        "5af1f2c2b92d56788ad85b5c",
+        "5af1f2c2b92d56788ad85b70"
+      ],
+      "profile": "5af5cf0420c6f43d9b506fec",
+      "__v": 0
+    },
+    {
+      "_id": "5b01a961b99f3749247a35aa",
+      "subjectSpecialisations": [
+        "5af1f2c2b92d56788ad85b7a",
+        "5af1f2c2b92d56788ad85b20"
+      ],
+      "profile": "5af5cf0420c6f43d9b507011",
+      "__v": 0
+    },
+    {
+      "_id": "5b01aac1b99f3749247a35ab",
+      "subjectSpecialisations": [
+        "5af1f2c2b92d56788ad85b2a",
+        "5af1f2c2b92d56788ad85b3e"
+      ],
+      "profile": "5af5cf0420c6f43d9b507012",
+      "__v": 0
+    },
+    {
+      "_id": "5b01aaf6b99f3749247a35ac",
+      "subjectSpecialisations": [
+        "5af1f2c2b92d56788ad85b48",
+        "5af1f2c2b92d56788ad85b5c"
+      ],
+      "profile": "5af5cf0420c6f43d9b506ff1",
+      "__v": 0
+    },
+    {
+      "_id": "5b01ab2ab99f3749247a35ad",
+      "subjectSpecialisations": [
+        "5af1f2c2b92d56788ad85b66",
+        "5af1f2c2b92d56788ad85b7a"
+      ],
+      "profile": "5af5cf0420c6f43d9b507013",
+      "__v": 0
+    },
+    {
+      "_id": "5b01ab61b99f3749247a35ae",
+      "subjectSpecialisations": [
+        "5af201af312ace7f6644c7b0"
+      ],
+      "profile": "5af5cf0420c6f43d9b506ff6",
+      "__v": 0
+    },
+    {
+      "_id": "5b01abe5b99f3749247a35af",
+      "subjectSpecialisations": [
+        "5af1f2c2b92d56788ad85b20",
+        "5af1f2c2b92d56788ad85b2a"
+      ],
+      "profile": "5af5cf0420c6f43d9b507015",
+      "__v": 0
+    },
+    {
+      "_id": "5b01ac15b99f3749247a35b0",
+      "subjectSpecialisations": [
+        "5af1f2c2b92d56788ad85b34",
+        "5af1f2c2b92d56788ad85b3e"
+      ],
+      "profile": "5af5cf0420c6f43d9b506ffb",
+      "__v": 0
+    },
+    {
+      "_id": "5b01ac44b99f3749247a35b1",
+      "subjectSpecialisations": [
+        "5af1f2c2b92d56788ad85b48",
+        "5af1f2c2b92d56788ad85b52"
+      ],
+      "profile": "5af5cf0420c6f43d9b507016",
+      "__v": 0
+    },
+    {
+      "_id": "5b01ac74b99f3749247a35b2",
+      "subjectSpecialisations": [
+        "5af1f2c2b92d56788ad85b5c",
+        "5af1f2c2b92d56788ad85b66"
+      ],
+      "profile": "5af5cf0420c6f43d9b507017",
+      "__v": 0
+    },
+    {
+      "_id": "5b01aca4b99f3749247a35b3",
+      "subjectSpecialisations": [
+        "5af1f2c2b92d56788ad85b70",
+        "5af1f2c2b92d56788ad85b7a"
+      ],
+      "profile": "5af5cf0420c6f43d9b507000",
+      "__v": 0
+    },
+    {
+      "_id": "5b01acd1b99f3749247a35b4",
+      "subjectSpecialisations": [
+        "5af201af312ace7f6644c7b0",
+        "5af1f2c2b92d56788ad85b20"
+      ],
+      "profile": "5af5cf0420c6f43d9b507018",
+      "__v": 0
+    },
+    {
+      "_id": "5b01acfcb99f3749247a35b5",
+      "subjectSpecialisations": [
+        "5af1f2c2b92d56788ad85b2a",
+        "5af1f2c2b92d56788ad85b34"
+      ],
+      "profile": "5af5cf0420c6f43d9b507005",
+      "__v": 0
+    },
+    {
+      "_id": "5b01ad3db99f3749247a35b6",
+      "subjectSpecialisations": [
+        "5af1f2c2b92d56788ad85b3e",
+        "5af1f2c2b92d56788ad85b48"
+      ],
+      "profile": "5af5cf0420c6f43d9b50701a",
+      "__v": 0
+    },
+    {
+      "_id": "5b01ad65b99f3749247a35b7",
+      "subjectSpecialisations": [
+        "5af1f2c2b92d56788ad85b52",
+        "5af1f2c2b92d56788ad85b5c"
+      ],
+      "profile": "5af5cf0420c6f43d9b50700a",
+      "__v": 0
+    },
+    {
+      "_id": "5b01ad97b99f3749247a35b8",
+      "subjectSpecialisations": [
+        "5af1f2c2b92d56788ad85b66",
+        "5af1f2c2b92d56788ad85b70"
+      ],
+      "profile": "5af5cf0420c6f43d9b50701b",
+      "__v": 0
+    },
+    {
+      "_id": "5b01adcbb99f3749247a35b9",
+      "subjectSpecialisations": [
+        "5af1f2c2b92d56788ad85b7a",
+        "5af201af312ace7f6644c7b0"
+      ],
+      "profile": "5af5cf0420c6f43d9b50700f",
+      "__v": 0
+    },
+    {
+      "_id": "5b01adfdb99f3749247a35ba",
+      "subjectSpecialisations": [
+        "5af201af312ace7f6644c7b0",
+        "5af1f2c2b92d56788ad85b20"
+      ],
+      "profile": "5af5cf0420c6f43d9b50701c",
+      "__v": 0
+    },
+    {
+      "_id": "5b01ae26b99f3749247a35bb",
+      "subjectSpecialisations": [
+        "5af1f2c2b92d56788ad85b7a",
+        "5af1f2c2b92d56788ad85b2a"
+      ],
+      "profile": "5af5cf0420c6f43d9b50701d",
+      "__v": 0
+    },
+    {
+      "_id": "5b01ae52b99f3749247a35bc",
+      "subjectSpecialisations": [
+        "5af1f2c2b92d56788ad85b70",
+        "5af1f2c2b92d56788ad85b34"
+      ],
+      "profile": "5af5cf0420c6f43d9b507014",
+      "__v": 0
+    }
+  ],
+  "courses": [
+    {
+      "studentSize": 10,
+      "_id": "5b01e616c63f5c5a1ff60655",
+      "grade": "1",
+      "letter": "a",
+      "__v": 0
+    },
+    {
+      "studentSize": 12,
+      "_id": "5b01e6b3c63f5c5a1ff60656",
+      "grade": "1",
+      "letter": "b",
+      "__v": 0
+    },
+    {
+      "studentSize": 11,
+      "_id": "5b01e734c63f5c5a1ff60657",
+      "grade": "2",
+      "letter": "a",
+      "__v": 0
+    },
+    {
+      "studentSize": 15,
+      "_id": "5b01e7b0c63f5c5a1ff60658",
+      "grade": "2",
+      "letter": "b",
+      "__v": 0
+    },
+    {
+      "studentSize": 13,
+      "_id": "5b01e838c63f5c5a1ff60659",
+      "grade": "3",
+      "letter": "a",
+      "__v": 0
+    },
+    {
+      "studentSize": 12,
+      "_id": "5b01e8abc63f5c5a1ff6065a",
+      "grade": "3",
+      "letter": "b",
+      "__v": 0
+    },
+    {
+      "studentSize": 14,
+      "_id": "5b01e97dc63f5c5a1ff6065b",
+      "grade": "4",
+      "letter": "a",
+      "__v": 0
+    },
+    {
+      "studentSize": 12,
+      "_id": "5b01e9fcc63f5c5a1ff6065c",
+      "grade": "5",
+      "letter": "a",
+      "__v": 0
+    },
+    {
+      "studentSize": 13,
+      "_id": "5b01ea6cc63f5c5a1ff6065d",
+      "grade": "5",
+      "letter": "b",
+      "__v": 0
+    },
+    {
+      "studentSize": 12,
+      "_id": "5b01eb44c63f5c5a1ff6065e",
+      "grade": "6",
+      "letter": "a",
+      "__v": 0
+    },
+    {
+      "studentSize": 11,
+      "_id": "5b01ebb3c63f5c5a1ff6065f",
+      "grade": "6",
+      "letter": "b",
+      "__v": 0
+    },
+    {
+      "studentSize": 10,
+      "_id": "5b01ec26c63f5c5a1ff60660",
+      "grade": "7",
+      "letter": "a",
+      "__v": 0
+    },
+    {
+      "studentSize": 9,
+      "_id": "5b01ec9cc63f5c5a1ff60661",
+      "grade": "7",
+      "letter": "b",
+      "__v": 0
+    },
+    {
+      "studentSize": 10,
+      "_id": "5b01ecfdc63f5c5a1ff60662",
+      "grade": "8",
+      "letter": "a",
+      "__v": 0
+    },
+    {
+      "studentSize": 11,
+      "_id": "5b01edadc63f5c5a1ff60663",
+      "grade": "8",
+      "letter": "b",
+      "__v": 0
+    },
+    {
+      "studentSize": 10,
+      "_id": "5b01ee4cc63f5c5a1ff60664",
+      "grade": "9",
+      "letter": "a",
+      "__v": 0
+    },
+    {
+      "studentSize": 11,
+      "_id": "5b01eeacc63f5c5a1ff60665",
+      "grade": "9",
+      "letter": "b",
+      "__v": 0
+    },
+    {
+      "studentSize": 10,
+      "_id": "5b01ef19c63f5c5a1ff60666",
+      "grade": "10",
+      "letter": "a",
+      "__v": 0
+    },
+    {
+      "studentSize": 11,
+      "_id": "5b01ef7ac63f5c5a1ff60667",
+      "grade": "10",
+      "letter": "b",
+      "__v": 0
+    },
+    {
+      "studentSize": 10,
+      "_id": "5b01efe9c63f5c5a1ff60668",
+      "grade": "4",
+      "letter": "b",
+      "__v": 0
+    }
+  ],
+  "subjects": [
+    {
+      "_id": "5af1f2c2b92d56788ad85b20",
+      "name": "Mathematik",
+      "occurrences": 4,
+      "requiredRoomType": "",
+      "__v": 0
+    },
+    {
+      "_id": "5af1f2c2b92d56788ad85b2a",
+      "name": "Deutsch",
+      "occurrences": 4,
+      "requiredRoomType": "",
+      "__v": 0
+    },
+    {
+      "_id": "5af1f2c2b92d56788ad85b34",
+      "name": "Erdkunde",
+      "occurrences": 2,
+      "requiredRoomType": "",
+      "__v": 0
+    },
+    {
+      "_id": "5af1f2c2b92d56788ad85b3e",
+      "name": "Biologie",
+      "occurrences": 2,
+      "requiredRoomType": "Biologie",
+      "__v": 0
+    },
+    {
+      "_id": "5af1f2c2b92d56788ad85b48",
+      "name": "Englisch",
+      "occurrences": 4,
+      "requiredRoomType": "",
+      "__v": 0
+    },
+    {
+      "_id": "5af1f2c2b92d56788ad85b52",
+      "name": "Physik",
+      "occurrences": 2,
+      "requiredRoomType": "Physik",
+      "__v": 0
+    },
+    {
+      "_id": "5af1f2c2b92d56788ad85b5c",
+      "name": "Chemie",
+      "occurrences": 2,
+      "requiredRoomType": "Chemie",
+      "__v": 0
+    },
+    {
+      "_id": "5af1f2c2b92d56788ad85b66",
+      "name": "Sport",
+      "occurrences": 4,
+      "requiredRoomType": "Sport",
+      "__v": 0
+    },
+    {
+      "_id": "5af1f2c2b92d56788ad85b70",
+      "name": "WiSo",
+      "occurrences": 2,
+      "requiredRoomType": "",
+      "__v": 0
+    },
+    {
+      "_id": "5af1f2c2b92d56788ad85b7a",
+      "name": "Geschichte",
+      "occurrences": 2,
+      "requiredRoomType": "",
+      "__v": 0
+    },
+    {
+      "_id": "5af201af312ace7f6644c7b0",
+      "name": "Musik",
+      "occurrences": 2,
+      "requiredRoomType": "Musik",
+      "__v": 0
+    }
+  ]
+}

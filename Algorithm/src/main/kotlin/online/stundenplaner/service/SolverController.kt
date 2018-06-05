@@ -15,12 +15,12 @@ private const val SOLVER_CONFIG = "online/stundenplaner/solver/curriculumCourseS
  * @param consumer a [SolutionConsumer] this service will report the solution to.
  * @param numOfSolutions the amount of solutions to be calculated at the same time. Be wary if this number is higher than your amount of CPU cores!
  */
-open class SolverService<Solution_>(
+open class SolverController<Solution_>(
   private val consumer: SolutionConsumer<Solution_>,
   val numOfSolutions: Int = 1
 ) {
 
-  val logger: Logger = LoggerFactory.getLogger(SolverService::class.java)
+  val logger: Logger = LoggerFactory.getLogger(SolverController::class.java)
   private val currentBestSolutions: MutableList<Solution_?>
 
   private val solvers: List<Solver<Solution_>>
@@ -40,6 +40,7 @@ open class SolverService<Solution_>(
   private fun registerForBestSolutionChanges(solver: Solver<Solution_>, numOfSolution: Int) {
     solver.addEventListener {
       if (it.isEveryProblemFactChangeProcessed) {
+        logger.info("New best score: ${it.newBestScore}")
         currentBestSolutions[numOfSolution] = it.newBestSolution
         consumer.consumeSolution(it.newBestSolution, numOfSolution)
       }
@@ -59,25 +60,25 @@ open class SolverService<Solution_>(
       }
     }
   }
-}
-
-/**
- * An interface for a basic Solution Consumer class
- * @param Solution_ the solution type, the class with the [PlanningSolution] annotation
- */
-interface SolutionConsumer<Solution_> {
-  /**
-   * Consumes a Solution_ to do whatever with it.
-   * @param solution the solution to be consumed
-   * @param numOfSolution which solution is being consumed (default = 0)
-   */
-  fun consumeSolution(solution: Solution_, numOfSolution: Int = 0)
 
   /**
-   * Consumes a Solution_ to do whatever with it.
-   * This Solution_ will be the final one, solving is terminated hereafter.
-   * @param solution the solution to be consumed
-   * @param numOfSolution which solution is being consumed (default = 0)
+   * An interface for a basic Solution Consumer class
+   * @param Solution_ the solution type, the class with the [PlanningSolution] annotation
    */
-  fun consumeFinalSolution(solution: Solution_, numOfSolution: Int = 0)
+  interface SolutionConsumer<Solution_> {
+    /**
+     * Consumes a Solution_ to do whatever with it.
+     * @param solution the solution to be consumed
+     * @param numOfSolution which solution is being consumed (default = 0)
+     */
+    fun consumeSolution(solution: Solution_, numOfSolution: Int = 0)
+
+    /**
+     * Consumes a Solution_ to do whatever with it.
+     * This Solution_ will be the final one, solving is terminated hereafter.
+     * @param solution the solution to be consumed
+     * @param numOfSolution which solution is being consumed (default = 0)
+     */
+    fun consumeFinalSolution(solution: Solution_, numOfSolution: Int = 0)
+  }
 }

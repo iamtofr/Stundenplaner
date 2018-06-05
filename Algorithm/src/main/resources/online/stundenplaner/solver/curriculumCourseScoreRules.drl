@@ -63,7 +63,7 @@ end
 rule "roomOccupancy"
     when
         Lecture($leftId : id, period != null, $period : period, room != null, $room : room)
-        // $leftLecture has lowest id of the period+room combo
+        // $leftLecture has lowest _id of the period+room combo
         not Lecture(period == $period, room == $room, id < $leftId)
         // rightLecture has the same period
         Lecture(period == $period, room == $room, id > $leftId, $rightId : id)
