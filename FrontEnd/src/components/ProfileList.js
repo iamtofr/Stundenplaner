@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { withRouter } from 'react-router';
 import Link from './Link';
 import iconUser from '../assets/iconUser.svg';
 import * as Colors from '../constants/Colors';
@@ -67,4 +68,4 @@ class ProfileList extends Component {
     }
 }
 
-export default ProfileList;
+export default withRouter(ProfileList);
