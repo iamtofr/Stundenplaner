@@ -98,7 +98,8 @@ wss.on('connection', function connection(ws) {
             if (err) throw err;
             console.log('Curriculum created!');
           });
-          ws.send(JSON.stringify(newCurriculum));
+          // ws.send(JSON.stringify(newCurriculum));
+          ws.send(JSON.stringify({test: "geht"}));
         });
       });
   })
