@@ -71,7 +71,7 @@ class Widget extends Component {
               onMouseLeave={() => this.setState({ buttonhover: false })}
               onClick={() => onClose()}
             >
-              <img style={styles.icon} src={iconClose} />
+              <img style={styles.icon} src={iconClose} alt="closeWidget" />
             </span>
           )}
           <p style={styles.label}>{text}</p>
