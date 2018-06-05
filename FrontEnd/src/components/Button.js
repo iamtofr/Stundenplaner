@@ -27,14 +27,13 @@ class Button extends Component {
     }
 
     handleHover = () => {
-        console.log('Button is hovered!!');
         this.setState({
             hover: !this.state.hover
         });
     };
 
     render() {
-        const {style, text, color, hoverColor, onClick} = this.props; 
+        const {style, text, color, hoverColor, onClick} = this.props;
         const normalStyle = {
             backgroundColor: color,
             boxShadow: [`0px 0px 2px rgba(0, 0, 0, 0.12)`, `0px 2px 2px rgba(0, 0, 0, 0.24)`]
