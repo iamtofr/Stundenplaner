@@ -55,7 +55,7 @@ class Dashboard extends Component {
     }
 
     return (
-      <GridLayout style={styles.container} cols={3} rowHeight={20} margin={[20, 20]} containerPadding={[10, 10]}>
+      <GridLayout style={styles.container} cols={3} rowHeight={20} margin={[20, 20]} containerPadding={[10, 10]} >
         <div key={this.state.stundenplan} data-grid={{ x: 0, y: 0, w: 1, h: 6 }}>
           <Widget style={styles.widget}
                   onClose={() => this.setState({stundenplan: ""})}
@@ -293,56 +293,43 @@ class Dashboard extends Component {
               <Widget style={styles.widget}
                       text="Einstellungen">
                   <Link
-                      icon={this.state.schuler ? iconRemove : iconCreate}
-                      text="Schuler Widget"
+                      icon={this.state.stundenplan ? iconRemove : iconCreate}
+                      text="Stundenpläner Widget"
                       onClick={() => {
-                          this.props.history.push({
-                              pathname: '/details',
-                              state: {
-                                  title: 'Räume',
-                              },
-                          });
+                          this.state.stundenplan ? this.setState({stundenplan: ""}) : this.setState({stundenplan: "Account"})
+                      }}
+                  />
+                  <Link
+                      icon={this.state.schuler ? iconRemove : iconCreate}
+                      text="Schüler Widget"
+                      onClick={() => {
+                          this.state.schuler ? this.setState({schuler: ""}) : this.setState({schuler: "Account"})
                       }}
                   />
                   <Link
                       icon={this.state.fach ? iconRemove : iconCreate}
-                      text="Fach Widget"
+                      text="Fächer Widget"
                       onClick={() => {
-                          this.props.history.push({
-                              pathname: '/details',
-                              state: {
-                                  title: 'Räume',
-                              },
-                          });
+                          this.state.fach ? this.setState({fach: ""}) : this.setState({fach: "Account"})
                       }}
                   />
                   <Link
                       icon={this.state.raum ? iconRemove : iconCreate}
-                      text="Raum Widget"
+                      text="Räume Widget"
                       onClick={() => {
-                          this.props.history.push({
-                              pathname: '/details',
-                              state: {
-                                  title: 'Räume',
-                              },
-                          });
+                          this.state.raum ? this.setState({raum: ""}) : this.setState({raum: "Account"})
                       }}
                   />
                   <Link
                       icon={this.state.lehrer ? iconRemove : iconCreate}
                       text="Lehrer Widget"
                       onClick={() => {
-                          this.props.history.push({
-                              pathname: '/details',
-                              state: {
-                                  title: 'Räume',
-                              },
-                          });
+                          this.state.lehrer ? this.setState({lehrer: ""}) : this.setState({lehrer: "Account"})
                       }}
                   />
                   <Link
                       icon={this.state.account ? iconRemove : iconCreate}
-                      text="Account Widget"
+                      text="Accounts Widget"
                       onClick={() => {
                           this.state.account ? this.setState({account: ""}) : this.setState({account: "Account"})
                       }}
