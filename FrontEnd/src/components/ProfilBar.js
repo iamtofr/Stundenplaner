@@ -63,7 +63,7 @@ class ProfilBar extends Component {
   }
 
   render() {
-    const { style, indicatorPos, onClick } = this.props;
+    const { indicatorPos } = this.props;
     const pos = {
       left: indicatorPos,
     };
