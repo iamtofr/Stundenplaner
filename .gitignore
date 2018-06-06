@@ -224,7 +224,7 @@ typings/
 
 *.iml
 modules.xml
-#.idea/
+.idea/
 *.ipr
 
 # Sonarlint plugin
