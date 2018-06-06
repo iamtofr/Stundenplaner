@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Stundenplan from '../components/Stundenplan';
 import Profile from '../components/Profile';
+import Liste from '../components/ProfileList';
 
 const styles = {
   container: {
@@ -18,12 +19,15 @@ class DetailsPage extends Component {
     }
 
     const title = this.props.location.state.title;
+    const id = this.props.location.state.id;
+    const occupation = this.props.location.state.occupation;
     document.title = `StundenPlaner - ${title}`;
 
     return (
       <div style={styles.container}>
         {title === 'Stundenplan' && <Stundenplan />}
-        {title === 'Profil' && <Profile />}
+        {title === 'Profil' && <Profile id={id} occupation={occupation} />}
+        {title === 'Profilliste' && <Liste occupation={occupation}/>}
       </div>
     );
   }

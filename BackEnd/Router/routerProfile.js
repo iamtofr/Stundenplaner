@@ -65,6 +65,8 @@ app.route('/')
     })
 
     .patch((req, res, next) => {
+
+
         if (req.perm >= permission.student) {
             console.log(req.body);
             let query = {'_id': req.body._id};
