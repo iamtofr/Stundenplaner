@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
 
@@ -10,36 +11,36 @@
 
   <name>Stundenplaner Algorithm</name>
   <description>
-    Stundenplaner Algorithm is the algorithm to the Stundenplaner curriculum planning service. It solves the problem using the Optaplanner framework and serves and receives the problems and solutions via a WebSocket service using sparkjava.
+    Stundenplaner Algorithm is the algorithm to the Stundenplaner curriculum planning service. It solves the problem
+    using the Optaplanner framework and serves and receives the problems and solutions via a WebSocket service using
+    sparkjava.
   </description>
   <url>https://www.stundenplaner.online</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <kotlin.version>1.2.41</kotlin.version>
+    <optaplanner.version>7.7.0.Final</optaplanner.version>
+    <main.class>online.stundenplaner.service.WebSocketServiceKt</main.class>
   </properties>
 
   <build>
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <groupId>org.codehaus.mojo</groupId>
-          <artifactId>exec-maven-plugin</artifactId>
-          <!-- WARNING: This configuration must be run with "mvn exec:java" not "mvn exec:exec". -->
-          <!-- It is impossible to write a configuration that is compatible with both exec:java and exec:exec -->
-          <configuration>
-            <mainClass>de.stundenplaner.service.websocketHandler</mainClass>
-            <arguments>
-              <argument>-Xms256m</argument>
-              <!-- Most examples run (potentially slower) with max heap of 128 MB (so -Xmx128m), but 1 example's dataset requires 1.5 GB -->
-              <argument>-Xmx1536m</argument>
-              <argument>-server</argument>
-            </arguments>
-          </configuration>
-        </plugin>
-      </plugins>
-    </pluginManagement>
     <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <!-- WARNING: This configuration must be run with "mvn exec:java" not "mvn exec:exec". -->
+        <!-- It is impossible to write a configuration that is compatible with both exec:java and exec:exec -->
+        <configuration>
+          <mainClass>${main.class}</mainClass>
+          <arguments>
+            <argument>-Xms256m</argument>
+            <!-- Most examples run (potentially slower) with max heap of 128 MB (so -Xmx128m), but 1 example's dataset requires 1.5 GB -->
+            <argument>-Xmx1536m</argument>
+            <argument>-server</argument>
+          </arguments>
+        </configuration>
+      </plugin>
       <plugin>
         <groupId>org.jetbrains.kotlin</groupId>
         <artifactId>kotlin-maven-plugin</artifactId>
@@ -99,16 +100,12 @@
     <dependency>
       <groupId>org.optaplanner</groupId>
       <artifactId>optaplanner-core</artifactId>
-      <version>7.7.0.Final</version>
+      <version>${optaplanner.version}</version>
     </dependency>
     <dependency>
       <groupId>org.optaplanner</groupId>
       <artifactId>optaplanner-persistence-jackson</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.optaplanner</groupId>
-      <artifactId>optaplanner-test</artifactId>
-      <scope>test</scope>
+      <version>${optaplanner.version}</version>
     </dependency>
     <!-- Logging -->
     <dependency>

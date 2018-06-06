@@ -1,6 +1,7 @@
 package online.stundenplaner.service
 
 import com.fasterxml.jackson.databind.DeserializationFeature
+import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import online.stundenplaner.domain.SchoolSchedule
@@ -19,8 +20,19 @@ fun main(args: Array<String>) {
   Spark.init()
 }
 
+/**
+ * Message wrapper for socket communication, allows specifying a msgType.
+ * @property msgType type of this message
+ * @property data the package of this message
+ * @constructor Creates a new message object.
+ */
 class Message(val msgType: String, val data: Any?)
 
+/**
+ * Controller class for a WebSocket connection.
+ * Implements @OnWebSocketConnect, @OnWebSocketMessage and @OnWebSocketError.
+ * Passes the
+ */
 @WebSocket
 class WebSocketController {
   private val mapper = jacksonObjectMapper()
@@ -52,46 +64,30 @@ class WebSocketController {
     courseSchedule.fillLectures()
     courseSchedule.fillRequiredTeachers()
 
-    val solverController = SolverController(ScheduleConsumer(session))
+    val solverController = SolverController(ScheduleConsumer({message -> emit(session, message) }, mapper))
 
     solverController.solve(courseSchedule)
-//    emit(session, Message("scheduleData", courseSchedule))
   }
+
 
   @OnWebSocketClose
-  fun disconnect(session: Session, code: Int, reason: String?) {
-    // remove the user from our list
-//        val user = users.remove(session)
-    // notify all other users this user has disconnected
-//        if (user != null) broadcast(Message("left", user))
-//        if (user != null) {
-//            println("left msg ${user.name}")
-//        }
-  }
+  fun disconnect(session: Session, code: Int, reason: String?) = println("${session.remote} disconnected.")
 
   @OnWebSocketError
-  fun error(session: Session, err: Throwable) {
-    println(err)
-  }
+  fun error(session: Session, err: Throwable) = println(err)
 
   private fun emit(session: Session, message: Message) = session.remote.sendString(mapper.writeValueAsString(message))
-//    fun broadcast(message: Message) = users.forEach() { emit(it.key, message) }
-//    fun broadcastToOthers(session: Session, message: Message) = users.filter { it.key != session }.forEach() { emit(it.key, message)}
 
-  class ScheduleConsumer(private val session: Session) : SolverController.SolutionConsumer<SchoolSchedule> {
-    private val mapper = jacksonObjectMapper()
-    private fun emit(session: Session, message: Message) = session.remote.sendString(mapper.writeValueAsString(message))
-
+  class ScheduleConsumer(private val returnFunction: (Message) -> Unit, val mapper:ObjectMapper) : SolverController.SolutionConsumer<SchoolSchedule> {
     override fun consumeSolution(solution: SchoolSchedule, numOfSolution: Int) {
-      mapper.writeValue(File("result$port$numOfSolution.json"), solution.lectures)
-//      emit(session, Message("scheduleData", solution.lectures))
+      mapper.writeValue(File("Algorithm/results/result$port$numOfSolution.json"), solution.lectures)
     }
 
     override fun consumeFinalSolution(solution: SchoolSchedule, numOfSolution: Int) {
       mapper.writeValue(File("finalresult$port$numOfSolution.json"), solution.lectures)
-      emit(session, Message("scheduleData", solution.score))
-      emit(session, Message("scheduleData", solution.lectures))
-      emit(session, Message("end", null))
+      returnFunction(Message("scheduleData", solution.score))
+      returnFunction(Message("scheduleData", solution.lectures))
+      returnFunction( Message("end", null))
     }
   }
 }

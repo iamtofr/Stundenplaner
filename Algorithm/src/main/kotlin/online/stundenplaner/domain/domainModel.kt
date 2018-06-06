@@ -64,6 +64,7 @@ data class Period(var timeSlot: Int, val weekday: Int) : Persistable() {
   }
 }
 
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator::class, property = "_id")
 data class Room(
   val number: Int,
   val house: String,

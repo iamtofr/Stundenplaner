@@ -15,7 +15,7 @@ private const val SOLVER_CONFIG = "online/stundenplaner/solver/curriculumCourseS
  * @param consumer a [SolutionConsumer] this service will report the solution to.
  * @param numOfSolutions the amount of solutions to be calculated at the same time. Be wary if this number is higher than your amount of CPU cores!
  */
-open class SolverController<Solution_>(
+class SolverController<Solution_>(
   private val consumer: SolutionConsumer<Solution_>,
   val numOfSolutions: Int = 1
 ) {
