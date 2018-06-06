@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import TextInput from './TextInput';
 import Button from './Button';
 import * as Colors from '../constants/Colors';
@@ -7,95 +7,96 @@ import Logo from '../assets/logo.svg';
 import ProfilBar from './ProfilBar';
 
 const styles = {
-    container: {
-        display: 'flex',
-        flexDirection: 'column',
-    },
-    info: {
-        display: 'flex',
-    },
-    data: {
-        display: 'flex',
-        flexDirection: 'column',
-    },
-    infoBox: {
-        display: 'flex',
-        flex: 'auto',
-        flexDirection: 'column',
-        padding: 5,
-        margin: 20,
-    },
-    person: {
-        display: 'flex',
-    },
-    contact: {
-        display: 'flex',
-    },
-    contactColumn: {
-        display: 'flex',
-        flex: 1,
-        flexDirection: 'column',
-    },
-    subjects: {
-        display: 'flex',
-    },
-    side: {
-        display: 'flex',
-        flexDirection: 'column',
-    },
-    title: {
-        fontSize: 18,
-        textTransform: 'uppercase',
-    },
-    avatar: {
-        width: 200,
-        height: 200,
-        borderRadius: 100,
-    },
-    notes: {
-        display: 'flex',
-        flex: 1,
-        background: 0,
-        border: 0,
-        outline: 0,
-        fontSize: 14,
-    },
-    buttons: {
-        display: 'flex',
-        justifyContent: 'flex-end',
-    },
-    button: {
-        margin: 10,
-    },
+  container: {
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  info: {
+    display: 'flex',
+  },
+  data: {
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  infoBox: {
+    display: 'flex',
+    flex: 'auto',
+    flexDirection: 'column',
+    padding: 5,
+    margin: 20,
+  },
+  person: {
+    display: 'flex',
+  },
+  contact: {
+    display: 'flex',
+  },
+  contactColumn: {
+    display: 'flex',
+    flex: 1,
+    flexDirection: 'column',
+  },
+  subjects: {
+    display: 'flex',
+  },
+  side: {
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  title: {
+    fontSize: 18,
+    textTransform: 'uppercase',
+  },
+  avatar: {
+    width: 200,
+    height: 200,
+    borderRadius: 100,
+  },
+  notes: {
+    display: 'flex',
+    flex: 1,
+    background: 0,
+    border: 0,
+    outline: 0,
+    fontSize: 14,
+  },
+  buttons: {
+    display: 'flex',
+    justifyContent: 'flex-end',
+  },
+  button: {
+    margin: 10,
+  },
 };
 
 class Profile extends Component {
-    constructor() {
-        super();
-        this.state = {
-            profile: {},
-        };
-    }
+  constructor() {
+    super();
+    this.state = {
+      profile: {},
+    };
+  }
 
-    componentDidMount() {
-        console.log(this.props);
-        this.occupation = this.props.occupation;
-        console.log("XXXXX" + this.props.occupation);
+  componentDidMount() {
+    console.log(this.props);
+    this.occupation = this.props.occupation;
+    console.log("XXXXX" + this.props.occupation);
 
-        fetch('https://stundenplaner.online/profile/' + this.props.id + '?token=1234')
-            .then(response => response.json())
-            .then(responseJson => {
-                this.setState({
-                    profile: responseJson,
-                });
-            })
-            .catch(err => {
-                console.log(err);
-                this.setState({
-                    passwordError: 'Benutzername oder Passwort falsch.',
-                });
-            });
-    }
+    fetch('https://stundenplaner.online/profile/' + this.props.id + '?token=1234')
+      .then(response => response.json())
+      .then(responseJson => {
+        this.setState({
+          profile: responseJson,
+        });
+      })
+      .catch(err => {
+        console.log(err);
+        this.setState({
+          passwordError: 'Benutzername oder Passwort falsch.',
+        });
+      });
+  }
+
   printDiv = divName => {
     let printContents = document.getElementById(divName).parentNode.innerHTML;
     let originalContents = document.body.innerHTML;
@@ -118,8 +119,8 @@ class Profile extends Component {
     }
     return (
       <div style={styles.container}>
-  <ProfilBar />
-    <div style={styles.info}>
+        <ProfilBar/>
+        <div style={styles.info}>
           <div style={styles.data}>
             <div style={styles.infoBox}>
               <p style={styles.title}>Persönliche Daten</p>
@@ -154,7 +155,7 @@ class Profile extends Component {
                       initials: event.target.value,
                     })
                   }
-                />
+                />}
                 <TextInput
                   type="text"
                   label="Geschlecht"
@@ -222,53 +223,49 @@ class Profile extends Component {
                     }
                   />
                 </div>
-                  {
-                    this.occupation === "student" &&
-                    < div
-                    style = { styles.contactColumn
-                  }>
-                  <
-                    TextInput
-                    type = "text"
-                    label = "Kontaktperson"
-                    value = { profile.contact
-                  }
-                    onChange = { event
-                  =>
-                    this.setState({
-                      contact: event.target.value,
-                    })
-                  }
+                {
+                  this.occupation === "student" &&
+                  <div
+                    style={styles.contactColumn}
+                  >
+                    <TextInput
+                      type="text"
+                      label="Kontaktperson"
+                      value={profile.contact
+                      }
+                      onChange={event =>
+                        this.setState({
+                          contact: event.target.value,
+                        })
+                      }
                     />
-                    < TextInput
-                    type = "tel"
-                    label = "Telefonnummer"
-                    value = { profile.contactPhone
-                  }
-                    onChange = { event
-                  =>
-                    this.setState({
-                      contactPhone: event.target.value,
-                    })
-                  }
+                    <TextInput
+                      type="tel"
+                      label="Telefonnummer"
+                      value={profile.contactPhone
+                      }
+                      onChange={event =>
+                        this.setState({
+                          contactPhone: event.target.value,
+                        })
+                      }
                     />
-                    < TextInput
-                    type = "email"
-                    label = "E-Mail"
-                    value = { profile.contactEmail
-                  }
-                    onChange = { event
-                  =>
-                    this.setState({
-                      contactEmail: event.target.value,
-                    })
-                  }
+                    <TextInput
+                      type="email"
+                      label="E-Mail"
+                      value={profile.contactEmail
+                      }
+                      onChange={event =>
+                        this.setState({
+                          contactEmail: event.target.value,
+                        })
+                      }
                     />
-                    < /div>
-                  }
+                  </div>
+                }
               </div>
             </div>
-                  {this.occupation === "teacher" &&
+            {this.occupation === "teacher" &&
             <div style={styles.infoBox}>
               <p style={styles.title}>Unterrichtete Fächer</p>
               <div style={styles.subjects}>
@@ -310,16 +307,16 @@ class Profile extends Component {
                 />
               </div>
             </div>
-                  }
+            }
           </div>
           <div style={styles.side}>
-            <img style={styles.avatar} src={profile.photo || Logo} alt="Avatar" />
+            <img style={styles.avatar} src={profile.photo || Logo} alt="Avatar"/>
             <Button
               style={styles.button}
               text="Löschen"
               color={Colors.blue}
               hoverColor={Colors.lightBlue}
-              />
+            />
             <div style={styles.infoBox}>
               <p style={styles.title}>Notizen</p>
               <textarea
@@ -336,26 +333,27 @@ class Profile extends Component {
         </div>
         <div style={styles.buttons}>
           <Button style={styles.button}
-          text="Ausdrucken"
-          color={Colors.blue}
-          hoverColor={Colors.lightBlue}
-          onClick={() => {console.log('Print schedule');
-          this.printDiv('avatar');
-          }}
+                  text="Ausdrucken"
+                  color={Colors.blue}
+                  hoverColor={Colors.lightBlue}
+                  onClick={() => {
+                    console.log('Print schedule');
+                    this.printDiv('avatar');
+                  }}
           />
           <Button
             style={styles.button}
             text="Speichern"
             color={Colors.green}
-    hoverColor={Colors.lightGreen}
+            hoverColor={Colors.lightGreen}
 
 
-    />
+          />
           <Button style={styles.button}
-          text="Abbruch"
-    color={Colors.red}
-    hoverColor={Colors.lightRed}
-    />
+                  text="Abbruch"
+                  color={Colors.red}
+                  hoverColor={Colors.lightRed}
+          />
         </div>
       </div>
     );
