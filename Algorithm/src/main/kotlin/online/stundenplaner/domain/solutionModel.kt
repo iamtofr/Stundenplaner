@@ -3,12 +3,13 @@ package online.stundenplaner.domain
 import com.fasterxml.jackson.annotation.JsonIdentityReference
 import com.fasterxml.jackson.annotation.JsonIgnore
 import online.stundenplaner.persistence.Persistable
+import online.stundenplaner.solver.weights.RoomStrengthWeightFactory
 import org.optaplanner.core.api.domain.entity.PlanningEntity
 import org.optaplanner.core.api.domain.entity.PlanningPin
 import org.optaplanner.core.api.domain.valuerange.ValueRangeProvider
 import org.optaplanner.core.api.domain.variable.PlanningVariable
 
-@PlanningEntity // (difficultyWeightFactoryClass = LectureDifficultyWeightFactory::class)
+@PlanningEntity
 class Lecture(
   @JsonIdentityReference(alwaysAsId = true)
   var course: Course? = null,
@@ -21,15 +22,11 @@ class Lecture(
   var pinned: Boolean? = false
 
   @JsonIdentityReference(alwaysAsId = true)
-  @get:PlanningVariable(valueRangeProviderRefs = ["allPeriods"]
-//    ,strengthWeightFactoryClass = PeriodStrengthWeightFactory::class
-  )
+  @get:PlanningVariable(valueRangeProviderRefs = ["allPeriods"])
   var period: Period? = null
 
   @JsonIdentityReference(alwaysAsId = true)
-  @get:PlanningVariable(valueRangeProviderRefs = ["allRooms"]
-    //, strengthWeightFactoryClass = RoomStrengthWeightFactory::class
-  )
+  @get:PlanningVariable(valueRangeProviderRefs = ["allRooms"], strengthWeightFactoryClass = RoomStrengthWeightFactory::class)
   var room: Room? = null
 
   @JsonIdentityReference(alwaysAsId = true)
