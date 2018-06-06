@@ -19,13 +19,15 @@ class DetailsPage extends Component {
     }
 
     const title = this.props.location.state.title;
+    const id = this.props.location.state.id;
+    const occupation = this.props.location.state.occupation;
     document.title = `StundenPlaner - ${title}`;
 
     return (
       <div style={styles.container}>
         {title === 'Stundenplan' && <Stundenplan />}
-        {title === 'Profil' && <Profile />}
-        {title === 'Schülerliste' && <Liste />}
+        {title === 'Profil' && <Profile id={id} occupation={occupation} />}
+        {title === 'Profilliste' && <Liste occupation={occupation}/>}
       </div>
     );
   }

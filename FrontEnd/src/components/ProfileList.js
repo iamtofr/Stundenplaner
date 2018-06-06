@@ -5,29 +5,29 @@ import iconUser from '../assets/iconUser.svg';
 import * as Colors from '../constants/Colors';
 import Course from "./Course";
 
-const socket = new WebSocket('wss://stundenplaner.online');
-socket.onopen = () => {
-    socket.send('Konni connected!');
-};
+
 
 const styles = {};
 
 class ProfileList extends Component {
     constructor() {
         super();
+
         this.state = {
             profiles: []
         };
     }
 
     componentDidMount() {
-        fetch('https://stundenplaner.online/student?token=1234')
+        this.occupation = this.props.occupation;
+        fetch('https://stundenplaner.online/' + this.occupation + '?token=1234')
             .then(response => response.json())
             .then(responseJson => {
                 this.setState({
                     profiles: responseJson,
                 });
-            })
+            });
+
     }
 
     renderProfileLink(profile) {
@@ -40,6 +40,9 @@ class ProfileList extends Component {
                         pathname: '/details',
                         state: {
                             title: 'Profil',
+
+                            id: profile.profile._id,
+                            occupation: this.occupation
                         },
                     });
                 }}
