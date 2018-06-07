@@ -5,7 +5,7 @@ const WebSocket = require('ws');
 const express = require('express');
 const https = require('https');
 const helmet = require('helmet');
-const toAlgorithm = require('../Algorithm/collectData');
+const toAlgorithm = require('../Tools/collectDataForAlgo');
 const WebsocketClient = require('./client');
 
 
@@ -14,6 +14,7 @@ mongoose.connect('mongodb://localhost/stundenplaner');
 const Schema = require('../Schemas/schemas');
 const period = mongoose.model('period', Schema.period);
 const Curriculum = mongoose.model('curiculum', Schema.curriculum);
+const populateCurriculum = require('../Tools/populateCurriculum');
 
 
 const app = express();
@@ -91,16 +92,21 @@ wss.on('connection', function connection(ws) {
   console.log('connected');
   ws.on('message', function incoming(message) {
     toAlgorithm.buildAlgorithm().then((schoolData) => {
+      //TODO das hier muss dann weg
       ws.send(JSON.stringify({ test: "geht" }));
       let websocketClient = new WebsocketClient(schoolData, (resolvedSchoolData) => {
-        //TODO das hier muss dann weg
         console.log(resolvedSchoolData);
+
         let newCurriculum = Curriculum(resolvedSchoolData);
+
         newCurriculum.save(function(err) {
           if (err) throw err;
           console.log('Curriculum created!');
         });
-        // ws.send(JSON.stringify(newCurriculum));
+
+        let populated = populateCurriculum.build(newCurriculum);
+
+        ws.send(JSON.stringify(populated));
       });
     });
   })

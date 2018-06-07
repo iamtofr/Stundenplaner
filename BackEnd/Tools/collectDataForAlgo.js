@@ -24,7 +24,6 @@ let getData = (data) => {
 };
 
 let calcStudentSize = (courses) => {
-
  courses.forEach((course)=> {
    course.studentSize = course.students.length;
    course.students = [];
@@ -40,16 +39,12 @@ async function buildAlgo() {
       rooms: await getData(room),
       teachers: await getData(teacher),
       courses: calcStudentSize(await getData(course)),
-      // courses: (await getData(course)),
       subjects: await getData(subject),
     };
-    // console.log('ich bin von hier du sack', toAlgo);
     return toAlgo;
   }
   catch (err) {
     console.log('hier error von collectData: ', err)
   }
 }
-
-// console.log(buildAlgo().then((data) => console.log(data)));
 module.exports.buildAlgorithm = buildAlgo;
