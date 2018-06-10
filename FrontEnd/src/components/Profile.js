@@ -127,7 +127,7 @@ class Profile extends Component {
                 <TextInput
                   type="text"
                   label="Vorname"
-                  value={profile.surname}
+                  value={profile.name}
                   onChange={event =>
                     this.setState({
                       firstName: event.target.value,
@@ -137,7 +137,7 @@ class Profile extends Component {
                 <TextInput
                   type="text"
                   label="Nachname"
-                  value={profile.name}
+                  value={profile.surname}
                   onChange={event =>
                     this.setState({
                       lastName: event.target.value,
