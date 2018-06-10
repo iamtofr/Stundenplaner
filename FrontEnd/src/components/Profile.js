@@ -168,7 +168,7 @@ class Profile extends Component {
                 <TextInput
                   type="text"
                   label="Geburtsdatum"
-                  value={profile.dateOfBirth}
+                  value={this.renderDateOfBirth(profile.dateOfBirth)}
                   onChange={event =>
                     this.setState({
                       dateOfBirth: event.target.value,
@@ -357,6 +357,12 @@ class Profile extends Component {
       </div>
     );
   }
+
+    renderDateOfBirth(dateOfBirth) {
+        let date = new Date(dateOfBirth);
+        let month = date.getMonth()+1;
+        return date.getDate().toString()+ "." + month.toString() +"."+ date.getFullYear().toString();
+    }
 }
 
 export default Profile;
