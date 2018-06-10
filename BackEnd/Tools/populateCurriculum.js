@@ -64,4 +64,4 @@ let populateLectures = async (dataFromAlgo) => {
 };
 
 
-module.exports = build;
+module.exports.build = build;

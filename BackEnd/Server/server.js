@@ -92,11 +92,8 @@ wss.on('connection', function connection(ws) {
   console.log('connected');
   ws.on('message', function incoming(message) {
     toAlgorithm.buildAlgorithm().then((schoolData) => {
-      //TODO das hier muss dann weg
-      ws.send(JSON.stringify({ test: "geht" }));
       let websocketClient = new WebsocketClient(schoolData, (resolvedSchoolData) => {
-        console.log(resolvedSchoolData);
-
+        console.log("11111111111 From Algo incoming: ", resolvedSchoolData);
         let newCurriculum = Curriculum(resolvedSchoolData);
 
         newCurriculum.save(function(err) {

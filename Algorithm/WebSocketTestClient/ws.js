@@ -31,7 +31,7 @@ const ws = new WebSocket('ws://localhost:9000/api.stundenplaner.online/', {
 var data = fs.readFileSync('dummy.json', 'utf8');
 // var data = fs.readFileSync('schoolData.json', 'utf8');
 var jsonData = JSON.parse(data);
-var schoolData = JSON.stringify(jsonData);
+var schoolData = jsonData;
 
 ws.on('open', function open() {
     console.log('connection is open');

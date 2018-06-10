@@ -34,7 +34,7 @@ class WebsocketClient {
         switch (serverMessage.msgType) {
           case CONNECTION_STATUS:
             if (serverMessage.data === "algorithmServerReady") {
-              this.sendMessage(GET_LECTURES, schoolData);
+              this.sendMessage(GET_LECTURES, JSON.stringify(schoolData));
             } else {
               throw new Error("Wrong server");
             }
