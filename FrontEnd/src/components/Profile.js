@@ -80,7 +80,6 @@ class Profile extends Component {
   componentDidMount() {
     console.log(this.props);
     this.occupation = this.props.occupation;
-    console.log("XXXXX" + this.props.occupation);
 
     fetch('https://stundenplaner.online/profile/' + this.props.id + '?token=1234')
       .then(response => response.json())
@@ -195,7 +194,7 @@ class Profile extends Component {
                   <TextInput
                     type="text"
                     label="Anschrift"
-                    value={profile.address}
+                    value={profile.address? (profile.address.street + " " + profile.address.number + " " + profile.address.zipCode + " " + profile.address.city) :""}
                     onChange={event =>
                       this.setState({
                         address: event.target.value,
