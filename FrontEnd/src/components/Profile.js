@@ -241,8 +241,7 @@ class Profile extends Component {
                     <TextInput
                       type="tel"
                       label="Telefonnummer"
-                      value={profile.contactPhone
-                      }
+                      value={profile.contactPhoneNumber}
                       onChange={event =>
                         this.setState({
                           contactPhone: event.target.value,
