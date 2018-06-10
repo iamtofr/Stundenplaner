@@ -193,7 +193,7 @@
       "number": 34,
       "seats": 14,
       "house": "A",
-      "roomType": "",
+      "roomType": "Klassenraum",
       "barrierFree": true,
       "__v": 0
     },
@@ -208,7 +208,7 @@
       "number": 45,
       "seats": 11,
       "house": "A",
-      "roomType": "",
+      "roomType": "Klassenraum",
       "barrierFree": false,
       "__v": 0
     },
@@ -223,7 +223,7 @@
       "number": 93,
       "seats": 11,
       "house": "A",
-      "roomType": "",
+      "roomType": "Klassenraum",
       "barrierFree": true,
       "__v": 0
     },
@@ -238,7 +238,7 @@
       "number": 67,
       "seats": 10,
       "house": "A",
-      "roomType": "",
+      "roomType": "Klassenraum",
       "barrierFree": false,
       "__v": 0
     },
@@ -253,7 +253,7 @@
       "number": 5,
       "seats": 15,
       "house": "A",
-      "roomType": "",
+      "roomType": "Klassenraum",
       "barrierFree": false,
       "__v": 0
     },
@@ -268,7 +268,7 @@
       "number": 73,
       "seats": 14,
       "house": "A",
-      "roomType": "",
+      "roomType": "Klassenraum",
       "barrierFree": false,
       "__v": 0
     },
@@ -283,7 +283,7 @@
       "number": 18,
       "seats": 13,
       "house": "A",
-      "roomType": "",
+      "roomType": "Klassenraum",
       "barrierFree": false,
       "__v": 0
     },
@@ -298,7 +298,7 @@
       "number": 34,
       "seats": 11,
       "house": "A",
-      "roomType": "",
+      "roomType": "Klassenraum",
       "barrierFree": true,
       "__v": 0
     },
@@ -313,7 +313,7 @@
       "number": 8,
       "seats": 14,
       "house": "A",
-      "roomType": "",
+      "roomType": "Klassenraum",
       "barrierFree": false,
       "__v": 0
     },
@@ -328,7 +328,7 @@
       "number": 29,
       "seats": 14,
       "house": "A",
-      "roomType": "",
+      "roomType": "Klassenraum",
       "barrierFree": true,
       "__v": 0
     },
@@ -343,7 +343,7 @@
       "number": 93,
       "seats": 13,
       "house": "A",
-      "roomType": "",
+      "roomType": "Klassenraum",
       "barrierFree": true,
       "__v": 0
     },
@@ -358,7 +358,7 @@
       "number": 77,
       "seats": 15,
       "house": "A",
-      "roomType": "",
+      "roomType": "Klassenraum",
       "barrierFree": false,
       "__v": 0
     },
@@ -373,7 +373,7 @@
       "number": 2,
       "seats": 13,
       "house": "A",
-      "roomType": "",
+      "roomType": "Klassenraum",
       "barrierFree": true,
       "__v": 0
     },
@@ -388,7 +388,7 @@
       "number": 18,
       "seats": 15,
       "house": "A",
-      "roomType": "",
+      "roomType": "Klassenraum",
       "barrierFree": true,
       "__v": 0
     },
@@ -403,7 +403,7 @@
       "number": 19,
       "seats": 12,
       "house": "A",
-      "roomType": "",
+      "roomType": "Klassenraum",
       "barrierFree": true,
       "__v": 0
     },
@@ -418,7 +418,7 @@
       "number": 50,
       "seats": 14,
       "house": "A",
-      "roomType": "",
+      "roomType": "Klassenraum",
       "barrierFree": false,
       "__v": 0
     },
@@ -433,7 +433,7 @@
       "number": 13,
       "seats": 13,
       "house": "A",
-      "roomType": "",
+      "roomType": "Klassenraum",
       "barrierFree": true,
       "__v": 0
     },
@@ -448,7 +448,7 @@
       "number": 73,
       "seats": 10,
       "house": "A",
-      "roomType": "",
+      "roomType": "Klassenraum",
       "barrierFree": false,
       "__v": 0
     },
@@ -463,7 +463,7 @@
       "number": 97,
       "seats": 14,
       "house": "A",
-      "roomType": "",
+      "roomType": "Klassenraum",
       "barrierFree": false,
       "__v": 0
     },
@@ -478,7 +478,7 @@
       "number": 33,
       "seats": 10,
       "house": "A",
-      "roomType": "",
+      "roomType": "Klassenraum",
       "barrierFree": false,
       "__v": 0
     },
@@ -493,7 +493,7 @@
       "number": 48,
       "seats": 12,
       "house": "A",
-      "roomType": "",
+      "roomType": "Klassenraum",
       "barrierFree": false,
       "__v": 0
     },
@@ -725,442 +725,462 @@
   ],
   "teachers": [
     {
-      "_id": "5b01a5a7b99f3749247a359c",
       "subjectSpecialisations": [
         "5af1f2c2b92d56788ad85b20",
         "5af1f2c2b92d56788ad85b2a"
       ],
+      "_id": "5b01a5a7b99f3749247a359c",
       "profile": "5af5cf0420c6f43d9b507007",
       "__v": 0
     },
     {
-      "_id": "5b01a5feb99f3749247a359d",
       "subjectSpecialisations": [
         "5af1f2c2b92d56788ad85b34",
         "5af1f2c2b92d56788ad85b3e"
       ],
+      "_id": "5b01a5feb99f3749247a359d",
       "profile": "5af5cf0420c6f43d9b507008",
       "__v": 0
     },
     {
-      "_id": "5b01a641b99f3749247a359e",
       "subjectSpecialisations": [
         "5af1f2c2b92d56788ad85b48",
         "5af1f2c2b92d56788ad85b52"
       ],
+      "_id": "5b01a641b99f3749247a359e",
       "profile": "5af5cf0420c6f43d9b50700b",
       "__v": 0
     },
     {
-      "_id": "5b01a673b99f3749247a359f",
       "subjectSpecialisations": [
         "5af1f2c2b92d56788ad85b5c",
         "5af1f2c2b92d56788ad85b66"
       ],
+      "_id": "5b01a673b99f3749247a359f",
       "profile": "5af5cf0420c6f43d9b506fd3",
       "__v": 0
     },
     {
-      "_id": "5b01a6aab99f3749247a35a0",
       "subjectSpecialisations": [
         "5af1f2c2b92d56788ad85b70",
         "5af1f2c2b92d56788ad85b7a"
       ],
+      "_id": "5b01a6aab99f3749247a35a0",
       "profile": "5af5cf0420c6f43d9b507009",
       "__v": 0
     },
     {
-      "_id": "5b01a6e7b99f3749247a35a1",
       "subjectSpecialisations": [
         "5af201af312ace7f6644c7b0",
         "5af1f2c2b92d56788ad85b20"
       ],
+      "_id": "5b01a6e7b99f3749247a35a1",
       "profile": "5af5cf0420c6f43d9b506fd8",
       "__v": 0
     },
     {
-      "_id": "5b01a720b99f3749247a35a2",
       "subjectSpecialisations": [
         "5af1f2c2b92d56788ad85b2a",
         "5af1f2c2b92d56788ad85b34"
       ],
+      "_id": "5b01a720b99f3749247a35a2",
       "profile": "5af5cf0420c6f43d9b50700c",
       "__v": 0
     },
     {
-      "_id": "5b01a74eb99f3749247a35a3",
       "subjectSpecialisations": [
         "5af1f2c2b92d56788ad85b3e",
         "5af1f2c2b92d56788ad85b48"
       ],
+      "_id": "5b01a74eb99f3749247a35a3",
       "profile": "5af5cf0420c6f43d9b50700d",
       "__v": 0
     },
     {
-      "_id": "5b01a786b99f3749247a35a4",
       "subjectSpecialisations": [
         "5af1f2c2b92d56788ad85b52",
         "5af1f2c2b92d56788ad85b5c"
       ],
+      "_id": "5b01a786b99f3749247a35a4",
       "profile": "5af5cf0420c6f43d9b506fdd",
       "__v": 0
     },
     {
-      "_id": "5b01a7b3b99f3749247a35a5",
       "subjectSpecialisations": [
         "5af1f2c2b92d56788ad85b66",
         "5af1f2c2b92d56788ad85b70"
       ],
+      "_id": "5b01a7b3b99f3749247a35a5",
       "profile": "5af5cf0420c6f43d9b50700e",
       "__v": 0
     },
     {
-      "_id": "5b01a80ab99f3749247a35a6",
       "subjectSpecialisations": [
         "5af1f2c2b92d56788ad85b7a",
         "5af201af312ace7f6644c7b0"
       ],
+      "_id": "5b01a80ab99f3749247a35a6",
       "profile": "5af5cf0420c6f43d9b506fe2",
       "__v": 0
     },
     {
-      "_id": "5b01a844b99f3749247a35a7",
       "subjectSpecialisations": [
         "5af1f2c2b92d56788ad85b20",
         "5af1f2c2b92d56788ad85b34"
       ],
+      "_id": "5b01a844b99f3749247a35a7",
       "profile": "5af5cf0420c6f43d9b506fe7",
       "__v": 0
     },
     {
-      "_id": "5b01a8a6b99f3749247a35a8",
       "subjectSpecialisations": [
         "5af1f2c2b92d56788ad85b3e",
         "5af1f2c2b92d56788ad85b52"
       ],
+      "_id": "5b01a8a6b99f3749247a35a8",
       "profile": "5af5cf0420c6f43d9b507010",
       "__v": 0
     },
     {
-      "_id": "5b01a8e2b99f3749247a35a9",
       "subjectSpecialisations": [
         "5af1f2c2b92d56788ad85b5c",
         "5af1f2c2b92d56788ad85b70"
       ],
+      "_id": "5b01a8e2b99f3749247a35a9",
       "profile": "5af5cf0420c6f43d9b506fec",
       "__v": 0
     },
     {
-      "_id": "5b01a961b99f3749247a35aa",
       "subjectSpecialisations": [
         "5af1f2c2b92d56788ad85b7a",
         "5af1f2c2b92d56788ad85b20"
       ],
+      "_id": "5b01a961b99f3749247a35aa",
       "profile": "5af5cf0420c6f43d9b507011",
       "__v": 0
     },
     {
-      "_id": "5b01aac1b99f3749247a35ab",
       "subjectSpecialisations": [
         "5af1f2c2b92d56788ad85b2a",
         "5af1f2c2b92d56788ad85b3e"
       ],
+      "_id": "5b01aac1b99f3749247a35ab",
       "profile": "5af5cf0420c6f43d9b507012",
       "__v": 0
     },
     {
-      "_id": "5b01aaf6b99f3749247a35ac",
       "subjectSpecialisations": [
         "5af1f2c2b92d56788ad85b48",
         "5af1f2c2b92d56788ad85b5c"
       ],
+      "_id": "5b01aaf6b99f3749247a35ac",
       "profile": "5af5cf0420c6f43d9b506ff1",
       "__v": 0
     },
     {
-      "_id": "5b01ab2ab99f3749247a35ad",
       "subjectSpecialisations": [
         "5af1f2c2b92d56788ad85b66",
         "5af1f2c2b92d56788ad85b7a"
       ],
+      "_id": "5b01ab2ab99f3749247a35ad",
       "profile": "5af5cf0420c6f43d9b507013",
       "__v": 0
     },
     {
-      "_id": "5b01ab61b99f3749247a35ae",
       "subjectSpecialisations": [
         "5af201af312ace7f6644c7b0"
       ],
+      "_id": "5b01ab61b99f3749247a35ae",
       "profile": "5af5cf0420c6f43d9b506ff6",
       "__v": 0
     },
     {
-      "_id": "5b01abe5b99f3749247a35af",
       "subjectSpecialisations": [
         "5af1f2c2b92d56788ad85b20",
         "5af1f2c2b92d56788ad85b2a"
       ],
+      "_id": "5b01abe5b99f3749247a35af",
       "profile": "5af5cf0420c6f43d9b507015",
       "__v": 0
     },
     {
-      "_id": "5b01ac15b99f3749247a35b0",
       "subjectSpecialisations": [
         "5af1f2c2b92d56788ad85b34",
         "5af1f2c2b92d56788ad85b3e"
       ],
+      "_id": "5b01ac15b99f3749247a35b0",
       "profile": "5af5cf0420c6f43d9b506ffb",
       "__v": 0
     },
     {
-      "_id": "5b01ac44b99f3749247a35b1",
       "subjectSpecialisations": [
         "5af1f2c2b92d56788ad85b48",
         "5af1f2c2b92d56788ad85b52"
       ],
+      "_id": "5b01ac44b99f3749247a35b1",
       "profile": "5af5cf0420c6f43d9b507016",
       "__v": 0
     },
     {
-      "_id": "5b01ac74b99f3749247a35b2",
       "subjectSpecialisations": [
         "5af1f2c2b92d56788ad85b5c",
         "5af1f2c2b92d56788ad85b66"
       ],
+      "_id": "5b01ac74b99f3749247a35b2",
       "profile": "5af5cf0420c6f43d9b507017",
       "__v": 0
     },
     {
-      "_id": "5b01aca4b99f3749247a35b3",
       "subjectSpecialisations": [
         "5af1f2c2b92d56788ad85b70",
         "5af1f2c2b92d56788ad85b7a"
       ],
+      "_id": "5b01aca4b99f3749247a35b3",
       "profile": "5af5cf0420c6f43d9b507000",
       "__v": 0
     },
     {
-      "_id": "5b01acd1b99f3749247a35b4",
       "subjectSpecialisations": [
         "5af201af312ace7f6644c7b0",
         "5af1f2c2b92d56788ad85b20"
       ],
+      "_id": "5b01acd1b99f3749247a35b4",
       "profile": "5af5cf0420c6f43d9b507018",
       "__v": 0
     },
     {
-      "_id": "5b01acfcb99f3749247a35b5",
       "subjectSpecialisations": [
         "5af1f2c2b92d56788ad85b2a",
         "5af1f2c2b92d56788ad85b34"
       ],
+      "_id": "5b01acfcb99f3749247a35b5",
       "profile": "5af5cf0420c6f43d9b507005",
       "__v": 0
     },
     {
-      "_id": "5b01ad3db99f3749247a35b6",
       "subjectSpecialisations": [
         "5af1f2c2b92d56788ad85b3e",
         "5af1f2c2b92d56788ad85b48"
       ],
+      "_id": "5b01ad3db99f3749247a35b6",
       "profile": "5af5cf0420c6f43d9b50701a",
       "__v": 0
     },
     {
-      "_id": "5b01ad65b99f3749247a35b7",
       "subjectSpecialisations": [
         "5af1f2c2b92d56788ad85b52",
         "5af1f2c2b92d56788ad85b5c"
       ],
+      "_id": "5b01ad65b99f3749247a35b7",
       "profile": "5af5cf0420c6f43d9b50700a",
       "__v": 0
     },
     {
-      "_id": "5b01ad97b99f3749247a35b8",
       "subjectSpecialisations": [
         "5af1f2c2b92d56788ad85b66",
         "5af1f2c2b92d56788ad85b70"
       ],
+      "_id": "5b01ad97b99f3749247a35b8",
       "profile": "5af5cf0420c6f43d9b50701b",
       "__v": 0
     },
     {
-      "_id": "5b01adcbb99f3749247a35b9",
       "subjectSpecialisations": [
         "5af1f2c2b92d56788ad85b7a",
         "5af201af312ace7f6644c7b0"
       ],
+      "_id": "5b01adcbb99f3749247a35b9",
       "profile": "5af5cf0420c6f43d9b50700f",
       "__v": 0
     },
     {
-      "_id": "5b01adfdb99f3749247a35ba",
       "subjectSpecialisations": [
         "5af201af312ace7f6644c7b0",
         "5af1f2c2b92d56788ad85b20"
       ],
+      "_id": "5b01adfdb99f3749247a35ba",
       "profile": "5af5cf0420c6f43d9b50701c",
       "__v": 0
     },
     {
-      "_id": "5b01ae26b99f3749247a35bb",
       "subjectSpecialisations": [
         "5af1f2c2b92d56788ad85b7a",
         "5af1f2c2b92d56788ad85b2a"
       ],
+      "_id": "5b01ae26b99f3749247a35bb",
       "profile": "5af5cf0420c6f43d9b50701d",
       "__v": 0
     },
     {
-      "_id": "5b01ae52b99f3749247a35bc",
       "subjectSpecialisations": [
         "5af1f2c2b92d56788ad85b70",
         "5af1f2c2b92d56788ad85b34"
       ],
+      "_id": "5b01ae52b99f3749247a35bc",
       "profile": "5af5cf0420c6f43d9b507014",
       "__v": 0
     }
   ],
   "courses": [
     {
-      "studentSize": 10,
+      "students": [],
       "_id": "5b01e616c63f5c5a1ff60655",
       "grade": "1",
       "letter": "a",
-      "__v": 0
+      "__v": 0,
+      "studentSize": 10
     },
     {
-      "studentSize": 12,
+      "students": [],
       "_id": "5b01e6b3c63f5c5a1ff60656",
       "grade": "1",
       "letter": "b",
-      "__v": 0
+      "__v": 0,
+      "studentSize": 10
     },
     {
-      "studentSize": 11,
+      "students": [],
       "_id": "5b01e734c63f5c5a1ff60657",
       "grade": "2",
       "letter": "a",
-      "__v": 0
+      "__v": 0,
+      "studentSize": 10
     },
     {
-      "studentSize": 15,
+      "students": [],
       "_id": "5b01e7b0c63f5c5a1ff60658",
       "grade": "2",
       "letter": "b",
-      "__v": 0
+      "__v": 0,
+      "studentSize": 10
     },
     {
-      "studentSize": 13,
+      "students": [],
       "_id": "5b01e838c63f5c5a1ff60659",
       "grade": "3",
       "letter": "a",
-      "__v": 0
+      "__v": 0,
+      "studentSize": 10
     },
     {
-      "studentSize": 12,
+      "students": [],
       "_id": "5b01e8abc63f5c5a1ff6065a",
       "grade": "3",
       "letter": "b",
-      "__v": 0
+      "__v": 0,
+      "studentSize": 10
     },
     {
-      "studentSize": 14,
+      "students": [],
       "_id": "5b01e97dc63f5c5a1ff6065b",
       "grade": "4",
       "letter": "a",
-      "__v": 0
+      "__v": 0,
+      "studentSize": 10
     },
     {
-      "studentSize": 12,
+      "students": [],
       "_id": "5b01e9fcc63f5c5a1ff6065c",
       "grade": "5",
       "letter": "a",
-      "__v": 0
+      "__v": 0,
+      "studentSize": 10
     },
     {
-      "studentSize": 13,
+      "students": [],
       "_id": "5b01ea6cc63f5c5a1ff6065d",
       "grade": "5",
       "letter": "b",
-      "__v": 0
+      "__v": 0,
+      "studentSize": 10
     },
     {
-      "studentSize": 12,
+      "students": [],
       "_id": "5b01eb44c63f5c5a1ff6065e",
       "grade": "6",
       "letter": "a",
-      "__v": 0
+      "__v": 0,
+      "studentSize": 10
     },
     {
-      "studentSize": 11,
+      "students": [],
       "_id": "5b01ebb3c63f5c5a1ff6065f",
       "grade": "6",
       "letter": "b",
-      "__v": 0
+      "__v": 0,
+      "studentSize": 10
     },
     {
-      "studentSize": 10,
+      "students": [],
       "_id": "5b01ec26c63f5c5a1ff60660",
       "grade": "7",
       "letter": "a",
-      "__v": 0
+      "__v": 0,
+      "studentSize": 10
     },
     {
-      "studentSize": 9,
+      "students": [],
       "_id": "5b01ec9cc63f5c5a1ff60661",
       "grade": "7",
       "letter": "b",
-      "__v": 0
+      "__v": 0,
+      "studentSize": 10
     },
     {
-      "studentSize": 10,
+      "students": [],
       "_id": "5b01ecfdc63f5c5a1ff60662",
       "grade": "8",
       "letter": "a",
-      "__v": 0
+      "__v": 0,
+      "studentSize": 10
     },
     {
-      "studentSize": 11,
+      "students": [],
       "_id": "5b01edadc63f5c5a1ff60663",
       "grade": "8",
       "letter": "b",
-      "__v": 0
+      "__v": 0,
+      "studentSize": 10
     },
     {
-      "studentSize": 10,
+      "students": [],
       "_id": "5b01ee4cc63f5c5a1ff60664",
       "grade": "9",
       "letter": "a",
-      "__v": 0
+      "__v": 0,
+      "studentSize": 10
     },
     {
-      "studentSize": 11,
+      "students": [],
       "_id": "5b01eeacc63f5c5a1ff60665",
       "grade": "9",
       "letter": "b",
-      "__v": 0
+      "__v": 0,
+      "studentSize": 10
     },
     {
-      "studentSize": 10,
+      "students": [],
       "_id": "5b01ef19c63f5c5a1ff60666",
       "grade": "10",
       "letter": "a",
-      "__v": 0
+      "__v": 0,
+      "studentSize": 10
     },
     {
-      "studentSize": 11,
+      "students": [],
       "_id": "5b01ef7ac63f5c5a1ff60667",
       "grade": "10",
       "letter": "b",
-      "__v": 0
+      "__v": 0,
+      "studentSize": 10
     },
     {
-      "studentSize": 10,
+      "students": [],
       "_id": "5b01efe9c63f5c5a1ff60668",
       "grade": "4",
       "letter": "b",
-      "__v": 0
+      "__v": 0,
+      "studentSize": 10
     }
   ],
   "subjects": [
@@ -1168,21 +1188,21 @@
       "_id": "5af1f2c2b92d56788ad85b20",
       "name": "Mathematik",
       "occurrences": 4,
-      "requiredRoomType": "",
+      "requiredRoomType": "Klassenraum",
       "__v": 0
     },
     {
       "_id": "5af1f2c2b92d56788ad85b2a",
       "name": "Deutsch",
       "occurrences": 4,
-      "requiredRoomType": "",
+      "requiredRoomType": "Klassenraum",
       "__v": 0
     },
     {
       "_id": "5af1f2c2b92d56788ad85b34",
       "name": "Erdkunde",
       "occurrences": 2,
-      "requiredRoomType": "",
+      "requiredRoomType": "Klassenraum",
       "__v": 0
     },
     {
@@ -1196,7 +1216,7 @@
       "_id": "5af1f2c2b92d56788ad85b48",
       "name": "Englisch",
       "occurrences": 4,
-      "requiredRoomType": "",
+      "requiredRoomType": "Klassenraum",
       "__v": 0
     },
     {
@@ -1224,14 +1244,14 @@
       "_id": "5af1f2c2b92d56788ad85b70",
       "name": "WiSo",
       "occurrences": 2,
-      "requiredRoomType": "",
+      "requiredRoomType": "Klassenraum",
       "__v": 0
     },
     {
       "_id": "5af1f2c2b92d56788ad85b7a",
       "name": "Geschichte",
       "occurrences": 2,
-      "requiredRoomType": "",
+      "requiredRoomType": "Klassenraum",
       "__v": 0
     },
     {

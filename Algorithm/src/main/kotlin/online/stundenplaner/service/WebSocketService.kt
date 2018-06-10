@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.DeserializationFeature
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
+import online.stundenplaner.domain.Curriculum
 import online.stundenplaner.domain.SchoolSchedule
 import org.eclipse.jetty.websocket.api.Session
 import org.eclipse.jetty.websocket.api.annotations.*
@@ -80,13 +81,14 @@ class WebSocketController {
 
   class ScheduleConsumer(private val returnFunction: (Message) -> Unit, val mapper:ObjectMapper) : SolverController.SolutionConsumer<SchoolSchedule> {
     override fun consumeSolution(solution: SchoolSchedule, numOfSolution: Int) {
-      mapper.writeValue(File("Algorithm/results/result$port$numOfSolution.json"), solution.lectures)
+//      mapper.writeValue(File("Algorithm/results/result$port$numOfSolution.json"), solution.lectures)
+      returnFunction(Message("scheduleData", Curriculum(0, solution.lectures)))
     }
 
     override fun consumeFinalSolution(solution: SchoolSchedule, numOfSolution: Int) {
-      mapper.writeValue(File("finalresult$port$numOfSolution.json"), solution.lectures)
-      returnFunction(Message("scheduleData", solution.score))
-      returnFunction(Message("scheduleData", solution.lectures))
+//      mapper.writeValue(File("finalresult$port$numOfSolution.json"), solution.lectures)
+//      returnFunction(Message("scheduleData", solution.score))
+      returnFunction(Message("scheduleData", Curriculum(0, solution.lectures)))
       returnFunction( Message("end", null))
     }
   }

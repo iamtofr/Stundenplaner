@@ -41,3 +41,5 @@ class Lecture(
     return "K: ${course?._id}, L: ${teacher?._id}, R: ${room?._id}, D: ${period?._id}"
   }
 }
+
+data class Curriculum(val solution: Int, val lectures: List<Lecture>)

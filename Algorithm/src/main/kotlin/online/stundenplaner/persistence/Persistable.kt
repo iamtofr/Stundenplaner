@@ -1,8 +1,7 @@
 package online.stundenplaner.persistence
 
-import com.fasterxml.jackson.annotation.JsonIdentityInfo
-import com.fasterxml.jackson.annotation.JsonIdentityReference
-import com.fasterxml.jackson.annotation.JsonIgnore
+import com.fasterxml.jackson.annotation.*
+import com.fasterxml.jackson.annotation.JsonProperty.Access
 import com.fasterxml.jackson.annotation.ObjectIdGenerators
 import org.apache.commons.lang3.builder.CompareToBuilder
 import org.optaplanner.core.api.domain.lookup.PlanningId
@@ -13,7 +12,9 @@ var idCounter: Long = 0
 
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator::class, property="_id")
 open class Persistable(
-  @get:PlanningId var _id: String = idCounter++.toString()
+  @JsonProperty(access = Access.WRITE_ONLY)
+  @get:PlanningId
+  var _id: String = idCounter++.toString()
 ) : Serializable, Comparable<Persistable> {
 
   /**

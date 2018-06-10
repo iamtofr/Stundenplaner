@@ -14,7 +14,7 @@ class RoomStrengthWeightFactory : SelectionSorterWeightFactory<SchoolSchedule, R
 
     override fun compareTo(other: RoomStrengthWeight): Int =
       CompareToBuilder()
-        .append(room.seats, other.room.seats)
+        .append(room.seats, other.room. seats)
         .append(room._id, other.room._id)
         .toComparison()
   }
