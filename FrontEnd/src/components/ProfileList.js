@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
-import { withRouter } from 'react-router';
+import {withRouter} from 'react-router';
 import Link from './Link';
 import iconUser from '../assets/iconUser.svg';
-import * as Colors from '../constants/Colors';
-import Course from "./Course";
-
+import ReactTable from "react-table"
+import 'react-table/react-table.css'
 
 
 const styles = {};
@@ -30,44 +29,82 @@ class ProfileList extends Component {
 
     }
 
-    renderProfileLink(profile) {
-        return <li>
-            <Link
-                icon={iconUser}
-                text={profile.profile.name}
-                onClick={() => {
-                    this.props.history.push({
-                        pathname: '/details',
-                        state: {
-                            title: 'Profil',
+    goToProfile(row) {
+        this.props.history.push({
+            pathname: '/details',
+            state: {
+                title: 'Profil',
 
-                            id: profile.profile._id,
-                            occupation: this.occupation
-                        },
-                    });
-                }}
-            />
-        </li>
-    }
+                id: row.original.profile._id,
+                occupation: this.occupation
+            },
+        });
 
-    renderProfileList(list){
-        let linkList = [];
-        for (let elem of list) {
-            linkList.push(this.renderProfileLink(elem));
-        }
-        return linkList;
     }
 
     render() {
-        const profiles = this.state.profiles;
-        let listElements = this.renderProfileList(profiles);
-        console.log(listElements);
+        const columns = [{
+                id: 'profileName',
+                Header: 'Vorname',
+                accessor: p => p.profile.name,
+                Cell: row => (<div
+                        onClick={() => this.goToProfile(row)
+                        }
+                    >
+                        {row.value}
+                    </div>
+                )
+            },
+                {
+                    id: 'profileSurname',
+                    Header: 'Nachname',
+                    accessor: p => p.profile.surname,
+                    Cell: row => (<div
+                            onClick={() => {
+                                this.props.history.push({
+                                    pathname: '/details',
+                                    state: {
+                                        title: 'Profil',
 
-        return (<div style={styles.container}>
-            <ul>
-                {listElements}
-            </ul>
-        </div>)
+                                        id: row.original.profile._id,
+                                        occupation: this.occupation
+                                    },
+                                });
+                            }}
+                        >
+                            {row.value}
+                        </div>
+                    )
+
+                }
+            ]
+        ;
+
+        return (
+            < ReactTable
+                data={this.state.profiles}
+                filterable
+                defaultFilterMethod={(filter, row) =>
+                    String(row[filter.id]).startsWith(filter.value)}
+                defaultSorted={[
+                    {
+                        id: "profileSurname",
+                        desc: false
+                    }
+                ]}
+                columns={columns}
+                className="-striped -highlight"
+                previousText="Zurück"
+                nextText="Vor"
+                loadingText="Lade..."
+                noDataText="Keine Ergenbnisse gefunden"
+                pageText="Seite"
+                ofText="von"
+                rowsText="Zeilen"
+            />
+        )
+
+
     }
 }
 
