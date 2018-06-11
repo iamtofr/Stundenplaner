@@ -12,8 +12,8 @@ private const val SOLVER_CONFIG = "online/stundenplaner/solver/curriculumCourseS
 /**
  * A service handling solving and watching a Solution_ problem
  * @param Solution_ the solution type, the class with the [PlanningSolution] annotation
- * @param consumer a [SolutionConsumer] this service will report the solution to.
- * @param numOfSolutions the amount of solutions to be calculated at the same time. Be wary if this number is higher than your amount of CPU cores!
+ * @property consumer a [SolutionConsumer] this service will report the solution to.
+ * @property numOfSolutions the amount of solutions to be calculated at the same time. Be wary if this number is higher than your amount of CPU cores!
  */
 class SolverController<Solution_>(
   private val consumer: SolutionConsumer<Solution_>,
