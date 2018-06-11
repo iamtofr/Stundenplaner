@@ -80,7 +80,6 @@ class Profile extends Component {
   componentDidMount() {
     console.log(this.props);
     this.occupation = this.props.occupation;
-    console.log("XXXXX" + this.props.occupation);
 
     fetch('https://stundenplaner.online/profile/' + this.props.id + '?token=1234')
       .then(response => response.json())
@@ -128,7 +127,7 @@ class Profile extends Component {
                 <TextInput
                   type="text"
                   label="Vorname"
-                  value={profile.surname}
+                  value={profile.name}
                   onChange={event =>
                     this.setState({
                       firstName: event.target.value,
@@ -138,7 +137,7 @@ class Profile extends Component {
                 <TextInput
                   type="text"
                   label="Nachname"
-                  value={profile.name}
+                  value={profile.surname}
                   onChange={event =>
                     this.setState({
                       lastName: event.target.value,
@@ -169,7 +168,7 @@ class Profile extends Component {
                 <TextInput
                   type="text"
                   label="Geburtsdatum"
-                  value={profile.dateOfBirth}
+                  value={this.renderDateOfBirth(profile.dateOfBirth)}
                   onChange={event =>
                     this.setState({
                       dateOfBirth: event.target.value,
@@ -195,7 +194,7 @@ class Profile extends Component {
                   <TextInput
                     type="text"
                     label="Anschrift"
-                    value={profile.address}
+                    value={profile.address? (profile.address.street + " " + profile.address.number + " " + profile.address.zipCode + " " + profile.address.city) :""}
                     onChange={event =>
                       this.setState({
                         address: event.target.value,
@@ -242,8 +241,7 @@ class Profile extends Component {
                     <TextInput
                       type="tel"
                       label="Telefonnummer"
-                      value={profile.contactPhone
-                      }
+                      value={profile.contactPhoneNumber}
                       onChange={event =>
                         this.setState({
                           contactPhone: event.target.value,
@@ -358,6 +356,12 @@ class Profile extends Component {
       </div>
     );
   }
+
+    renderDateOfBirth(dateOfBirth) {
+        let date = new Date(dateOfBirth);
+        let month = date.getMonth()+1;
+        return date.getDate().toString()+ "." + month.toString() +"."+ date.getFullYear().toString();
+    }
 }
 
 export default Profile;

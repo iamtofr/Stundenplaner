@@ -19,7 +19,9 @@ let profile = new Schema({
     email: {type: String, required: false},
     contact: {type: String, required: false},
     phoneNumber: {type: String, required: false},
-    photo: {type: String, required: false}
+    photo: {type: String, required: false},
+    initials: {type: String, required: false}
+
 });
 
 module.exports = profile;

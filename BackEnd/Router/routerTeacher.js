@@ -24,6 +24,7 @@ app.use(function (req, res, next) {
 });
 
 let teacher = mongoose.model('teacher', schema.teacher);
+let subject = mongoose.model('subject', schema.subject);
 
 /**
  * HTTP Requests for Address Routes
@@ -31,7 +32,8 @@ let teacher = mongoose.model('teacher', schema.teacher);
 app.route('/')
     .get((req, res, next) => {
         if (req.perm >= permission.manager) {
-            teacher.find({}).populate('profile').exec(function (err, result) {
+            teacher.find({}).populate('profile').populate({ path: 'subjectSpecialisations', model: subject})
+                .exec(function (err, result) {
                 if (err) throw err;
                 res.status(200).json(result);
             });
