@@ -42,7 +42,7 @@ app.route('/')
 
     .post((req, res, next) => {
         if (req.perm >= permission.manager) {
-            let newCourse = profile(req.body);
+            let newCourse = course(req.body);
             newCourse.save(function (err) {
                 if (err) throw err;
                 console.log('Course created!');

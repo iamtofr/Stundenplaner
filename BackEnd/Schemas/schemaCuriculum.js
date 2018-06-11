@@ -12,8 +12,8 @@ const schemaIn = require('../Schemas/schemas');
 let Lecture = schemaIn.lecture;
 
 let curriculum = new Schema({
-  solution: {type: Number, required: true},
-  lectures: {type: [Lecture], required: true},
+  solution: { type: Number, required: true },
+  lectures: { type: [ Lecture ], required: false },
 });
 
 module.exports = curriculum;

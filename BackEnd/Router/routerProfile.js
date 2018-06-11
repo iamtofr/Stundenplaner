@@ -20,8 +20,8 @@ const permission = require('../Tools/permissions');
 
 app.use(bodyParser.json());
 app.use(function (req, res, next) {
-    console.log(req.body);
-    next();
+  console.log(req.body);
+  next();
 });
 
 /**
