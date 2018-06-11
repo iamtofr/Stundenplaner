@@ -10,17 +10,17 @@
 
 let account = require('./schemaAccount.js');
 let address = require('./schemaAddress.js');
-let course = require('./schemaCourse.js');
-let lecture = require('./schemaLecture.js');
 let period = require('./schemaPeriod.js');
 let profile = require('./schemaProfile.js');
 let role = require('./schemaRole.js');
 let room = require('./schemaRoom.js');
 let student = require('./schemaStudent.js');
+let course = require('./schemaCourse.js');
 let subject = require('./schemaSubject.js');
 let teacher = require('./schemaTeacher.js');
-let curriculum = require('./schemaCuriculum.js');
+let lecture = require('./schemaLecture.js');
 let toAlgorithm = require('./schemaToAlgorithm.js');
+let curriculum = require('./schemaCuriculum.js');
 
 
 

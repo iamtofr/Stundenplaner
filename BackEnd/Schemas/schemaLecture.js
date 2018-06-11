@@ -14,7 +14,7 @@ let lecture = new Schema({
   course: {type: Schema.Types.ObjectId, ref:'course', required: false},
   subject: {type: Schema.Types.ObjectId, ref:'subject', required: false},
   period: {type: Schema.Types.ObjectId, ref:'period', required: false},
-  pinned: {type: Boolean, required: true}
+  pinned: {type: Boolean, required: false},
 });
 
 module.exports = lecture;

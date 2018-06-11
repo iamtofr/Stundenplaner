@@ -44,7 +44,7 @@ app.route('/')
 
     .post((req, res, next) => {
         if (req.perm >= permission.manager) {
-            let newTeacher = profile(req.body);
+            let newTeacher = teacher(req.body);
             newTeacher.save(function (err) {
                 if (err) throw err;
                 console.log('Teacher created!');

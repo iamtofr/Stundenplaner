@@ -9,17 +9,14 @@ const subject = mongoose.model('subject', Schema.subject);
 const lecture = mongoose.model('lecture', Schema.lecture);
 
 
-let build = async (dataFromAlgo) => {
-  let outLectureArray = [];
-  populateLectures(dataFromAlgo).then((result) => {
-    outLectureArray.push(result);
-  });
-  return outLectureArray;
+let build = (dataFromAlgo) => {
+  return populateLectures(dataFromAlgo)
 };
 
 let populateLectures = async (dataFromAlgo) => {
-  for (let lectureAlgo of dataFromAlgo) {
+  let lectureArray = [];
 
+  for (let lectureAlgo of dataFromAlgo) {
     let outLecture = {
       teacherName: "",
       roomNumber: "",
@@ -28,40 +25,34 @@ let populateLectures = async (dataFromAlgo) => {
       period: {},
     };
 
-    let teacherProfile = lectureAlgo.teacher.findById(lectureAlgo.teacher._id);
-    outLecture.teacherName = await teacherProfile.populate('profile').exec(function(err, result) {
-      if (err) throw err;
-      return result.name;
-    });
+    let teacherProfile = teacher.findById(lectureAlgo.teacher._id);
+    outLecture.teacherName = await teacherProfile
+      .populate('profile','name')
+      .exec();
 
-    let room = lectureAlgo.room.findById(lectureAlgo.room._id);
-    outLecture.roomNumber = await room.populate('room').exec(function(err, result) {
-      if (err) throw err;
-      return result.number;
-    });
+    let roomData = room.findById(lectureAlgo.room._id);
+    outLecture.roomNumber = await roomData
+      .populate('room','number')
+      .exec();
 
-    let course = lectureAlgo.course.findById(lectureAlgo.course._id);
-    outLecture.course = await course.populate('course').exec(function(err, result) {
-      if (err) throw err;
-      return {
-        grade: result.grade,
-        letter: result.letter,
-      };
-    });
+    let courseData = course.findById(lectureAlgo.course._id);
+    outLecture.course = await courseData
+      .populate('course')
+      .exec();
 
-    let subject = await lectureAlgo.subject.findById(lectureAlgo.subject._id);
-    outLecture.subjectName = subject.populate('subject').exec(function(err, result) {
-      if (err) throw err;
-      return result.name;
-    });
+    let subjectData = subject.findById(lectureAlgo.subject._id);
+    outLecture.subjectName = await subjectData
+      .populate('subject', 'name')
+      .exec();
 
-    let period = await lectureAlgo.period.findById(lectureAlgo.period._id);
-    outLecture.period = period.populate('period').exec(function(err, result) {
-      if (err) throw err;
-      return result;
-    });
+    let periodData = period.findById(lectureAlgo.period._id);
+    outLecture.period = await periodData
+      .populate('period')
+      .exec();
+    lectureArray.push(outLecture);
   }
+  return lectureArray;
 };
 
 
-module.exports = build;
+module.exports.build = build;

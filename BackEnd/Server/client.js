@@ -34,7 +34,7 @@ class WebsocketClient {
         switch (serverMessage.msgType) {
           case CONNECTION_STATUS:
             if (serverMessage.data === "algorithmServerReady") {
-              this.sendMessage(GET_LECTURES, schoolData);
+              this.sendMessage(GET_LECTURES, JSON.stringify(schoolData));
             } else {
               throw new Error("Wrong server");
             }
@@ -43,7 +43,7 @@ class WebsocketClient {
             if (serverMessage.data) {
               try {
                 let serverData = serverMessage.data;
-                console.log("Server-data:", serverData);
+                // console.log("Server-data:", serverData);
                 dataCallback(serverData);
               }
               catch (err) {
@@ -67,7 +67,7 @@ class WebsocketClient {
       msgType: type,
       data: data
     };
-    console.log("sending message ", JSON.stringify(msg, null, 1));
+    // console.log("sending message ", JSON.stringify(msg, null, 1));
     ws.send(JSON.stringify(msg));
   }
 }

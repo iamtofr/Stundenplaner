@@ -42,7 +42,7 @@ app.route('/')
     })
 
     .post((req, res, next) => {
-        let newLecture = profile(req.body);
+        let newLecture = lecture(req.body);
         newLecture.save(function (err) {
             if (err) throw err;
             console.log('Lecture created!');

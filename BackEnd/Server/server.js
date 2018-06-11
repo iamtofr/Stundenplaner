@@ -12,7 +12,8 @@ const WebsocketClient = require('./client');
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/stundenplaner');
 const Schema = require('../Schemas/schemas');
-const period = mongoose.model('period', Schema.period);
+const Lecture = mongoose.model('lecture', Schema.lecture);
+
 const Curriculum = mongoose.model('curiculum', Schema.curriculum);
 const populateCurriculum = require('../Tools/populateCurriculum');
 
@@ -92,21 +93,38 @@ wss.on('connection', function connection(ws) {
   console.log('connected');
   ws.on('message', function incoming(message) {
     toAlgorithm.buildAlgorithm().then((schoolData) => {
-      //TODO das hier muss dann weg
-      ws.send(JSON.stringify({ test: "geht" }));
       let websocketClient = new WebsocketClient(schoolData, (resolvedSchoolData) => {
-        console.log(resolvedSchoolData);
 
-        let newCurriculum = Curriculum(resolvedSchoolData);
+        let solution = resolvedSchoolData.solution;
+        let lectureArray = [];
 
-        newCurriculum.save(function(err) {
-          if (err) throw err;
-          console.log('Curriculum created!');
-        });
 
-        let populated = populateCurriculum.build(newCurriculum);
+        for (let data of resolvedSchoolData.lectures) {
+          let newlecture = Lecture(data);
+          newlecture.save(function(err) {
+            if (err) throw err;
+          });
+          lectureArray.push(newlecture);
+        }
+        resolvedSchoolData.lectures = lectureArray;
 
-        ws.send(JSON.stringify(populated));
+        // let newCurriculum = Curriculum();
+        //
+        // newCurriculum.solution = resolvedSchoolData.solution;
+        // newCurriculum.lectures = resolvedSchoolData.lectures;
+        //
+        // newCurriculum.save(function(err) {
+        //   if (err) throw err;
+        //   console.log('Curriculum created!');
+        // });
+        // ws.send(JSON.stringify(resolvedSchoolData));
+
+        populateCurriculum.build(resolvedSchoolData.lectures)
+          .then(populated => ws.send(JSON.stringify(populated)));
+
+        // ws.send(JSON.stringify(resolvedSchoolData));
+        // console.log(populated);
+        // console.log("_tobi_ ", resolvedSchoolData);
       });
     });
   })
