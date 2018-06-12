@@ -42,7 +42,7 @@ class Stundenplan extends Component {
   constructor() {
     super();
     this.state = {
-      activeClasses: ['1A', '1B'],
+      activeClasses: ['1a', '1b'],
     };
   }
 
@@ -81,65 +81,65 @@ class Stundenplan extends Component {
       <div style={styles.container}>
         <div style={styles.content}>
           <div style={styles.classes}>
-            <div style={styles.class} onClick={() => this.addTimetable('1A')}>
-              <p style={styles.classLabel}>1A</p>
+            <div style={styles.class} onClick={() => this.addTimetable('1a')}>
+              <p style={styles.classLabel}>1a</p>
             </div>
-            <div style={styles.class} onClick={() => this.addTimetable('1B')}>
-              <p style={styles.classLabel}>1B</p>
+            <div style={styles.class} onClick={() => this.addTimetable('1b')}>
+              <p style={styles.classLabel}>1b</p>
             </div>
-            <div style={styles.class} onClick={() => this.addTimetable('2A')}>
-              <p style={styles.classLabel}>2A</p>
+            <div style={styles.class} onClick={() => this.addTimetable('2a')}>
+              <p style={styles.classLabel}>2a</p>
             </div>
-            <div style={styles.class} onClick={() => this.addTimetable('2B')}>
-              <p style={styles.classLabel}>2B</p>
+            <div style={styles.class} onClick={() => this.addTimetable('2b')}>
+              <p style={styles.classLabel}>2b</p>
             </div>
-            <div style={styles.class} onClick={() => this.addTimetable('3A')}>
-              <p style={styles.classLabel}>3A</p>
+            <div style={styles.class} onClick={() => this.addTimetable('3a')}>
+              <p style={styles.classLabel}>3a</p>
             </div>
-            <div style={styles.class} onClick={() => this.addTimetable('3B')}>
-              <p style={styles.classLabel}>3B</p>
+            <div style={styles.class} onClick={() => this.addTimetable('3b')}>
+              <p style={styles.classLabel}>3b</p>
             </div>
-            <div style={styles.class} onClick={() => this.addTimetable('4A')}>
-              <p style={styles.classLabel}>4A</p>
+            <div style={styles.class} onClick={() => this.addTimetable('4a')}>
+              <p style={styles.classLabel}>4a</p>
             </div>
-            <div style={styles.class} onClick={() => this.addTimetable('4B')}>
-              <p style={styles.classLabel}>4B</p>
+            <div style={styles.class} onClick={() => this.addTimetable('4b')}>
+              <p style={styles.classLabel}>4b</p>
             </div>
-            <div style={styles.class} onClick={() => this.addTimetable('5A')}>
-              <p style={styles.classLabel}>5A</p>
+            <div style={styles.class} onClick={() => this.addTimetable('5a')}>
+              <p style={styles.classLabel}>5a</p>
             </div>
-            <div style={styles.class} onClick={() => this.addTimetable('5B')}>
-              <p style={styles.classLabel}>5B</p>
+            <div style={styles.class} onClick={() => this.addTimetable('5b')}>
+              <p style={styles.classLabel}>5b</p>
             </div>
-            <div style={styles.class} onClick={() => this.addTimetable('6A')}>
-              <p style={styles.classLabel}>6A</p>
+            <div style={styles.class} onClick={() => this.addTimetable('6a')}>
+              <p style={styles.classLabel}>6a</p>
             </div>
-            <div style={styles.class} onClick={() => this.addTimetable('6B')}>
-              <p style={styles.classLabel}>6B</p>
+            <div style={styles.class} onClick={() => this.addTimetable('6b')}>
+              <p style={styles.classLabel}>6b</p>
             </div>
-            <div style={styles.class} onClick={() => this.addTimetable('7A')}>
-              <p style={styles.classLabel}>7A</p>
+            <div style={styles.class} onClick={() => this.addTimetable('7a')}>
+              <p style={styles.classLabel}>7a</p>
             </div>
-            <div style={styles.class} onClick={() => this.addTimetable('7B')}>
-              <p style={styles.classLabel}>7B</p>
+            <div style={styles.class} onClick={() => this.addTimetable('7b')}>
+              <p style={styles.classLabel}>7b</p>
             </div>
-            <div style={styles.class} onClick={() => this.addTimetable('8A')}>
-              <p style={styles.classLabel}>8A</p>
+            <div style={styles.class} onClick={() => this.addTimetable('8a')}>
+              <p style={styles.classLabel}>8a</p>
             </div>
-            <div style={styles.class} onClick={() => this.addTimetable('8B')}>
-              <p style={styles.classLabel}>8B</p>
+            <div style={styles.class} onClick={() => this.addTimetable('8b')}>
+              <p style={styles.classLabel}>8b</p>
             </div>
-            <div style={styles.class} onClick={() => this.addTimetable('9A')}>
-              <p style={styles.classLabel}>9A</p>
+            <div style={styles.class} onClick={() => this.addTimetable('9a')}>
+              <p style={styles.classLabel}>9a</p>
             </div>
-            <div style={styles.class} onClick={() => this.addTimetable('9B')}>
-              <p style={styles.classLabel}>9B</p>
+            <div style={styles.class} onClick={() => this.addTimetable('9b')}>
+              <p style={styles.classLabel}>9b</p>
             </div>
-            <div style={styles.class} onClick={() => this.addTimetable('10A')}>
-              <p style={styles.classLabel}>10A</p>
+            <div style={styles.class} onClick={() => this.addTimetable('10a')}>
+              <p style={styles.classLabel}>10a</p>
             </div>
-            <div style={styles.class} onClick={() => this.addTimetable('10B')}>
-              <p style={styles.classLabel}>10B</p>
+            <div style={styles.class} onClick={() => this.addTimetable('10b')}>
+              <p style={styles.classLabel}>10b</p>
             </div>
           </div>
           <div style={styles.timetables}>{this.renderTimetables()}</div>

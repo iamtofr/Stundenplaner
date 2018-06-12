@@ -190,4 +190,7 @@ const mapDispatchToProps = {
   setLectures: appActions.setLectures,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Timetable);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(Timetable);

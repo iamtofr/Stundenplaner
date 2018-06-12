@@ -4,14 +4,13 @@ import { connect } from 'react-redux';
 import { actions as appActions } from '../reducers/app';
 import * as Colors from '../constants/Colors';
 import Logo from '../assets/logo.svg';
-import iconDropdown from '../assets/iconDropdown.svg';
 
 const styles = {
   container: {
     width: '100%',
     display: 'flex',
     alignItems: 'center',
-    marginBottom: 50,
+    marginBottom: 4,
   },
   logo: {
     width: 40,
@@ -54,28 +53,7 @@ class NavBar extends Component {
         />
         <div style={styles.buttons}>
           <button style={styles.button}>
-            <p style={styles.label}>Stundenplan</p>
-            <img style={styles.icon} src={iconDropdown} alt="arrow" />
-          </button>
-          <button style={styles.button}>
-            <p style={styles.label}>Klasse</p>
-            <img style={styles.icon} src={iconDropdown} alt="arrow" />
-          </button>
-          <button style={styles.button}>
-            <p style={styles.label}>Lehrer</p>
-            <img style={styles.icon} src={iconDropdown} alt="arrow" />
-          </button>
-          <button style={styles.button}>
-            <p style={styles.label}>Schüler</p>
-            <img style={styles.icon} src={iconDropdown} alt="arrow" />
-          </button>
-          <button style={styles.button}>
-            <p style={styles.label}>Raum</p>
-            <img style={styles.icon} src={iconDropdown} alt="arrow" />
-          </button>
-          <button style={styles.button}>
-            <p style={styles.label}>Accounts</p>
-            <img style={styles.icon} src={iconDropdown} alt="arrow" />
+            <p style={styles.label}>StundenPlaner</p>
           </button>
         </div>
         <button
@@ -100,4 +78,9 @@ const mapDispatchToProps = {
   logout: appActions.logout,
 };
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(NavBar));
+export default withRouter(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps,
+  )(NavBar),
+);
