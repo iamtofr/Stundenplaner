@@ -112,7 +112,6 @@ class Login extends Component {
     })
       .then(response => response.json())
       .then(responseJson => {
-        console.log(responseJson);
         this.props.login({
           username: this.state.name,
           password: this.state.password,

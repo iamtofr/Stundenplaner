@@ -101,7 +101,6 @@ class Timetable extends Component {
         i: i.toString(),
       });
     }
-    console.log(array);
     return array;
   }
 
@@ -124,9 +123,7 @@ class Timetable extends Component {
   }
 
   render() {
-    const { schoolClass, lectures, onClose } = this.props;
-
-    console.log(lectures);
+    const { schoolClass, onClose } = this.props;
 
     return (
       <div style={styles.all}>

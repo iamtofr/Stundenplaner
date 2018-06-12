@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import RGL, { WidthProvider } from 'react-grid-layout';
 import 'react-resizable/css/styles.css';
 import 'react-grid-layout/css/styles.css';
+import { actions as appActions } from '../reducers/app';
 import Widget from '../components/Widget';
 import ModalView from '../components/ModalView';
 import Link from '../components/Link';
@@ -107,7 +108,11 @@ class Dashboard extends Component {
                   socket.send('Go');
                 };
                 socket.onmessage = msg => {
+                  console.log('received Data from Websocket: ');
                   console.log(JSON.parse(msg.data));
+                  this.props.setLectures({
+                    lectures: JSON.parse(msg.data),
+                  });
                 };
                 this.props.history.push({
                   pathname: '/details',
@@ -390,4 +395,13 @@ const mapStateToProps = state => ({
   isLoggedIn: state.app.isLoggedIn,
 });
 
-export default withRouter(connect(mapStateToProps)(Dashboard));
+const mapDispatchToProps = {
+  setLectures: appActions.setLectures,
+};
+
+export default withRouter(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps,
+  )(Dashboard),
+);
