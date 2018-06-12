@@ -5,6 +5,7 @@ import RGL, { WidthProvider } from 'react-grid-layout';
 import 'react-resizable/css/styles.css';
 import 'react-grid-layout/css/styles.css';
 import Widget from '../components/Widget';
+import ModalView from '../components/ModalView';
 import Link from '../components/Link';
 import * as Colors from '../constants/Colors';
 import iconList from '../assets/iconList.svg';
@@ -39,12 +40,23 @@ class Dashboard extends Component {
       kalender: 'Calender',
       wetter: 'Wetter',
       einstellungen: 'Einstellungen',
+      show: false,
     };
   }
 
   componentDidMount() {
     document.title = 'StundenPlaner - Dashboard';
   }
+
+  showModal = e => {
+    console.log('calling modal');
+    this.setState({ show: true });
+  };
+
+  hideModal = e => {
+    console.log('closing modal');
+    this.setState({ show: false });
+  };
 
   render() {
     if (!this.props.isLoggedIn) {
@@ -82,13 +94,28 @@ class Dashboard extends Component {
               icon={iconCreate}
               text="Stundenplan erstellen"
               onClick={() => {
-                const socket = new WebSocket('wss://stundenplaner.online');
-                socket.onopen = () => {
-                  socket.send('Go');
-                };
-                socket.onmessage = msg => {
-                  console.log(msg);
-                };
+                this.showModal();
+              }}
+            />
+            <ModalView
+              isOpen={this.state.show}
+              handleOpenModal={() => this.showModal()}
+              handleCloseModal={() => this.hideModal()}
+              onSubmit={() => {
+                console.log('run');
+                //const socket = new WebSocket('wss://stundenplaner.online');
+                //socket.onopen = () => {
+                //  socket.send('Go');
+                //};
+                //socket.onmessage = msg => {
+                //  console.log(msg);
+                //};
+                //this.props.history.push({
+                //  pathname: '/details',
+                //  state: {
+                //    title: 'Stundenplan',
+                //  },
+                //});
               }}
             />
             <Link
@@ -211,7 +238,7 @@ class Dashboard extends Component {
                   pathname: '/details',
                   state: {
                     title: 'Profilliste',
-                      occupation: 'student'
+                    occupation: 'student',
                   },
                 });
               }}
@@ -240,7 +267,7 @@ class Dashboard extends Component {
                   pathname: '/details',
                   state: {
                     title: 'Profilliste',
-                      occupation: 'teacher'
+                    occupation: 'teacher',
                   },
                 });
               }}

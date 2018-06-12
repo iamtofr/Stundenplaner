@@ -182,7 +182,12 @@ class Login extends Component {
           />
         </div>
         <p style={styles.error}>{this.state.passwordError}</p>
-        <Button text="Einloggen" color={Colors.blue} onClick={this.submitForm} />
+        <Button
+          text="Einloggen"
+          color={Colors.blue}
+          hoverColor={Colors.lightBlue}
+          onClick={this.submitForm}
+        />
         <a style={styles.link} href="" onClick={this.onLinkClicked}>
           Passwort vergessen
         </a>
@@ -199,4 +204,9 @@ const mapDispatchToProps = {
   login: appActions.login,
 };
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Login));
+export default withRouter(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps,
+  )(Login),
+);

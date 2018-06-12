@@ -11,7 +11,7 @@ const styles = {
     width: '100%',
     display: 'flex',
     alignItems: 'center',
-    marginBottom: 50,
+    marginBottom: 4,
   },
   logo: {
     width: 40,
@@ -100,4 +100,9 @@ const mapDispatchToProps = {
   logout: appActions.logout,
 };
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(NavBar));
+export default withRouter(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps,
+  )(NavBar),
+);
