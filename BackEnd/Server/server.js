@@ -93,11 +93,14 @@ wss.on('connection', function connection(ws) {
   console.log('connected');
   ws.on('message', function incoming(message) {
     toAlgorithm.buildAlgorithm().then((schoolData) => {
+
+      ws.send(JSON.stringify('Start WebSocket Connection'));
+
       let websocketClient = new WebsocketClient(schoolData, (resolvedSchoolData) => {
 
-        let solution = resolvedSchoolData.solution;
-        let lectureArray = [];
+        ws.send(JSON.stringify('Datacollection completed'));
 
+        let lectureArray = [];
 
         for (let data of resolvedSchoolData.lectures) {
           let newlecture = Lecture(data);
@@ -106,25 +109,28 @@ wss.on('connection', function connection(ws) {
           });
           lectureArray.push(newlecture);
         }
+
         resolvedSchoolData.lectures = lectureArray;
+        ws.send(JSON.stringify('Data Solved'));
 
-        // let newCurriculum = Curriculum();
-        //
-        // newCurriculum.solution = resolvedSchoolData.solution;
-        // newCurriculum.lectures = resolvedSchoolData.lectures;
-        //
-        // newCurriculum.save(function(err) {
-        //   if (err) throw err;
-        //   console.log('Curriculum created!');
-        // });
-        // ws.send(JSON.stringify(resolvedSchoolData));
+        // console.log("Data from Algo: ",resolvedSchoolData);
 
-        populateCurriculum.build(resolvedSchoolData.lectures)
-          .then(populated => ws.send(JSON.stringify(populated)));
 
-        // ws.send(JSON.stringify(resolvedSchoolData));
-        // console.log(populated);
-        // console.log("_tobi_ ", resolvedSchoolData);
+        let newCurriculum = Curriculum(resolvedSchoolData);
+        newCurriculum.save().then(curriculum => {
+          console.log(curriculum.lectures);
+            populateCurriculum.build(curriculum.lectures)
+              .then(populated => {
+                ws.send(JSON.stringify("send to frontEnd"));
+                // console.log(populated);
+                ws.send(JSON.stringify(populated));
+                console.log(populated);
+              });
+            console.log('Curriculum created!');
+          },
+          function(err) {
+            if (err) throw err;
+          });
       });
     });
   })
