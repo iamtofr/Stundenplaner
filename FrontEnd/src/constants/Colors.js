@@ -12,6 +12,8 @@ export const grey = '#6F6F6F';
 export const lightGrey = '#E4E4E4';
 export const black = '#000000';
 export const white = '#FFFFFF';
+export const boxGrey = '#F0F0F0';
+export const lineGrey = '#D3D3D3';
 
 export const subject0 = '#CC6666';
 export const subject1 = '#CC9566';

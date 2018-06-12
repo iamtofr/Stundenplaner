@@ -7,6 +7,7 @@ const styles = {
     width: '100%',
     height: 'auto',
     position: 'relative',
+    marginBottom: 10,
     background: Colors.mediumBlue,
     boxShadow: [`0px 0px 2px rgba(0, 0, 0, 0.12)`, `0px 2px 2px rgba(0, 0, 0, 0.24)`],
   },
@@ -63,17 +64,13 @@ class ProfilBar extends Component {
   }
 
   render() {
-    const { indicatorPos } = this.props;
-    const pos = {
-      left: indicatorPos,
-    };
     return (
       <nav>
         <div style={styles.navContent}>
           <ul style={styles.tabs}>
             <li style={styles.tab}>
-              <NavLink style={{ ...styles.link, ...pos }} activeStyle={styles.activetab} to="">
-                Schuler
+              <NavLink style={styles.link} activeStyle={styles.activetab} to="">
+                Schüler
               </NavLink>
             </li>
             <li style={styles.tab}>
@@ -82,17 +79,17 @@ class ProfilBar extends Component {
               </NavLink>
             </li>
             <li style={styles.tab}>
-              <NavLink style={styles.link} activeStyle={{ color: 'red' }} to="/raum">
+              <NavLink style={styles.link} activeStyle={styles.activetab} to="/raum">
                 Raum
               </NavLink>
             </li>
             <li style={styles.tab}>
-              <NavLink style={styles.link} activeStyle={{ color: 'red' }} to="/fach">
+              <NavLink style={styles.link} activeStyle={styles.activetab} to="/fach">
                 Fach
               </NavLink>
             </li>
             <li style={styles.tab}>
-              <NavLink style={styles.link} activeStyle={{ color: 'red' }} to="/account">
+              <NavLink style={styles.link} activeStyle={styles.activetab} to="/account">
                 Account
               </NavLink>
             </li>

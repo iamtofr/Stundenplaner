@@ -27,7 +27,7 @@ class DetailsPage extends Component {
       <div style={styles.container}>
         {title === 'Stundenplan' && <Stundenplan />}
         {title === 'Profil' && <Profile id={id} occupation={occupation} />}
-        {title === 'Profilliste' && <Liste occupation={occupation}/>}
+        {title === 'Profilliste' && <Liste occupation={occupation} />}
       </div>
     );
   }
