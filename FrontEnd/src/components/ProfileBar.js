@@ -55,7 +55,7 @@ const styles = {
   },
 };
 
-class ProfilBar extends Component {
+class ProfileBar extends Component {
   constructor() {
     super();
     this.state = {
@@ -100,4 +100,4 @@ class ProfilBar extends Component {
   }
 }
 
-export default ProfilBar;
+export default ProfileBar;

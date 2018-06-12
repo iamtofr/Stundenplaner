@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ProfilBar from './ProfilBar';
 import Avatar from './Avatar';
 import TextInput from './TextInput';
 import Button from './Button';
@@ -109,7 +108,6 @@ class Profile extends Component {
   }
 
   componentDidMount() {
-    console.log(this.props);
     this.occupation = this.props.occupation;
 
     fetch('https://stundenplaner.online/profile/' + this.props.id + '?token=1234')
@@ -149,7 +147,6 @@ class Profile extends Component {
     }
     return (
       <div style={styles.container}>
-        <ProfilBar />
         <div style={styles.info}>
           <div style={styles.data}>
             <div style={styles.infoBox}>

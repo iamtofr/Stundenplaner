@@ -3,8 +3,6 @@ import { withRouter } from 'react-router';
 import ReactTable from 'react-table';
 import 'react-table/react-table.css';
 
-const styles = {};
-
 class ProfileList extends Component {
   constructor() {
     super();
@@ -70,26 +68,28 @@ class ProfileList extends Component {
     ];
 
     return (
-      <ReactTable
-        data={this.state.profiles}
-        filterable
-        defaultFilterMethod={(filter, row) => String(row[filter.id]).startsWith(filter.value)}
-        defaultSorted={[
-          {
-            id: 'profileSurname',
-            desc: false,
-          },
-        ]}
-        columns={columns}
-        className="-striped -highlight"
-        previousText="Zurück"
-        nextText="Vor"
-        loadingText="Lade..."
-        noDataText="Keine Ergenbnisse gefunden"
-        pageText="Seite"
-        ofText="von"
-        rowsText="Zeilen"
-      />
+      <div>
+        <ReactTable
+          data={this.state.profiles}
+          filterable
+          defaultFilterMethod={(filter, row) => String(row[filter.id]).startsWith(filter.value)}
+          defaultSorted={[
+            {
+              id: 'profileSurname',
+              desc: false,
+            },
+          ]}
+          columns={columns}
+          className="-striped -highlight"
+          previousText="Zurück"
+          nextText="Vor"
+          loadingText="Lade..."
+          noDataText="Keine Ergenbnisse gefunden"
+          pageText="Seite"
+          ofText="von"
+          rowsText="Zeilen"
+        />
+      </div>
     );
   }
 }

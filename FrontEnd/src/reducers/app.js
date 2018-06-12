@@ -17,7 +17,7 @@ const initialState = {
   lectures: [
     {
       _id: '21',
-      course: '1A',
+      course: '1a',
       subject: 'Mathe',
       pinned: false,
       period: { day: 0, slot: 0 },
@@ -26,7 +26,7 @@ const initialState = {
     },
     {
       _id: '22',
-      course: '1A',
+      course: '1a',
       subject: 'Mathe',
       pinned: false,
       period: { day: 0, slot: 1 },
@@ -35,7 +35,7 @@ const initialState = {
     },
     {
       _id: '23',
-      course: '1A',
+      course: '1a',
       subject: 'Mathe',
       pinned: false,
       period: { day: 1, slot: 1 },
@@ -44,7 +44,7 @@ const initialState = {
     },
     {
       _id: '24',
-      course: '1A',
+      course: '1a',
       subject: 'Mathe',
       pinned: false,
       period: { day: 1, slot: 2 },
@@ -53,7 +53,7 @@ const initialState = {
     },
     {
       _id: '25',
-      course: '1A',
+      course: '1a',
       subject: 'Sport',
       pinned: false,
       period: { day: 0, slot: 3 },
@@ -62,7 +62,7 @@ const initialState = {
     },
     {
       _id: '26',
-      course: '1A',
+      course: '1a',
       subject: 'Sport',
       pinned: false,
       period: { day: 1, slot: 0 },
@@ -71,7 +71,7 @@ const initialState = {
     },
     {
       _id: '27',
-      course: '1A',
+      course: '1a',
       subject: 'Deutsch',
       pinned: false,
       period: { day: 0, slot: 2 },
@@ -80,7 +80,7 @@ const initialState = {
     },
     {
       _id: '28',
-      course: '1A',
+      course: '1a',
       subject: 'Deutsch',
       pinned: false,
       period: { day: 1, slot: 3 },
@@ -89,7 +89,7 @@ const initialState = {
     },
     {
       _id: '29',
-      course: '1B',
+      course: '1b',
       subject: 'Mathe',
       pinned: false,
       period: { day: 0, slot: 0 },
@@ -98,7 +98,7 @@ const initialState = {
     },
     {
       _id: '30',
-      course: '1B',
+      course: '1b',
       subject: 'Mathe',
       pinned: false,
       period: { day: 0, slot: 1 },
@@ -107,7 +107,7 @@ const initialState = {
     },
     {
       _id: '31',
-      course: '1B',
+      course: '1b',
       subject: 'Mathe',
       pinned: false,
       period: { day: 1, slot: 2 },
@@ -116,7 +116,7 @@ const initialState = {
     },
     {
       _id: '32',
-      course: '1B',
+      course: '1b',
       subject: 'Mathe',
       pinned: false,
       period: { day: 1, slot: 3 },
@@ -125,7 +125,7 @@ const initialState = {
     },
     {
       _id: '33',
-      course: '1B',
+      course: '1b',
       subject: 'Sport',
       pinned: false,
       period: { day: 0, slot: 2 },
@@ -134,7 +134,7 @@ const initialState = {
     },
     {
       _id: '34',
-      course: '1B',
+      course: '1b',
       subject: 'Sport',
       pinned: false,
       period: { day: 1, slot: 1 },
@@ -143,7 +143,7 @@ const initialState = {
     },
     {
       _id: '35',
-      course: '1B',
+      course: '1b',
       subject: 'Deutsch',
       pinned: false,
       period: { day: 0, slot: 3 },
@@ -152,7 +152,7 @@ const initialState = {
     },
     {
       _id: '36',
-      course: '1B',
+      course: '1b',
       subject: 'Deutsch',
       pinned: false,
       period: { day: 1, slot: 0 },
