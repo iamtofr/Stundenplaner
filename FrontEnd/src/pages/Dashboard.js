@@ -102,20 +102,19 @@ class Dashboard extends Component {
               handleOpenModal={() => this.showModal()}
               handleCloseModal={() => this.hideModal()}
               onSubmit={() => {
-                console.log('run');
-                //const socket = new WebSocket('wss://stundenplaner.online');
-                //socket.onopen = () => {
-                //  socket.send('Go');
-                //};
-                //socket.onmessage = msg => {
-                //  console.log(msg);
-                //};
-                //this.props.history.push({
-                //  pathname: '/details',
-                //  state: {
-                //    title: 'Stundenplan',
-                //  },
-                //});
+                const socket = new WebSocket('wss://stundenplaner.online');
+                socket.onopen = () => {
+                  socket.send('Go');
+                };
+                socket.onmessage = msg => {
+                  console.log(msg);
+                };
+                this.props.history.push({
+                  pathname: '/details',
+                  state: {
+                    title: 'Stundenplan',
+                  },
+                });
               }}
             />
             <Link
