@@ -107,7 +107,7 @@ class Dashboard extends Component {
                   socket.send('Go');
                 };
                 socket.onmessage = msg => {
-                  console.log(msg);
+                  console.log(JSON.parse(msg.data));
                 };
                 this.props.history.push({
                   pathname: '/details',
@@ -313,7 +313,7 @@ class Dashboard extends Component {
             />
           </Widget>
         </div>
-        <div key={this.state.kalender} data-grid={{ x: 2, y: 0, w: 1, h: 15 }}>
+        <div key={this.state.kalender} data-grid={{ x: 2, y: 0, w: 1, h: 8 }}>
           <Widget
             style={styles.widget}
             onClose={() => this.setState({ kalender: '' })}
