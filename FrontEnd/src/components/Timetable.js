@@ -108,16 +108,17 @@ class Timetable extends Component {
     const { schoolClass, lectures } = this.props;
     const array = [];
 
-    lectures && lectures.forEach(lecture => {
-      if (lecture.course === schoolClass) {
-        const index = lecture.period.day * 10 + lecture.period.slot;
-        array.push(
-          <div key={index}>
-            <Course subject={lecture.subject} room={lecture.room} initials={lecture.teacher} />
-          </div>,
-        );
-      }
-    });
+    lectures &&
+      lectures.forEach(lecture => {
+        if (lecture.course === schoolClass) {
+          const index = lecture.period.day * 10 + lecture.period.slot;
+          array.push(
+            <div key={index}>
+              <Course subject={lecture.subject} room={lecture.room} initials={lecture.teacher} />
+            </div>,
+          );
+        }
+      });
 
     return array;
   }
@@ -144,7 +145,10 @@ class Timetable extends Component {
         </div>
         <div style={styles.container}>
           <div style={styles.class}>
-            <p style={styles.classLabel}>{schoolClass}</p>
+            <p style={styles.classLabel}>
+              {schoolClass.grade}
+              {schoolClass.letter}
+            </p>
           </div>
           <div style={styles.hours}>
             <p style={styles.hour}>1. Stunde</p>

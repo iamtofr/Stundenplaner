@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Timetable from './Timetable';
+import * as SortUtils from '../utils/SortUtils';
 import * as Colors from '../constants/Colors';
 
 const styles = {
@@ -11,14 +12,13 @@ const styles = {
     display: 'flex',
   },
   classes: {
-    height: 1000,
     display: 'flex',
     flexDirection: 'column',
     marginRight: 5,
   },
   class: {
+    height: 42,
     display: 'flex',
-    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     padding: 0,
@@ -44,60 +44,60 @@ class Stundenplan extends Component {
     this.state = {
       activeClasses: [],
       classList: [
-        '1a',
-        '1b',
-        '2a',
-        '2b',
-        '3a',
-        '3b',
-        '4a',
-        '4b',
-        '5a',
-        '5b',
-        '6a',
-        '6b',
-        '7a',
-        '7b',
-        '8a',
-        '8b',
-        '9a',
-        '9b',
-        '10a',
-        '10b',
+        { grade: 1, letter: 'a' },
+        { grade: 1, letter: 'b' },
+        { grade: 2, letter: 'a' },
+        { grade: 2, letter: 'b' },
+        { grade: 3, letter: 'a' },
+        { grade: 3, letter: 'b' },
+        { grade: 4, letter: 'a' },
+        { grade: 4, letter: 'b' },
+        { grade: 5, letter: 'a' },
+        { grade: 5, letter: 'b' },
+        { grade: 6, letter: 'a' },
+        { grade: 6, letter: 'b' },
+        { grade: 7, letter: 'a' },
+        { grade: 7, letter: 'b' },
+        { grade: 8, letter: 'a' },
+        { grade: 8, letter: 'b' },
+        { grade: 9, letter: 'a' },
+        { grade: 9, letter: 'b' },
+        { grade: 10, letter: 'a' },
+        { grade: 10, letter: 'b' },
       ],
     };
   }
 
   addTimetable(schoolClass) {
-    const activeClasses = this.state.activeClasses;
-    const classes = this.state.classList;
+    const { activeClasses, classList } = this.state;
     activeClasses.push(schoolClass);
-    classes.splice(classes.indexOf(schoolClass), 1);
+    classList.splice(classList.indexOf(schoolClass), 1);
     this.setState({
       activeClasses: activeClasses,
-      classList: classes,
+      classList: classList,
     });
   }
 
   removeTimetable(schoolClass) {
-    const activeClasses = this.state.activeClasses;
-    const classes = this.state.classList;
+    const { activeClasses, classList } = this.state;
     activeClasses.splice(activeClasses.indexOf(schoolClass), 1);
-    classes.push(schoolClass);
+    classList.push(schoolClass);
+    classList.sort(SortUtils.byClassesASC);
     this.setState({
       activeClasses: activeClasses,
-      classList: classes,
+      classList: classList,
     });
   }
 
   renderTimetables() {
+    const { activeClasses } = this.state;
     const array = [];
-    for (let i = 0; i < this.state.activeClasses.length; i++) {
+    for (let i = 0; i < activeClasses.length; i++) {
       array.push(
         <Timetable
-          schoolClass={this.state.activeClasses[i]}
+          schoolClass={activeClasses[i]}
           key={i.toString()}
-          onClose={() => this.removeTimetable(this.state.activeClasses[i])}
+          onClose={() => this.removeTimetable(activeClasses[i])}
         />,
       );
     }
@@ -105,11 +105,19 @@ class Stundenplan extends Component {
   }
 
   renderClassList() {
+    const { classList } = this.state;
     const array = [];
-    for (let i = 0; i < this.state.classList.length; i++) {
+    for (let i = 0; i < classList.length; i++) {
       array.push(
-        <div style={styles.class} onClick={() => this.addTimetable(this.state.classList[i])}>
-          <p style={styles.classLabel}>{this.state.classList[i]}</p>
+        <div
+          style={styles.class}
+          key={i.toString()}
+          onClick={() => this.addTimetable(classList[i])}
+        >
+          <p style={styles.classLabel}>
+            {classList[i].grade}
+            {classList[i].letter}
+          </p>
         </div>,
       );
     }
