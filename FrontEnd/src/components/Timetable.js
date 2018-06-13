@@ -108,7 +108,7 @@ class Timetable extends Component {
     const { schoolClass, lectures } = this.props;
     const array = [];
 
-    lectures.forEach(lecture => {
+    lectures && lectures.forEach(lecture => {
       if (lecture.course === schoolClass) {
         const index = lecture.period.day * 10 + lecture.period.slot;
         array.push(
