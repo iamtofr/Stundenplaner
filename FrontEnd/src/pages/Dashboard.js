@@ -14,6 +14,8 @@ import iconCreate from '../assets/iconCreate.svg';
 import iconEdit from '../assets/iconEdit.svg';
 import iconAdd from '../assets/iconAdd.svg';
 import iconRemove from '../assets/iconRemove.svg';
+import kalender from '../assets/Kalender.png';
+import wetter from '../assets/Wetter.png';
 
 const GridLayout = WidthProvider(RGL);
 
@@ -24,6 +26,12 @@ const styles = {
   link: {
     marginBottom: 10,
     color: Colors.darkBlue,
+  },
+  calender: {
+    height: 300,
+  },
+  weather: {
+    height: 300,
   },
 };
 
@@ -318,19 +326,19 @@ class Dashboard extends Component {
             />
           </Widget>
         </div>
-        <div key={this.state.kalender} data-grid={{ x: 2, y: 0, w: 1, h: 8 }}>
+        <div key={this.state.kalender} data-grid={{ x: 2, y: 0, w: 1, h: 10 }}>
           <Widget
             style={styles.widget}
             onClose={() => this.setState({ kalender: '' })}
             text="Kalender"
-          />
+          >
+            <img style={styles.calender} src={kalender} alt="Kalender" />
+          </Widget>
         </div>
-        <div key={this.state.wetter} data-grid={{ x: 2, y: 2, w: 1, h: 6 }}>
-          <Widget
-            style={styles.widget}
-            onClose={() => this.setState({ wetter: '' })}
-            text="Wetter"
-          />
+        <div key={this.state.wetter} data-grid={{ x: 2, y: 2, w: 1, h: 10 }}>
+          <Widget style={styles.widget} onClose={() => this.setState({ wetter: '' })} text="Wetter">
+            <img style={styles.weather} src={wetter} alt="Wetter" />
+          </Widget>
         </div>
         <div key={this.state.einstellungen} data-grid={{ x: 2, y: 2, w: 1, h: 7 }}>
           <Widget style={styles.widget} text="Einstellungen">
