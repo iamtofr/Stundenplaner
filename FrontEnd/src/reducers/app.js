@@ -35,7 +35,8 @@ export default (state = initialState, action) => {
       console.log('setLectures: ');
       console.log(action.data.lectures);
       return {
-        lectures: action.data,
+        isLoggedIn: true,
+        lectures: action.data.lectures,
       };
     default:
       return state;

@@ -110,11 +110,18 @@ class Timetable extends Component {
 
     lectures &&
       lectures.forEach(lecture => {
-        if (lecture.course === schoolClass) {
-          const index = lecture.period.day * 10 + lecture.period.slot;
+        if (
+          lecture.course.grade === schoolClass.grade &&
+          lecture.course.letter === schoolClass.letter
+        ) {
+          const index = (lecture.period.weekday - 1) * 10 + lecture.period.timeSlot - 1;
           array.push(
             <div key={index}>
-              <Course subject={lecture.subject} room={lecture.room} initials={lecture.teacher} />
+              <Course
+                subject={lecture.subject.name}
+                room={lecture.room.number}
+                initials={lecture.teacher.profile.initials}
+              />
             </div>,
           );
         }
