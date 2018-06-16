@@ -11,12 +11,21 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     marginBottom: 4,
+    marginTop: 10,
   },
   logo: {
     width: 40,
     height: 40,
     padding: 5,
   },
+  labelTitel: {
+    margin: 0,
+    padding: 0,
+    fontSize: 24,
+    fontWeight: 600,
+    color: Colors.darkBlue,
+  },
+
   buttons: {
     display: 'flex',
     flex: 1,
@@ -53,7 +62,7 @@ class NavBar extends Component {
         />
         <div style={styles.buttons}>
           <button style={styles.button}>
-            <p style={styles.label}>StundenPlaner</p>
+            <p style={styles.labelTitel}>StundenPlaner</p>
           </button>
         </div>
         <button

@@ -8,7 +8,6 @@ import { actions as appActions } from '../reducers/app';
 import Widget from '../components/Widget';
 import ModalView from '../components/ModalView';
 import Link from '../components/Link';
-import * as Colors from '../constants/Colors';
 import iconList from '../assets/iconList.svg';
 import iconCreate from '../assets/iconCreate.svg';
 import iconEdit from '../assets/iconEdit.svg';
@@ -25,7 +24,6 @@ const styles = {
   },
   link: {
     marginBottom: 10,
-    color: Colors.darkBlue,
   },
   calender: {
     height: 300,

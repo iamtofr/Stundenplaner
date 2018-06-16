@@ -7,7 +7,7 @@ const styles = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 10,
+    borderRadius: 6,
     overflow: 'hidden',
     backgroundColor: Colors.blue,
   },

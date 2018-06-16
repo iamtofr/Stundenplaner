@@ -23,10 +23,15 @@ const styles = {
     borderWidth: `1px 1px 0px 1px`,
     borderStyle: 'solid',
     borderColor: Colors.grey,
+    boxShadow: [
+      '0 0px 1px -2px rgba(0,0,0,.2)',
+      '0 0px 2px 0 rgba(0,0,0,.14)',
+      '0 0px 5px 0 rgba(0,0,0,.12)',
+    ],
   },
   close: {
     padding: 10,
-    marginRight: 100,
+    marginRight: 90,
   },
   days: {
     display: 'flex',
@@ -43,6 +48,11 @@ const styles = {
     flex: 1,
     border: `1px solid ${Colors.grey}`,
     marginBottom: 5,
+    boxShadow: [
+      '0 3px 1px -2px rgba(0,0,0,.2)',
+      '0 2px 2px 0 rgba(0,0,0,.14)',
+      '0 1px 5px 0 rgba(0,0,0,.12)',
+    ],
   },
   classLabel: {
     padding: 10,

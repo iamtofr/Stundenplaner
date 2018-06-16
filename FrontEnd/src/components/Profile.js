@@ -3,7 +3,6 @@ import Avatar from './Avatar';
 import TextInput from './TextInput';
 import Button from './Button';
 import * as Colors from '../constants/Colors';
-import Logo from '../assets/logo.svg';
 
 const styles = {
   container: {
@@ -50,7 +49,7 @@ const styles = {
     display: 'flex',
     flex: 'auto',
     flexDirection: 'column',
-    margin: '50px 0px 10px',
+    margin: '50px 20px 10px 0px',
     backgroundColor: Colors.boxGrey,
     borderRadius: 2,
     boxShadow: [
@@ -380,8 +379,7 @@ class Profile extends Component {
             )}
           </div>
           <div style={styles.side}>
-            {/* <Avatar photo={profile.photo} /> */}
-            <img style={styles.avatar} src={profile.photo || Logo} alt="Avatar" />
+            <Avatar photo={profile.photo} />
             <div style={styles.infoBoxNotes}>
               <p style={styles.title}>Notizen</p>
               <textarea

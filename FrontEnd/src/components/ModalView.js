@@ -30,7 +30,7 @@ const styles = {
   buttons: {
     display: 'flex',
     justifyContent: 'space-evenly',
-    margin: '180px auto 10px',
+    margin: '160px auto 10px',
   },
   button: {
     margin: '0 auto',

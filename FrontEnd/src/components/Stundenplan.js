@@ -7,6 +7,7 @@ const styles = {
   container: {
     display: 'flex',
     flexDirection: 'column',
+    color: Colors.darkBlue,
   },
   content: {
     display: 'flex',
@@ -24,6 +25,11 @@ const styles = {
     padding: 0,
     marginBottom: 5,
     border: `1px solid ${Colors.grey}`,
+    boxShadow: [
+      '0 3px 1px -2px rgba(0,0,0,.2)',
+      '0 2px 2px 0 rgba(0,0,0,.14)',
+      '0 1px 5px 0 rgba(0,0,0,.12)',
+    ],
   },
   classLabel: {
     padding: 10,
