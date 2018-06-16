@@ -23,7 +23,7 @@ const styles = {
     margin: 0,
     marginBottom: 20,
     padding: 0,
-    fontSize: 18,
+    fontSize: 21,
     fontWeight: 'bold',
     color: Colors.darkBlue,
   },

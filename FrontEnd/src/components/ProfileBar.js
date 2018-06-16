@@ -22,7 +22,7 @@ const styles = {
     display: 'inline-block',
     lineHeight: '50px',
     height: '50px',
-    width: 120,
+    width: 130,
     textAlign: 'center',
     margin: 0,
   },
@@ -31,10 +31,10 @@ const styles = {
     boxSizing: 'border-box',
     lineHeight: '50px',
     height: '50px',
-    width: 120,
+    width: 130,
     textAlign: 'center',
     margin: 0,
-    borderBottom: '2px',
+    borderBottom: '3px',
     borderBottomColor: Colors.yellow,
     borderBottomStyle: 'solid',
   },
@@ -44,14 +44,6 @@ const styles = {
     fontSize: '14px',
     color: Colors.white,
     textDecoration: 'none',
-  },
-  indicator: {
-    left: 0,
-    height: 2,
-    width: 120,
-    bottom: 0,
-    background: Colors.yellow,
-    position: 'absolute',
   },
 };
 
@@ -68,6 +60,11 @@ class ProfileBar extends Component {
       <nav>
         <div style={styles.navContent}>
           <ul style={styles.tabs}>
+            <li style={styles.tab}>
+              <NavLink style={styles.link} activeStyle={styles.activetab} to="/stundenplan">
+                Stundenplan
+              </NavLink>
+            </li>
             <li style={styles.tab}>
               <NavLink style={styles.link} activeStyle={styles.activetab} to="">
                 Schüler
