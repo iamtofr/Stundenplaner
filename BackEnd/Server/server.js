@@ -94,11 +94,16 @@ wss.on('connection', function connection(ws) {
   ws.on('message', function incoming(message) {
     toAlgorithm.buildAlgorithm().then((schoolData) => {
 
-      ws.send(JSON.stringify('Start WebSocket Connection'));
+      Lecture.remove({}, function (err) {
+        if (err) return res.send(500, {error: err});
+      });
+
+      Curriculum.remove({}, function (err) {
+        if (err) return res.send(500, {error: err});
+      });
+
 
       let websocketClient = new WebsocketClient(schoolData, (resolvedSchoolData) => {
-
-        ws.send(JSON.stringify('Datacollection completed'));
 
         let lectureArray = [];
 
@@ -111,22 +116,13 @@ wss.on('connection', function connection(ws) {
         }
 
         resolvedSchoolData.lectures = lectureArray;
-        ws.send(JSON.stringify('Data Solved'));
-
-        // console.log("Data from Algo: ",resolvedSchoolData);
-
 
         let newCurriculum = Curriculum(resolvedSchoolData);
         newCurriculum.save().then(curriculum => {
-          console.log(curriculum.lectures);
             populateCurriculum.build(curriculum.lectures)
               .then(populated => {
-                ws.send(JSON.stringify("send to frontEnd"));
-                // console.log(populated);
                 ws.send(JSON.stringify(populated));
-                console.log(populated);
               });
-            console.log('Curriculum created!');
           },
           function(err) {
             if (err) throw err;
