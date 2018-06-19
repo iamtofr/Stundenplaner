@@ -19,7 +19,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <kotlin.version>1.2.41</kotlin.version>
+    <kotlin.version>1.2.50</kotlin.version>
     <optaplanner.version>7.7.0.Final</optaplanner.version>
     <main.class>online.stundenplaner.service.WebSocketServiceKt</main.class>
   </properties>
@@ -29,6 +29,7 @@
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>exec-maven-plugin</artifactId>
+        <version>1.6.0</version>
         <!-- WARNING: This configuration must be run with "mvn exec:java" not "mvn exec:exec". -->
         <!-- It is impossible to write a configuration that is compatible with both exec:java and exec:exec -->
         <configuration>

@@ -1,6 +1,7 @@
 package online.stundenplaner.service
 
 import com.fasterxml.jackson.databind.DeserializationFeature
+import com.fasterxml.jackson.databind.JsonNode
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
@@ -54,14 +55,14 @@ class WebSocketController {
     println("message received: $message")
 
     when (message["msgType"].asText()) {
-      "getLectures" -> handleSchoolData(session, message["data"].asText())
+      "getLectures" -> handleSchoolData(session, asSchoolSchedule(message["data"]))
       "msgError" -> println("error $message")
     }
   }
 
-  private fun handleSchoolData(session: Session, string: String) {
-    val courseSchedule = mapper.readValue<SchoolSchedule>(string)
+  private fun asSchoolSchedule(node: JsonNode):SchoolSchedule = mapper.treeToValue(node, SchoolSchedule::class.java)
 
+  private fun handleSchoolData(session: Session, courseSchedule: SchoolSchedule) {
     courseSchedule.fillLectures()
     courseSchedule.fillRequiredTeachers()
 
