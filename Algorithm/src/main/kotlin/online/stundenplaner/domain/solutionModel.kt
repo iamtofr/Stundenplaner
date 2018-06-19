@@ -16,7 +16,7 @@ class Lecture(
 
   @JsonIdentityReference(alwaysAsId = true)
   var subject: Subject? = null
-) : Persistable() {
+) {
 
   @get:PlanningPin
   var pinned: Boolean? = false
