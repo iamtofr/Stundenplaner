@@ -20,11 +20,6 @@ const styles = {
     alignItems: 'center',
     marginBottom: 50,
   },
-  logo: {
-    width: 40,
-    height: 40,
-    padding: 5,
-  },
   buttons: {
     display: 'flex',
     flex: 1,
@@ -40,16 +35,9 @@ const styles = {
     background: 0,
     fontSize: 11,
   },
-
   text: {
     fontSize: 8,
     alignItems: 'center',
-  },
-  label: {
-    margin: 0,
-    padding: 0,
-    fontSize: 12,
-    color: Colors.darkBlue,
   },
 };
 
@@ -73,7 +61,6 @@ class Footer extends Component {
   }
 
   afterOpenModal() {
-    // references are now sync'd and can be accessed.
     this.subtitle.style.color = '#f00';
   }
 
@@ -94,10 +81,8 @@ class Footer extends Component {
           onAfterOpen={this.afterOpenModal}
           onRequestClose={this.closeModal}
           style={customStyles}
-          contentLabel="Example Modal"
         >
           <p ref={subtitle => (this.subtitle = subtitle)}>Impressum</p>
-          {/*<button onClick={this.closeModal}>close</button>*/}
           <div>
             <p style={styles.text}>
               {'stundenplaner.online Privacy Policy\n' +

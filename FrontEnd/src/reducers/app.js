@@ -2,12 +2,14 @@ export const types = {
   LOGIN: 'APP/LOGIN',
   LOGOUT: 'APP/LOGOUT',
   SET_LECTURES: 'APP/SET_LECTURES',
+  SET_ACTIVE_TAB: 'APP/SET_ACTIVE_TAB',
 };
 
 export const actions = {
   login: data => ({ type: types.LOGIN, data }),
   logout: () => ({ type: types.LOGOUT }),
   setLectures: data => ({ type: types.SET_LECTURES, data }),
+  setActiveTab: data => ({ type: types.SET_ACTIVE_TAB, data }),
 };
 
 const initialState = {
@@ -15,6 +17,7 @@ const initialState = {
   profile: {},
   isLoggedIn: false,
   lectures: [],
+  activeTab: '',
 };
 
 export default (state = initialState, action) => {
@@ -37,6 +40,12 @@ export default (state = initialState, action) => {
       return {
         isLoggedIn: true,
         lectures: action.data.lectures,
+      };
+    case types.SET_ACTIVE_TAB:
+      console.log(action.data.activeTab);
+      return {
+        isLoggedIn: true,
+        activeTab: action.data.activeTab,
       };
     default:
       return state;

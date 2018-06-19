@@ -11,6 +11,7 @@ import Footer from './components/Footer';
 const styles = {
   container: {
     display: 'flex',
+    marginBottom: 40,
   },
   content: {
     display: 'flex',
