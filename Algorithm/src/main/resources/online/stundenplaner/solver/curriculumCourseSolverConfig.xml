@@ -11,7 +11,7 @@
     <!--&lt;!&ndash;<assertionScoreDirectorFactory>&ndash;&gt;-->
     <!--&lt;!&ndash;<scoreDrl>org/optaplanner/examples/curriculumcourse/solver/curriculumCourseScoreRules.drl</scoreDrl>&ndash;&gt;-->
     <!--&lt;!&ndash;</assertionScoreDirectorFactory>&ndash;&gt;-->
-    <!--<initializingScoreTrend>ONLY_DOWN</initializingScoreTrend>-->
+    <initializingScoreTrend>ONLY_DOWN</initializingScoreTrend>
   </scoreDirectorFactory>
 
 
@@ -21,14 +21,14 @@
       ge0ffrey's main pc: 429
       ge0ffrey's old pc: 1152
     -->
-    <secondsSpentLimit>10</secondsSpentLimit>
-    <!--<bestScoreLimit>-0hard/-0soft</bestScoreLimit>-->
+    <secondsSpentLimit>240</secondsSpentLimit>
+    <bestScoreLimit>-0hard/-0soft</bestScoreLimit>
   </termination>
   <constructionHeuristic>
-    <constructionHeuristicType>FIRST_FIT</constructionHeuristicType>
-    <!--<forager>-->
-      <!--<pickEarlyType>FIRST_FEASIBLE_SCORE</pickEarlyType>-->
-    <!--</forager>-->
+    <!--<constructionHeuristicType>FIRST_FIT</constructionHeuristicType>-->
+    <forager>
+      <pickEarlyType>FIRST_FEASIBLE_SCORE</pickEarlyType>
+    </forager>
   </constructionHeuristic>
   <localSearch>
     <unionMoveSelector>
