@@ -2,19 +2,20 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import RGL, { WidthProvider } from 'react-grid-layout';
+import Calendar from 'react-calendar';
 import 'react-resizable/css/styles.css';
 import 'react-grid-layout/css/styles.css';
+import calendarStyles from '../styles/calendar.css';
 import { actions as appActions } from '../reducers/app';
 import Widget from '../components/Widget';
 import ModalView from '../components/ModalView';
 import Link from '../components/Link';
+import WeatherWidget from '../components/WeatherWidget';
 import iconList from '../assets/iconList.svg';
 import iconCreate from '../assets/iconCreate.svg';
 import iconEdit from '../assets/iconEdit.svg';
 import iconAdd from '../assets/iconAdd.svg';
 import iconRemove from '../assets/iconRemove.svg';
-import kalender from '../assets/Kalender.png';
-import wetter from '../assets/Wetter.png';
 
 const GridLayout = WidthProvider(RGL);
 
@@ -48,6 +49,7 @@ class Dashboard extends Component {
       wetter: 'Wetter',
       einstellungen: 'Einstellungen',
       show: false,
+      date: new Date(),
     };
   }
 
@@ -64,6 +66,8 @@ class Dashboard extends Component {
     console.log('closing modal');
     this.setState({ show: false });
   };
+
+  onChange = date => this.setState({ date });
 
   render() {
     if (!this.props.isLoggedIn) {
@@ -87,7 +91,7 @@ class Dashboard extends Component {
           >
             <Link
               icon={iconList}
-              text="Stundenplanliste anzeigen"
+              text="Stundenplan anzeigen"
               onClick={() => {
                 this.props.history.push({
                   pathname: '/details',
@@ -324,25 +328,25 @@ class Dashboard extends Component {
             />
           </Widget>
         </div>
-        <div key={this.state.kalender} data-grid={{ x: 2, y: 0, w: 1, h: 10 }}>
+        <div key={this.state.kalender} data-grid={{ x: 2, y: 0, w: 1, h: 11 }}>
           <Widget
             style={styles.widget}
             onClose={() => this.setState({ kalender: '' })}
             text="Kalender"
           >
-            <img style={styles.calender} src={kalender} alt="Kalender" />
+            <Calendar className="calendar" onChange={this.onChange} value={this.state.date} />
           </Widget>
         </div>
-        <div key={this.state.wetter} data-grid={{ x: 2, y: 2, w: 1, h: 10 }}>
+        <div key={this.state.wetter} data-grid={{ x: 2, y: 2, w: 1, h: 8 }}>
           <Widget style={styles.widget} onClose={() => this.setState({ wetter: '' })} text="Wetter">
-            <img style={styles.weather} src={wetter} alt="Wetter" />
+            <WeatherWidget />
           </Widget>
         </div>
-        <div key={this.state.einstellungen} data-grid={{ x: 2, y: 2, w: 1, h: 7 }}>
+        <div key={this.state.einstellungen} data-grid={{ x: 2, y: 2, w: 1, h: 8 }}>
           <Widget style={styles.widget} text="Einstellungen">
             <Link
               icon={this.state.stundenplan ? iconRemove : iconCreate}
-              text="Stundenpläner Widget"
+              text="Stundenplan Widget"
               onClick={() => {
                 this.state.stundenplan
                   ? this.setState({ stundenplan: '' })
