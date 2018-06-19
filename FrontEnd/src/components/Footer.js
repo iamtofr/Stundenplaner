@@ -222,7 +222,6 @@ class Footer extends Component {
             </p>
           </div>
         </Modal>
-
       </div>
     );
   }

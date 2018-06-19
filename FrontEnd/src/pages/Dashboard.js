@@ -4,14 +4,17 @@ import { connect } from 'react-redux';
 import RGL, { WidthProvider } from 'react-grid-layout';
 import 'react-resizable/css/styles.css';
 import 'react-grid-layout/css/styles.css';
+import { actions as appActions } from '../reducers/app';
 import Widget from '../components/Widget';
+import ModalView from '../components/ModalView';
 import Link from '../components/Link';
-import * as Colors from '../constants/Colors';
 import iconList from '../assets/iconList.svg';
 import iconCreate from '../assets/iconCreate.svg';
 import iconEdit from '../assets/iconEdit.svg';
 import iconAdd from '../assets/iconAdd.svg';
 import iconRemove from '../assets/iconRemove.svg';
+import kalender from '../assets/Kalender.png';
+import wetter from '../assets/Wetter.png';
 
 const GridLayout = WidthProvider(RGL);
 
@@ -21,7 +24,12 @@ const styles = {
   },
   link: {
     marginBottom: 10,
-    color: Colors.darkBlue,
+  },
+  calender: {
+    height: 300,
+  },
+  weather: {
+    height: 300,
   },
 };
 
@@ -39,12 +47,23 @@ class Dashboard extends Component {
       kalender: 'Calender',
       wetter: 'Wetter',
       einstellungen: 'Einstellungen',
+      show: false,
     };
   }
 
   componentDidMount() {
     document.title = 'StundenPlaner - Dashboard';
   }
+
+  showModal = e => {
+    console.log('calling modal');
+    this.setState({ show: true });
+  };
+
+  hideModal = e => {
+    console.log('closing modal');
+    this.setState({ show: false });
+  };
 
   render() {
     if (!this.props.isLoggedIn) {
@@ -82,13 +101,31 @@ class Dashboard extends Component {
               icon={iconCreate}
               text="Stundenplan erstellen"
               onClick={() => {
+                this.showModal();
+              }}
+            />
+            <ModalView
+              isOpen={this.state.show}
+              handleOpenModal={() => this.showModal()}
+              handleCloseModal={() => this.hideModal()}
+              onSubmit={() => {
                 const socket = new WebSocket('wss://stundenplaner.online');
                 socket.onopen = () => {
                   socket.send('Go');
                 };
                 socket.onmessage = msg => {
-                  console.log(msg);
+                  console.log('received Data from Websocket: ');
+                  console.log(JSON.parse(msg.data));
+                  this.props.setLectures({
+                    lectures: JSON.parse(msg.data),
+                  });
                 };
+                this.props.history.push({
+                  pathname: '/details',
+                  state: {
+                    title: 'Stundenplan',
+                  },
+                });
               }}
             />
             <Link
@@ -211,7 +248,7 @@ class Dashboard extends Component {
                   pathname: '/details',
                   state: {
                     title: 'Profilliste',
-                      occupation: 'student'
+                    occupation: 'student',
                   },
                 });
               }}
@@ -240,7 +277,7 @@ class Dashboard extends Component {
                   pathname: '/details',
                   state: {
                     title: 'Profilliste',
-                      occupation: 'teacher'
+                    occupation: 'teacher',
                   },
                 });
               }}
@@ -287,19 +324,19 @@ class Dashboard extends Component {
             />
           </Widget>
         </div>
-        <div key={this.state.kalender} data-grid={{ x: 2, y: 0, w: 1, h: 15 }}>
+        <div key={this.state.kalender} data-grid={{ x: 2, y: 0, w: 1, h: 10 }}>
           <Widget
             style={styles.widget}
             onClose={() => this.setState({ kalender: '' })}
             text="Kalender"
-          />
+          >
+            <img style={styles.calender} src={kalender} alt="Kalender" />
+          </Widget>
         </div>
-        <div key={this.state.wetter} data-grid={{ x: 2, y: 2, w: 1, h: 6 }}>
-          <Widget
-            style={styles.widget}
-            onClose={() => this.setState({ wetter: '' })}
-            text="Wetter"
-          />
+        <div key={this.state.wetter} data-grid={{ x: 2, y: 2, w: 1, h: 10 }}>
+          <Widget style={styles.widget} onClose={() => this.setState({ wetter: '' })} text="Wetter">
+            <img style={styles.weather} src={wetter} alt="Wetter" />
+          </Widget>
         </div>
         <div key={this.state.einstellungen} data-grid={{ x: 2, y: 2, w: 1, h: 7 }}>
           <Widget style={styles.widget} text="Einstellungen">
@@ -364,4 +401,13 @@ const mapStateToProps = state => ({
   isLoggedIn: state.app.isLoggedIn,
 });
 
-export default withRouter(connect(mapStateToProps)(Dashboard));
+const mapDispatchToProps = {
+  setLectures: appActions.setLectures,
+};
+
+export default withRouter(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps,
+  )(Dashboard),
+);

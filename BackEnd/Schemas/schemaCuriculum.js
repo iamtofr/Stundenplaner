@@ -7,13 +7,19 @@
 
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const schemaIn = require('../Schemas/schemas');
 
-let Lecture = schemaIn.lecture;
+let lecture = new Schema({
+  teacher: {type: Schema.Types.ObjectId, ref:'teacher', required: false},
+  room: {type: Schema.Types.ObjectId, ref:'room', required: false},
+  course: {type: Schema.Types.ObjectId, ref:'course', required: false},
+  subject: {type: Schema.Types.ObjectId, ref:'subject', required: false},
+  period: {type: Schema.Types.ObjectId, ref:'period', required: false},
+  pinned: {type: Boolean, required: false},
+});
 
 let curriculum = new Schema({
   solution: { type: Number, required: true },
-  lectures: { type: [ Lecture ], required: false },
+  lectures: [lecture],
 });
 
 module.exports = curriculum;

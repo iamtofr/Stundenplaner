@@ -8,11 +8,12 @@ let styles = {
     marginBottom: 10,
   },
   icon: {
-    width: 20,
-    height: 20,
-    marginRight: 5,
+    width: 24,
+    height: 24,
+    marginRight: 8,
   },
   link: {
+    fontSize: 18,
     color: Colors.darkBlue,
   },
 };

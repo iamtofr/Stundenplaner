@@ -17,35 +17,29 @@ let populateLectures = async (dataFromAlgo) => {
   let lectureArray = [];
 
   for (let lectureAlgo of dataFromAlgo) {
-    let outLecture = {
-      teacherName: "",
-      roomNumber: "",
-      course: {},
-      subjectName: "",
-      period: {},
-    };
+    let outLecture = {};
 
-    let teacherProfile = teacher.findById(lectureAlgo.teacher._id);
-    outLecture.teacherName = await teacherProfile
-      .populate('profile','name')
+    let teacherProfile = teacher.findById(lectureAlgo.teacher);
+    outLecture.teacher = await teacherProfile
+      .populate('profile')
       .exec();
 
-    let roomData = room.findById(lectureAlgo.room._id);
-    outLecture.roomNumber = await roomData
-      .populate('room','number')
+    let roomData = room.findById(lectureAlgo.room);
+    outLecture.room = await roomData
+      .populate('room')
       .exec();
 
-    let courseData = course.findById(lectureAlgo.course._id);
+    let courseData = course.findById(lectureAlgo.course);
     outLecture.course = await courseData
       .populate('course')
       .exec();
 
-    let subjectData = subject.findById(lectureAlgo.subject._id);
-    outLecture.subjectName = await subjectData
-      .populate('subject', 'name')
+    let subjectData = subject.findById(lectureAlgo.subject);
+    outLecture.subject = await subjectData
+      .populate('subject')
       .exec();
 
-    let periodData = period.findById(lectureAlgo.period._id);
+    let periodData = period.findById(lectureAlgo.period);
     outLecture.period = await periodData
       .populate('period')
       .exec();

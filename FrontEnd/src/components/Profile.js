@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
+import Avatar from './Avatar';
 import TextInput from './TextInput';
 import Button from './Button';
 import * as Colors from '../constants/Colors';
-import Logo from '../assets/logo.svg';
-
-import ProfilBar from './ProfilBar';
 
 const styles = {
   container: {
@@ -22,8 +20,15 @@ const styles = {
     display: 'flex',
     flex: 'auto',
     flexDirection: 'column',
-    padding: 5,
-    margin: 20,
+    paddingBottom: 4,
+    margin: '10px 20px',
+    backgroundColor: Colors.boxGrey,
+    borderRadius: 2,
+    boxShadow: [
+      '0 3px 1px -2px rgba(0,0,0,.2)',
+      '0 2px 2px 0 rgba(0,0,0,.14)',
+      '0 1px 5px 0 rgba(0,0,0,.12)',
+    ],
   },
   person: {
     display: 'flex',
@@ -35,30 +40,48 @@ const styles = {
     display: 'flex',
     flex: 1,
     flexDirection: 'column',
+    paddingRight: 20,
   },
   subjects: {
     display: 'flex',
+  },
+  infoBoxNotes: {
+    display: 'flex',
+    flex: 'auto',
+    flexDirection: 'column',
+    margin: '50px 20px 10px 0px',
+    backgroundColor: Colors.boxGrey,
+    borderRadius: 2,
+    boxShadow: [
+      '0 3px 1px -2px rgba(0,0,0,.2)',
+      '0 2px 2px 0 rgba(0,0,0,.14)',
+      '0 1px 5px 0 rgba(0,0,0,.12)',
+    ],
   },
   side: {
     display: 'flex',
     flexDirection: 'column',
   },
   title: {
-    fontSize: 18,
+    fontSize: 14,
     textTransform: 'uppercase',
+    margin: '16px 10px 6px 10px',
   },
   avatar: {
     width: 200,
     height: 200,
     borderRadius: 100,
+    margin: 10,
   },
   notes: {
     display: 'flex',
     flex: 1,
-    background: 0,
-    border: 0,
+    margin: 10,
+    background: Colors.light,
     outline: 0,
     fontSize: 14,
+    borderRadius: 2,
+    border: `1px solid ${Colors.lineGrey}`,
   },
   buttons: {
     display: 'flex',
@@ -66,6 +89,12 @@ const styles = {
   },
   button: {
     margin: 10,
+  },
+  inputWidthLarge: {
+    width: '388px',
+  },
+  inputWidthSmall: {
+    width: '142px',
   },
 };
 
@@ -78,7 +107,6 @@ class Profile extends Component {
   }
 
   componentDidMount() {
-    console.log(this.props);
     this.occupation = this.props.occupation;
 
     fetch('https://stundenplaner.online/profile/' + this.props.id + '?token=1234')
@@ -118,7 +146,6 @@ class Profile extends Component {
     }
     return (
       <div style={styles.container}>
-        <ProfilBar/>
         <div style={styles.info}>
           <div style={styles.data}>
             <div style={styles.infoBox}>
@@ -144,18 +171,21 @@ class Profile extends Component {
                     })
                   }
                 />
-                {this.occupation === "teacher" &&
+                {this.occupation === 'teacher' && (
+                  <TextInput
+                    width={styles.inputWidthSmall}
+                    type="text"
+                    label="Kürzel"
+                    value={profile.initials}
+                    onChange={event =>
+                      this.setState({
+                        initials: event.target.value,
+                      })
+                    }
+                  />
+                )}
                 <TextInput
-                  type="text"
-                  label="Kürzel"
-                  value={profile.initials}
-                  onChange={event =>
-                    this.setState({
-                      initials: event.target.value,
-                    })
-                  }
-                />}
-                <TextInput
+                  width={styles.inputWidthSmall}
                   type="text"
                   label="Geschlecht"
                   value={profile.sex}
@@ -166,6 +196,7 @@ class Profile extends Component {
                   }
                 />
                 <TextInput
+                  width={styles.inputWidthSmall}
                   type="text"
                   label="Geburtsdatum"
                   value={this.renderDateOfBirth(profile.dateOfBirth)}
@@ -176,6 +207,7 @@ class Profile extends Component {
                   }
                 />
                 <TextInput
+                  width={styles.inputWidthSmall}
                   type="text"
                   label="Nationalität"
                   value={profile.nationality}
@@ -192,9 +224,20 @@ class Profile extends Component {
               <div style={styles.contact}>
                 <div style={styles.contactColumn}>
                   <TextInput
+                    width={styles.inputWidthLarge}
                     type="text"
                     label="Anschrift"
-                    value={profile.address? (profile.address.street + " " + profile.address.number + " " + profile.address.zipCode + " " + profile.address.city) :""}
+                    value={
+                      profile.address
+                        ? profile.address.street +
+                          ' ' +
+                          profile.address.number +
+                          ' ' +
+                          profile.address.zipCode +
+                          ' ' +
+                          profile.address.city
+                        : ''
+                    }
                     onChange={event =>
                       this.setState({
                         address: event.target.value,
@@ -202,6 +245,7 @@ class Profile extends Component {
                     }
                   />
                   <TextInput
+                    width={styles.inputWidthLarge}
                     type="tel"
                     label="Telefonnummer"
                     value={profile.phoneNumber}
@@ -212,6 +256,7 @@ class Profile extends Component {
                     }
                   />
                   <TextInput
+                    width={styles.inputWidthLarge}
                     type="email"
                     label="E-Mail"
                     value={profile.email}
@@ -222,16 +267,13 @@ class Profile extends Component {
                     }
                   />
                 </div>
-                {
-                  this.occupation === "student" &&
-                  <div
-                    style={styles.contactColumn}
-                  >
+                {this.occupation === 'student' && (
+                  <div style={styles.contactColumn}>
                     <TextInput
+                      width={styles.inputWidthLarge}
                       type="text"
                       label="Kontaktperson"
-                      value={profile.contact
-                      }
+                      value={profile.contact}
                       onChange={event =>
                         this.setState({
                           contact: event.target.value,
@@ -239,6 +281,7 @@ class Profile extends Component {
                       }
                     />
                     <TextInput
+                      width={styles.inputWidthLarge}
                       type="tel"
                       label="Telefonnummer"
                       value={profile.contactPhoneNumber}
@@ -249,10 +292,10 @@ class Profile extends Component {
                       }
                     />
                     <TextInput
+                      width={styles.inputWidthLarge}
                       type="email"
                       label="E-Mail"
-                      value={profile.contactEmail
-                      }
+                      value={profile.contactEmail}
                       onChange={event =>
                         this.setState({
                           contactEmail: event.target.value,
@@ -260,62 +303,84 @@ class Profile extends Component {
                       }
                     />
                   </div>
-                }
+                )}
               </div>
             </div>
-            {this.occupation === "teacher" &&
-            <div style={styles.infoBox}>
-              <p style={styles.title}>Unterrichtete Fächer</p>
-              <div style={styles.subjects}>
-                <TextInput
-                  type="text"
-                  value={profile.subject}
-                  onChange={event =>
-                    this.setState({
-                      subject1: event.target.value,
-                    })
-                  }
-                />
-                <TextInput
-                  type="text"
-                  value={profile.subject}
-                  onChange={event =>
-                    this.setState({
-                      subject2: event.target.value,
-                    })
-                  }
-                />
-                <TextInput
-                  type="text"
-                  value={profile.subject}
-                  onChange={event =>
-                    this.setState({
-                      subject3: event.target.value,
-                    })
-                  }
-                />
-                <TextInput
-                  type="text"
-                  value={profile.subject}
-                  onChange={event =>
-                    this.setState({
-                      subject4: event.target.value,
-                    })
-                  }
-                />
+            {this.occupation === 'teacher' && (
+              <div style={styles.infoBox}>
+                <p style={styles.title}>Unterrichtete Fächer</p>
+                <div style={styles.subjects}>
+                  <TextInput
+                    type="text"
+                    value={profile.subject}
+                    onChange={event =>
+                      this.setState({
+                        subject1: event.target.value,
+                      })
+                    }
+                  />
+                  <TextInput
+                    type="text"
+                    value={profile.subject}
+                    onChange={event =>
+                      this.setState({
+                        subject2: event.target.value,
+                      })
+                    }
+                  />
+                  <TextInput
+                    type="text"
+                    value={profile.subject}
+                    onChange={event =>
+                      this.setState({
+                        subject3: event.target.value,
+                      })
+                    }
+                  />
+                  <TextInput
+                    type="text"
+                    value={profile.subject}
+                    onChange={event =>
+                      this.setState({
+                        subject4: event.target.value,
+                      })
+                    }
+                  />
+                </div>
               </div>
-            </div>
-            }
+            )}
+            {this.occupation === 'student' && (
+              <div style={styles.infoBox}>
+                <p style={styles.title}>Schulische Daten</p>
+                <div style={styles.subjects}>
+                  <TextInput
+                    width={styles.inputWidthSmall}
+                    type="text"
+                    label="Klasse"
+                    value="5A"
+                    onChange={event =>
+                      this.setState({
+                        subject1: event.target.value,
+                      })
+                    }
+                  />
+                  <TextInput
+                    type="text"
+                    label="Vertiefungsrichtung"
+                    value={profile.subject}
+                    onChange={event =>
+                      this.setState({
+                        subject2: event.target.value,
+                      })
+                    }
+                  />
+                </div>
+              </div>
+            )}
           </div>
           <div style={styles.side}>
-            <img style={styles.avatar} src={profile.photo || Logo} alt="Avatar"/>
-            <Button
-              style={styles.button}
-              text="Löschen"
-              color={Colors.blue}
-              hoverColor={Colors.lightBlue}
-            />
-            <div style={styles.infoBox}>
+            <Avatar photo={profile.photo} />
+            <div style={styles.infoBoxNotes}>
               <p style={styles.title}>Notizen</p>
               <textarea
                 style={styles.notes}
@@ -330,38 +395,38 @@ class Profile extends Component {
           </div>
         </div>
         <div style={styles.buttons}>
-          <Button style={styles.button}
-                  text="Ausdrucken"
-                  color={Colors.blue}
-                  hoverColor={Colors.lightBlue}
-                  onClick={() => {
-                    console.log('Print schedule');
-                    this.printDiv('avatar');
-                  }}
+          <Button
+            style={styles.button}
+            text="Profil löschen"
+            color={Colors.blue}
+            hoverColor={Colors.lightBlue}
+            onClick={() => {
+              console.log('Print schedule');
+              this.printDiv('avatar');
+            }}
           />
           <Button
             style={styles.button}
             text="Speichern"
             color={Colors.green}
             hoverColor={Colors.lightGreen}
-
-
           />
-          <Button style={styles.button}
-                  text="Abbruch"
-                  color={Colors.red}
-                  hoverColor={Colors.lightRed}
+          <Button
+            style={styles.button}
+            text="Abbruch"
+            color={Colors.red}
+            hoverColor={Colors.lightRed}
           />
         </div>
       </div>
     );
   }
 
-    renderDateOfBirth(dateOfBirth) {
-        let date = new Date(dateOfBirth);
-        let month = date.getMonth()+1;
-        return date.getDate().toString()+ "." + month.toString() +"."+ date.getFullYear().toString();
-    }
+  renderDateOfBirth(dateOfBirth) {
+    let date = new Date(dateOfBirth);
+    let month = date.getMonth() + 1;
+    return date.getDate().toString() + '.' + month.toString() + '.' + date.getFullYear().toString();
+  }
 }
 
 export default Profile;

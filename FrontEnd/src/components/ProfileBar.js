@@ -7,6 +7,7 @@ const styles = {
     width: '100%',
     height: 'auto',
     position: 'relative',
+    marginBottom: 10,
     background: Colors.mediumBlue,
     boxShadow: [`0px 0px 2px rgba(0, 0, 0, 0.12)`, `0px 2px 2px rgba(0, 0, 0, 0.24)`],
   },
@@ -21,7 +22,7 @@ const styles = {
     display: 'inline-block',
     lineHeight: '50px',
     height: '50px',
-    width: 120,
+    width: 130,
     textAlign: 'center',
     margin: 0,
   },
@@ -30,10 +31,10 @@ const styles = {
     boxSizing: 'border-box',
     lineHeight: '50px',
     height: '50px',
-    width: 120,
+    width: 130,
     textAlign: 'center',
     margin: 0,
-    borderBottom: '2px',
+    borderBottom: '3px',
     borderBottomColor: Colors.yellow,
     borderBottomStyle: 'solid',
   },
@@ -44,17 +45,9 @@ const styles = {
     color: Colors.white,
     textDecoration: 'none',
   },
-  indicator: {
-    left: 0,
-    height: 2,
-    width: 120,
-    bottom: 0,
-    background: Colors.yellow,
-    position: 'absolute',
-  },
 };
 
-class ProfilBar extends Component {
+class ProfileBar extends Component {
   constructor() {
     super();
     this.state = {
@@ -63,17 +56,18 @@ class ProfilBar extends Component {
   }
 
   render() {
-    const { indicatorPos } = this.props;
-    const pos = {
-      left: indicatorPos,
-    };
     return (
       <nav>
         <div style={styles.navContent}>
           <ul style={styles.tabs}>
             <li style={styles.tab}>
-              <NavLink style={{ ...styles.link, ...pos }} activeStyle={styles.activetab} to="">
-                Schuler
+              <NavLink style={styles.link} activeStyle={styles.activetab} to="/stundenplan">
+                Stundenplan
+              </NavLink>
+            </li>
+            <li style={styles.tab}>
+              <NavLink style={styles.link} activeStyle={styles.activetab} to="">
+                Schüler
               </NavLink>
             </li>
             <li style={styles.tab}>
@@ -82,17 +76,17 @@ class ProfilBar extends Component {
               </NavLink>
             </li>
             <li style={styles.tab}>
-              <NavLink style={styles.link} activeStyle={{ color: 'red' }} to="/raum">
+              <NavLink style={styles.link} activeStyle={styles.activetab} to="/raum">
                 Raum
               </NavLink>
             </li>
             <li style={styles.tab}>
-              <NavLink style={styles.link} activeStyle={{ color: 'red' }} to="/fach">
+              <NavLink style={styles.link} activeStyle={styles.activetab} to="/fach">
                 Fach
               </NavLink>
             </li>
             <li style={styles.tab}>
-              <NavLink style={styles.link} activeStyle={{ color: 'red' }} to="/account">
+              <NavLink style={styles.link} activeStyle={styles.activetab} to="/account">
                 Account
               </NavLink>
             </li>
@@ -103,4 +97,4 @@ class ProfilBar extends Component {
   }
 }
 
-export default ProfilBar;
+export default ProfileBar;

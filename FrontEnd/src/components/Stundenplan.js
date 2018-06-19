@@ -1,29 +1,35 @@
 import React, { Component } from 'react';
 import Timetable from './Timetable';
+import * as SortUtils from '../utils/SortUtils';
 import * as Colors from '../constants/Colors';
 
 const styles = {
   container: {
     display: 'flex',
     flexDirection: 'column',
+    color: Colors.darkBlue,
   },
   content: {
     display: 'flex',
   },
   classes: {
-    height: 1000,
     display: 'flex',
     flexDirection: 'column',
     marginRight: 5,
   },
   class: {
+    height: 42,
     display: 'flex',
-    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     padding: 0,
     marginBottom: 5,
     border: `1px solid ${Colors.grey}`,
+    boxShadow: [
+      '0 3px 1px -2px rgba(0,0,0,.2)',
+      '0 2px 2px 0 rgba(0,0,0,.14)',
+      '0 1px 5px 0 rgba(0,0,0,.12)',
+    ],
   },
   classLabel: {
     padding: 10,
@@ -42,35 +48,81 @@ class Stundenplan extends Component {
   constructor() {
     super();
     this.state = {
-      activeClasses: ['1A', '1B'],
+      activeClasses: [{ grade: '1', letter: 'a' }, { grade: '1', letter: 'b' }],
+      classList: [
+        { grade: '2', letter: 'b' },
+        { grade: '2', letter: 'a' },
+        { grade: '3', letter: 'a' },
+        { grade: '3', letter: 'b' },
+        { grade: '4', letter: 'a' },
+        { grade: '4', letter: 'b' },
+        { grade: '5', letter: 'a' },
+        { grade: '5', letter: 'b' },
+        { grade: '6', letter: 'a' },
+        { grade: '6', letter: 'b' },
+        { grade: '7', letter: 'a' },
+        { grade: '7', letter: 'b' },
+        { grade: '8', letter: 'a' },
+        { grade: '8', letter: 'b' },
+        { grade: '9', letter: 'a' },
+        { grade: '9', letter: 'b' },
+        { grade: '10', letter: 'a' },
+        { grade: '10', letter: 'b' },
+      ],
     };
   }
 
   addTimetable(schoolClass) {
-    const classes = this.state.activeClasses;
-    classes.push(schoolClass);
+    const { activeClasses, classList } = this.state;
+    activeClasses.push(schoolClass);
+    classList.splice(classList.indexOf(schoolClass), 1);
     this.setState({
-      activeClasses: classes,
+      activeClasses: activeClasses,
+      classList: classList,
     });
   }
 
   removeTimetable(schoolClass) {
-    const classes = this.state.activeClasses;
-    classes.splice(classes.indexOf(schoolClass), 1);
+    const { activeClasses, classList } = this.state;
+    activeClasses.splice(activeClasses.indexOf(schoolClass), 1);
+    classList.push(schoolClass);
+    classList.sort(SortUtils.byClassesASC);
     this.setState({
-      activeClasses: classes,
+      activeClasses: activeClasses,
+      classList: classList,
     });
   }
 
   renderTimetables() {
+    const { activeClasses } = this.state;
     const array = [];
-    for (let i = 0; i < this.state.activeClasses.length; i++) {
+    for (let i = 0; i < activeClasses.length; i++) {
       array.push(
         <Timetable
-          schoolClass={this.state.activeClasses[i]}
+          schoolClass={activeClasses[i]}
           key={i.toString()}
-          onClose={() => this.removeTimetable(this.state.activeClasses[i])}
+          onClose={() => this.removeTimetable(activeClasses[i])}
         />,
+      );
+    }
+    return array;
+  }
+
+  renderClassList() {
+    const { classList } = this.state;
+    const array = [];
+    for (let i = 0; i < classList.length; i++) {
+      array.push(
+        <div
+          style={styles.class}
+          key={i.toString()}
+          onClick={() => this.addTimetable(classList[i])}
+        >
+          <p style={styles.classLabel}>
+            {classList[i].grade}
+            {classList[i].letter}
+          </p>
+        </div>,
       );
     }
     return array;
@@ -80,68 +132,7 @@ class Stundenplan extends Component {
     return (
       <div style={styles.container}>
         <div style={styles.content}>
-          <div style={styles.classes}>
-            <div style={styles.class} onClick={() => this.addTimetable('1A')}>
-              <p style={styles.classLabel}>1A</p>
-            </div>
-            <div style={styles.class} onClick={() => this.addTimetable('1B')}>
-              <p style={styles.classLabel}>1B</p>
-            </div>
-            <div style={styles.class} onClick={() => this.addTimetable('2A')}>
-              <p style={styles.classLabel}>2A</p>
-            </div>
-            <div style={styles.class} onClick={() => this.addTimetable('2B')}>
-              <p style={styles.classLabel}>2B</p>
-            </div>
-            <div style={styles.class} onClick={() => this.addTimetable('3A')}>
-              <p style={styles.classLabel}>3A</p>
-            </div>
-            <div style={styles.class} onClick={() => this.addTimetable('3B')}>
-              <p style={styles.classLabel}>3B</p>
-            </div>
-            <div style={styles.class} onClick={() => this.addTimetable('4A')}>
-              <p style={styles.classLabel}>4A</p>
-            </div>
-            <div style={styles.class} onClick={() => this.addTimetable('4B')}>
-              <p style={styles.classLabel}>4B</p>
-            </div>
-            <div style={styles.class} onClick={() => this.addTimetable('5A')}>
-              <p style={styles.classLabel}>5A</p>
-            </div>
-            <div style={styles.class} onClick={() => this.addTimetable('5B')}>
-              <p style={styles.classLabel}>5B</p>
-            </div>
-            <div style={styles.class} onClick={() => this.addTimetable('6A')}>
-              <p style={styles.classLabel}>6A</p>
-            </div>
-            <div style={styles.class} onClick={() => this.addTimetable('6B')}>
-              <p style={styles.classLabel}>6B</p>
-            </div>
-            <div style={styles.class} onClick={() => this.addTimetable('7A')}>
-              <p style={styles.classLabel}>7A</p>
-            </div>
-            <div style={styles.class} onClick={() => this.addTimetable('7B')}>
-              <p style={styles.classLabel}>7B</p>
-            </div>
-            <div style={styles.class} onClick={() => this.addTimetable('8A')}>
-              <p style={styles.classLabel}>8A</p>
-            </div>
-            <div style={styles.class} onClick={() => this.addTimetable('8B')}>
-              <p style={styles.classLabel}>8B</p>
-            </div>
-            <div style={styles.class} onClick={() => this.addTimetable('9A')}>
-              <p style={styles.classLabel}>9A</p>
-            </div>
-            <div style={styles.class} onClick={() => this.addTimetable('9B')}>
-              <p style={styles.classLabel}>9B</p>
-            </div>
-            <div style={styles.class} onClick={() => this.addTimetable('10A')}>
-              <p style={styles.classLabel}>10A</p>
-            </div>
-            <div style={styles.class} onClick={() => this.addTimetable('10B')}>
-              <p style={styles.classLabel}>10B</p>
-            </div>
-          </div>
+          <div style={styles.classes}>{this.renderClassList()}</div>
           <div style={styles.timetables}>{this.renderTimetables()}</div>
         </div>
       </div>

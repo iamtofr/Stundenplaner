@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
+import ProfileBar from '../components/ProfileBar';
 import Stundenplan from '../components/Stundenplan';
 import Profile from '../components/Profile';
 import Liste from '../components/ProfileList';
@@ -25,9 +26,10 @@ class DetailsPage extends Component {
 
     return (
       <div style={styles.container}>
+        <ProfileBar />
         {title === 'Stundenplan' && <Stundenplan />}
         {title === 'Profil' && <Profile id={id} occupation={occupation} />}
-        {title === 'Profilliste' && <Liste occupation={occupation}/>}
+        {title === 'Profilliste' && <Liste occupation={occupation} />}
       </div>
     );
   }
