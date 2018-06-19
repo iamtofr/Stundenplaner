@@ -1,0 +1,15 @@
+.calendar {
+  width: 100%;
+  border: 0;
+  font-family: 'Roboto', sans-serif;
+  color: rgb(41, 65, 99);
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+.react-calendar__tile--active {
+  background: rgb(242, 213, 92);
+  color: rgb(41, 65, 99);
+}
+button.react-calendar__tile:enabled:hover {
+  background: rgb(146, 186, 230);
+}
