@@ -48,8 +48,10 @@ class Stundenplan extends Component {
   constructor() {
     super();
     this.state = {
-      activeClasses: [{ grade: '1', letter: 'a' }, { grade: '1', letter: 'b' }],
+      activeClasses: [],
       classList: [
+        { grade: '1', letter: 'a' },
+        { grade: '1', letter: 'b' },
         { grade: '2', letter: 'b' },
         { grade: '2', letter: 'a' },
         { grade: '3', letter: 'a' },
