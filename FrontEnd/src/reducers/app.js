@@ -38,13 +38,13 @@ export default (state = initialState, action) => {
       console.log('setLectures: ');
       console.log(action.data.lectures);
       return {
-        isLoggedIn: true,
+        ...state,
         lectures: action.data.lectures,
       };
     case types.SET_ACTIVE_TAB:
       console.log(action.data.activeTab);
       return {
-        isLoggedIn: true,
+        ...state,
         activeTab: action.data.activeTab,
       };
     default:
