@@ -113,11 +113,13 @@ class Dashboard extends Component {
               handleOpenModal={() => this.showModal()}
               handleCloseModal={() => this.hideModal()}
               onSubmit={() => {
+                this.props.showLoader();
                 const socket = new WebSocket('wss://stundenplaner.online');
                 socket.onopen = () => {
                   socket.send('Go');
                 };
                 socket.onmessage = msg => {
+                  this.props.hideLoader();
                   console.log('received Data from Websocket: ');
                   console.log(JSON.parse(msg.data));
                   this.props.setLectures({
@@ -405,6 +407,8 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = {
   setLectures: appActions.setLectures,
+  showLoader: appActions.showLoader,
+  hideLoader: appActions.hideLoader,
 };
 
 export default withRouter(

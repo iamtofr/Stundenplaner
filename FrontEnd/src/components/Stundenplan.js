@@ -1,7 +1,25 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import Modal from 'react-modal';
+import { ClipLoader } from 'react-spinners';
 import Timetable from './Timetable';
 import * as SortUtils from '../utils/SortUtils';
 import * as Colors from '../constants/Colors';
+
+const customStyles = {
+  content: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+    background: Colors.light,
+  },
+};
 
 const styles = {
   container: {
@@ -133,6 +151,10 @@ class Stundenplan extends Component {
   render() {
     return (
       <div style={styles.container}>
+        <Modal isOpen={this.props.isLoading} style={customStyles}>
+          <p>Berechne Stundenpläne...</p>
+          <ClipLoader color={Colors.blue} loading={true} size={50} />
+        </Modal>
         <div style={styles.content}>
           <div style={styles.classes}>{this.renderClassList()}</div>
           <div style={styles.timetables}>{this.renderTimetables()}</div>
@@ -142,4 +164,8 @@ class Stundenplan extends Component {
   }
 }
 
-export default Stundenplan;
+const mapStateToProps = state => ({
+  isLoading: state.app.isLoading,
+});
+
+export default connect(mapStateToProps)(Stundenplan);
